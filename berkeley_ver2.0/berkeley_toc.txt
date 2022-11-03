@@ -1,0 +1,196 @@
+\title{
+Contents
+}
+
+\author{
+Preface vii
+}
+
+I Problems 1
+
+1 Real Analysis 3
+
+$1.1 \quad$ Elementary Calculus $\ldots \ldots \ldots \ldots \ldots \ldots \ldots \ldots \ldots \ldots \ldots$
+
+$1.2 \quad$ Limits and Continuity $\ldots \ldots \ldots \ldots \ldots$
+
+$1.3$ Sequences, Series, and Products $\ldots \ldots \ldots \ldots \ldots \ldots \ldots \ldots \ldots$
+
+$1.4$ Differential Calculus $\ldots \ldots \ldots \ldots \ldots \ldots \ldots \ldots \ldots \ldots \ldots \ldots$
+
+$1.5 \quad$ Integral Calculus $\ldots \ldots \ldots \ldots \ldots \ldots \ldots \ldots \ldots \ldots \ldots \ldots \ldots \ldots \ldots \ldots \ldots \ldots \ldots \ldots \ldots \ldots$
+
+$1.6 \quad$ Sequences of Functions $\ldots \ldots \ldots \ldots \ldots \ldots \ldots \ldots \ldots$
+
+$1.7 \quad$ Fourier Series $\ldots \ldots \ldots \ldots \ldots \ldots \ldots \ldots \ldots$
+
+
+$1.8 \quad$ Convex Functions $\ldots \ldots \ldots \ldots \ldots \ldots \ldots \ldots$
+
+2 Multivariable Calculus 31
+
+$2.1 \quad$ Limits and Continuity $\ldots \ldots \ldots \ldots \ldots \ldots \ldots \ldots \ldots \ldots \ldots$
+
+$2.2$ Differential Calculus $\ldots \ldots \ldots \ldots \ldots$
+
+$2.3 \quad$ Integral Calculus $\ldots \ldots \ldots \ldots \ldots \ldots \ldots \ldots \ldots \ldots \ldots \ldots \ldots \ldots \ldots \ldots \ldots \ldots \ldots \ldots \ldots \ldots \ldots$
+
+3 Differential Equations 43
+
+$3.1 \quad$ First Order Equations $\ldots \ldots \ldots \ldots \ldots \ldots \ldots$
+
+$3.2 \quad$ Second Order Equations $\ldots \ldots \ldots$. . . . . . . . . 47 3.3 Higher Order Equations $\ldots \ldots \ldots$. . . . . . . . . . . 49
+
+$3.4 \quad$ Systems of Differential Equations $\ldots \ldots \ldots$
+
+4 Metric Spaces 57
+
+$4.1 \quad$ Topology of $\mathbb{R}^{n} \ldots \ldots \ldots . \ldots \ldots \ldots \ldots \ldots \ldots \ldots \ldots \ldots \ldots \ldots \ldots$
+
+$4.2 \quad$ General Theory ................... 60
+
+$4.3 \quad$ Fixed Point Theorem ................ 62
+
+5 Complex Analysis $\quad 65$
+
+$5.1 \quad$ Complex Numbers $\ldots \ldots \ldots . \ldots \ldots \ldots \ldots$
+
+$5.2 \quad$ Series and Sequences of Functions . . . . . . . . . . 67
+
+$5.3 \quad$ Conformal Mappings $\ldots \ldots \ldots . \ldots \ldots$
+
+$5.4 \quad$ Functions on the Unit Disc $\ldots \ldots \ldots \ldots \ldots \ldots$
+
+$5.5$ Growth Conditions ..................74 74
+
+$5.6 \quad$ Analytic and Meromorphic Functions . . . . . . . . . 75
+
+$5.7$ Cauchy's Theorem ................. 80
+
+$5.8 \quad$ Zeros and Singularities $\ldots \ldots \ldots . \ldots . \ldots . \ldots . \ldots$
+
+$5.9$ Harmonic Functions $\ldots \ldots . \ldots . \ldots . \ldots$
+
+$5.10 \quad$ Residue Theory $\ldots \ldots \ldots \ldots . \ldots \ldots . \ldots \ldots$
+
+$5.11$ Integrals Along the Real Axis $\ldots \ldots . \ldots \ldots$
+
+6 Algebra 97
+
+6.1 Examples of Groups and General Theory ......... . 97
+
+$6.2 \quad$ Homomorphisms and Subgroups . . . . . . . . . . . 99
+
+$6.3 \quad$ Cyclic Groups $\ldots \ldots \ldots \ldots \ldots . \ldots \ldots \ldots$
+
+$6.4$ Normality, Quotients, and Homomorphisms . . . . . . . . 102
+
+$6.5 \quad S_{n}, A_{n}, D_{n}, \ldots \ldots \ldots \ldots . \ldots \ldots \ldots$
+
+$6.6 \quad$ Direct Products ......................106
+
+6.7 Free Groups, Generators, and Relations ............ 106
+
+$6.8 \quad$ Finite Groups $\ldots \ldots \ldots \ldots \ldots \ldots \ldots \ldots \ldots \ldots \ldots \ldots$
+
+6.9 Rings and Their Homomorphisms . . . . . . . . . . . 109
+
+![](https://cdn.mathpix.com/cropped/2022_10_28_1fdd6377bb0b8c3364f0g-2.jpg?height=60&width=1325&top_left_y=1797&top_left_x=427)
+
+$6.11$ Polynomials $\ldots \ldots \ldots \ldots \ldots \ldots \ldots \ldots \ldots \ldots \ldots \ldots \ldots \ldots \ldots$
+
+$6.12$ Fields and Their Extensions $\ldots \ldots . \ldots . \ldots . \ldots$
+
+$6.13$ Elementary Number Theory $\ldots \ldots . \ldots . \ldots . \ldots$
+
+7 Linear Algebra 123
+
+$7.1 \quad$ Vector Spaces $\ldots \ldots \ldots \ldots \ldots \ldots \ldots \ldots . \ldots \ldots \ldots . \ldots \ldots \ldots$
+
+$7.2 \quad$ Rank and Determinants ................... . . . . . . . .
+
+$7.3 \quad$ Systems of Equations . . . . . . . . . . . . . . . . . 129
+
+$7.4$ Linear Transformations $\ldots \ldots \ldots . \ldots . \ldots . \ldots . \ldots$
+
+$7.5$ Eigenvalues and Eigenvectors $\ldots \ldots \ldots 134$
+
+$7.6$ Canonical Forms $\ldots \ldots \ldots . \ldots \ldots \ldots . \ldots \ldots \ldots$
+
+$7.7 \quad$ Similarity ......................144
+
+$7.8$ Bilinear, Quadratic Forms, and Inner Product Spaces . . . . 146 $7.9$ General Theory of Matrices $\ldots \ldots \ldots \ldots \ldots$
+
+II Solutions 155
+
+1 Real Analysis 157
+
+$1.1 \quad$ Elementary Calculus $\ldots \ldots \ldots \ldots \ldots \ldots \ldots \ldots \ldots \ldots \ldots \ldots \ldots$
+
+$1.2$ Limits and Continuity $\ldots \ldots \ldots . \ldots \ldots \ldots . \ldots \ldots$
+
+$1.3$ Sequences, Series, and Products $\ldots \ldots \ldots \ldots \ldots \ldots \ldots$
+
+$1.4 \quad$ Differential Calculus $\ldots \ldots \ldots \ldots \ldots \ldots \ldots \ldots \ldots \ldots \ldots \ldots \ldots$
+
+![](https://cdn.mathpix.com/cropped/2022_10_28_1fdd6377bb0b8c3364f0g-3.jpg?height=57&width=1325&top_left_y=720&top_left_x=427)
+
+$1.6$ Sequences of Functions $\ldots \ldots . \ldots . \ldots . \ldots . \ldots . \ldots . \ldots$
+
+![](https://cdn.mathpix.com/cropped/2022_10_28_1fdd6377bb0b8c3364f0g-3.jpg?height=54&width=1325&top_left_y=821&top_left_x=427)
+
+$1.8$ Convex Functions $\ldots \ldots \ldots . \ldots \ldots \ldots . \ldots \ldots \ldots$
+
+2 Multivariable Calculus 235
+
+$2.1 \quad$ Limits and Continuity $\ldots \ldots . \ldots . \ldots \ldots \ldots . \ldots \ldots$
+
+$2.2 \quad$ Differential Calculus $\ldots \ldots \ldots . \ldots \ldots \ldots . \ldots \ldots \ldots \ldots \ldots \ldots$
+
+![](https://cdn.mathpix.com/cropped/2022_10_28_1fdd6377bb0b8c3364f0g-3.jpg?height=57&width=1323&top_left_y=1121&top_left_x=431)
+
+3 Differential Equations 265
+
+$3.1$ First Order Equations $\ldots \ldots . \ldots . \ldots \ldots . \ldots \ldots . \ldots . \ldots . \ldots$
+
+$3.2 \quad$ Second Order Equations $\ldots \ldots . \ldots 274$
+
+$3.3 \quad$ Higher Order Equations $\ldots \ldots . \ldots 278$
+
+$3.4$ Systems of Differential Equations .............. . 280
+
+4 Metric Spaces 289
+
+$4.1 \quad$ Topology of $\mathbb{R}^{n} \ldots \ldots \ldots . \ldots \ldots \ldots . \ldots \ldots . \ldots \ldots$
+
+$4.2 \quad$ General Theory ......................297
+
+$4.3 \quad$ Fixed Point Theorem .................300
+
+5 Complex Analysis 305
+
+![](https://cdn.mathpix.com/cropped/2022_10_28_1fdd6377bb0b8c3364f0g-3.jpg?height=57&width=1325&top_left_y=1809&top_left_x=430)
+
+$5.2 \quad$ Series and Sequences of Functions . . . . . . . . . . . . 309
+
+$5.3 \quad$ Conformal Mappings $\ldots \ldots \ldots . \ldots \ldots \ldots \ldots \ldots \ldots$
+
+$5.4$ Functions on the Unit Disc . . . . . . . . . . . . . 321
+
+$5.5$ Growth Conditions . . . . . . . . . . . . . . . 329
+
+$5.6$ Analytic and Meromorphic Functions . . . . . . . . . 334
+
+$5.7$ Cauchy's Theorem . . . . . . . . . . . . . . . . 347
+
+$5.8 \quad$ Zeros and Singularities . . . ..............356
+
+$5.9 \quad$ Harmonic Functions $\ldots \ldots \ldots . \ldots \ldots \ldots \ldots \ldots$
+
+![](https://cdn.mathpix.com/cropped/2022_10_28_1fdd6377bb0b8c3364f0g-3.jpg?height=57&width=1328&top_left_y=2270&top_left_x=428)
+
+$5.11$ Integrals Along the Real Axis . . . . . . . . . . . .390
+
+6 Algebra 423
+
+6.1 Examples of Groups and General Theory ......... . 423
