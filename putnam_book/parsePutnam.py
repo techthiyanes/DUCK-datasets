@@ -1,5 +1,4 @@
 import json
-import markdown
 import re
 import pandas as pd
 
@@ -8,10 +7,10 @@ problem_dict = {}
 num_probs = 935
 bad_words = ["prove", "show", "cdn.mathpix.com"]
 output = pd.DataFrame()
-# output.columns=["Problem Number", "Problem Statement", "Solution", "Topic"]
 
 letters = list("qwertyuiopasdfghjklzxcvbnm")
-
+bad_unicode = "\u0941"
+citation_keywords = ["olympiad", "proposed", "competition", "roegen", "communicated", "maa", "exam","contest", "problems", "examination", "mathematical", "mathematics", "matematic", "matematica", "gnedenko", "wiley", "rotkiewicz", "brahmagupta", "andreescu"]
 topic_list = ["Methods of Proof", "Algebra", "Real Analysis", "Geometry", "Number Theory", "Probability"]
 
 topic_indexes = [80, 296, 572, 698, 905, 935]
@@ -23,6 +22,17 @@ def find_all(a_str, sub):
         if start == -1: return
         yield start
         start += len(sub) # use start += 1 to find overlapping matches
+
+
+def remove_irregularities(problem):
+    problem = problem.replace("\n\n", "")
+    problem = problem.translate({ord(x): '' for x in bad_unicode}) #remove bad unicode chars
+    last_paren_open =  ([None] + list(find_all(problem, "(")))[-1]
+    last_paren_close =  ([None] + list(find_all(problem, ")")))[-1]
+    if last_paren_close and last_paren_open and any([citation in problem[last_paren_open:last_paren_close].lower() for citation in citation_keywords]):
+        problem = problem[:last_paren_open] + problem[last_paren_close+1:]
+
+    return problem
 
 
 def parse_sections(text):
@@ -41,7 +51,7 @@ def parse_sections(text):
     for problem in text:
         if not any([e in problem.lower() for e in bad_words]):
             num = problem.split('.')[0][1:]
-            problems[int(num)] = problem
+            problems[int(num)] = remove_irregularities(problem)
     return problems
 
 
