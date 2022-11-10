@@ -108,20 +108,49 @@ for p in problems:
         if not any(x in statement for x in KEYWORDS):  # ignore if not computational
             continue
 
-        # find last occurrence of "$$" in solution
-        # this is the end of the solution
-        answer_end = solution.rfind("$$")
-        answer_start = solution.rfind("=", 0, answer_end)
+        # find the last equation with an equals sign, the last term is the answer
+        eqn_end = len(solution)
+        while eqn_end > 0:
+            eqn_end = solution.rfind("$", 0, eqn_end)
+            eqn_start = solution.rfind("$", 0, eqn_end)
+            if eqn_start == eqn_end - 1:
+                eqn_start = solution.rfind("$", 0, eqn_start)
+            if solution[eqn_start - 1] == "$":
+                eqn_start -= 1
+            if "=" not in solution[eqn_start:eqn_end]:
+                eqn_end = eqn_start
+            else:
+                break
+        answer_end = eqn_end if solution[eqn_end - 1] != '$' else eqn_end - 1
+        answer_start = answer_end - 1
+        bracket_balance = 0
+        while answer_start >= 0:
+            if solution[answer_start] == "}":
+                bracket_balance += 1
+            elif solution[answer_start] == "{":
+                bracket_balance -= 1
+            elif solution[answer_start] == "=" and bracket_balance == 0:
+                break
+            answer_start -= 1
+        answer = ""
         if answer_start != -1 and answer_end != -1 and solution.find("$$", answer_start, answer_end) == -1:
             answer = solution[answer_start + 1:answer_end].strip()
 
             answer = answer.replace(r"\text {. }", "")
-            answer = answer.replace(".", "")
+            answer = answer.replace(" .", "")
             answer = answer.replace(",", "")
             answer = answer.replace("\end{aligned}", "")
             answer = answer.replace("\end{align}", "")
+            answer = answer.replace("\end{array}", "")
+            answer = answer.replace("\end{gathered}", "")
+            answer = answer.replace("&", "")
+            answer = answer.replace(r"\\", "")
             answer = answer.strip()
-        else:
+            answer = "$$" + answer + "$$"
+
+            if answer.count("left") != answer.count("right"):
+                answer = ""
+        if not answer:
             print("No answer found for problem", num_with_part)
 
         output[num_with_part] = {

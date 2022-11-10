@@ -292,7 +292,7 @@ Problem:
 
 Two uniform infinite sheets of electric charge densities $+\sigma$ and $-\sigma$ intersect at right angles. Find the magnitude and direction of the electric field everywhere and sketch the lines of $\mathbf{E}$.
 
-$(W$ isconsin)
+
 
 Solution:
 
@@ -6893,7 +6893,7 @@ Problem:
 
 A toroid having an iron core of square cross section (Fig. 2.17) and permeability $\mu$ is wound with $N$ closely spaced turns of wire carrying a current $I$. Find the magnitude of the magnetization $M$ everywhere inside the iron.
 
-$(W$ isconsin)
+
 
 ![](https://cdn.mathpix.com/cropped/2022_10_30_6a2dacf5647d8430e732g-184.jpg?height=264&width=240&top_left_y=1454&top_left_x=552)
 

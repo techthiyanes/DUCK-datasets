@@ -47,6 +47,7 @@ lines = lines.replace("(Coulumbia)", "")
 lines = lines.replace("$(U C$, Berkeley)", "")
 lines = lines.replace("(SUNY, Buffalo)", "")
 lines = lines.replace("$(S U N Y, B u f f a l o)$", "")
+lines = lines.replace("$(W$ isconsin)", "")
 lines = lines.split("\n")
 
 # count lines that start with "![](https://cdn.mathpix.com"
