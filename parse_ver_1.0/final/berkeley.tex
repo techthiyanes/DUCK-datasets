@@ -1,0 +1,3934 @@
+\documentclass[10pt]{article}
+\usepackage{hyperref}
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\setlength\parindent{0pt}
+\title{OUTPUT.TEX.}
+\date{Updated: \today}
+\author{}
+
+
+\begin{document}
+
+
+\textbf{Solution} : 1. Suppose $f:[0,1] \rightarrow(0,1)$ is a continuous surjection. Consider the sequence $\left(x_{n}\right)$ such that $x_{n} \in f^{-1}((0,1 / n))$. By the BolzanoWeierstrass Theorem [Rud87, p. 40], [MH93, p. 153], we may assume that $\left(x_{n}\right)$ converges, to $x \in[0,1]$, say. By continuity, we have $f(x)=0$, which is absurd. Therefore, no such a function can exist.
+
+2. $g(x)=|\sin 2 \pi x|$.
+
+3. Suppose $g:(0,1) \rightarrow[0,1]$ is a continuous bijection. Let $x_{0}=g^{-1}(0)$ and $x_{1}=g^{-1}(1)$. Without loss of generality, assume $x_{0}<x_{1}$ (otherwise consider $1-g)$. By the Intermediate Value Theorem [Rud87, p. 93], we have $g\left(\left[x_{0}, x_{1}\right]\right)=$ $[0,1]$. As $x_{0}, x_{1} \in(0,1), g$ is not an injection, which contradicts our assumption.
+\textbf{Topic} :Elementary Calculus \\
+\textbf{Book} :Berkeley Problems in Mathematics\\
+\textbf{Final Answer} :\\
+
+
+\textbf{Solution} : Let $A(c)$ denote the area the problem refers. The condition on $f^{\prime \prime}$ implies the convexity of $f$, so the graph of $f$ is always above any tangent to it, and we have
+
+$$
+A(c)=\int_{a}^{b}\left(f(x)-f(c)-f^{\prime}(c)(x-c)\right) d x .
+$$
+
+The derivative of $A$ is given by
+
+$$
+\begin{aligned}
+A^{\prime}(c) &=-\int_{a}^{b} f^{\prime \prime}(c)(x-c) d x \\
+&=-f^{\prime \prime}(c) \frac{b^{2}-a^{2}}{2}+(b-a) c f^{\prime}(c) \\
+&=f^{\prime \prime}(c)(b-a)\left(c-\frac{a+b}{2}\right)
+\end{aligned}
+$$
+
+so the minimum occurs at $c=(a+b) / 2$. As $A^{\prime}$ is an increasing function, $A$ is convex, so its minimum in $[a, b]$ corresponds to the only critical point in $(a, b)$.
+\textbf{Topic} :Elementary Calculus \\
+\textbf{Book} :Berkeley Problems in Mathematics\\
+\textbf{Final Answer} :\\
+
+
+\textbf{Solution} : Using the parameterization
+
+$$
+x=a \cos t, y=b \sin t,
+$$
+
+a triple of points on the ellipse is given by
+
+$$
+\left(a \cos t_{i}, b \sin t_{i}\right), \quad i=1,2,3 .
+$$
+
+So the area of an inscribed triangle is given by
+
+$$
+\frac{1}{2}\left|\begin{array}{lll}
+1 & a \cos t_{1} & b \sin t_{1} \\
+1 & a \cos t_{2} & b \sin t_{2} \\
+1 & a \cos t_{3} & b \sin t_{3}
+\end{array}\right|=\frac{a b}{2}\left|\begin{array}{lll}
+1 & \cos t_{1} & \sin t_{1} \\
+1 & \cos t_{2} & \sin t_{2} \\
+1 & \cos t_{3} & \sin t_{3}
+\end{array}\right|
+$$
+
+which is $a b$ times the area of a triangle inscribed in the unit circle. In the case of the circle, among all inscribed triangles with a given base $2 w(0<w \leqslant 1)$, the one of maximum area is an isosceles triangle whose area equals
+
+$$
+g(w)=w\left(1+\sqrt{1-w^{2}}\right) .
+$$
+
+Using elementary calculus one finds that the maximum of $g$ on the interval $0 \leqslant w \leqslant 1$ occurs at $w=\sqrt{3} / 2$, corresponding to an equilateral triangle, and equals $3 \sqrt{3} / 4$. Alternatively, fixing one side of the triangle as the basis, we easily see that among all the inscribed triangles the one with the greatest area is isosceles because of the maximum height, showing that the angle at the basis is the same. Fixing another side we see that the triangle is indeed equilateral. Hence, the area is maximal when
+
+$$
+t_{2}=t_{1}+\frac{2 \pi}{3} \text { and } t_{3}=t_{2}+\frac{2 \pi}{3}
+$$
+
+that is, when the corresponding triangle inscribed in the unit circle is regular.
+
+For the ellipse with semiaxes $a, b$, this corresponds to an inscribed triangle with maximum area equals $3 a b \sqrt{3} / 4$.
+\textbf{Topic} :Elementary Calculus \\
+\textbf{Book} :Berkeley Problems in Mathematics\\
+\textbf{Final Answer} :\\
+
+
+\textbf{Solution} : Consider the function $f(x)=\log x / x$. We have $a^{b}=b^{a}$ iff $f(a)=f(b)$. Now $f^{\prime}(x)=(1-\log x) / x^{2}$, so $f$ is increasing for $x<e$ and decreasing for $x>e$. For the above equality to hold, we must have $0<a<e$, so $a$ is either 1 or 2 , and $b>e$. For $a=1$, clearly there are no solutions, and for $a=2$ and $b=4$ works; since $f$ is decreasing for $x>e$, this is the only solution. \\
+\textbf{Topic} :Elementary Calculus \\
+\textbf{Book} :Berkeley Problems in Mathematics\\
+\textbf{Final Answer} :\\
+
+
+\textbf{Solution} :nan\\
+\textbf{Topic} :Elementary Calculus \\
+\textbf{Book} :Berkeley Problems in Mathematics\\
+\textbf{Final Answer} :\\
+
+
+\textbf{Solution} : With the change of variables $y=x \sqrt{t}$, we have
+
+$$
+f(t)=\int_{-\infty}^{\infty} e^{-t x^{2}} d x=\int_{-\infty}^{\infty} e^{-y^{2}} \frac{d y}{\sqrt{t}}=\frac{1}{\sqrt{t}} \int_{-\infty}^{\infty} e^{-y^{2}} d y=\sqrt{\frac{\pi}{t}},
+$$
+
+so
+
+$$
+f^{\prime}(t)=-\frac{\sqrt{\pi}}{2} t^{-3 / 2} .
+$$
+\textbf{Topic} :Elementary Calculus \\
+\textbf{Book} :Berkeley Problems in Mathematics\\
+\textbf{Final Answer} :\\
+
+
+\textbf{Solution} : Let
+
+$$
+G(u, v, x)=\int_{v}^{u} e^{t^{2}+x t} d t .
+$$
+
+Then $F(x)=G(\cos x, \sin x, x)$, so
+
+$$
+\begin{aligned}
+F^{\prime}(x) &=\frac{\partial G}{\partial u} \frac{\partial u}{\partial x}+\frac{\partial G}{\partial v} \frac{\partial v}{\partial x}+\frac{\partial G}{\partial x} \\
+&=e^{u^{2}+x u}(-\sin x)-e^{\left(v^{2}+x v\right)} \cos x+\int_{v}^{u} t e^{t^{2}+x t} d t
+\end{aligned}
+$$
+
+and
+
+$$
+F^{\prime}(0)=-1+\int_{0}^{1} t e^{t^{2}} d t=\frac{1}{2}(e-3) .
+$$
+\textbf{Topic} :Elementary Calculus \\
+\textbf{Book} :Berkeley Problems in Mathematics\\
+\textbf{Final Answer} :\\
+
+
+\textbf{Solution} : 1 . Let $f(z) \neq 0$. Then
+
+$$
+f(x) f(z)=f\left(\sqrt{x^{2}+z^{2}}\right)=f(-x) f(z),
+$$
+
+so $f(x)=f(-x)$ and $f$ is even.
+
+Also, $f(0) f(z)=f(z)$, so $f(0)=1$.
+
+2. We will show now that $f(\sqrt{n} x)=(f(x))^{n}$ for real $x$ and natural $n$, using the Induction Principle [MH93, p. 7]. The result is clear for $n=1$. Assume it holds for $n=k$. We have
+
+$$
+\begin{aligned}
+f(\sqrt{k+1} x) &=f\left(\sqrt{(\sqrt{k x})^{2}+x^{2}}\right) \\
+&=f(\sqrt{k x}) f(x) \\
+&=(f(x))^{k} f(x) \\
+&=(f(x))^{k+1}
+\end{aligned}
+$$
+
+If $p, q \in \mathbb{N}$, then
+
+$$
+f(p)=f\left(p^{2} \cdot 1\right)=(f(1))^{p^{2}}
+$$
+
+and
+
+$$
+f(|p|)=f\left(\sqrt{p^{2}}\left|\frac{p}{q}\right|\right)=\left(f\left(\left|\frac{p}{q}\right|\right)\right)^{q^{2}}
+$$
+
+from which follows
+
+$$
+\left(f\left(\frac{p}{q}\right)\right)^{q^{2}}=(f(1))^{p^{2}} .
+$$
+
+- If $f(1)>0$, we have
+
+$$
+f\left(\frac{p}{q}\right)=(f(1))^{\frac{p^{2}}{q^{2}}},
+$$
+
+so, by continuity on $\mathbb{R}$,
+
+$$
+f(x)=(f(1))^{x^{2}} .
+$$
+
+- If $f(1)=0$, then $f$ vanishes on a dense set, so it vanishes everywhere, contradicting the hypothesis.
+
+- To see that $f(1)<0$ cannot happen, consider $p$ even and $q$ odd. We get $f(p / q)>0$, so $f$ is positive on a dense set, and $f(1) \geqslant 0$.
+
+Note that we used only the continuity of $f$ and its functional equation.
+
+Differentiating, we easily check that $f$ satisfies the differential equation. The most general function satisfying all the conditions is then
+
+$$
+c^{x^{2}}
+$$
+
+with $0<c<1$.
+\textbf{Topic} :Elementary Calculus \\
+\textbf{Book} :Berkeley Problems in Mathematics\\
+\textbf{Final Answer} :\\
+
+
+\textbf{Solution} : 1. For $\varepsilon>0$ let
+
+$$
+L=\max _{x \in[0,1]}(|f(x)|+1) \text { and } 0<\delta<\min \left\{\frac{\varepsilon}{2 L}, 1\right\} .
+$$
+
+We have
+
+$$
+\left|\int_{1-\delta}^{1} x^{n} f(x) d x\right| \leqslant \int_{1-\delta}^{1} x^{n}|f(x)| d x \leqslant L \delta \leqslant \frac{\varepsilon}{2}
+$$
+
+and
+
+$$
+\left|\int_{0}^{1-\delta} x^{n} f(x) d x\right| \leqslant \int_{0}^{1-\delta}(1-\delta)^{n}|f(x)| d x \leqslant L \delta^{n+1}
+$$
+
+so
+
+$$
+\lim _{n \rightarrow \infty} \int_{0}^{1} x^{n} f(x) d x=0
+$$
+
+2. We will show that
+
+$$
+\lim _{n \rightarrow \infty} n \int_{0}^{1} x^{n}(f(x)-f(1)) d x=0
+$$
+
+For $\varepsilon>0$ let $\delta$ be such that $|f(x)-f(1)|<\varepsilon / 2$ if $x \in[1-\delta, 1]$. We have
+
+$$
+\left|n \int_{1-\delta}^{n} x^{n}(f(x)-f(1)) d x\right| \leqslant n \int_{1-\delta}^{1} x^{n}|f(x)-f(1)| d x \leqslant n \int_{1-\delta}^{1} x^{n} \frac{\varepsilon}{2} d x \leqslant \frac{\varepsilon}{2}
+$$
+
+and, letting $L=\sup _{x \in[0,1]}|f(x)-f(1)|$,
+
+$$
+\left|n \int_{0}^{1-\delta} x^{n}(f(x)-f(1)) d x\right| \leqslant n \int_{0}^{1-\delta} x^{n} L d x=n \frac{(1-\delta)^{n+1}}{n+1}
+$$
+
+and the result follows.
+
+Now it suffices to notice that
+
+$$
+n \int_{0}^{1} x^{n} f(x) d x=n \int_{0}^{1} x^{n}(f(x)-f(1)) d x+n \int_{0}^{1} f(1) x^{n} d x
+$$
+\textbf{Topic} :Limits and Continuity \\
+\textbf{Book} :Berkeley Problems in Mathematics\\
+\textbf{Final Answer} :\\
+
+
+\textbf{Solution} : $A_{1}^{n} \leqslant A_{1}^{n}+\cdots+A_{k}^{n} \leqslant k A_{1}^{n}$, so we have
+
+$$
+A_{1}=\lim _{n \rightarrow \infty}\left(A_{1}^{n}\right)^{1 / n} \leqslant \lim _{n \rightarrow \infty}\left(A_{1}^{n}+\cdots+A_{k}^{n}\right)^{1 / n} \leqslant \lim _{n \rightarrow \infty}\left(k A_{1}^{n}\right)^{1 / n}=A_{1} .
+$$
+
+showing that the limit equals $A_{1}$.
+\textbf{Topic} :Sequences, Series, and Products \\
+\textbf{Book} :Berkeley Problems in Mathematics\\
+\textbf{Final Answer} :\\
+
+
+\textbf{Solution} : Let $p_{1}=1, p_{2}=(2 / 1)^{2}, p_{3}=(3 / 2)^{3}, \ldots, p_{n}=(n /(n-1))^{n}$. Then
+
+$$
+\frac{p_{1} p_{2} \cdots p_{n}}{n}=\frac{n^{n}}{n !},
+$$
+
+and since $p_{n} \rightarrow e$, we have $\lim \left(n^{n} / n !\right)^{1 / n}=e$ as well (using the fact that $\left.\lim n^{1 / n}=1\right)$.
+\textbf{Topic} :Sequences, Series, and Products \\
+\textbf{Book} :Berkeley Problems in Mathematics\\
+\textbf{Final Answer} :\\
+
+
+\textbf{Solution} : Obviously, $x_{n} \geqslant 1$ for all $n$; so, if the limit exists, it is $\geqslant 1$, and we can pass to the limit in the recurrence relation to get
+
+$$
+x_{\infty}=\frac{3+2 x_{\infty}}{3+x_{\infty}} \text {; }
+$$
+
+in other words, $x_{\infty}^{2}+x_{\infty}-3=0$. So $x_{\infty}$ is the positive solution of this quadratic equation, that is, $x_{\infty}=\frac{1}{2}(-1+\sqrt{13})$.
+
+To prove that the limit exists, we use the recurrence relation to get
+
+$$
+\begin{aligned}
+x_{n+1}-x_{n} &=\frac{3+2 x_{n}}{3+x_{n}}-\frac{3+2 x_{n-1}}{3+x_{n-1}} \\
+&=\frac{3\left(x_{n}-x_{n-1}\right)}{\left(3+x_{n}\right)\left(3+x_{n+1}\right)}
+\end{aligned}
+$$
+
+Hence, $\left|x_{n+1}-x_{n}\right| \leqslant \frac{1}{3}\left|x_{n}-x_{n-1}\right|$. Iteration gives
+
+$$
+\left|x_{n+1}-x_{n}\right| \leqslant 3^{-n}\left|x_{1}-x_{0}\right|=\frac{1}{3^{n} \cdot 4} .
+$$
+
+The series $\sum_{n=1}^{\infty}\left(x_{n+1}-x_{n}\right)$, of positive terms, is dominated by the convergent series $\frac{1}{4} \sum_{n=1}^{\infty} 3^{-n}$ and so converges. We have $\sum_{n=1}^{\infty}\left(x_{n+1}-x_{n}\right)=\lim x_{n}-x_{1}$ and we are done.
+\textbf{Topic} :Sequences, Series, and Products \\
+\textbf{Book} :Berkeley Problems in Mathematics\\
+\textbf{Final Answer} :\\
+
+
+\textbf{Solution} : We prove, by induction, that $0<x_{n}<1 / 2$ for $n \geqslant 1$. First, $0<x_{1}=1 / 3<1 / 2$. Suppose for some $n \geqslant 1$, that $0<x_{n}<1 / 2$. Then $2 / 5<x_{n+1}=1 /\left(2+x_{n}\right)<1 / 2$. This completes the induction.
+
+Let $f(x)=1 /(2+x)$. The equation $f(x)=x$ has a unique solution in the interval $0<x<1 / 2$ given by $p=\sqrt{2}-1$. Moreover, $\left|f^{\prime}(x)\right|=1 /(2+x)^{2}<$ $1 / 4$ for $0<x<1 / 2$. Thus, for $n \geqslant 1$,
+
+$$
+\begin{aligned}
+\left|x_{n+1}-p\right| &=\left|f\left(x_{n}\right)-f(p)\right| \\
+& \leqslant \frac{1}{4}\left|x_{n}-p\right|,
+\end{aligned}
+$$
+
+by the Mean Value Theorem.
+
+Iterating, we obtain
+
+$$
+\begin{aligned}
+\left|x_{n+1}-p\right| & \leqslant\left(\frac{1}{4}\right)^{2}\left|x_{n-1}-p\right| \\
+& \leqslant \cdots \\
+& \leqslant\left(\frac{1}{4}\right)^{n}\left|x_{1}-p\right| .
+\end{aligned}
+$$
+
+Hence the sequence $x_{n}$ tends to the limit $\sqrt{2}-1$.
+\textbf{Topic} :Sequences, Series, and Products \\
+\textbf{Book} :Berkeley Problems in Mathematics\\
+\textbf{Final Answer} :\\
+
+
+\textbf{Solution} : By the given relation $x_{n+1}-x_{n}=(\alpha-1)\left(x_{n}-x_{n-1}\right)$. Therefore, by the Induction Principle [MH93, p. 7], we have $x_{n}-x_{n-1}=(\alpha-1)^{n-1}\left(x_{1}-x_{0}\right)$, showing that the sequence is Cauchy and then converges. Hence,
+
+$$
+x_{n}-x_{0}=\sum_{k=1}^{n}\left(x_{k}-x_{k-1}\right)=\left(x_{1}-x_{0}\right) \sum_{k=1}^{n}(\alpha-1)^{k-1} \text {. }
+$$
+
+Taking limits, we get
+
+$$
+\lim _{n \rightarrow \infty} x_{n}=\frac{(1-\alpha) x_{0}+x_{1}}{2-\alpha} .
+$$
+\textbf{Topic} :Sequences, Series, and Products \\
+\textbf{Book} :Berkeley Problems in Mathematics\\
+\textbf{Final Answer} :\\
+
+
+\textbf{Solution} : The given relation can be written in matrix form as $\left(\begin{array}{c}x_{n+1} \\ x_{n}\end{array}\right)=$ $A\left(\begin{array}{c}x_{n-1} \\ x_{n}\end{array}\right)$, where $A=\left(\begin{array}{cc}2 c & -1 \\ 1 & 0\end{array}\right)$. The required periodicity holds if and only if $A^{k}=$ $\left(\begin{array}{ll}1 & 0 \\ 0 & 1\end{array}\right)$. The characteristic polynomial of $A$ is $\lambda^{2}-2 c \lambda+1$, so the eigenvalues of $A$ are $c \pm \sqrt{c^{2}-1}$. A necessary condition for $A^{k}=\left(\begin{array}{ll}1 & 0 \\ 0 & 1\end{array}\right)$ is that the eigenvalues of $A$ be $k^{t h}$ roots of unity, which implies that $c=\cos \left(\frac{2 \pi j}{k}\right), j=0,1, \ldots,\left\lfloor\frac{k}{2}\right\rfloor$. If $c$ has the preceding form and $0<j<\frac{k}{2}$ (i.e., $-1<c<1$ ), then the eigenvalues of $A$ are distinct (i.e., $A$ is diagonalizable), and the equality $A^{k}=\left(\begin{array}{l}1 \\ 0 \\ 0\end{array}\right)$ holds. If $c=1$ or $-1$, then the eigenvalues of $A$ are not distinct, and $A$ has the Jordan Canonical Form [HK61, p. 247]
+
+$\left(\begin{array}{ll}1 & 1 \\ 0 & 1\end{array}\right)$ or $\left(\begin{array}{cc}-1 & 1 \\ 0 & -1\end{array}\right)$, respectively, in which case $A^{k} \neq\left(\begin{array}{ll}1 & 0 \\ 0 & 1\end{array}\right)$. Hence, the desired periodicity holds if and only if $c=\cos \left(\frac{2 \pi j}{k}\right)$, where $j$ is an integer, and $0<j<$ $k / 2$
+\textbf{Topic} :Sequences, Series, and Products \\
+\textbf{Book} :Berkeley Problems in Mathematics\\
+\textbf{Final Answer} :\\
+
+
+\textbf{Solution} : If $\lim x_{n}=x_{\infty} \in \mathbb{R}$, we have $x_{\infty}=a+x_{\infty}^{2} ;$ so
+
+$$
+x_{\infty}=\frac{1 \pm \sqrt{1-4 a}}{2}
+$$
+
+and we must have $a \leqslant 1 / 4$.
+
+Conversely, assume $0<a \leqslant 1 / 4$. As $x_{n+1}-x_{n}=x_{n}^{2}-x_{n-1}^{2}$, we conclude, by the Induction Principle [MH93, p. 7], that the given sequence is nondecreasing. Also,
+
+$$
+x_{n+1}=a+x_{n}^{2}<\frac{1}{4}+\frac{1}{4}=\frac{1}{2}
+$$
+
+if $x_{n}<1 / 2$, which shows that the sequence is bounded. It follows that the sequence converges when $0<a \leqslant 1 / 4$.
+\textbf{Topic} :Sequences, Series, and Products \\
+\textbf{Book} :Berkeley Problems in Mathematics\\
+\textbf{Final Answer} :\\
+
+
+\textbf{Solution} : Let $y_{n}=x_{n} / \sqrt{a}$. It will be shown that $y_{n} \rightarrow 1$. The sequence $\left(y_{n}\right)$ satisfies the recurrence relation
+
+$$
+y_{n}=\frac{1}{2}\left(y_{n-1}+\frac{1}{y_{n-1}}\right) .
+$$
+
+We have $y_{n} \geqslant 1$ for all $n$ because for any positive $b$
+
+$$
+\frac{1}{2}\left(b+\frac{1}{b}\right)-1=\frac{1}{2}\left(\sqrt{b}-\frac{1}{\sqrt{b}}\right)^{2} \geqslant 0 .
+$$
+
+Hence, for every $n$,
+
+$$
+y_{n-1}-y_{n}=\frac{1}{2}\left(y_{n-1}-\frac{1}{y_{n-1}}\right) \geqslant 0,
+$$
+
+so the sequence $\left(y_{n}\right)$ is nonincreasing. As it is also bounded below, it converges. Let $y_{n} \rightarrow y$. The recurrence relation gives
+
+$$
+y=\frac{1}{2}\left(y+\frac{1}{y}\right),
+$$
+
+i.e., $y=1 / y$, from which $y=1$ follows, since $y \geqslant 1$.
+\textbf{Topic} :Sequences, Series, and Products \\
+\textbf{Book} :Berkeley Problems in Mathematics\\
+\textbf{Final Answer} :\\
+
+
+\textbf{Solution} : 1. We have
+
+$$
+f(x)=\frac{1}{2}-\left(x-\frac{1}{2}\right)^{2}
+$$
+
+so $x_{n}$ is bounded by $1 / 2$ and, by the Induction Principle [MH93, p. 7], nondecreasing. Let $\lambda$ be its limit. Then
+
+$$
+\lambda=\frac{1}{2}-\left(\lambda-\frac{1}{2}\right)^{2}
+$$
+
+and, as the sequence takes only positive values,
+
+$$
+\lambda=\frac{1}{2} \text {. }
+$$
+
+2. It is clear, from the expression for $f$ above, that
+
+$$
+f(x) \leqslant x \text { for } x \leqslant-\frac{1}{2}
+$$
+
+and
+
+$$
+f(x) \leqslant-\frac{1}{2} \text { for } x \geqslant \frac{3}{2}
+$$
+
+therefore, the sequence diverges for such initial values.
+
+On the other hand, if $|x-1 / 2|<1$, we get
+
+$$
+\left|f(x)-\frac{1}{2}\right|<\left|x-\frac{1}{2}\right|
+$$
+
+so, for these initial values, we get
+
+$$
+\left|x_{n+1}-\frac{1}{2}\right|<\left|x-\frac{1}{2}\right|^{n}=o(1)
+$$
+\textbf{Topic} :Sequences, Series, and Products \\
+\textbf{Book} :Berkeley Problems in Mathematics\\
+\textbf{Final Answer} :\\
+
+
+\textbf{Solution} : Suppose that $\lim f_{n+1} / f_{n}=a<\infty . a \geqslant 1$ since the the sequence $f_{n}$ is increasing. We have
+
+$$
+\frac{f_{n+1}}{f_{n}}=1+\frac{f_{n-1}}{f_{n}} .
+$$
+
+Taking the limit as $n$ tends to infinity, we get (since $a \neq 0$ )
+
+$$
+a=1+\frac{1}{a}
+$$
+
+or
+
+$$
+a^{2}-a-1=0 .
+$$
+
+This quadratic equation has one positive root,
+
+$$
+\varphi=\frac{1+\sqrt{5}}{2} \text {. }
+$$
+
+We show now that the sequence $\left(f_{n+1} / f_{n}\right)$ is a Cauchy sequence. Applying the definition of the $f_{n}$ 's, we get
+
+$$
+\left|\frac{f_{n+1}}{f_{n}}-\frac{f_{n}}{f_{n-1}}\right|=\left|\frac{f_{n-1}^{2}-f_{n} f_{n-2}}{f_{n-1}^{2}+f_{n-1} f_{n-2}}\right|
+$$
+
+Since $f_{n}$ is an increasing sequence,
+
+$$
+f_{n-1}\left(f_{n-1}-f_{n-2}\right) \geqslant 0
+$$
+
+or
+
+$$
+f_{n-1}^{2}+f_{n-1} f_{n-2} \geqslant 2 f_{n-1} f_{n-2} .
+$$
+
+By substituting this in and simplifying, we get
+
+$$
+\left|\frac{f_{n+1}}{f_{n}}-\frac{f_{n}}{f_{n-1}}\right| \leqslant \frac{1}{2}\left|\frac{f_{n}}{f_{n-1}}-\frac{f_{n-1}}{f_{n-2}}\right| .
+$$
+
+By the Induction Principle [MH93, p. 7], we get
+
+$$
+\left|\frac{f_{n+1}}{f_{n}}-\frac{f_{n}}{f_{n-1}}\right| \leqslant \frac{1}{2^{n-2}}\left|\frac{f_{3}}{f_{2}}-\frac{f_{2}}{f_{1}}\right| .
+$$
+
+Therefore, by the Triangle Inequality [MH87, p. 20], for all $m>n$,
+
+$$
+\left|\frac{f_{m+1}}{f_{m}}-\frac{f_{n+1}}{f_{n}}\right| \leqslant\left|\frac{f_{3}}{f_{2}}-\frac{f_{2}}{f_{1}}\right| \sum_{k=n}^{m-1} \frac{1}{2^{k-2}} .
+$$
+
+Since the series $\sum 2^{-n}$ converges, the right-hand side tends to 0 as $m$ and $n$ tend to infinity. Hence, the sequence $\left(f_{n+1} / f_{n}\right)$ is a Cauchy sequence, and we are done.
+\textbf{Topic} :Sequences, Series, and Products \\
+\textbf{Book} :Berkeley Problems in Mathematics\\
+\textbf{Final Answer} :\\
+
+
+\textbf{Solution} : As
+
+$$
+\lim \left|\frac{a^{n+1}}{(n+1)^{b}(\log n+1)^{c}} \frac{n^{b}(\log n)^{c}}{a^{n}}\right|=|a|
+$$
+
+the series converges absolutely for $|a|<1$ and diverges for $|a|>1$.
+
+- $a=1$.
+
+(i) $b>1$. Let $b=1+2 \varepsilon$; we have
+
+$$
+\frac{1}{n^{1+2 \varepsilon}(\log n)^{c}}=o\left(\frac{1}{n^{1+\varepsilon}}\right) \quad(n \rightarrow \infty)
+$$
+
+and, as the series $\sum n^{-(1+\varepsilon)}$ converges, the given series converges absolutely for $b>1$.
+
+(ii) $b=1$. The series converges (absolutely) only if $c>1$ and diverges if $c \leqslant 1$, by the Integral Test [Rud87, p. 139].
+
+(iii) $b<1$. Comparing with the harmonic series, we conclude that the series diverges.
+
+- $a=-1$. By Leibniz Criterion [Rud87, p. 71], the series converges exactly when
+
+$$
+\lim \frac{1}{n^{b}(\log n)^{c}}=0
+$$
+
+which is equivalent to $b>0$ or $b=0, c>0$. \\
+\textbf{Topic} :Sequences, Series, and Products \\
+\textbf{Book} :Berkeley Problems in Mathematics\\
+\textbf{Final Answer} :\\
+
+
+\textbf{Solution} : Using the formula $\sin 2 x=2 \sin x \cos x$ and the Induction Principle [MH93, p. 7], starting with $\sin \frac{\pi}{2}=1$, we see that
+
+$$
+\cos \frac{\pi}{2^{2}} \cos \frac{\pi}{2^{3}} \cdots \cos \frac{\pi}{2^{n}}=\frac{1}{2^{n-1} \sin \frac{\pi}{2^{n}}}
+$$
+
+So we have
+
+$$
+\frac{1}{2^{n-1} \sin \frac{\pi}{2^{n}}}=\frac{2}{\pi} \frac{\frac{\pi}{2^{n}}}{\sin \frac{\pi}{2^{n}}} \sim \frac{2}{\pi} \quad(n \rightarrow \infty)
+$$
+
+since $\sin x \sim x(x \rightarrow 0)$
+
+
+\textbf{Topic} :Sequences, Series, and Products \\
+\textbf{Book} :Berkeley Problems in Mathematics\\
+\textbf{Final Answer} :\\
+
+
+\textbf{Solution} : Lemma 1: If $\left(x_{n}\right)$ is an infinite sequence in the finite interval $[a, b]$, then it has a convergent subsequence.
+
+Consider the sequence $y_{k}=\sup \left\{x_{n} \mid n \geqslant k\right\}$. By the least upper bound property, we know that $y_{k}$ exists and is in $[a, b]$ for all $k$. By the definition of supremum, it is clear that the $y_{k}$ 's form a nonincreasing sequence. Let $y$ be the infimum of this sequence. From the definition of infimum, we know that the $y_{k}$ 's converge to $y$. Again, by the definition of supremum, we know that we can find $x_{n}$ 's arbitrarily close to each $y_{k}$, so we can choose a subsequence of the original sequence which converges to $y$.
+
+Lemma 2: A continuous function $f$ on $[a, b]$ is bounded.
+
+Suppose $f$ is not bounded. Then, for each $n$, there is a point $x_{n} \in[a, b]$ such that $\left|f\left(x_{n}\right)\right|>n$. By passing to a subsequence, we may assume that the $x_{n}$ 's converge to a point $x \in[a, b]$. (This is possible by Lemma 1.) Then, by the continuity of $f$ at $x$, we must have that $\left|f(x)-f\left(x_{n}\right)\right|<1$ for $n$ sufficiently large, or $\left|f\left(x_{n}\right)\right|<|f(x)|+1$, contradicting our choice of the $x_{n}$ 's.
+
+Lemma 3: A continuous function $f$ on $[a, b]$ achieves its extrema.
+
+It will suffice to show that $f$ attains its maximum, the other case is proved in exactly the same way. Let $M=\sup f$ and suppose $f$ never attains this value. Define $g(x)=M-f(x)$. Then $g(x)>0$ on $[a, b]$, so $1 / g$ is continuous. Therefore, by Lemma $2,1 / g$ is bounded by, say, $N$. Hence, $M-f(x)>1 / N$, or $f(x)<M-1 / N$, contradicting the definition of $M$.
+
+Lemma 4: If a differentiable function $f$ on $(a, b)$ has a relative extremum at $a$ point $c \in(a, b)$, then $f^{\prime}(c)=0$.
+
+Define the function $g$ by
+
+$$
+g(x)=\left\{\begin{array}{ccc}
+\frac{f(x)-f(c)}{x-c} & \text { for } \quad x \neq c \\
+0 & \text { for } \quad x=c
+\end{array}\right.
+$$
+
+and suppose $g(c)>0$. By continuity, we can find an interval $J$ around $c$ such that $g(x)>0$ if $x \in J$. Therefore, $f(x)-f(c)$ and $x-c$ always have the same sign in $J$, so $f(x)<c$ if $x<c$ and $f(x)>f(c)$ if $x>c$. This contradicts the fact that $f$ has a relative extremum at $c$. A similar argument shows that the assumption that $g(c)<0$ yields a contradiction, so we must have that $g(c)=0$.
+
+Lemma 5 (Rolle's Theorem [MH93, p. 200]): Let $f$ be continuous on $[a, b]$ and differentiable on $(a, b)$ with $f(a)=f(b)$. There is a point $c \in(a, b)$ such that $f^{\prime}(c)=0$. Suppose $f^{\prime}(c) \neq 0$ for all $c \in(a, b)$. By Lemma $3, f$ attains its extrema on $[a, b]$, but by Lemma 4 it cannot do so in the interior since otherwise the derivative at that point would be zero. Hence, it attains its maximum and minimum at the endpoints. Since $f(a)=f(b)$, it follows that $f$ is constant, and so $f^{\prime}(c)=0$ for all $c \in(a, b)$, a contradiction.
+
+Lemma 6 (Mean Value Theorem [Rud87, p. 108]): If $f$ is a continuous function on $[a, b]$, differentiable on $(a, b)$, then there is $c \in(a, b)$ such that $f(b)-f(a)=f^{\prime}(c)(b-a)$.
+
+Define the function $h(x)=f(x)(b-a)-x(f(b)-f(a)) . h$ is continuous on $[a, b]$, differentiable on $(a, b)$, and $h(a)=h(b)$. By Lemma 5, there is $c \in(a, b)$ such that $h^{\prime}(c)=0$. Differentiating the expression for $h$ yields the desired result.
+
+There is a point $c$ such that $f(b)-f(a)=f^{\prime}(c)(b-a)$, but, by assumption, the right-hand side is 0 for all $c$. Hence, $f(b)=f(a)$.
+\textbf{Topic} :Differential Calculus \\
+\textbf{Book} :Berkeley Problems in Mathematics\\
+\textbf{Final Answer} :\\
+
+
+\textbf{Solution} : We have
+
+$$
+\begin{aligned}
+&p_{t}(x)=\left(1+t^{2}\right) x^{3}-3 t^{3} x+t^{4} \\
+&p_{t}^{\prime}(x)=3\left(1+t^{2}\right) x^{2}-3 t^{3} \\
+&p_{t}^{\prime \prime}(x)=6\left(1+t^{2}\right) x
+\end{aligned}
+$$
+
+- $t<0$. In this case, $p_{t}^{\prime}>0$ and $p_{t}(x)<0$ for $x$ sufficiently negative, and $p_{t}(x)>0$ for $x$ sufficiently positive. Hence, by the Intermediate Value Theorem [Rud87, p. 93], $p_{t}$ has exactly one root, of multiplicity 1 , since the derivative is positive.
+
+- $t=0$. Now $p_{t}(x)=x^{3}$, which has a single zero of multiplicity 3 .
+
+- $t>0$. We have
+
+$$
+p_{t}^{\prime}\left(\pm \sqrt{\frac{t^{3}}{1+t^{2}}}\right)=0
+$$
+
+and $p_{t}^{\prime \prime}(x)<0$ for negative $x ; p_{t}^{\prime \prime}(x)>0$ for positive $x$. So
+
+$$
+p_{t}\left(\sqrt{\frac{t^{3}}{1+t^{2}}}\right)
+$$
+
+is a local minimum, and
+
+$$
+p_{t}\left(-\sqrt{\frac{t^{3}}{1+t^{2}}}\right)
+$$
+
+is a local maximum of $p_{t}$.
+
+We will study the values of $p_{t}$ at these critical points. As $p_{t}(0)>0$ and $p_{t}^{\prime}(0)<0$, the relative maximum must be positive.
+
+We have
+
+$$
+p_{t}\left(\sqrt{\frac{t^{3}}{1+t^{2}}}\right)=t^{4}\left(1-\sqrt{\frac{t}{1+t^{2}}}\right)=A_{t}
+$$
+
+say. We get
+
+(i) $0<t<2-\sqrt{3}$. In this case, we have $A_{t}>0$, so $p_{t}$ has one single root.
+
+(ii) $2-\sqrt{3}<t<2+\sqrt{3}$. Now $A_{t}<0$ and $p_{t}$ has three roots.
+
+(iii) $t>2+\sqrt{3}$. We have $A_{t}>0$ and $p_{t}$ has one root.
+\textbf{Topic} :Differential Calculus \\
+\textbf{Book} :Berkeley Problems in Mathematics\\
+\textbf{Final Answer} :\\
+
+
+\textbf{Solution} : We claim there is an $\varepsilon>0$ such that $f(t) \neq 0$ for all $t \in(0, \varepsilon)$. Suppose, on the contrary, that there is a sequence $x_{n} \rightarrow 0$ such that $f\left(x_{n}\right)=0$. Considering the real function $\mathfrak{N} f(x)$, to each subinterval $\left[x_{n+1}, x_{n}\right]$, we find a sequence $t_{n} \rightarrow 0, t_{n} \in\left[x_{n+1}, x_{n}\right]$, such that $\mathfrak{A} f^{\prime}\left(t_{n}\right)=0$ for all $n$, but since $\lim _{t \rightarrow 0+} f^{\prime}(t)=C$, this would imply $\Re C=0$. In the same fashion, using the imaginary part of $f(x)$, we see that $\Im C=0$, which is a contradiction.
+
+Since $f(t)$ is nonzero on a small interval starting at 0 , the composition with the $C^{\infty}$-function absolute value
+
+$$
+\text { I } 1: \mathbb{C} \backslash\{0\} \rightarrow \mathbb{R}_{+}
+$$
+
+will give a $C^{1}$-function $g(t)=|f(t)|$, on a small neighborhood of zero.
+\textbf{Topic} :Differential Calculus \\
+\textbf{Book} :Berkeley Problems in Mathematics\\
+\textbf{Final Answer} :\\
+
+
+\textbf{Solution} : Integrating by parts and noting that $\varphi$ vanishes at 1 and 2 , we get
+
+$$
+\int_{1}^{2} e^{i \lambda x} \varphi(x) d x=\left.\frac{e^{i \lambda x}}{i \lambda} \varphi(x)\right|_{1} ^{2}-\frac{1}{i \lambda} \int_{1}^{2} e^{i \lambda x} \varphi^{\prime}(x) d x=-\frac{1}{i \lambda} \int_{1}^{2} e^{i \lambda x} \varphi^{\prime}(x) d x,
+$$
+
+applying integration by parts a second time and using the fact that $\varphi^{\prime}$ also vanishes at the endpoints, we get
+
+$$
+\int_{1}^{2} e^{i \lambda x} \varphi(x) d x=-\frac{1}{\lambda^{2}} \int_{1}^{2} e^{i \lambda x} \varphi^{\prime \prime}(x) d x .
+$$
+
+Taking absolute values gives
+
+$$
+\left|\int_{1}^{2} e^{i \lambda x} \varphi(x) d x\right| \leqslant \frac{1}{\lambda^{2}} \int_{1}^{2}\left|\varphi^{\prime \prime}(x)\right| d x .
+$$
+
+Since $\varphi \in C^{2}$, the integral on the right-hand side is finite, and we are done.
+\textbf{Topic} :Integral Calculus \\
+\textbf{Book} :Berkeley Problems in Mathematics\\
+\textbf{Final Answer} :\\
+
+
+\textbf{Solution} : Using the Maclaurin expansion [PMJ85, p. 127] of $\sin x$, we get
+
+$$
+\frac{\sin x}{x}=\sum_{0}^{\infty}(-1)^{n} \frac{x^{2 n}}{(2 n+1) !} .
+$$
+
+The series above is alternating for every value of $x$, so we have
+
+$$
+\left|\frac{\sin x}{x}-\sum_{0}^{k}(-1)^{n} \frac{x^{2 n+1}}{(2 n+1) !}\right| \leqslant \frac{x^{2 k+2}}{(2 k+3) !} .
+$$
+
+Taking $k=2$, we have
+
+$$
+\left|I-\int_{0}^{1 / 2}\left(1-\frac{x^{2}}{3 !}\right) d x\right| \leqslant \int_{0}^{1 / 2} \frac{x^{4}}{5 !} d x
+$$
+
+which gives an approximate value of $71 / 144$ with an error bounded by $0.00013$.
+\textbf{Topic} :Integral Calculus \\
+\textbf{Book} :Berkeley Problems in Mathematics\\
+\textbf{Final Answer} :\\
+
+
+\textbf{Solution} : Consider the figure
+
+MATHPIX IMAGE
+
+The left side of the desired inequality is the sum of the areas of the two shaded regions. Those regions together contain a rectangle of sides $a$, and $b$, from which the inequality follows. The condition for equality is $b=f(a)$, the condition that the two regions fill the rectangle. \\
+\textbf{Topic} :Integral Calculus \\
+\textbf{Book} :Berkeley Problems in Mathematics\\
+\textbf{Final Answer} :\\
+
+
+\textbf{Solution} : $\log x$ is integrable near zero, and near infinity it is dominated by $\sqrt{x}$, so the given integral exists finitely. Making the change of variables $x=a / t$, it becomes 
+
+$$
+\begin{aligned}
+\int_{0}^{\infty} \frac{\log x}{x^{2}+a^{2}} d x &=\frac{\log a}{a} \int_{0}^{\infty} \frac{d t}{1+t^{2}}-\frac{1}{a} \int_{0}^{\infty} \frac{\log t}{1+t^{2}} d t \\
+&=\left.\frac{\log a}{a} \arctan t\right|_{0} ^{\infty}-J \\
+&=\frac{\pi \log a}{2 a}-J .
+\end{aligned}
+$$
+
+If we treat $J$ in a similar way, we get $J=-J$, so $J=0$ and the given integral equals
+
+$$
+\frac{\pi \log a}{2 a}
+$$
+\textbf{Topic} :Integral Calculus \\
+\textbf{Book} :Berkeley Problems in Mathematics\\
+\textbf{Final Answer} :\\
+
+
+\textbf{Solution} : 1. By the Cauchy-Schwarz Inequality [MH93, p. 69], we have
+
+$$
+\left|g_{n}(x)\right| \leqslant \sqrt{\int_{0}^{1}(x+y) d y} \sqrt{\int_{0}^{1}\left(f_{n}(y)\right)^{2} d y} \leqslant \sqrt{\int_{0}^{1}(1+y) d y} \sqrt{5}=\sqrt{\frac{15}{2}}
+$$
+
+2. Since $\sqrt{x+y}$ is a continuous function of $x$ and $y$ on the compact unit square, it is uniformly continuous there. Hence, given any $\varepsilon>0$, there exists $\delta>0$ such that
+
+$$
+\left|\sqrt{x_{1}+y_{1}}-\sqrt{x_{2}+y_{2}}\right|<\varepsilon
+$$
+
+whenever $\left|x_{1}-x_{2}\right|+\left|y_{1}-y_{2}\right|<\delta$. In particular, $\left|\sqrt{x_{1}+y}-\sqrt{x_{2}+y}\right|<\varepsilon$ whenever $\left|x_{1}-x_{2}\right|<\delta$, therefore,
+
+$$
+\begin{aligned}
+\left|g_{n}\left(x_{1}\right)-g_{n}\left(x_{2}\right)\right| &=\left|\int_{0}^{1}\left(\sqrt{x_{1}+y}-\sqrt{x_{2}+y}\right) f_{n}(y) d y\right| \\
+& \leqslant \varepsilon \int_{0}^{1}\left|f_{n}(y)\right| d y \\
+& \leqslant 5 \varepsilon
+\end{aligned}
+$$
+
+whenever $\left|x_{1}-x_{2}\right|<\delta$. Since the same value of $\delta$ works for all values of $n$ simultaneously, the family $\left\{g_{n}\right\}$ is equicontinuous. Using the uniform bound established above the conclusion follows from the Arzelà-Ascoli's Theorem.
+\textbf{Topic} :Sequences of Functions \\
+\textbf{Book} :Berkeley Problems in Mathematics\\
+\textbf{Final Answer} :\\
+
+
+\textbf{Solution} : 1. We have, for $n \in \mathbb{N}$,
+
+$$
+\frac{1}{\pi} \int_{-\pi}^{\pi} f(x) \cos n x d x=0
+$$
+
+because the integrand is an odd function. Also
+
+$$
+\frac{1}{\pi} \int_{-\pi}^{\pi} f(x) \sin n x d x=\frac{2}{\pi} \int_{0}^{\pi} f(x) \sin n x d x
+$$
+
+
+
+$$
+\begin{aligned}
+&=\frac{2}{\pi}\left(-\left.\frac{x \cos n x}{n}\right|_{0} ^{\pi}+\int_{0}^{\pi} \frac{\cos n x}{n}\right) \\
+&=\frac{2}{\pi} \frac{(-1)^{n+1}}{n}
+\end{aligned}
+$$
+
+so the Fourier series of $f$ is
+
+$$
+\sum_{n=1}^{\infty} \frac{(-1)^{n+1} 2}{n} \sin n x .
+$$
+
+2. If the series converged uniformly the function $f$ would be continuous, which is not the case.
+
+3. As $f$ and $f^{\prime}$ are sectionally continuous, we have
+
+$$
+\sum_{n=1}^{\infty} \frac{(-1)^{n+1} 2 \sin n x}{n}=\frac{f(x-)+f(x+)}{2}= \begin{cases}f(x) & \text { if } x \neq(2 n+1) \pi \\ 0 & \text { if } x=(2 n+1) \pi\end{cases}
+$$
+
+where $n \in \mathbb{Z}$.
+\textbf{Topic} :Fourier Series \\
+\textbf{Book} :Berkeley Problems in Mathematics\\
+\textbf{Final Answer} :\\
+
+
+\textbf{Solution} : 1 . Since $f(x)$ is an odd function, the integrals
+
+$$
+\frac{1}{\pi} \int_{-\pi}^{\pi} f(x) \cos n x d x
+$$
+
+vanish for $n \in \mathbb{N}$. The Fourier series has only terms in $\sin n x$ given by
+
+$$
+b_{n}=\frac{1}{\pi} \int_{-\pi}^{\pi} x^{3} \sin n x d x .
+$$
+
+2. As $f$ and $f^{\prime}$ are sectionally continuous, we have
+
+$$
+\sum_{n=1}^{\infty} b_{n} \sin n x=\frac{f(x-)+f(x+)}{2}= \begin{cases}f(x) & \text { if } x \neq(2 n+1) \pi \\ 0 & \text { if } x=(2 n+1) \pi\end{cases}
+$$
+
+where $n \in \mathbb{Z}$.
+
+3. Using Parseval's Identity [MH93, p. 577]
+
+$$
+\frac{1}{2} a_{0}^{2}+\sum_{n=1}^{\infty}\left(a_{n}^{2}+b_{n}^{2}\right)=\frac{1}{\pi} \int_{-\pi}^{\pi} f^{2}(x) d x
+$$
+
+and the fact that all $a_{n}=0$,
+
+$$
+\sum_{n=1}^{\infty} b^{2}=\frac{1}{\pi} \int_{-\pi}^{\pi} x^{6} d x=\frac{2}{7} \pi^{6} .
+$$
+\textbf{Topic} :Fourier Series \\
+\textbf{Book} :Berkeley Problems in Mathematics\\
+\textbf{Final Answer} :\\
+
+
+\textbf{Solution} : The Fourier series of $f$ converges to $f$ because $f^{\prime \prime}$ exists. Let the Fourier series of $f$ be
+
+$$
+\frac{\alpha_{0}}{2}+\sum_{n=1}^{\infty}\left(\alpha_{n} \cos n x+\beta_{n} \sin n x\right)
+$$
+
+As $f^{\prime \prime}=g-k f$ is continuous, we obtain its Fourier series by termwise differentiating the series for $f$, and get
+
+$$
+\begin{gathered}
+\frac{k \alpha_{0}}{2}+\sum_{n=1}^{\infty}\left(\left(k-n^{2}\right) \alpha_{n} \cos n x+\left(k-n^{2}\right) \beta_{n} \sin n x\right)= \\
+\frac{a_{0}}{2}+\sum_{n=1}^{\infty}\left(a_{n} \cos n x+b_{n} \sin n x\right) .
+\end{gathered}
+$$
+
+So we have
+
+$$
+\alpha_{0}=\frac{a_{0}}{k}, \quad \alpha_{n}=\frac{a_{n}}{k-n^{2}}, \quad \beta_{n}=\frac{b_{n}}{k-n^{2}} \quad \text { for } n \geqslant 1 .
+$$
+\textbf{Topic} :Fourier Series \\
+\textbf{Book} :Berkeley Problems in Mathematics\\
+\textbf{Final Answer} :\\
+
+
+\textbf{Solution} : Let the arc length of the circle between the points of contact of the $(i-1)$ th and $i$ th sides be $2 \varphi_{i}$. The area of the corresponding part of the hexagon is $\tan \varphi_{i}$, the total area is $A=\sum_{i=1}^{6} \tan \varphi_{i}$. This is the function to be minimized on $(0, \pi / 2)^{6}$ with the restriction $\sum_{i=1}^{6} \varphi_{i}=\pi$. Since $A$ is a convex function on $(0, \pi / 2)^{6} \subset \mathbb{R}^{6}$, any critical point is an absolute minimum.
+
+MATHPIX IMAGE
+
+We use the method of Lagrange Multipliers [MH93, p. 414]. Lagrange's equations for a critical point are $\sec ^{2} \varphi_{i}=\lambda$, which are satisfied by $\varphi_{i}=\pi / 6$, corresponding to a regular hexagon. The minimal value of $A$ is $2 \sqrt{3}$.
+\textbf{Topic} :Differential Calculus \\
+\textbf{Book} :Berkeley Problems in Mathematics\\
+\textbf{Final Answer} :\\
+
+
+\textbf{Solution} : 1 . $|f(x, y)| \leq 2 \sqrt{x^{2}+y^{2}}$, and when $(x, y)$ approaches the origin the limit is 0 , and so is the limit of $f(x, y)$.
+
+2. Computing the the directional derivative of $f$ in the direction of $(x, y)$ with $y \neq 0$, we have
+
+$$
+\lim _{h \rightarrow 0} \frac{f(h x, h y)}{h}=\lim _{h \rightarrow 0}\left(1-\cos \frac{h^{2} x^{2}}{h y}\right) \sqrt{x^{2}+y^{2}}=0
+$$
+
+and in the direction of the $\mathrm{x}$-axis the limit is trivialy zero, because the function is identically zero.
+
+3. From the previous calculation, we know that, if $f$ were differentiable, the derivative would be zero, and then the quotient
+
+$$
+\frac{f(x, y)}{\sqrt{x^{2}+y^{2}}} \rightarrow 0
+$$
+
+as $(x, y) \rightarrow(0,0)$, but is false. To see it, approach the origin following the curve $y=x^{2} / \pi$, the limit of the quotient is then $1-\cos \pi=2$. \\
+\textbf{Topic} :Differential Calculus \\
+\textbf{Book} :Berkeley Problems in Mathematics\\
+\textbf{Final Answer} :\\
+
+
+\textbf{Solution} : The function $f$ is differentiable at the point $z=\left(x_{0}, y_{0}\right) \in U$ if there is a linear transformation $f^{\prime}(z) \in L\left(\mathbb{R}^{2}, \mathbb{R}^{1}\right)$ such that
+
+$$
+\lim _{h \rightarrow 0} \frac{\left|f(z+h)-f(z)-f^{\prime}(z) h\right|}{\|h\|}=0 .
+$$
+
+Continuity of the partial derivatives is a sufficient condition for differentiability. A calculation gives
+
+$$
+\begin{gathered}
+\frac{\partial f}{\partial x}(x, y)= \begin{cases}(4 / 3) x^{1 / 3} \sin y / x-y x^{-2 / 3} \cos y / x & \text { if } x \neq 0 \\
+0 & \text { if } x=0\end{cases} \\
+\frac{\partial f}{\partial y}(x, y)= \begin{cases}x^{1 / 3} \cos (y / x) & \text { if } x \neq 0 \\
+0 & \text { if } x=0\end{cases}
+\end{gathered}
+$$
+
+which are continuous on $\mathbb{R}^{2} \backslash\{(0, y) \mid y \in \mathbb{R}\}$. Thus, $f$ is differentiable there. At any point $(0, y)$, we have
+
+$$
+\frac{f(h, k)-f(0, y)}{\|(h, k)\|}=O\left(|h|^{1 / 3}\right)=o(1) \quad(h \rightarrow 0)
+$$
+
+so $f$ is differentiable at these points also.
+\textbf{Topic} :Differential Calculus \\
+\textbf{Book} :Berkeley Problems in Mathematics\\
+\textbf{Final Answer} :\\
+
+
+\textbf{Solution} : We have
+
+$$
+\nabla h(x, y)=\left(g^{\prime}(x) g(y), g^{\prime}(y) g(x)\right)
+$$
+
+For the desired condition to hold, $\nabla h(x, y)$ must be a scalar multiple of $(x, y)$, at least for $(x, y) \neq(0,0)$. Thus,
+
+$$
+\frac{g^{\prime}(x) g(y)}{x}=\frac{g^{\prime}(y) g(x)}{y},
+$$
+
+assuming $x y \neq 0$. This can be written as
+
+$$
+\frac{g^{\prime}(x)}{x g(x)}=\frac{g^{\prime}(y)}{y g(y)}
+$$
+
+which implies that $\frac{g^{\prime}(x)}{x g(x)}=A=$ constant. The preceding differential equation for $g$ has the general solution
+
+$$
+g(x)=B e^{A x^{2} / 2}
+$$
+
+with $B$ a constant, positive because $g$ is positive by assumption. Every such $g$ obviously has the required property.
+\textbf{Topic} :Differential Calculus \\
+\textbf{Book} :Berkeley Problems in Mathematics\\
+\textbf{Final Answer} :\\
+
+
+\textbf{Solution} :nan\\
+\textbf{Topic} :Differential Calculus \\
+\textbf{Book} :Berkeley Problems in Mathematics\\
+\textbf{Final Answer} :\\
+
+
+\textbf{Solution} : For $X \in \Sigma$, we have
+
+$$
+\begin{aligned}
+\|A-X\|^{2} &=(1-x)^{2}+y^{2}+z^{2}+(2-t)^{2} \\
+&=y^{2}+z^{2}+1-2 x+x^{2}+(2-t)^{2} \\
+& \geqslant \pm 2 y z+1-2 x+2|x|(2-t) \\
+&=4|x|-2 x+2(\pm y z-|x| t)+1
+\end{aligned}
+$$
+
+We can choose the sign, so $\pm y z-|x| t=0$ because $\operatorname{det} X=0$. As $4|x|-2 x \geqslant 0$, we have $\|A-X\| \geqslant 1$ with equality when $4|x|-2 x=0,|x|=2-t, y=\pm z$,
+
+MATHPIX IMAGE
+\textbf{Topic} :Differential Calculus \\
+\textbf{Book} :Berkeley Problems in Mathematics\\
+\textbf{Final Answer} :\\
+
+
+\textbf{Solution} : Each element of $P_{2}$ has the form $a x^{2}+b x+c$ for $(a, b, c) \in$ $\mathbb{R}^{3}$, so we can identify $P_{2}$ with $\mathbb{R}^{3}$ and $J$ becomes a scalar field on $\mathbb{R}^{3}$ :
+
+$$
+J(a, b, c)=\int_{0}^{1}\left(a x^{2}+b x+c\right)^{2} d x=\frac{a^{2}}{5}+\frac{a b}{2}+\frac{2 a c}{3}+\frac{b^{2}}{3}+b c+c^{2} .
+$$
+
+To $Q$ corresponds the set $\{(a, b, c) \mid a+b+c=1\}$. If $J$ achieves a minimum value on $Q$, then, by the Method of Lagrange Multipliers [MH93, p. 414], we know that there is a constant $\lambda$ with $\nabla J=\lambda \nabla g$, where $g(a, b, c)=a+b+c-1$. We have
+
+$$
+\nabla J=\left(\frac{2 a}{5}+\frac{b}{2}+\frac{2 c}{3}, \frac{a}{2}+\frac{2 b}{3}+c, \frac{2 a}{3}+b+2 c\right)
+$$
+
+and $\nabla g=(1,1,1)$. These and the constraint equation $g(a, b, c)=0$ form the system
+
+$$
+\left(\begin{array}{cccc}
+2 / 5 & 1 / 2 & 2 / 3 & -1 \\
+1 / 2 & 2 / 3 & 1 & -1 \\
+2 / 3 & 1 & 2 & -1 \\
+1 & 1 & 1 & 0
+\end{array}\right)\left(\begin{array}{l}
+a \\
+b \\
+c \\
+\lambda
+\end{array}\right)=\left(\begin{array}{c}
+0 \\
+0 \\
+0 \\
+1
+\end{array}\right)
+$$
+
+which has the unique solution $\lambda=2 / 9,(a, b, c)=(10 / 3,-8 / 3,1 / 3)$. Therefore, if $J$ attains a minimum, it must do so at this point. To see that $J$ does attain a minimum, parameterize the plane $Q$ with the $x y$ coordinates and consider the quadratic surface with a linear $z$ term defined by $z=J(x, y, 1-x-y)$ in $\mathbb{R}^{3}$. The surface is the graph of the map $J: P_{2} \rightarrow \mathbb{R}$. Rotating around the $z$-axis will eliminate the $x y$ cross-terms in the equation, reducing it to the standard equation of either an elliptic paraboloid or a hyperbolic paraboloid. However, $J$ is always nonnegative, so the surface must be an elliptic paraboloid and, as such, has a minimum.
+\textbf{Topic} :Differential Calculus \\
+\textbf{Book} :Berkeley Problems in Mathematics\\
+\textbf{Final Answer} :\\
+
+
+\textbf{Solution} : Let
+
+$$
+g(x, y)=\frac{-y}{x^{2}+y^{2}} \quad \text { and } \quad f(x, y)=\frac{x}{x^{2}+y^{2}} .
+$$
+
+Then
+
+Let $\gamma$ be the curve in $\mathcal{A}$ given by
+
+$$
+\frac{\partial g}{\partial y}=\frac{y^{2}-x^{2}}{\left(x^{2}+y^{2}\right)^{2}}=\frac{\partial f}{\partial x} .
+$$
+
+$$
+(x, y)=(2 \cos t, 2 \sin t), \quad 0 \leqslant t \leqslant 2 \pi .
+$$
+
+Then
+
+$$
+\int_{y} g(x, y) d x+f(x, y) d y=\int_{0}^{2 \pi}\left(\frac{-2 \sin t}{4}(-2 \sin t)+\frac{2 \cos t}{4}(2 \cos t)\right) d t
+$$
+
+
+
+$$
+\begin{aligned}
+&=\int_{0}^{2 \pi} d t \\
+&=2 \pi .
+\end{aligned}
+$$
+
+Suppose there is a function $h$ such that $(g, f)=\nabla h=\left(\frac{\partial h}{\partial x}, \frac{\partial h}{\partial y}\right)$. Then, since $\gamma$ is closed, by the fundamental theorem of vector calculus, we obtain
+
+$$
+\int_{y} g d x+f d y=0 .
+$$
+
+which contradicts the calculation above.
+\textbf{Topic} :Differential Calculus \\
+\textbf{Book} :Berkeley Problems in Mathematics\\
+\textbf{Final Answer} :\\
+
+
+\textbf{Solution} : $f$ is clearly a $C^{\infty}$ function, so
+
+$$
+\begin{aligned}
+f(X+h Y)-f(X) &=(X+h Y)(X+h Y)-X^{2} \\
+&=h X Y+h Y X+h^{2} Y^{2}
+\end{aligned}
+$$
+
+therefore
+
+$$
+f^{\prime}(X) \cdot Y=X Y+Y X
+$$
+\textbf{Topic} :Differential Calculus \\
+\textbf{Book} :Berkeley Problems in Mathematics\\
+\textbf{Final Answer} :\\
+
+
+\textbf{Solution} : 1 . The measure preserving condition is that the derivative, $f^{\prime}$, has absolute value 1 at every point. Since the function is continuous it must be either $f^{\prime}=-1$ or $f^{\prime}=1$ on the entire domain. Therefore, $f(x)=-x+c$ or $f(x)=x+c$ where $c$ is a constant. Thus, $f$ cannot map $\mathbb{R}$ into $\mathbb{R}_{+}$.
+
+2. Take $f(x, y)=\left(e^{-y} x, e^{y}\right)$.
+
+
+\textbf{Topic} :Differential Calculus \\
+\textbf{Book} :Berkeley Problems in Mathematics\\
+\textbf{Final Answer} :\\
+
+
+\textbf{Solution} : Using polar coordinates, we have
+
+$$
+\begin{aligned}
+\iint_{\mathcal{A}} e^{-x^{2}-y^{2}} d x d y &=\int_{0}^{2 \pi} \int_{0}^{1} \rho e^{-\rho^{2}} d \rho d \theta \\
+&=-\frac{1}{2} \int_{0}^{2 \pi} \int_{0}^{1}-2 \rho e^{-\rho^{2}} d \rho d \theta \\
+&=-\frac{1}{2} \int_{0}^{2 \pi}\left(e^{-1}-1\right) \\
+&=\pi\left(e^{-1}-1\right) .
+\end{aligned}
+$$
+\textbf{Topic} :Integral Calculus \\
+\textbf{Book} :Berkeley Problems in Mathematics\\
+\textbf{Final Answer} :\\
+
+
+\textbf{Solution} : We write
+
+$$
+\begin{aligned}
+I &=\int_{-\infty}^{\infty} e^{-3 y^{2} / 2}\left(\int_{-\infty}^{\infty} e^{-2 x^{2}+2 x y-y^{2} / 2} d x\right) d y \\
+&=\int_{-\infty}^{\infty} e^{-3 y^{2} / 2}\left(\int_{-\infty}^{\infty} e^{-2\left(x-\frac{y}{2}\right)^{2}} d x\right) d y
+\end{aligned}
+$$
+
+making the substitution $t=\sqrt{2}\left(x-\frac{y}{2}\right), d t=\sqrt{2} d x$ on the inner integral, we get
+
+$$
+\begin{aligned}
+I &=\frac{1}{\sqrt{2}} \int_{-\infty}^{\infty} e^{-3 y^{2} / 2}\left(\int_{-\infty}^{\infty} e^{-t^{2}} d t\right) d y \\
+&=\sqrt{\frac{\pi}{2}} \int_{-\infty}^{\infty} e^{-3 y^{2} / 2} d y
+\end{aligned}
+$$
+
+now making the substitution: $s=\sqrt{\frac{3}{2}} y, d s=\sqrt{\frac{3}{2}} d y$ we obtain
+
+$$
+\begin{aligned}
+I &=\sqrt{\frac{\pi}{3}} \int_{-\infty}^{\infty} e^{-s^{2}} d s \\
+&=\frac{\pi}{\sqrt{3}} .
+\end{aligned}
+$$
+\textbf{Topic} :Integral Calculus \\
+\textbf{Book} :Berkeley Problems in Mathematics\\
+\textbf{Final Answer} :\\
+
+
+\textbf{Solution} : Consider the annular region $\mathcal{A}$ between the circles of radius $r$ and $R$, then by the Green's Theorem
+
+$$
+\begin{aligned}
+&\int_{R} e^{x}\left(-\varphi_{y} d x+\varphi_{x} d y\right)-\int_{r} e^{y}\left(-\varphi_{y} d x+\varphi_{x} d y\right)= \\
+&=\int_{\partial \mathcal{A}} e^{x}\left(-\varphi_{x} d x+\varphi_{x} d y\right) \\
+&=\iint_{\mathcal{A}} d\left(e^{x}\left(-\varphi_{y} d x+\varphi_{x} d y\right)\right) \\
+&=\iint_{\mathcal{A}}-e^{x} \varphi_{y y} d y \wedge d x+\left(e^{x} \varphi_{x}+e^{x} \varphi_{x x}\right) d x \wedge d y \\
+&=\iint_{\mathcal{A}} e^{x}\left(\varphi_{x x}+e^{x} \varphi_{x x}+\varphi_{x}\right) d x \wedge d y=0
+\end{aligned}
+$$
+
+showing that the integral does not depend on the radius $r$. Now, parametrizing the circle of radius $r$
+
+$$
+\begin{aligned}
+&\int_{C_{r}} e^{x}\left(-\varphi_{y} d x+\varphi_{x} d y\right)= \\
+&=\int_{0}^{2 \pi} e^{r \cos \theta}\left(\varphi_{y}(r \cos \theta, r \sin \theta) \sin \theta+\varphi_{x}(r \cos \theta, r \sin \theta) \cos \theta\right) r d \theta
+\end{aligned}
+$$
+
+but when $r \rightarrow 0$ the integrand converges uniformly to
+
+$$
+\frac{\sin \theta}{2 \pi} \cdot \sin \theta+\frac{\cos \theta}{2 \pi} \cdot \cos \theta=\frac{1}{2 \pi}
+$$
+
+so the integral approaches 1 when $r \rightarrow 0$ and that is the value of the integral.
+\textbf{Topic} :Integral Calculus \\
+\textbf{Book} :Berkeley Problems in Mathematics\\
+\textbf{Final Answer} :\\
+
+
+\textbf{Solution} : Using the change of variables
+
+$$
+\begin{cases}x=\sin \varphi \cos \theta & 0<\theta<2 \pi \\ y=\sin \varphi \sin \theta & 0<\varphi<\pi \\ z=\cos \varphi & \end{cases}
+$$
+
+we have
+
+$$
+d A=\sin \varphi d \theta d \varphi
+$$
+
+and
+
+$$
+\iint_{\mathcal{S}}\left(x^{2}+y+z\right) d A=\int_{0}^{\pi} \int_{0}^{2 \pi}\left(\sin ^{2} \varphi \cos ^{2} \theta+\sin \varphi \sin \theta+\cos \varphi\right) \sin \varphi d \theta d \varphi .
+$$
+
+Breaking the integral in three terms, we get
+
+$$
+\begin{aligned}
+\int_{0}^{\pi} \int_{0}^{2 \pi} \sin \varphi \cos \varphi d \theta d \varphi=2 \pi \cdot \frac{1}{2} \int_{0}^{\pi} \sin 2 \varphi d \varphi=0 \\
+\int_{0}^{\pi} \int_{0}^{2 \pi} \sin ^{2} \varphi \sin \theta d \theta d \varphi=\left(\int_{0}^{\pi} \sin ^{2} \varphi d \varphi\right) \int_{0}^{2 \pi} \sin \theta d \theta=0 \\
+\int_{0}^{\pi} \int_{0}^{2 \pi} \sin ^{3} \varphi \cos ^{2} \theta d \theta d \varphi &=\left(\int_{0}^{\pi} \sin ^{3} \varphi d \varphi\right)\left(\int_{0}^{2 \pi} \cos ^{2} \theta d \theta\right) \\
+&=\int_{0}^{\pi} \frac{1}{4}\left(3 \sin \varphi-\sin ^{3} \varphi\right) d \varphi \int_{0}^{2 \pi} \cos ^{2} \theta d \theta \\
+&=\frac{1}{4}\left(-3 \cos \varphi+\left.\frac{1}{3} \cos ^{3} \varphi\right|_{0} ^{\pi}\right)\left(\int_{0}^{2 \pi} \frac{1+\cos 2 \theta}{2} d \theta\right) \\
+&=\frac{1}{4}\left(-3(-2)+\frac{1}{3}(-2)\right) \pi \\
+&=\frac{1}{4}\left(6-\frac{2}{3}\right) \pi=\frac{4}{3} \pi .
+\end{aligned}
+$$
+
+Therefore,
+
+$$
+\iint_{\mathcal{S}}\left(x^{2}+y+z\right) d A=\frac{4}{3} \pi
+$$
+\textbf{Topic} :Integral Calculus \\
+\textbf{Book} :Berkeley Problems in Mathematics\\
+\textbf{Final Answer} :\\
+
+
+\textbf{Solution} : 1 . We have
+
+$$
+\left|\begin{array}{ccc}
+\vec{\imath} & \vec{\jmath} & \vec{k} \\
+\partial / \partial x & \partial / \partial y & \partial / \partial z \\
+x^{2}+y-4 & 3 x y & 2 x z+z^{2}
+\end{array}\right|=-2 z \vec{\jmath}+(3 y-1) \vec{k} \text {. }
+$$
+
+2. Let $\mathcal{H}=\left\{(x, y, z) \in \mathbb{R}^{3} \mid x^{2}+y^{2}+z^{2}=16, z \geqslant 0\right\}$, and consider the set $\mathcal{D}$ given by $\mathcal{D}=\left\{(x, y, 0) \in \mathbb{R}^{3} \mid x^{2}+y^{2} \leqslant 16\right\} . \mathcal{H}$ and $\mathcal{D}$ have the same boundary, so, by Stokes' Theorem [Rud87, p. 253]
+
+$$
+\begin{aligned}
+\int_{\mathcal{H}}(\nabla \times F) \cdot \overrightarrow{d S} &=\int_{\partial \mathcal{H}} F \cdot \vec{d} l=\int_{\partial \mathcal{D}} F \cdot \overrightarrow{d l} \\
+&=\int_{\partial \mathcal{D}}(\nabla F \times F) \cdot d S=\iint_{\mathcal{D}}(-2 z \vec{j}+(3 y-1) \vec{k}) \cdot \vec{k} d x d y \\
+&=\iint_{\mathcal{D}}(3 y-1) d x d y=-16 \pi .
+\end{aligned}
+$$
+\textbf{Topic} :Integral Calculus \\
+\textbf{Book} :Berkeley Problems in Mathematics\\
+\textbf{Final Answer} :\\
+
+
+\textbf{Solution} : For $\left(x_{0}, y_{0}\right)$ to be the midpoint of $L\left(x_{0}, y_{0}\right)$, the $y$ intercept of $L$ must be $2 y_{0}$ and the $x$ intercept must be $2 x_{0}$. Hence, the slope of the tangent line is $-y_{0} / x_{0}$. Let the curve have the equation $y=f(x)$. We get the differential equation
+
+$$
+f^{\prime}(x)=-\frac{f(x)}{x},
+$$
+
+or
+
+$$
+-\frac{1}{x}=\frac{f^{\prime}(x)}{f(x)}=\frac{1}{y} \frac{d y}{d x} .
+$$
+
+By separation of variables, we get
+
+$$
+\log y=-\log x+C \text {. }
+$$
+
+Hence,
+
+$$
+f(x)=y=\frac{D}{x}
+$$
+
+for some constant $D$. Solving for the initial condition $f(3)=2$, we get $f(x)=6 / x$.
+\textbf{Topic} :First Order Equations \\
+\textbf{Book} :Berkeley Problems in Mathematics\\
+\textbf{Final Answer} :\\
+
+
+\textbf{Solution} :nan\\
+\textbf{Topic} :First Order Equations \\
+\textbf{Book} :Berkeley Problems in Mathematics\\
+\textbf{Final Answer} :\\
+
+
+\textbf{Solution} : From the equation, we get $x^{\prime}=0$ iff $x^{3}-x=0$, so the constant solutions are $x \equiv-1, x \equiv 0$, and $x \equiv 1$.
+
+2. Considering the sign of $x^{\prime}$, we get the phase portrait
+
+MATHPIX IMAGE
+
+so 0 is a stable singularity, and 1 a unstable one. There are no other singularities in $[0,1]$, so the limit of the orbit of the solution $x(t)$ that verifies $x(0)=1 / 2$ is 0 .
+\textbf{Topic} :First Order Equations \\
+\textbf{Book} :Berkeley Problems in Mathematics\\
+\textbf{Final Answer} :\\
+
+
+\textbf{Solution} : Suppose $y(t)>0$ for $t \in\left(t_{0}, t_{1}\right), y\left(t_{0}\right)=0$. Integrating the equation
+
+$$
+\frac{y^{\prime}}{\sqrt{y}}=1
+$$
+
+we get the solution $y(t)=(t+c)^{2} / 4$ where $c$ is a constant. Each such solution can be extended to a differentiable function on $\mathbb{R}$ :
+
+$$
+y(t)= \begin{cases}0 & \text { if } t \leqslant t_{0} \\ \left(t-t_{0}\right)^{2} / 4 & \text { if } t \geqslant t_{0}\end{cases}
+$$
+
+We must have $t_{0} \geqslant 0$ for $y$ to satisfy the given initial condition. $y \equiv 0$ is also a solution. \\
+\textbf{Topic} :First Order Equations \\
+\textbf{Book} :Berkeley Problems in Mathematics\\
+\textbf{Final Answer} :\\
+
+
+\textbf{Solution} : The two functions $y \equiv 0$ and $y \equiv 2$ are obviously solutions to the differential equation, and the first one satisfies the given initial condition. We will show that this is the only one. Suppose there is a solution $y(x)$ that satisfies the initial condition and it is not identically zero, then there is a point $x_{0}$ where $y\left(x_{0}\right) \neq 0$ and let $(a, b)$ denote a maximal interval where $y(x) \neq 0$ containing $x_{0}$. Ate least one of the two extremes of the interval exists, let's call it $a$, the other might be infinite and for that extreme $y(a)=0$.
+
+Inside this interval the separable differential equation can be written as
+
+$$
+\frac{d y}{\sqrt{y(y-2)}}=d x
+$$
+
+and with the substitution $w=x-1$ the first integral becomes
+
+$$
+\int \frac{d w}{\sqrt{w^{2}-1}}=\ln \left(w+\sqrt{w^{2}-1}\right)+C
+$$
+
+so integrating both sides we get
+
+$$
+\ln (y-1+\sqrt{y(y-2)})=x+C
+$$
+
+which is the same as
+
+$$
+y-1+\sqrt{y(y-2)}=k e^{x} \quad \text { for some } k>0
+$$
+
+but taking the limit when $x \rightarrow a, y$ is zero at the limit and we have a contradiction because the right side is positive. So no such functions exist, except for $y(x) \equiv 0$.
+\textbf{Topic} :First Order Equations \\
+\textbf{Book} :Berkeley Problems in Mathematics\\
+\textbf{Final Answer} :\\
+
+
+\textbf{Solution} : The given equation is equivalent to $\frac{d}{d x}(x y)=x$. Integrating both sides we get $x y=\frac{x^{2}}{2}+k$, so $y=\frac{x}{2}+\frac{k}{x}$ and $k$ has to be 0 for the function to be differentiable in the given interval.
+\textbf{Topic} :First Order Equations \\
+\textbf{Book} :Berkeley Problems in Mathematics\\
+\textbf{Final Answer} :\\
+
+
+\textbf{Solution} : Multiplying the first equation by the integrating factor $\exp \left(\int_{0}^{x} q(t) d t\right)$, we get
+
+$$
+\frac{d}{d x}\left(f(x) \exp \left(\int_{0}^{x} q(t) d t\right)\right)=0 .
+$$
+
+The general solution is therefore,
+
+$$
+f(x)=C \exp \left(-\int_{0}^{x} q(t) d t\right)
+$$
+
+where $C$ is a constant. The hypothesis is that $\lim _{x \rightarrow \infty} \int_{0}^{x} q(t) d t=+\infty$. Even if $|p| \geqslant|q|$, the corresponding property may fail for $p$. For example, for $p \equiv-1$ and $q \equiv 1$, the general solutions are respectively $C \exp (-x)$ and $C \exp (x)$.
+\textbf{Topic} :First Order Equations \\
+\textbf{Book} :Berkeley Problems in Mathematics\\
+\textbf{Final Answer} :\\
+
+
+\textbf{Solution} : The characteristic polynomial of the given differential equation is $(r-1)^{2}$ so the general solution is
+
+$$
+\alpha e^{t}+\beta t e^{t} \text {. }
+$$
+
+The initial conditions give $\alpha=1$, and $\beta=0$, so the solution is $y(t)=e^{t}$.
+\textbf{Topic} :Second Order Equations \\
+\textbf{Book} :Berkeley Problems in Mathematics\\
+\textbf{Final Answer} :\\
+
+
+\textbf{Solution} : The characteristic polynomial of the associated homogeneous equation is
+
+$$
+r^{2}-2 r+1=(r-1)^{2}
+$$
+
+so the general solution of the homogeneous equation
+
+$$
+\frac{d^{2} x}{d t^{2}}-2 \frac{d x}{d t}+x=0
+$$
+
+is
+
+$$
+A e^{t}+B t e^{t} \quad(A, B \in \mathbb{R}) .
+$$
+
+$(\cos t) / 2$ is easily found to be a particular solution of the original equation, so the general solution is
+
+$$
+A e^{t}+B t e^{t}+\frac{\cos t}{2} \text {. }
+$$
+
+The initial conditions give $A=-\frac{1}{2}$ and $B=\frac{1}{2}$, so the solution is
+
+$$
+\frac{1}{2}\left(e^{t}-t e^{t}+\cos t\right) \text {. }
+$$
+\textbf{Topic} :Second Order Equations \\
+\textbf{Book} :Berkeley Problems in Mathematics\\
+\textbf{Final Answer} :\\
+
+
+\textbf{Solution} : Substituting $y(x)=x^{a}$ gives the quadratic equation $a(a-1)+1=0$. The two roots are
+
+$$
+\frac{1}{2} \pm \frac{\sqrt{3} i}{2},
+$$
+
+so the general solution is
+
+$$
+y(x)=A \sqrt{x} \cos \left(\frac{\sqrt{3}}{2} \log x\right)+B \sqrt{x} \cos \left(\frac{\sqrt{3}}{2} \log x\right) .
+$$
+
+The boundary condition $y(1)=0$ implies $A=0$ and then the boundary condition $y(L)=0$ can be satisfied for nonzero $B$ only if
+
+$$
+\sin \left(\frac{\sqrt{3}}{2} \log L\right)=0 .
+$$
+
+\section{Equivalently,}
+
+$$
+L=e^{2 n \pi / \sqrt{3}}
+$$
+
+where $n$ is any positive integer.
+\textbf{Topic} :Second Order Equations \\
+\textbf{Book} :Berkeley Problems in Mathematics\\
+\textbf{Final Answer} :\\
+
+
+\textbf{Solution} :nan\\
+\textbf{Topic} :Second Order Equations \\
+\textbf{Book} :Berkeley Problems in Mathematics\\
+\textbf{Final Answer} :\\
+
+
+\textbf{Solution} : 1 . Since the differential equation is linear homogeneous with constant coefficients we can build its characteristic equation, which is,
+
+$$
+\lambda^{3}+\lambda^{2}-2=0 .
+$$
+
+By inspection we can easily see that 1 is one of the roots, factoring as
+
+$$
+(\lambda-1)\left(\lambda^{2}+2 \lambda+2\right)=0
+$$
+
+so the roots are 1 and $-1 \pm i$, and the solution to the differential equation has the form
+
+$$
+f(x)=c_{1} e^{x}+c_{2} e^{-x} \cos x+c_{3} e^{-x} \sin x
+$$
+
+so the space of solutions has dimension 3.
+
+2. $E_{0}$ is the two-dimensional subspace defined by $c_{1}=0$, that is, the function $g(t)=c_{2} e^{-t} \cos t+c_{3} e^{-t} \sin t$, and after the substitution for the initial condition we see that $c_{2}=0$ and $c_{3}=2$, so
+
+$$
+g(t)=2 e^{-t} \sin t .
+$$
+\textbf{Topic} :Higher Order Equations \\
+\textbf{Book} :Berkeley Problems in Mathematics\\
+\textbf{Final Answer} :\\
+
+
+\textbf{Solution} : The four complex fourth roots of $-1$ are $\frac{\pm 1 \pm i}{\sqrt{2}}$. Therefore the functions $e^{\pm x / \sqrt{2}} \cos (x / \sqrt{2})$ and $e^{\pm x / \sqrt{2}} \sin (x / \sqrt{2})$ satisfy the differential equation $y^{(4)}=-y$.
+
+For $u(t)=e^{-x / \sqrt{2}} \sin (x / \sqrt{2})$ we have $u(0)=\lim _{x \rightarrow \infty} u(x)=\lim _{x \rightarrow \infty} u^{\prime}(x)=0$.
+
+As $u^{\prime}(0)=1 / \sqrt{2}, y(t)=\sqrt{2} e^{-x / \sqrt{2}} \sin (x / \sqrt{2})$ also satisfies $y^{\prime}(0)=1$. \\
+\textbf{Topic} :Higher Order Equations \\
+\textbf{Book} :Berkeley Problems in Mathematics\\
+\textbf{Final Answer} :\\
+
+
+\textbf{Solution} : 1 . The characteristic polynomial of the equation is
+
+$$
+x^{7}+\cdots+x+1=\frac{x^{8}-1}{x-1}
+$$
+
+which has roots $-1, \pm i$, and $(\pm 1 \pm i) / \sqrt{2}$. For each such root $z_{k}=u_{k}+i v_{k}$, $k=1, \ldots, 7$, we have the corresponding solution
+
+$$
+e^{z_{k} t}=e^{u_{k} t}\left(\cos v_{k} t+i \sin v_{k} t\right)
+$$
+
+and these form a basis for the space of complex solutions. To get a basis for the real solutions, we take the real and imaginary parts, getting the basis
+
+$$
+\begin{gathered}
+x_{1}(t)=e^{-t}, \quad x_{2}(t)=\cos t, \quad x_{3}(t)=\sin t, \quad x_{4}(t)=e^{\frac{1}{\sqrt{2}} t} \cos \frac{1}{\sqrt{2}} t, \\
+x_{5}(t)=e^{\frac{1}{\sqrt{2}} t} \sin \frac{1}{\sqrt{2}} t, \quad x_{6}(t)=e^{\frac{-1}{\sqrt{2}} t} \cos \frac{1}{\sqrt{2}} t, \quad x_{7}(t)=e^{\frac{-1}{\sqrt{2}} t} \sin \frac{1}{\sqrt{2}} t .
+\end{gathered}
+$$
+
+2. A solution tends to 0 at $\infty$ iff it is a linear combination of solutions in the basis with the same property. Hence, the functions $x_{1}, x_{6}$, and $x_{7}$ form a basis for the space of solutions tending to 0 at $\infty$.
+\textbf{Topic} :Higher Order Equations \\
+\textbf{Book} :Berkeley Problems in Mathematics\\
+\textbf{Final Answer} :\\
+
+
+\textbf{Solution} : Solving the characteristic equation $r^{3}-1=0$, we find that the general solution to $y^{\prime \prime \prime}-y=0$ is given by
+
+$$
+y(x)=c_{1} e^{x}+c_{2} e^{-x / 2} \cos \frac{\sqrt{3}}{2} x+c_{3} e^{-x / 2} \sin \frac{\sqrt{3}}{2} x,
+$$
+
+with $c_{1}, c_{2}$, and $c_{3} \in \mathbb{R}$. $\lim _{x \rightarrow \infty} y(x)=0$ when $c_{1}=0$. But the solution above with $c_{1}=0$, is the general solution of the differential equation with characteristic polynomial $\left(r^{3}-1\right) /(r-1)=r^{2}+r+1$, that is,
+
+$$
+y^{\prime \prime}+y^{\prime}+y=0 \text {. }
+$$
+
+So $y^{\prime \prime}(0)+y^{\prime}(0)+y(0)=0$, and we can take $a=b=c=1$ and $d=0$. 
+
+
+\textbf{Topic} :Higher Order Equations \\
+\textbf{Book} :Berkeley Problems in Mathematics\\
+\textbf{Final Answer} :\\
+
+
+\textbf{Solution} : Rewritting the system as a liner homogeneous system of equations we have
+
+$$
+\left(\begin{array}{c}
+x^{\prime}(t) \\
+y^{\prime}(t)
+\end{array}\right)=\left(\begin{array}{cc}
+2 & -1 \\
+1 & 0
+\end{array}\right)\left(\begin{array}{l}
+x(t) \\
+y(t)
+\end{array}\right)
+$$
+
+so the solutions are of the form
+
+$$
+\left(\begin{array}{l}
+x(t) \\
+y(t)
+\end{array}\right)=e^{A t}\left(\begin{array}{l}
+c_{1} \\
+c_{2}
+\end{array}\right)
+$$
+
+By the Cayley-Hamilton Theorem [HK61, p. 194], the computation of the exponential of a matrix reduces to a finite sum of terms, in this case two,
+
+$$
+e^{A t}=\alpha_{1} A t+\alpha_{0} I
+$$
+
+where the $\alpha_{i}(t)$ are functions of $t$ depending on the matrix $A$. Furthermore, if $r(\lambda)=\alpha_{1} \lambda+\alpha_{0}$, then for each eigenvalue $\lambda_{i}$ of $A, r\left(\lambda_{i}\right)=e^{\lambda_{i}}$ and for each one with multiplicity two
+
+$$
+e^{\lambda_{i}}=\left.\frac{d}{d \lambda} r(\lambda)\right|_{\lambda=\lambda_{i}}
+$$
+
+which is a way to compute the values of $\alpha_{0}$ and $\alpha_{1}$, and then the exponential $e^{A t}$. More generally, if $e^{A t}$ can be computed with the polynomial
+
+$$
+e^{A t}=\alpha_{n-1} A^{n-1} t^{n-1}+\alpha_{n-2} A^{n-2} t^{n-2}+\cdots+\alpha_{1} A t+\alpha_{0} I
+$$
+
+then if we consider the polynomial
+
+$$
+r(\lambda)=\alpha_{n-1} \lambda^{n-1}+\alpha_{n-2} \lambda^{n-2}+\cdots+\alpha_{1} \lambda+\alpha_{0}
+$$
+
+for each eigenvalue $\lambda_{i}$ of $A t$
+
+$$
+e^{\lambda_{i}}=r\left(\lambda_{i}\right)
+$$
+
+and furthermore, if the multiplicity of $\lambda_{i}$ is $k>1$, the each of the equations is also valid:
+
+$$
+e^{\lambda_{i}}=\left.\frac{d^{j}}{d \lambda^{j}} r(\lambda)\right|_{\lambda=\lambda_{i}} \quad \text { for } \quad 1 \leqslant j \leqslant k-1 .
+$$
+
+For more details on this and other interesting ways to compute the exponential of a matrix see [MVL78], specially Section 5, and the references cited there.
+
+The characteristic polynomial of $A t$ is
+
+$$
+\chi_{A t}(\lambda)=\lambda^{2}-(2 t) \lambda+t^{2}
+$$
+
+so the eigenvalues are $\lambda_{1}=\lambda_{2}=t$, and using the above formulas for the computation of $\alpha_{i}$, we get
+
+$$
+\begin{aligned}
+r(\lambda) &=\alpha_{1} \lambda+\alpha_{0} \\
+\frac{d r(\lambda)}{d \lambda} &=\alpha_{1}
+\end{aligned}
+$$
+
+and we end up with the system
+
+$$
+\begin{aligned}
+e^{t} &=t \alpha_{1}+\alpha_{0} \\
+e^{t} &=\alpha_{1}
+\end{aligned}
+$$
+
+Therefore the solutions are $\alpha_{1}=e^{t}$ and $\alpha_{0}=e^{t}(1-t)$ so the exponential is
+
+$$
+e^{A t}=e^{t}\left(\begin{array}{cc}
+1+t & -t \\
+t & 1-t
+\end{array}\right)
+$$
+
+The solutions are then
+
+$$
+\left(\begin{array}{l}
+x(t) \\
+y(t)
+\end{array}\right)=e^{t}\left(\begin{array}{cc}
+1+t & -t \\
+t & 1-t
+\end{array}\right)\left(\begin{array}{l}
+c_{1} \\
+c_{2}
+\end{array}\right)
+$$
+
+that is,
+
+$$
+\begin{aligned}
+&x(t)=e^{t}\left(k_{1}+k_{2} t\right) \\
+&y(t)=e^{t}\left(k_{1}-k_{2}+k_{2} t\right)
+\end{aligned}
+$$
+\textbf{Topic} :Systems of Differential Equations \\
+\textbf{Book} :Berkeley Problems in Mathematics\\
+\textbf{Final Answer} :\\
+
+
+\textbf{Solution} :nan\\
+\textbf{Topic} :Systems of Differential Equations \\
+\textbf{Book} :Berkeley Problems in Mathematics\\
+\textbf{Final Answer} :\\
+
+
+\textbf{Solution} : Expanding the matrix differential equation, we get the family of differential equations
+
+$$
+\frac{d f_{i j}}{d t}=f_{i-1 j-1}, \quad 1 \leqslant i, j \leqslant n,
+$$
+
+where $f_{i j} \equiv 0$ if $i$ or $j$ equals 0 . Solving these, we get
+
+$$
+X(t)=\left(\begin{array}{cccc}
+\xi_{11} & \xi_{12} & \xi_{13} & \xi_{14} \\
+\xi_{21} & \xi_{11} t+\xi_{22} & \xi_{12} t+\xi_{23} & \xi_{13} t+\xi_{24} \\
+\xi_{31} & \xi_{21} t+\xi_{32} & \frac{1}{2} \xi_{11} t^{2}+\xi_{22} t+\xi_{33} & \frac{1}{2} \xi_{12} t^{2}+\xi_{23} t+\xi_{34} \\
+\xi_{41} & \xi_{31} t+\xi_{42} & \frac{1}{2} \xi_{21} t^{2}+\xi_{32} t+\xi_{43} & \frac{1}{6} \xi_{11} t^{3}+\frac{1}{2} \xi_{22} t^{2}+\xi_{33} t+\xi_{44}
+\end{array}\right)
+$$
+
+where the $\xi_{i j}$ 's are constants.
+\textbf{Topic} :Systems of Differential Equations \\
+\textbf{Book} :Berkeley Problems in Mathematics\\
+\textbf{Final Answer} :\\
+
+
+\textbf{Solution} : Let $g(x)=(1+x)^{-1}$. We have
+
+$$
+g^{\prime}(x)=\frac{-1}{(1+x)^{2}}
+$$
+
+therefore,
+
+$$
+\left|g^{\prime}(x)\right| \leqslant \frac{1}{\left(1+x_{0} / 2\right)^{2}}<1 \text { for } x>x_{0} .
+$$
+
+Then, by the Fixed Point Theorem [Rud87, p. 220], the sequence given by
+
+$$
+x_{0}>0, \quad x_{n+1}=g\left(x_{n}\right)
+$$
+
+converges to the unique fixed point of $g$ in $\left[x_{0}, \infty\right)$. Solving $g(x)=x$ in that domain gives us the limit
+
+$$
+\frac{-1+\sqrt{5}}{2} \text {. }
+$$
+\textbf{Topic} :Fixed Point Theorem \\
+\textbf{Book} :Berkeley Problems in Mathematics\\
+\textbf{Final Answer} :\\
+
+
+\textbf{Solution} : 1. We have
+
+$$
+\begin{aligned}
+P_{n-1}(x) &=\frac{x^{n}-1}{x-1} \\
+&=x^{n-1}+\cdots+1
+\end{aligned}
+$$
+
+for $x \neq 1$, so $P_{n-1}(1)=n$.
+
+2. Let
+
+$$
+p_{k}=e^{\frac{2 \pi i(k-1)}{n}} \quad \text { for } k=1, \ldots, n
+$$
+
+be the $n^{t h}$ roots of 1 . As $p_{1}=1$, we have
+
+$$
+\prod_{i=2}^{n}\left(z-p_{k}\right)=P_{n-1}(z) .
+$$
+
+Letting $z=1$, and using Part 1, we get the desired result. \\
+\textbf{Topic} :Complex Numbers \\
+\textbf{Book} :Berkeley Problems in Mathematics\\
+\textbf{Final Answer} :\\
+
+
+\textbf{Solution} : From the recurrence relation, we see that the coefficients $a_{n}$ grow, at most, at an exponential rate, so the series has a positive radius of convergence. Let $f$ be the function it represents in its disc of convergence, and consider the polynomial $p(z)=3+4 z-z^{2}$. We have
+
+$$
+\begin{aligned}
+p(z) f(z) &=\left(3+4 z-z^{2}\right) \sum_{n=0}^{\infty} a_{n} z^{n} \\
+&=3 a_{0}+\left(3 a_{1}+4 a_{0}\right) z+\sum_{n=0}^{\infty}\left(3 a_{n}+4 a_{n-1}-a_{n-2}\right) z^{n} \\
+&=3+z
+\end{aligned}
+$$
+
+So
+
+$$
+f(z)=\frac{3+z}{3+4 z-z^{2}} .
+$$
+
+The radius of convergence of the series is the distance from 0 to the closest singularity of $f$, which is the closest root of $p$. The roots of $p$ are $2 \pm \sqrt{7}$. Hence, the radius of convergence is $\sqrt{7}-2$.
+\textbf{Topic} :Series and Sequences of Functions \\
+\textbf{Book} :Berkeley Problems in Mathematics\\
+\textbf{Final Answer} :\\
+
+
+\textbf{Solution} : As
+
+$$
+1-x^{2}+x^{4}-x^{6}+\cdots=\frac{1}{1+x^{2}}
+$$
+
+which has singularities at $\pm i$, the radius of convergence of
+
+$$
+\sum_{n=0}^{\infty} a_{n}(x-3)^{n}
+$$
+
+is the distance from 3 to $\pm i,|3 \mp i|=\sqrt{10}$. We then have
+
+$$
+\limsup _{n \rightarrow \infty}\left(\left|a_{n}\right|^{\frac{1}{n}}\right)=\frac{1}{\sqrt{10}} \cdot
+$$
+\textbf{Topic} :Series and Sequences of Functions \\
+\textbf{Book} :Berkeley Problems in Mathematics\\
+\textbf{Final Answer} :\\
+
+
+\textbf{Solution} : Let $R$ denote the radius of convergence of this power series.
+
+$$
+R=\underset{n}{\limsup _{n}\left|n^{\log n}\right|^{1 / n}}=\limsup _{n} e^{(\log n)^{2} / n}=e^{0}=1 .
+$$
+
+The series and all term by term derivatives converge absolutely on $|z|<1$ and diverge for $|z|>1$. Let $|z|=1$. For $k \geqslant 0$ the $k^{t h}$ derivative of the power series is
+
+$$
+\sum_{n=k}^{\infty} n(n-1) \cdots(n-k+1) \frac{z^{n-k}}{n^{\log n}} .
+$$
+
+To see that this converges absolutely, note that
+
+$$
+\sum_{n=k}^{\infty} n(n-1) \cdots(n-k+1) \frac{1}{n^{\log n}} \leqslant \sum_{n=k}^{\infty} \frac{1}{n^{\log n-k}} .
+$$
+
+Since, for $n$ sufficiently large, $\log n-k>2$, and $\sum 1 / n^{2}$ converges, by the Comparison Test [Rud87, p. 60] it follows that the power series converges absolutely on the circle $|z|=1$.
+\textbf{Topic} :Series and Sequences of Functions \\
+\textbf{Book} :Berkeley Problems in Mathematics\\
+\textbf{Final Answer} :\\
+
+
+\textbf{Solution} : The rational function
+
+$$
+f(z)=\frac{1-z^{2}}{1-z^{12}}
+$$
+
+has poles at all nonreal twelfth roots of unity (the singularities at $z^{2}=1$ are removable). Thus, the radius of convergence is the distance from 1 to the nearest singularity:
+
+$$
+R=|\exp (\pi i / 6)-1|=\sqrt{(\cos (\pi / 6)-1)^{2}+\sin ^{2}(\pi / 6)}=\sqrt{2-\sqrt{3}} .
+$$
+\textbf{Topic} :Series and Sequences of Functions \\
+\textbf{Book} :Berkeley Problems in Mathematics\\
+\textbf{Final Answer} :\\
+
+
+\textbf{Solution} : Let $\varepsilon_{k}=\lim _{n \rightarrow \infty} g_{n}^{(k)}(0)$. Then, clearly, $\left|\varepsilon_{k}\right| \leqslant\left|f^{(k)}(0)\right|$ for all $k$. Since $f$ is an entire function, its Maclaurin series [MH87, p. 234] converges absolutely for all $z$. Therefore, by the Comparison Test [Rud87, p. 60], the series
+
+$$
+\sum_{k=0}^{\infty} \varepsilon_{k} z^{k}
+$$
+
+converges for all $z$ and defines an entire function $g(z)$. Let $R>0$ and $\varepsilon>0$. For $|z| \leqslant R$, we have
+
+$$
+\left|g_{n}(z)-g(z)\right| \leqslant \sum_{k=0}^{N}\left|g_{n}^{(k)}(0)-\varepsilon_{k}\right| R^{k}
+$$
+
+
+
+$$
+\leqslant \sum_{k=0}^{N}\left|g_{n}^{(k)}(0)-\varepsilon_{k}\right| R^{k}+\sum_{k=N+1}^{\infty} 2\left|f^{(k)}(0)\right| R^{k}
+$$
+
+taking $N$ sufficiently large, the second term is less than $\varepsilon / 2$ (since the power series for $f$ converges absolutely and uniformly on the disc $|z| \leqslant R$ ). Let $n$ be so large that $\left|g_{n}^{(k)}(0)-\varepsilon_{k}\right|<\varepsilon / 2 M$ for $1 \leqslant k \leqslant N$, where
+
+$$
+M=\sum_{k=0}^{N} R^{k} .
+$$
+
+Thus, for such $n$, we have $\left|g_{n}(z)-g(z)\right|<\varepsilon$. Since this bound is independent of $z$, the convergence is uniform.
+\textbf{Topic} :Series and Sequences of Functions \\
+\textbf{Book} :Berkeley Problems in Mathematics\\
+\textbf{Final Answer} :\\
+
+
+\textbf{Solution} : Let $A=\{z|| z|<1| z-,1 / 4 \mid>1 / 4\}, B=\{z|r<| z \mid<1\}$. Let $f(z)=(z-\alpha) /(\alpha z-1)$ be a linear fractional transformation mapping $A$ onto $B$, where $-1<\alpha<1$. We have
+
+$$
+f(\{z|| z-1 / 4 \mid=1 / 4\})=\{z|| z \mid=r\}
+$$
+
+so
+
+$$
+\{f(0), f(1 / 2)\}=\{-r, r\}
+$$
+
+and
+
+$$
+0=r-r=f(0)+f(1 / 2)=\alpha+\frac{1 / 2-\alpha}{\alpha / 2-1}
+$$
+
+which implies $\alpha=2-\sqrt{3}$. Therefore, $r=|f(0)|=2-\sqrt{3}$.
+
+Suppose now that $g$ is a linear fractional transformation mapping $C=\{z|s<| z \mid<1\}$ onto $A$. Then $g^{-1}(\mathbb{R})$ is a straight line through the origin, because the real line is orthogonal to the circles $\{z|| z-1 / 4 \mid=1 / 4\}$ and $\{z|| z \mid=1\}$. Multiplying by a unimodular constant, we may assume $g^{-1}(\mathbb{R})=\mathbb{R}$. Then $f \circ g(C)=A$ and $f \circ g(\mathbb{R})=\mathbb{R}$. Replacing, if necessary, $g(z)$ by $g(s / z)$, we may suppose $f \circ g(\{z|| z \mid \leqslant 1\})=\{z|| z \mid \leqslant 1\}$, so
+
+$$
+f \circ g(z)=\beta \frac{z-\alpha}{\bar{\alpha} z-1} \quad \text { with } \quad|\alpha|<|\beta|=1 \text {. }
+$$
+
+Using the relation $0=f(s)+f(-s)$, we get $\alpha=0$, so $f \circ g(z)=\beta z$ and $s=r=2-\sqrt{3}$.
+\textbf{Topic} :Conformal Mappings \\
+\textbf{Book} :Berkeley Problems in Mathematics\\
+\textbf{Final Answer} :\\
+
+
+\textbf{Solution} : The map $\varphi_{1}(z)=2 z-1$ maps conformally the semidisc
+
+$$
+\left\{z|\mathfrak{I} z>0,| z-\frac{1}{2} \mid<\frac{1}{2}\right\}
+$$
+
+onto the upper half of the unit disc. The map
+
+$$
+\varphi_{2}(z)=\frac{1+z}{1-z}
+$$
+
+maps the unit disc conformally onto the right half-plane. Letting $z=r e^{i \theta}$, it becomes
+
+$$
+\frac{1+r e^{i \theta}}{1-r e^{i \theta}}=\frac{1-r^{2}+2 i r \sin \theta}{\left|1+r e^{i \theta}\right|^{2}} .
+$$
+
+Since $\sin \theta>0$ for $0<\theta<\pi, \varphi_{2}$ maps the upper half of $\mathbb{D}$ onto the upperright quadrant. The map $\varphi_{3}(z)=z^{2}$ maps the upper-right quadrant conformally onto the upper half-plane. The composition of $\varphi_{1}, \varphi_{2}$, and $\varphi_{3}$ is the desired map, namely the function $z \mapsto \frac{z^{2}}{(1-z)^{2}}$.
+\textbf{Topic} :Conformal Mappings \\
+\textbf{Book} :Berkeley Problems in Mathematics\\
+\textbf{Final Answer} :\\
+
+
+\textbf{Solution} : Let $\omega$ be a primitive $n^{t h}$ root of unity. The transformations $\psi_{j}(z)=\omega^{j} z, j=0, \ldots, n-1$, form a cyclic group of order $n$ and fix the points $z=0$ and $z=\infty$. Let $\chi(z)=\frac{z+1}{z-1}$. Then $\chi(1)=\infty, \chi(-1)=0$, and $\chi^{-1}=\chi$. The transformations $\varphi_{j}=\chi \circ \psi_{j} \circ \chi, j=0, \ldots, n-1$, thus form a cyclic group of order $n$ that fix the points 1 and $-1$. We have explicitly
+
+$$
+\varphi_{j}(z)=\frac{\omega^{j}\left(\frac{z+1}{z-1}\right)+1}{\omega^{j}\left(\frac{z+1}{z-1}\right)-1}=\frac{\left(\omega^{j}+1\right) z+\omega^{j}-1}{\left(\omega^{j}-1\right) z+\omega^{j}+1}=\frac{z+\left(\frac{\omega^{j}-1}{\omega^{j}+1}\right)}{\left(\frac{\omega^{j}-1}{\omega^{j}+1}\right) z+1} .
+$$
+
+
+
+
+\textbf{Topic} :Conformal Mappings \\
+\textbf{Book} :Berkeley Problems in Mathematics\\
+\textbf{Final Answer} :\\
+
+
+\textbf{Solution} : Let $b / a=r e^{i \beta}$ and consider the function $g$ defined by $g(z)=f(z) a^{-1} e^{-i \beta / 2}$. We have
+
+$$
+\begin{aligned}
+g\left(e^{i \theta}\right) &=e^{i(\theta-\beta / 2)}+r e^{i(\beta / 2-\theta)} \\
+&=(1+r) \cos (\theta-\beta / 2)+i(1-r) \sin (\theta-\beta / 2)
+\end{aligned}
+$$
+
+so the image of the unit circle under $g$ is the ellipse in standard position with axes $1+r$ and $|1-r|$. As $f(z)=a \exp (i \beta / 2) g(z), f$ maps the unit circle onto the ellipse of axes $|a|(1+r)$ and $|a(1-r)|$, rotated from the standard position $\arg a+\beta / 2$.
+\textbf{Topic} :Functions on the Unit Disc \\
+\textbf{Book} :Berkeley Problems in Mathematics\\
+\textbf{Final Answer} :\\
+
+
+\textbf{Solution} : We have, for $z, w \in \mathbb{D}$,
+
+$$
+f(w)=f(z) \text { iff }(w-z)\left(1+\frac{w+z}{2}\right)=0
+$$
+
+so $f$ in injective. Then the area of its image is given by
+
+$$
+\begin{aligned}
+\int_{\mathbb{D}}\left|f^{\prime}(z)\right|^{2} d x d y &=\int_{\mathbb{D}}\left(1+2 \mathfrak{I} z+|z|^{2}\right) d z \\
+&=\int_{\mathbb{D}}\left(1+2 x+x^{2}+y^{2}\right) d x d y \\
+&=\int_{0}^{2 \pi} \int_{0}^{1}\left(1+2 r \cos \theta+r^{2}\right) d r d \theta \\
+&=\frac{3 \pi}{2}
+\end{aligned}
+$$
+\textbf{Topic} :Functions on the Unit Disc \\
+\textbf{Book} :Berkeley Problems in Mathematics\\
+\textbf{Final Answer} :\\
+
+
+\textbf{Solution} : Let $\sum_{n=0}^{\infty} c_{n} z^{n}$ be the power series of such an $f$ at the origin. Then
+
+$$
+c_{0}=f(0)=(f(0))^{k}=c_{0}^{k},
+$$
+
+so $c_{0}$ is either 0 or a $(k-1)^{t h}$ root of unity. Assume $c_{0} \neq 0$ but that $f$ is not constant. Let $j$ be the smallest positive integer such that $c_{j} \neq 0$. Then $f\left(z^{k}\right)=$ $c_{0}+c_{j} z^{j k}+$ higher order terms, so $(f(z))^{k}=c_{0}+k c_{j} z^{j}+$ higher order terms, which gives a contradiction. Hence, if $f(0) \neq 0$, then $f$ is constant and equal to $\mathrm{a}(k-1)^{t h}$ root of unity.
+
+Assume $f(0)=0$ but $f$ is not identically 0 . Let $j$, as above, be the smallest positive integer such that $c_{j} \neq 0$. We then have $f(z)=z^{j} g(z)$, where $g$ is entire and $g(0)=c_{j}$. The function $z \mapsto z^{j}$ satisfies the condition imposed on $f$, so $g$ also satisfies that condition. By the preceding argument, $g$ is constant, equal to a $(k-1)^{t h}$ root of unity.
+
+Then $f$ is either the zero function or $f(z)=c z^{j}$, where $c$ is a $(k-1)^{t h}$ root of unity and $j$ is a nonnegative integer.
+\textbf{Topic} :Analytic and Meromorphic Functions \\
+\textbf{Book} :Berkeley Problems in Mathematics\\
+\textbf{Final Answer} :\\
+
+
+\textbf{Solution} : Let $f(x+i y)=u(x, y)+i v(x, y)$, where $u(x, y)=e^{x} s(y)$ and $v(x, y)=e^{x} t(y)$. From the Cauchy-Riemann equations [MH87, p. 72], we get $e^{x} s(y)=e^{x} t^{\prime}(y)$, so $s(y)=t^{\prime}(y)$. Similarly, $s^{\prime}(y)=-t(y)$. This equation has the unique solution $s(y)=\cos y$ satisfying the initial conditions $s(0)=1$ and $s^{\prime}(0)=-t(0)=0$, which, in turn, implies that $t(y)=-s^{\prime}(y)=\sin y$.
+\textbf{Topic} :Analytic and Meromorphic Functions \\
+\textbf{Book} :Berkeley Problems in Mathematics\\
+\textbf{Final Answer} :\\
+
+
+\textbf{Solution} : $f^{\prime \prime}+f$ is analytic on $\mathbb{D}$ and vanishes on $X=\{1 / n \mid n \geqslant 0\}$, so it vanishes identically. Using the Maclaurin expansion [MH87, p. 234] of $f$, we get
+
+$$
+\sum_{k \geqslant 0} \frac{f^{(k)}(0)}{k !} z^{k}=-\sum_{k \geqslant 0} \frac{f^{(k+2)}(0)}{k !} z^{k} .
+$$
+
+So we have
+
+$$
+f(0)=-f^{\prime \prime}(0)=\cdots=(-1)^{k} f^{(2 k)}(0)=\cdots
+$$
+
+and
+
+$$
+f^{\prime}(0)=-f^{\prime \prime \prime}(0)=\cdots=(-1)^{k} f^{(2 k+1)}(0)=\cdots
+$$
+
+Therefore,
+
+$$
+\begin{aligned}
+f(z) &=f(0) \sum_{k \geqslant 0} \frac{(-1)^{k}}{(2 k) !} z^{2 k}+f^{\prime}(0) \sum_{k \geqslant 0} \frac{(-1)^{k}}{(2 k+1) !} z^{2 k+1} \\
+&=f(0) \cos z+f^{\prime}(0) \sin z .
+\end{aligned}
+$$
+
+Conversely, any linear combination of $\cos z$ and $\sin z$ satisfies the given equation, so these are all such functions.
+\textbf{Topic} :Analytic and Meromorphic Functions \\
+\textbf{Book} :Berkeley Problems in Mathematics\\
+\textbf{Final Answer} :\\
+
+
+\textbf{Solution} : Clearly, entire functions of the form $f(z)=a z+b, a, b \in \mathbb{C}$ $a \neq 0$, are one-to-one maps of $\mathbb{C}$ onto $\mathbb{C}$. We will show that these are all such maps by considering the kind of singularity such a map $f$ has at $\infty$. If it has a removable singularity, then it is a bounded entire function, and, by Liouville's Theorem [MH87, p. 170], a constant.
+
+If it has an essential singularity, then, by the Casorati-Weierstrass Theorem [MH87, p. 256], it gets arbitrarily close to any complex number in any neighborhood of $\infty$. But if we look at, say, $f(0)$, we know that for some $\varepsilon$ and $\delta$, the disc $|z|<\delta$ is mapped onto $|f(0)-z|<\varepsilon$ by $f$. Hence, $f$ is not injective.
+
+Therefore, $f$ has a pole at $\infty$, so is a polynomial. But all polynomials of degree 2 or more have more than one root, so are not injective.
+\textbf{Topic} :Analytic and Meromorphic Functions \\
+\textbf{Book} :Berkeley Problems in Mathematics\\
+\textbf{Final Answer} :\\
+
+
+\textbf{Solution} : 1 . The function $f$ is defined on the open set $\Omega=\mathbb{C} \backslash[0,1]$. Suppose $D(a, R) \subset \Omega$. For every $z \in D(a, R)$ and $t \in[0,1]$,
+
+$$
+\left|\frac{z-a}{t-a}\right| \leqslant \frac{|z-a|}{R}<1 \text {. }
+$$
+
+Thus,
+
+$$
+\sum_{n=0}^{\infty} \frac{F(t)(z-a)^{n}}{(t-a)^{n+1}}=\frac{F(t)}{(t-a)} \frac{1}{\left(1-\frac{z-a}{t-a}\right)}=\frac{F(t)}{t-z} .
+$$
+
+The convergence of the series, for a fixed $z \in D(a, R)$, is uniform in $t \in[0,1]$. This follows from Weierstrass's $M$-test and the inequality
+
+$$
+\left|\frac{F(t)(z-a)^{n}}{(t-a)^{n+1}}\right| \leqslant \frac{\|F\|}{R}\left(\frac{|z-a|}{R}\right)^{n} .
+$$
+
+Thus we have the power series expansion, valid for $z \in D(a, R)$,
+
+$$
+f(z)=\int_{0}^{1} \frac{F(t)}{t-z} d t=\int_{0}^{1} \sum_{n=0}^{\infty} \frac{F(t)(z-a)^{n}}{(t-a)^{n+1}} d t=\sum_{n=0}^{\infty} c_{n}(z-a)^{n}
+$$
+
+where
+
+$$
+c_{n}=\int_{0}^{1} \frac{F(t)}{(t-a)^{n+1}} d t \quad(n=0,1,2, \ldots) .
+$$
+
+This proves that $f$ is analytic in $\Omega$.
+
+2. For $|z|>1$ and $0 \leqslant t \leqslant 1$, we have,
+
+$$
+\frac{F(t)}{t-z}=-\frac{F(t)}{z} \cdot \frac{1}{\left(1-\frac{t}{z}\right)}=-\frac{F(t)}{z} \sum_{n=0}^{\infty} \frac{t^{n}}{z^{n}}
+$$
+
+where the convergence, for a fixed $z$ in $|z|>1$, is uniform for $t \in[0,1]$ since $|t / z| \leqslant 1 /|z|<1$.
+
+We thus have the Laurent expansion, valid in $|z|>1$,
+
+$$
+f(z)=-\sum_{n=0}^{\infty} z^{-(n+1)} \int_{0}^{1} t^{n} F(t) d t=\sum_{n=1}^{\infty} b_{n} z^{-n}
+$$
+
+where
+
+$$
+b_{n}=-\int_{0}^{1} t^{n-1} F(t) d t \quad(n=1,2, \ldots) .
+$$
+
+The above is a transform $F \in \mathcal{C}[0,1] \mapsto f \in H(\Omega)$. We have seen above that the Laurent coefficients of $f$ are the moments $\int_{0}^{1} t^{n} F(t) d t(n \geqslant 0)$ of $F$. Now the Laurent coefficients are determined by $f$. To show that $F$ is determined by $f$ it is sufficient to show that the moments of $F$ determine $F$. This in turn is a consequence of the following result.
+
+If $\varphi \in \mathcal{C}[0,1]$, and $\int_{0}^{1} t^{n} \varphi(t) d t=0$ for all $n \geqslant 0$, then $\varphi=0$.
+
+It suffices to consider real-valued $\varphi$. By hypothesis, $\int_{0}^{1} p(t) \varphi(t) d t=0$ for all polynomials $p$. The Weierstrass Approximation Theorem asserts that there is a sequence of polynomials $p_{k}$ which converges to $\varphi$ uniformly on $[0,1]$. Thus $\int_{0}^{1} p_{k}(t) \varphi(t) d t \rightarrow \int_{0}^{1} \varphi^{2}(t) d t$ as $k \rightarrow \infty$, and so $\int_{0}^{1} \varphi^{2}(t) d t=0$. This implies that $\varphi=0$ on $[0,1]$.
+\textbf{Topic} :Analytic and Meromorphic Functions \\
+\textbf{Book} :Berkeley Problems in Mathematics\\
+\textbf{Final Answer} :\\
+
+
+\textbf{Solution} : By Cauchy's Integral Formula [MH87, p. 167], we have
+
+$$
+e^{0}=\frac{1}{2 \pi i} \int_{|z|=1} \frac{e^{z}}{z} d z=\frac{1}{2 \pi} \int_{0}^{2 \pi} e^{e^{i \theta}} d \theta
+$$
+
+therefore,
+
+$$
+\int_{0}^{2 \pi} e^{e^{i \theta}} d \theta=2 \pi .
+$$
+\textbf{Topic} :Cauchy's Theorem \\
+\textbf{Book} :Berkeley Problems in Mathematics\\
+\textbf{Final Answer} :\\
+
+
+\textbf{Solution} : By Cauchy's Integral Formula for derivatives [MH87, p. 169], we have
+
+therefore,
+
+$$
+\left.\frac{d}{d z} e^{z}\right|_{z=0}=\frac{1}{2 \pi i} \int_{|z|=1} \frac{e^{z}}{z^{2}} d z=\frac{1}{2 \pi} \int_{0}^{2 \pi} e^{e^{i \theta}-i \theta} d \theta
+$$
+
+$$
+\int_{0}^{2 \pi} e^{e^{i \theta}-i \theta} d \theta=2 \pi .
+$$
+\textbf{Topic} :Cauchy's Theorem \\
+\textbf{Book} :Berkeley Problems in Mathematics\\
+\textbf{Final Answer} :\\
+
+
+\textbf{Solution} : We'll apply Cauchy's Integral Formula [MH87, p. 167] to $f(z)=1 /(1-\bar{a} z)$, which is holomorphic on a neighborhood of $|z| \leqslant 1$. We have
+
+$$
+\begin{aligned}
+\int_{|z|=1} \frac{|d z|}{|z-a|^{2}} &=\int_{-\pi}^{\pi} \frac{1}{\left|e^{i \theta}-a\right|^{2}} d \theta \\
+&=\int_{-\pi}^{\pi} \frac{1}{\left(e^{i \theta}-a\right)\left(e^{-i \theta}-\bar{a}\right)} d \theta \\
+&=\int_{-\pi}^{\pi} \frac{e^{i \theta}}{\left(e^{i \theta}-a\right)\left(1-\bar{a} e^{i \theta}\right)} d \theta \\
+&=\frac{1}{i} \int_{|z|=1} \frac{1}{(z-a)(1-\bar{a} z)} d z \\
+&=\frac{2 \pi}{1-|a|^{2}} .
+\end{aligned}
+$$
+\textbf{Topic} :Cauchy's Theorem \\
+\textbf{Book} :Berkeley Problems in Mathematics\\
+\textbf{Final Answer} :\\
+
+
+\textbf{Solution} : The integrand equals
+
+$$
+\frac{1}{\left(a e^{i \theta}-b\right)^{2}\left(a e^{-i \theta}-b\right)^{2}}=\frac{e^{2 i \theta}}{\left(a e^{i \theta}-b\right)^{2}\left(a-b e^{i \theta}\right)^{2}}
+$$
+
+Thus, I can be written as a complex integral,
+
+$$
+I=\frac{1}{2 \pi i} \int_{|z|=1} \frac{z}{(a z-b)^{2}(a-b z)^{2}} d z=\frac{1}{2 \pi i b^{2}} \int_{|z|=1} \frac{z}{(a z-b)^{2}\left(z-\frac{a}{b}\right)^{2}} d z
+$$
+
+By Cauchy's Theorem for derivatives, we have
+
+$$
+I=\left.\frac{1}{b^{2}} \frac{d}{d z}\left(\frac{z}{(a z-b)^{2}}\right)\right|_{z=\frac{a}{b}}=\frac{a^{2}+b^{2}}{\left(b^{2}-a^{2}\right)^{3}}
+$$
+\textbf{Topic} :Cauchy's Theorem \\
+\textbf{Book} :Berkeley Problems in Mathematics\\
+\textbf{Final Answer} :\\
+
+
+\textbf{Solution} : 1. We have
+
+$$
+f(z)=\left(z-z_{1}\right)^{n_{1}} \cdots\left(z-z_{k}\right)^{n_{k}} g(z)
+$$
+
+where $g$ is an analytic function with no zeros in $\Omega$. So
+
+$$
+\frac{f^{\prime}(z)}{f(z)}=\frac{n_{1}}{z-z_{1}}+\cdots+\frac{n_{k}}{z-z_{k}}+\frac{g^{\prime}(z)}{g(z)} .
+$$
+
+Since $g$ is never 0 in $\Omega, g^{\prime} / g$ is analytic there, and, by Cauchy's Theorem [MH87, p. 152], its integral around $\gamma$ is 0 . Therefore,
+
+$$
+\frac{1}{2 \pi i} \int_{\gamma} \frac{f^{\prime}(z)}{f(z)} d z=\sum_{j=1}^{k} \frac{1}{2 \pi i} \int_{\gamma} \frac{n_{j}}{z-z_{j}} d z
+$$
+
+
+
+$$
+=\sum_{j=1}^{k} n_{j}
+$$
+
+2. We have
+
+so
+
+$$
+\frac{z f^{\prime}(z)}{f(z)}=\frac{z}{z-z_{1}}+\frac{g^{\prime}(z)}{g(z)}
+$$
+
+$$
+\frac{1}{2 \pi i} \int_{\gamma} \frac{z f^{\prime}(z)}{f(z)} d z=z_{1} \text {. }
+$$
+\textbf{Topic} :Cauchy's Theorem \\
+\textbf{Book} :Berkeley Problems in Mathematics\\
+\textbf{Final Answer} :\\
+
+
+\textbf{Solution} : The analyticity of $f$ can be proved with the aid of Morera's Theorem [MH87, p. 173]. If $\gamma$ is a rectangle contained with its interior in $\mathbb{C} \backslash[0,1]$, then
+
+$$
+\int_{\gamma} f(z) d z=\int_{0}^{1}\left(\int_{\gamma} \frac{\sqrt{t}}{t-z} d z\right) d t=0
+$$
+
+(by Cauchy's Theorem [MH87, p. 152]). Morera's Theorem thus implies that $f$ is analytic. Alternatively, one can argue directly: for $z_{0}$ in $\mathbb{C} \backslash[0,1]$
+
+$$
+\lim _{z \rightarrow z_{0}} \frac{f(z)-f\left(z_{0}\right)}{z-z_{0}}=\lim _{z \rightarrow z_{0}} \int_{0}^{1} \frac{\sqrt{t}}{\left(t-z_{0}\right)(t-z)} d t=\int_{0}^{1} \frac{\sqrt{t}}{\left(t-z_{0}\right)^{2}} d t,
+$$
+
+where the passage to the limit in the integral is justified by the uniform convergence of the integrands.
+
+To find the Laurent expansion [MH87, p. 246] about $\infty$ we assume $|z|>1$ and write
+
+$$
+\begin{aligned}
+f(z) &=-\frac{1}{z} \int_{0}^{1} \frac{\sqrt{t}}{1-\frac{t}{z}} d t \\
+&=-\frac{1}{z} \int_{0}^{\infty} \sum_{n=0}^{\infty} \frac{t^{n+\frac{1}{2}}}{z^{n}} d t
+\end{aligned}
+$$
+
+The series converges uniformly on $[0,1]$, so we can integrate term by term to get
+
+$$
+f(z)=-\sum_{n=0}^{\infty}\left(\int_{0}^{1} t^{n+\frac{1}{2}} d t\right) z^{-n-1}=-\sum_{n=0}^{\infty} \frac{z^{-n-1}}{n+\frac{3}{2}} .
+$$
+\textbf{Topic} :Cauchy's Theorem \\
+\textbf{Book} :Berkeley Problems in Mathematics\\
+\textbf{Final Answer} :\\
+
+
+\textbf{Solution} : Let $p(z)=z^{7}-4 z^{3}-11$. For $z$ in the unit circle, we have
+
+$$
+|p(z)-11|=\left|z^{7}-4 z^{3}\right| \leqslant 5<11
+$$
+
+so, by Rouché's Theorem [MH87, p. 421], the given polynomial has no zeros in the unit disc. For $|z|=2$,
+
+$$
+\left|p(z)-z^{7}\right|=\left|4 z^{3}+11\right| \leqslant 43<128=\left|z^{7}\right|
+$$
+
+so there are seven zeros inside the disc $\{z|| z \mid<2\}$ and they are all between the two given circles.
+\textbf{Topic} :Zeros and Singularities \\
+\textbf{Book} :Berkeley Problems in Mathematics\\
+\textbf{Final Answer} :\\
+
+
+\textbf{Solution} : As
+
+$$
+(\tan z)^{-2}-z^{-2}=\frac{z^{2}-(\tan z)^{2}}{z^{2}(\tan z)^{2}}
+$$
+
+the Maclaurin expansion [MH87, p. 234] of the numerator has no terms of degree up to 3 , whereas the expansion of the denominator starts with $z^{4}$, therefore, the limit is finite.
+
+As
+
+$$
+\tan z=z+\frac{1}{3} z^{3}+o\left(z^{4}\right) \quad(z \rightarrow 0)
+$$
+
+we have
+
+$$
+(\tan z)^{-2}-z^{-2}=\frac{z^{2}-z^{2}-\frac{2}{3} z^{4}+o\left(z^{4}\right)}{z^{4}+o\left(z^{4}\right)} \quad(z \rightarrow 0)
+$$
+
+so the limit at 0 is $-2 / 3$.
+\textbf{Topic} :Zeros and Singularities \\
+\textbf{Book} :Berkeley Problems in Mathematics\\
+\textbf{Final Answer} :\\
+
+
+\textbf{Solution} : Derivating twice, we can see that
+
+$$
+\frac{\partial^{2} u}{\partial x^{2}}=6 x=-\frac{\partial^{2} u}{\partial y^{2}},
+$$
+
+so $\Delta u=0$. The function $f$ is then given by (see [Car63b, pp. 126-127])
+
+$$
+f(z)=2 u\left(\frac{z}{2}, \frac{z}{2 i}\right)=2\left(\frac{z^{3}}{8}-3 \frac{z}{2} \frac{z^{2}}{(-4)}\right)=z^{3} .
+$$
+
+so, up to a constant, $v(x, y)=3 x^{2} y-y^{3}+k$.
+\textbf{Topic} :Harmonic Functions \\
+\textbf{Book} :Berkeley Problems in Mathematics\\
+\textbf{Final Answer} :\\
+
+
+\textbf{Solution} : 1. Let $f=u+i v$. Then $v$ is identically 0 on the unit circle. By the Maximum Modulus Principle [MH87, p. 185] for harmonic functions, $v$ is identically zero on $\mathbb{D}$. By the Cauchy-Riemann equations [MH87, p. 72], the partial derivatives of $u$ vanish; hence, $u$ is constant also and so is $f$.
+
+2. Consider
+
+$$
+f(z)=i \frac{z+1}{z-1} \text {. }
+$$
+
+$f$ is analytic everywhere in $\mathbb{C}$ except at 1 . We have
+
+$$
+f\left(e^{i \theta}\right)=i \frac{e^{i \theta}+1}{e^{i \theta}-1}=i \frac{e^{i \theta / 2}+e^{-i \theta / 2}}{e^{i \theta / 2}-e^{-i \theta / 2}}=\cot \left(\frac{\theta}{2}\right) \in \mathbb{R} .
+$$
+\textbf{Topic} :Harmonic Functions \\
+\textbf{Book} :Berkeley Problems in Mathematics\\
+\textbf{Final Answer} :\\
+
+
+\textbf{Solution} : Let $v$ be a harmonic conjugate of $u$, and let $f=e^{u+i v}$. Then $f$ is an entire function and, for $|z|>1$, we have
+
+$$
+|f(z)|=e^{u(z)} \leqslant e^{a \log |z|+b}=e^{b}|z|^{a} .
+$$
+
+Let $n$ be a positive integer such that $n \geqslant a$. Then the function $z^{-n} f(z)$ has an isolated singularity at $\infty$ and, by the preceding inequality, is bounded in a neighborhood of $\infty$. Hence, $\infty$ is a removable singularity of $z^{-n} f(z)$ and, thus, is, at worst, a pole of $f$. That means $f$ is an entire function with, at worst, a pole at $\infty$, and so $f$ is a polynomial. Since nonconstant polynomials are surjective and $f$ omits the value $0, f$ must be constant, and so is $u$, as desired.
+\textbf{Topic} :Harmonic Functions \\
+\textbf{Book} :Berkeley Problems in Mathematics\\
+\textbf{Final Answer} :\\
+
+
+\textbf{Solution} : 1. The set $G$ is the set of all invertible $2 \times 2$ real matrices. If $A, B \in G$, then $|A B|=|A||B| \neq 0$ and thus $A B \in G$. Matrix multiplication is associative. The identity matrix $I$ has determinant one, and thus belongs to $G$. Finally if $A \in G$ then $A$ is invertible, with $\left|A^{-1}\right|=1 /|A| \neq 0$, and thus $G$ is closed to inverses. This proves that $G$ is a multiplicative group.
+
+2. Let
+
+$$
+A=\left(\begin{array}{ll}
+a & b \\
+c & d
+\end{array}\right), B=\left(\begin{array}{ll}
+1 & 1 \\
+0 & 1
+\end{array}\right), \dot{C}=\left(\begin{array}{ll}
+1 & 0 \\
+1 & 1
+\end{array}\right) .
+$$
+
+Then
+
+$$
+\begin{aligned}
+& A B=\left(\begin{array}{ll}a & a+b \\c & c+d\end{array}\right) \quad B A=\left(\begin{array}{cc}a+c & b+d \\c & d\end{array}\right), \\
+& A C=\left(\begin{array}{ll}a+b & b \\c+d & d\end{array}\right) \quad C A=\left(\begin{array}{cc}a & b \\a+c & b+d\end{array}\right) .
+\end{aligned}
+$$
+
+The matrices $B$ and $C$ belong to $G$. If $A$ commutes with $B$ and with $C$ then $c=0$, $a=d, b=0$ and $A=a I$ is a scalar matrix. On the other hand any scalar matrix commutes with every element of $G$. We conclude that the center of $G$ is the set of all real $2 \times 2$ matrices $a I$ with $a \neq 0$.
+
+3. If $A, B$ are orthogonal then $(A B)(A B)^{t}=A B B^{t} A^{t}=I$, so $O$ is closed under multiplication. The identity matrix is orthogonal. Finally, if $A$ is orthogonal then $A^{-1}=A^{t}$ and $A^{-1}\left(A^{-1}\right)^{t}=A^{t} A=I$, thus $O$ is a subgroup of $G$. If $x=\left(\begin{array}{ll}1 & 0 \\ 1 & 1\end{array}\right)$ and $y=\left(\begin{array}{ll}0 & 1 \\ 1 & 0\end{array}\right)$ then $x$ is in $G, y$ is in $O$ and
+
+$$
+x^{-1} y x=\left(\begin{array}{cc}
+1 & 0 \\
+-1 & 1
+\end{array}\right)\left(\begin{array}{ll}
+0 & 1 \\
+1 & 0
+\end{array}\right)\left(\begin{array}{ll}
+1 & 0 \\
+1 & 1
+\end{array}\right)=\left(\begin{array}{cc}
+1 & 1 \\
+0 & -1
+\end{array}\right)
+$$
+
+is not orthogonal. This proves that $O$ is not a normal subgroup of $G$.
+
+4. $\mathbb{R}^{*}=\mathbb{R} \backslash\{0\}$ is an abelian multiplicative group. The map det : $G \rightarrow \mathbb{R}^{*}$ is a group homomorphism which is clearly surjective, and nontrivial.
+\textbf{Topic} :Examples of Groups and General Theory \\
+\textbf{Book} :Berkeley Problems in Mathematics\\
+\textbf{Final Answer} :\\
+
+
+\textbf{Solution} :nan\\
+\textbf{Topic} :Examples of Groups and General Theory \\
+\textbf{Book} :Berkeley Problems in Mathematics\\
+\textbf{Final Answer} :\\
+
+
+\textbf{Solution} : 1. Let $C_{g}$ denote the conjugacy class of $g$ and $Z_{g}$ the centralizer of $g$. Using the Orbit Stabilizer Theorem [Fra99, Thm. 16.16], [Lan94, Prop. I.5.1], $\left|Z_{g}\right| \cdot\left|C_{g}\right|=|G|$ for every element $g$. Hence $\sum_{g \in C}\left|Z_{g}\right|=|G|$ for every conjugacy class $C$, and $|X|=\sum_{g \in G}\left|Z_{g}\right|=c|G|$.
+
+2. In this case $G=S_{5}$, so $|G|=5 !=120$. The number of conjugacy classes is the number of partitions of 5 , namely 7 . So there are $7 \cdot 120=840$ pairs of commuting permutations.
+\textbf{Topic} :Homomorphisms and Subgroups \\
+\textbf{Book} :Berkeley Problems in Mathematics\\
+\textbf{Final Answer} :\\
+
+
+\textbf{Solution} : We will prove a more general result. Let $G=\langle g\rangle,|G|=n$, and $\alpha \in$ Aut $G$. As $\alpha(g)$ also generates $G$, we have $\alpha(g)=g^{k}$ for some $1 \leqslant k<n$, $(k, n)=1$. Conversely, $x \mapsto x^{k}$ is an automorphism of $G$ for $(k, 1)=1$. Let $\mathbb{Z}_{n}$ be the multiplicative group of residue classes modulo $n$ relatively prime to $n$. If $\bar{k}$ denotes the residue class containing $k$, we can define $\Phi:$ Aut $G \rightarrow \mathbb{Z}_{n}$ by
+
+$$
+\Phi(\alpha)=\bar{k} \quad \text { iff } \quad \alpha(g)=g^{k} .
+$$
+
+It is clear that $\Phi$ is an isomorphism. As $\mathbb{Z}_{n}$ is an abelian group of order $\varphi(n)$ ( $\varphi$ is Euler's totient function [Sta89, p. 77], [Her75, p. 43]), so is Aut $G$. When $n$ is prime, these groups are also cyclic.
+\textbf{Topic} :Homomorphisms and Subgroups \\
+\textbf{Book} :Berkeley Problems in Mathematics\\
+\textbf{Final Answer} :\\
+
+
+\textbf{Solution} : For each nonzero rational $s$, the map $f: \mathbb{Q} \rightarrow \mathbb{Q}$ given by $x \mapsto s x$ is a bijection and satisfies $f(x+y)=f(x)+f(y)$. Thus $f$ is an automorphism of $\mathbb{Q}$.
+
+Conversely, let $f$ be an automorphism of $\mathbb{Q}$. Then $f(0)=0$, and $s=f(1)$ is a nonzero rational. The inductive step $f(n+1)=f(n)+f(1)=n s+s$ proves that $f(n)=n s$ for $n \geqslant 1$. Further as $0=f(n+(-n))=f(n)+f(-n)$ we see that $f(-n)=-f(n)=-n s$ for $n \geqslant 1$. Thus $f(n)=n s$ for $n \in \mathbb{Z}$. Now let $x=m / n$ where $n>0$ and $m \in \mathbb{Z}$. Then $m s=f(m)=f(n x)=n f(x)$. Thus $f(x)=s x$.
+\textbf{Topic} :Homomorphisms and Subgroups \\
+\textbf{Book} :Berkeley Problems in Mathematics\\
+\textbf{Final Answer} :\\
+
+
+\textbf{Solution} : The only homomorphism is the trivial one. Suppose $\varphi$ is a nontrivial homomorphism. Then $\varphi(a)=m \neq 1$ for some $a, m \in \mathbb{Q}$. We have
+
+$$
+a=\frac{a}{2}+\frac{a}{2}=\frac{a}{3}+\frac{a}{3}+\frac{a}{3}+\cdots
+$$
+
+but $m$ is not the $n^{\text {ih }}$ power of a rational number for every positive $n$. For example $3 / 5=1 / 5+1 / 5+1 / 5$ but $\sqrt[3]{\frac{3}{5}} \notin \mathbb{Q}^{+}$
+\textbf{Topic} :Homomorphisms and Subgroups \\
+\textbf{Book} :Berkeley Problems in Mathematics\\
+\textbf{Final Answer} :\\
+
+
+\textbf{Solution} : Since $G$ is finitely generated, $\operatorname{Hom}\left(G, S_{k}\right)$ is finite (bounded by $\left.(k !)^{n}\right)$, where $S_{k}$ denotes the symmetric group on $k$ numbers $1,2, \ldots, k$. For any subgroup $H$ of index $k$ in $G$, we can identify $G / H$ with this set of symbols, sending the coset $H$ to 1 . Then the left action of $G$ on $G / H$ determines an element of $\operatorname{Hom}\left(G, S_{k}\right)$ such that $H$ is the stabilizer of 1 . Thus, the number of such $H$ 's is, at most, $(k !)^{n}$.
+
+
+\textbf{Topic} :Homomorphisms and Subgroups \\
+\textbf{Book} :Berkeley Problems in Mathematics\\
+\textbf{Final Answer} :\\
+
+
+\textbf{Solution} : 1. For each $x \in G$ the map $h \mapsto x h$ is a bijection between $H$ and the left coset $x H$. Thus, $|H|=|x H|$. Further, the left cosets of $H$ form a partition of $G$, arising from the equivalence relation on $G$ given by $x \sim y$ iff $x^{-1} y \in H$. Thus, the number of left cosets of $H$ in $G$ is given by $|G| /|H|$. The same holds for right cosets: here the partition of $G$ is given by the relation $x \sim y$ iff $x y^{-1} \in H$. This proves the result.
+
+2. The group of symmetries of the square is the dihedral group $D_{4}$ of order 8 . Take the square with vertices $P_{4}=\{1, i,-1,-i\}$ in the complex plane. Let $r$ denote the rotation of the about the origin through the angle $\pi / 2$. Then $\left\{1, r, r^{2}, r^{3}\right\}$ is a normal subgroup of $D_{4}$. Let $s$ be the reflection in the real axis. The elements of $D_{4}$ are
+
+$$
+1, r, r^{2}, r^{3}, s, r s, r^{2} s, r^{3} s
+$$
+
+Further, $s^{2}=1$, and $r s$ is also a reflection, so $(r s)^{2}=1$ or $s r=r^{-1} s=r^{3} s$. We obtain the presentation
+
+$$
+D_{4}=\left\langle r, s \mid r^{4}=1=s^{2}, s r=r^{-1} s\right\rangle .
+$$
+
+Let $H=\{1, s\}$. Then $r H=\{r, r s\} \neq H r=\{r, s r\}$.
+\textbf{Topic} :Normality, Quotients, and Homomorphisms \\
+\textbf{Book} :Berkeley Problems in Mathematics\\
+\textbf{Final Answer} :\\
+
+
+\textbf{Solution} : The groups of order $\leqslant 6$ are $\{1\}, \mathbb{Z}_{2}, \mathbb{Z}_{3}, \mathbb{Z}_{4}, \mathbb{Z}_{2} \times \mathbb{Z}_{2}, \mathbb{Z}_{5}$, $\mathbb{Z}_{6}$, and the symmetric group $S_{3}$. Suppose that $G$ is a group with the mentioned property. Let $S$ be a Sylow-2 subgroup of $G$. Some Sylow-2 subgroup of $G$ must contain (a subgroup isomorphic to) $\mathbb{Z}_{4}$, and all Sylow 2-subgroups are conjugate, so $S$ contains $\mathbb{Z}_{4}$. Similarly $S$ contains $\mathbb{Z}_{2} \times \mathbb{Z}_{2}$. Thus $S$ cannot equal either, so 8 divides the order of $S$, which divides the order of $G$. On the other hand, $G$ has subgroups of orders 3 and 5 , so 3 and 5 also divide $|G|$. Since $8,3,5$ are pairwise relatively prime, their product 120 divides $|G|$. Thus $|G| \geqslant 120$. On the other hand, the group $G=\mathbb{Z}_{4} \times \mathbb{Z}_{5} \times S_{3}$ of order 120 has the property: $\mathbb{Z}_{2}$ is isomorphic to a subgroup of $\mathbb{Z}_{4}$, and $\mathbb{Z}_{2}$ and $\mathbb{Z}_{3}$ are isomorphic to subgroups of $S_{3}$, so $\mathbb{Z}_{2} \times \mathbb{Z}_{2}$ and $\mathbb{Z}_{6} \cong \mathbb{Z}_{2} \times \mathbb{Z}_{3}$ are isomorphic to subgroups of $G$. The other desired inclusions are obvious.
+\textbf{Topic} :Normality, Quotients, and Homomorphisms \\
+\textbf{Book} :Berkeley Problems in Mathematics\\
+\textbf{Final Answer} :\\
+
+
+\textbf{Solution} : 1. First, note that the multiplication rule in $G$ reads
+
+$$
+\left(\begin{array}{cc}
+a & b \\
+0 & a^{-1}
+\end{array}\right)\left(\begin{array}{cc}
+a_{1} & b_{1} \\
+0 & a_{1}^{-1}
+\end{array}\right)=\left(\begin{array}{cc}
+a a_{1} & a b_{1}+b a_{1}^{-1} \\
+0 & a^{-1} a_{1}^{-1}
+\end{array}\right)
+$$
+
+which gives $\left(\begin{array}{cc}a & b \\ 0 & a^{-1}\end{array}\right)^{-1}=\left(\begin{array}{cc}a^{-1} & -b \\ 0 & a\end{array}\right)$. This makes it clear that $N$ is a subgroup, and if $\left(\begin{array}{ll}1 & \beta \\ 0 & 1\end{array}\right)$ is in $N$, then
+
+$$
+\begin{aligned}
+\left(\begin{array}{cc}
+a & b \\
+0 & a^{-1}
+\end{array}\right)^{-1}\left(\begin{array}{ll}
+1 & \beta \\
+0 & 1
+\end{array}\right)\left(\begin{array}{cc}
+a & b \\
+0 & a^{-1}
+\end{array}\right) &=\left(\begin{array}{cc}
+a^{-1} & -b \\
+0 & a
+\end{array}\right)\left(\begin{array}{cc}
+a & b+\beta a^{-1} \\
+0 & a^{-1}
+\end{array}\right) \\
+&=\left(\begin{array}{cc}
+1 & \beta a^{-2} \\
+0 & 1
+\end{array}\right) \in N,
+\end{aligned}
+$$
+
+proving that $N$ is normal.
+
+By the first equation, the map from $G$ onto $\mathbb{R}_{+}$(the group of positive reals under multiplication) given by $\left(\begin{array}{cc}a & b \\ 0 & a^{-1}\end{array}\right) \mapsto a$ is a homomorphism whose kernel is $N$ (which by itself proves that $N$ is a normal subgroup). Hence, $G / N$ is isomorphic to $\mathbb{R}_{+}$, which is isomorphic to the additive group $\mathbb{R}$.
+
+2. To obtain the desired normal subgroup majorizing $N$, we can take the inverse image under the homomorphism above of any nontrivial proper subgroup of $\mathbb{R}_{+}$. If we take the inverse image of $\mathbb{Q}_{+}$, the group of positive rationals, we get the proper normal subgroup
+
+$$
+N^{\prime}=\left\{\left(\begin{array}{cc}
+a & b \\
+0 & a^{-1}
+\end{array}\right) \mid a \in \mathbb{Q}+\right\}
+$$
+
+
+
+\section{of $G$, which contains $N$ properly.}
+\textbf{Topic} :Normality, Quotients, and Homomorphisms \\
+\textbf{Book} :Berkeley Problems in Mathematics\\
+\textbf{Final Answer} :\\
+
+
+\textbf{Solution} : Think of $S_{4}$ as permuting the set $\{1,2,3,4\}$. For $1 \leqslant i \leqslant 4$, let $G_{i} \subset S_{4}$ be the set of all permutations which fix $i$. Clearly, $G_{i}$ is a subgroup of $S_{4}$; since the elements of $G_{i}$ may freely permute the three elements of the set $\{1,2,3,4\} \backslash\{i\}$, it follows that $G_{i}$ is isomorphic to $S_{3}$. Thus, the $G_{i}$ 's are the desired four subgroups isomorphic to $S_{3}$.
+
+Similarly, for $i, j \in\{1,2,3,4\}, i \neq j$, let $H_{i j}$ be the set of permutations which fix $i$ and $j$. Again $H_{i j}$ is a subgroup of $S_{4}$, and since its elements can freely permute the other two elements, each must be isomorphic to $S_{2}$. Since for each pair $i$ and $j$ we must get a distinct subgroup, this gives us six such subgroups.
+
+Finally, note that $S_{2}$ is of order 2 and so is isomorphic to $\mathbb{Z}_{2}$. Therefore, any subgroup of $S_{4}$ which contains the identity and an element of order 2 is isomorphic to $S_{2}$. Consider the following three subgroups: $\{1,(12)(34)\},\{1,(13)(24)\}$, and $\{1,(14)(23)\}$. None of these three groups fix any of the elements of $\{1,2,3,4\}$, so they are not isomorphic to any of the $H_{i j}$. Thus, we have found the final three desired subgroups.
+\textbf{Topic} :, \\
+\textbf{Book} :Berkeley Problems in Mathematics\\
+\textbf{Final Answer} :\\
+
+
+\textbf{Solution} : We use the notation $1^{\alpha_{1}} 2^{\alpha_{2}} \ldots$ to denote the cycle pattern of a permutation in disjoint cycles form; this means that the permutation is a product of $\alpha_{1}$ cycles of length $1, \alpha_{2}$ cycles of length $2, \ldots$ (Thus the pattern of, say, (8)(3 4$)(56)(271) \in S_{8}$ is denoted by $1^{1} 2^{2} 3^{1}$.) The order of a permutation in disjoint cycles form is the least common multiple of the orders of its factors. The order of a cycle of length $r$ is $r$. The possible cycle patterns of elements of $S_{7}$ are
+
+$$
+\begin{aligned}
+& 1^{7} \\
+& 1^{5} 2^{1} ; \quad 1^{3} 2^{2} \quad 1^{1} 2^{3} ; \\
+& 1^{4} 3^{1} ; \quad 1^{2} 2^{1} 3^{1} ; \quad 2^{2} 3^{1} ; \quad 1^{1} 3^{2} ; \\
+& 1^{3} 4^{1} ; \quad 1^{1} 2^{1} 4^{1} ; \quad 3^{1} 4^{1} \\
+& 1^{2} 5^{1} ; \quad 2^{1} 5^{1} \text {; } \\
+& 1^{1} 6^{1} \text {; } \\
+& 7^{1} \text {. }
+\end{aligned}
+$$
+
+We see that possible orders of elements of $S_{7}$ are $1,2,3,4,5,6,7,10,12$.
+\textbf{Topic} :, \\
+\textbf{Book} :Berkeley Problems in Mathematics\\
+\textbf{Final Answer} :\\
+
+
+\textbf{Solution} : The order of a $k$-cycle is $k$, so the smallest $m$ which simultaneously annihilates all 9-cycles, 8-cycles, 7-cycles, and 5-cycles is $2^{3} \cdot 3^{2} \cdot 5 \cdot 7=$ 2520. Any $n$-cycle, $n \leqslant 9$, raised to this power is annihilated, so $n=2520$.
+
+To compute $n$ for $A 9$, note that an 8-cycle is an odd permutation, so no 8-cycles are in $A_{9}$. Therefore, $n$ need only annihilate 4-cycles (since a 4-cycle times a transposition is in A9), 9-cycles, 7-cycles, and 5-cycles. Thus, $n=2520 / 2=$ 1260.
+\textbf{Topic} :, \\
+\textbf{Book} :Berkeley Problems in Mathematics\\
+\textbf{Final Answer} :\\
+
+
+\textbf{Solution} : To determine the center of
+
+$$
+D_{n}=\left\langle a, b \mid a^{n}=b^{2}=1, b a=a^{-1} b\right\rangle
+$$
+
+( $a$ is a rotation by $2 \pi / n$ and $b$ is a flip), it suffices to find those elements which commute with the generators $a$ and $b$. Since $n \geqslant 3, a^{-1} \neq a$. Therefore,
+
+$$
+a^{r+1} b=a\left(a^{r} b\right)=\left(a^{r} b\right) a=a^{r-1} b
+$$
+
+so $a^{2}=1$, a contradiction; thus, no element of the form $a^{r} b$ is in the center. Similarly, if for $1 \leqslant s<n, a^{s} b=b a^{s}=a^{-s} b$, then $a^{2 s}=1$, which is possible only if $2 s=n$. Hence, $a^{s}$ commutes with $b$ if and only if $n=2 s$. So, if $n=2 s$, the center of $D_{n}$ is $\left\{1, a^{s}\right\}$; if $n$ is odd the center is $\{1\}$.
+\textbf{Topic} :, \\
+\textbf{Book} :Berkeley Problems in Mathematics\\
+\textbf{Final Answer} :\\
+
+
+\textbf{Solution} :nan\\
+\textbf{Topic} :Direct Products \\
+\textbf{Book} :Berkeley Problems in Mathematics\\
+\textbf{Final Answer} :\\
+
+
+\textbf{Solution} :nan\\
+\textbf{Topic} :Free Groups, Generators, and Relations \\
+\textbf{Book} :Berkeley Problems in Mathematics\\
+\textbf{Final Answer} :\\
+
+
+\textbf{Solution} : By the Structure Theorem for finitely generated abelian groups [Her75, p. 109], there are three: $\mathbb{Z}_{8}, \mathbb{Z}_{2} \times \mathbb{Z}_{4}$, and $\mathbb{Z}_{2} \times \mathbb{Z}_{2} \times \mathbb{Z}_{2}$.
+
+1. $\left(\mathbb{Z}_{15}\right)^{*}=\{1,2,4,7,8,11,13,14\}$. By inspection, we see that every element is of order 2 or 4 . Hence, $\left(\mathbb{Z}_{15}\right)^{*} \simeq \mathbb{Z}_{2} \times \mathbb{Z}_{4}$
+
+2. $\left(\mathbb{Z}_{17}\right)^{*}=\{1,2, \ldots, 16\}=\{\pm 1, \pm 2, \ldots, \pm 8\}$, passing to the quotient $\left(\mathbb{Z}_{17}\right)^{*} /\{\pm 1\}=\{1,2, \ldots, 8\}$ which is generated by 3 , so $\left(\mathbb{Z}_{17}\right)^{*} \simeq \mathbb{Z}_{8}$.
+
+3. The roots form a cyclic group of order 8 isomorphic to $\mathbb{Z}_{8}$.
+
+4. $\mathbf{F}_{8}$ is a field of characteristic 2, so every element added to itself is 0 . Hence,
+
+$$
+\mathbf{F}_{8}^{+} \simeq \mathbb{Z}_{2} \times \mathbb{Z}_{2} \times \mathbb{Z}_{2} .
+$$
+
+5. $\left(\mathbb{Z}_{16}\right)^{*}=\{1,3,5,7,9,11,13,15\} \simeq \mathbb{Z}_{2} \times \mathbb{Z}_{4}$ \\
+\textbf{Topic} :Finite Groups \\
+\textbf{Book} :Berkeley Problems in Mathematics\\
+\textbf{Final Answer} :\\
+
+
+\textbf{Solution} : If $p=2$, then the group is either cyclic and so isomorphic to $\mathbb{Z}_{4}$, or every element has order 2 and so is abelian and isomorphic to $\mathbb{Z}_{2} \oplus \mathbb{Z}_{2}$; for details see the Solution to Problem 6.8.1.
+
+Now suppose $p>2$ and let $G$ have order $2 p$. By Sylow's Theorems [Her75, p. 91], the $p$-Sylow subgroup of $G$ must be normal, since the number of such subgroups must divide $2 p$ and be congruent to $1 \bmod p$. Since the $p$-Sylow subgroup has order $p$, it is cyclic; let it be generated by $g$. A similar argument shows that the number of 2-Sylow subgroups is odd and divides $2 p$; hence, there is a unique, normal 2-Sylow subgroup, or there are $p$ conjugate 2-Sylow subgroups. Let one of the 2-Sylow subgroups be generated by $h$.
+
+In the first case, the element $g h g^{-1} h^{-1}$ is in the intersection of the 2-Sylow and the $p$-Sylow subgroups since they are both normal; these are cyclic groups of different orders, so it follows that $g h g^{-1} h^{-1}=1$, or $h g=g h$. Since $g$ and $h$ must generate $G$, we see that $G$ is abelian and isomorphic to $\mathbb{Z}_{2} \oplus \mathbb{Z}_{p}$.
+
+In the second case, a counting argument shows that all the elements of $G$ can be written in the form $g^{i} h^{j}, 0 \leqslant i<p, 0 \leqslant j<2$. Since all the elements of the form $g^{i}$ have order $p$, it follows that all the 2-Sylow subgroups are generated by the elements $g^{i} h$. Hence, all of these elements are of order 2 ; in particular, $g h g h=1$, or $h g=g^{-1} h$. Thus, $G=\left\langle g, h \mid g^{p}=h^{2}=1, h g=g^{-1} h\right\rangle$ and so $G$ is the dihedral group $D_{n}$.
+\textbf{Topic} :Finite Groups \\
+\textbf{Book} :Berkeley Problems in Mathematics\\
+\textbf{Final Answer} :\\
+
+
+\textbf{Solution} : Suppose $G$ contains an element whose order is not 2 . Then the map $g \mapsto-g$ is an automorphism of $G$ of order 2, and it follows by Lagrange's Theorem [Her75, p. 41] that Aut $(G)$ has even order. By the Structure Theorem for finite abelian groups [Her75, p. 109], it only remains to consider the groups $G=\left(\mathbb{Z}_{2}\right)^{r}(r=1,2, \ldots)$, plus the trivial group. If $G$ is trivial or $r=1$, then $\operatorname{Aut}(G)$ is trivial. If $r \geqslant 2$, then $G$ has the automorphism
+
+$$
+\left(x_{1}, x_{2}, x_{3}, x_{4}, \ldots, x_{r}\right) \mapsto\left(x_{2}, x_{1}, x_{3}, x_{4}, \ldots, x_{r}\right)
+$$
+
+of order 2, so Lagrange's Theorem again shows that $\operatorname{Aut}(G)$ has even order.
+
+So $\operatorname{Aut}(G)$ has odd order if and only if $G$ is trivial or $G \simeq \mathbb{Z}_{2}$. In both cases $\operatorname{Aut}(G)$ is trivial. Observe that it is not necessarily true that $\operatorname{Aut}(G \times H)=$ $\operatorname{Aut}(G) \times \operatorname{Aut}(H)$ even if $G$ and $H$ are cyclic of orders equal to distinct powers of a prime.
+\textbf{Topic} :Finite Groups \\
+\textbf{Book} :Berkeley Problems in Mathematics\\
+\textbf{Final Answer} :\\
+
+
+\textbf{Solution} : Let $\varphi^{\prime}: \mathbb{C}^{n} \rightarrow \mathbb{C}$ be a ring homomorphism and $e_{1}=(1,0,0, \ldots, 0), e_{2}=(0,1,0, \ldots, 0), \ldots, e_{n}=(0,0,0, \ldots, 1)$, then $e_{i} e_{j}=0$ for all $i \neq j$ and if $\varphi\left(e_{1}\right)=\cdots=\varphi\left(e_{n}\right)=0$,
+
+$$
+\varphi\left(x_{1}, \ldots, x_{n}\right)=\varphi\left(x_{1}, 0, \ldots, 0\right) \varphi\left(e_{1}\right)+\cdots+\varphi\left(0,0, \ldots, x_{n}\right) \varphi\left(e_{n}\right)=0
+$$
+
+that is, $\varphi$ is identically zero.
+
+Suppose now that $\varphi$ is a nontrivial homomorphism, then $\varphi\left(e_{i}\right) \neq 0$ for some $i$ and in this case $\varphi\left(e_{i}\right)=\varphi\left(e_{i} e_{i}\right)=\varphi\left(e_{i}\right) \varphi\left(e_{i}\right)$ and $\varphi\left(e_{i}\right)=1$. At the same time $0=\varphi\left(e_{i} e_{j}\right)=\varphi\left(e_{i}\right) \varphi\left(e_{j}\right)$ we conclude that $\varphi\left(e_{j}\right)=0$ for all $j \neq i$, and $\varphi$ is determined by its value on the $i^{i h}$ coordinate.
+
+$$
+\begin{aligned}
+\varphi\left(x_{1}, \ldots, x_{i}, \ldots, x_{n}\right) &=\varphi\left(0, \ldots, x_{i}, \ldots, 0\right) \varphi\left(e_{i}\right) \\
+&=\varphi\left(0, \ldots, x_{i}, \ldots, 0\right) 1 \\
+&=\varphi\left(0, \ldots, x_{i}, \ldots, 0\right)
+\end{aligned}
+$$
+
+So for every homomorphism $\sigma: \mathbb{C} \rightarrow \mathbb{C}$ we can create $n$ such homomorphisms from $\mathbb{C}^{n}$ to $\mathbb{C}$ by composing $\varphi\left(x_{1}, \ldots, x_{n}\right)=\sigma\left(\pi_{i}\left(x_{1}, \ldots, x_{n}\right)\right)$ where $\pi_{i}$ is the projection on the $i^{i h}$ coordinate, and the argument above shows that all arise in this way. We observe here that is probably the best that can be done, since homomorphims from $\mathbb{C}$ to $\mathbb{C}$ cannot be easily classified.
+\textbf{Topic} :Rings and Their Homomorphisms \\
+\textbf{Book} :Berkeley Problems in Mathematics\\
+\textbf{Final Answer} :\\
+
+
+\textbf{Solution} : For any set $S$ of primes, let $R_{S}$ be the set of rational numbers of the form $a / b$ where $a, b$ are integers and $b$ is a product of powers of primes in $S$. It is clear that $R_{S}$ contains 0 and 1 , and is closed under addition, multiplication, and additive inverses. Hence $R_{S}$ is a subring. If $S$ and $T$ are distinct sets of primes, say with $p \in S \backslash T$, then $1 / p \in R_{S}$ but $1 / p \notin R_{T}$, so $R_{S} \neq R_{T}$. Since there are infinitely many primes, we obtain at least $2^{\aleph_{0}}$ subrings in this way. On the other hand, as $\mathbb{Q}$ is countable, its number of subsets is $2^{N_{0}}$, therefore the set of subrings of $\mathbb{Q}$ has cardinality $2^{\aleph_{0}}$.
+
+
+
+Solution to 6.10.1: For two matrices in $A$ we have
+
+$$
+\left(\begin{array}{ll}
+a & b \\
+0 & c
+\end{array}\right)\left(\begin{array}{cc}
+a_{1} & b_{1} \\
+0 & c_{1}
+\end{array}\right)=\left(\begin{array}{cc}
+a a_{1} & a b_{1}+b c_{1} \\
+0 & c c_{1}
+\end{array}\right),
+$$
+
+MATHPIX IMAGE
+in $A$. Call these ideals $\mathfrak{I}_{1}, \mathfrak{I}_{2}, \mathfrak{I}_{3}$, respectively. We'll show that, together with $\{0\}$ and $A$, these are the only ideals in $A$.
+
+Consider any ideal $\mathfrak{I} \neq\{0\}$. As $A$ contains all scalar multiples of the identity matrix, $\mathfrak{I}$ is closed under scalar multiplication. From the equalities
+
+$$
+\begin{gathered}
+\left(\begin{array}{ll}
+1 & 0 \\
+0 & 0
+\end{array}\right)\left(\begin{array}{ll}
+a & b \\
+0 & c
+\end{array}\right)\left(\begin{array}{ll}
+0 & 0 \\
+0 & 1
+\end{array}\right)=\left(\begin{array}{ll}
+0 & b \\
+0 & 0
+\end{array}\right) \\
+\left(\begin{array}{ll}
+a & b \\
+0 & c
+\end{array}\right)\left(\begin{array}{ll}
+0 & 1 \\
+0 & 0
+\end{array}\right)=\left(\begin{array}{ll}
+0 & a \\
+0 & 0
+\end{array}\right),\left(\begin{array}{ll}
+0 & 1 \\
+0 & 0
+\end{array}\right)\left(\begin{array}{ll}
+a & b \\
+0 & c
+\end{array}\right)=\left(\begin{array}{ll}
+0 & c \\
+0 & 0
+\end{array}\right),
+\end{gathered}
+$$
+
+it follows that $\mathfrak{I}$ contains a nonzero matrix in $\mathfrak{I}_{1}$, hence that $\mathfrak{I}$ contains $\mathfrak{I}_{1}$. Suppose $\mathfrak{I} \neq \mathfrak{I}_{1}$. Every matrix in $\mathfrak{I}$ is the sum of a diagonal matrix and a matrix in $\mathfrak{I}_{1}$. There are three cases:
+
+- All diagonal matrices in $\mathfrak{I}$ have the form $\left(\begin{array}{ll}a & 0 \\ 0 & 0\end{array}\right)$. Then $\mathfrak{I}$ contains all such matrices, since it contains a nonzero one, and we conclude that $\mathfrak{I}=\mathfrak{I}_{2}$.
+
+- All diagonal matrices in $\mathfrak{I}$ have the form $\left(\begin{array}{l}0 \\ 0 \\ 0\end{array}\right)$. Then, by a similar argument, $\mathfrak{J}=\mathfrak{I}_{3}$.
+
+- I contains a matrix of the form $\left(\begin{array}{ll}a & 0 \\ 0 & c\end{array}\right)$ with $a \neq 0 \neq c$. Since
+
+$$
+\left(\begin{array}{ll}
+1 & 0 \\
+0 & 0
+\end{array}\right)\left(\begin{array}{ll}
+a & 0 \\
+0 & c
+\end{array}\right)=\left(\begin{array}{ll}
+a & 0 \\
+0 & 0
+\end{array}\right),\left(\begin{array}{ll}
+0 & 0 \\
+0 & 1
+\end{array}\right)\left(\begin{array}{ll}
+a & 0 \\
+0 & c
+\end{array}\right)=\left(\begin{array}{ll}
+0 & 0 \\
+0 & c
+\end{array}\right),
+$$
+
+we conclude in this case that $\mathfrak{I}$ contains both $\mathfrak{I}_{2}$ and $\mathfrak{I}_{3}$, hence that $\mathfrak{I}=A$.
+
+Solution to 6.10.2: Assume that $\mathfrak{I}$ is a nontrivial ideal. Let $M_{i j}$ be the $n \times n$ matrix with 1 in the $(i, j)^{\ell h}$ position and zeros elsewhere. Choose $A \in \mathfrak{I}$ such that $a=a_{i j} \neq 0$. Then, for $1 \leqslant k \leqslant n, M_{k i} A M_{j k}$ is a matrix which has $a$ in the $(k, k)^{t h}$ entry and 0 elsewhere. Since $\mathfrak{I}$ is an ideal, $M_{k i} A M_{j k} \in \mathfrak{I}$. The sum of these matrices is $a I$ and so this matrix is also in $\mathfrak{J}$. However, since $F$ is a field, $a$ is invertible, so $\mathfrak{I}=M_{n}(\mathbf{F})$. Solution to 6.10.3: We have see in the Solution to Problem 6.10.2 that $M_{n \times n}(F)$ has no nontrivial proper ideals. $M_{n \times n}(\mathbf{F})$ is an $\mathbf{F}$-vector field, and if we identify $\mathbf{F}$ with $\{a \mathfrak{I} \mid a \in \mathbf{F}\}$, we see that any ring homomorphism induces a vector space homomorphism. Hence, if $M_{n \times n}(F)$ and $M_{(n+1) \times(n+1)}(F)$ are isomorphic as rings, they are isomorphic as vector spaces. However, they have different dimensions $n^{2}$ and $(n+1)^{2}$, respectively, so this is impossible.
+
+Solution to 6.10.4: Since the kernel of $h$ is a two sided ideal in $R$, it suffices to show that every ideal $\mathfrak{J}$ in $R$ is either trivial ( $h$ is injective) or all of $R$ ( $h$ is zero).
+
+Assume $\mathfrak{J}$ is a non-trivial two sided ideal in $R$. Suppose $A \in \mathfrak{J}$ with $a_{i j} \neq 0$ for some $0 \leqslant i, j \leqslant n$. If we multiply $A$ on the left by the elementary matrix $E_{j i}$ we get the matrix $B=E_{j i} A$ which has only one nonzero entry $\left(b_{i j}=a_{i j}\right)$. If we multiply $B$ on the left by $\left(1 / a_{i j}\right) I$, we get $E_{i j}$, therefore $E_{i j} \in \mathfrak{J}$. Multiplying $E_{i j}$ on the left and on the right by elementary matrices, we produce all elementary matrices, so these are in $\mathfrak{J}$. As they generate $R$ we have $\mathfrak{J}=R$.
+
+Solution to 6.10.5: Each element of $F$ induces a constant function on $X$, and we identify the function with the element of $\mathbf{F}$. In particular, the function 1 is the unit element in $R(X, \mathrm{~F})$.
+
+Let $\mathfrak{I}$ be a proper ideal of $R(X, \mathbb{F})$. We will prove that there is a nonempty subset $Y$ of $X$ such that $\mathfrak{I}=\{f \in R(X, F) \mid f(x)=0$ for all $x \in Y\}=\mathfrak{I}_{Y}$. Suppose not. Then either $\mathfrak{I} \subset \mathfrak{I}_{Y}$ for some set $Y$ or, for every point $x \in X$, there is a function $f_{x}$ in $\mathfrak{I}$ such that $f_{x}(x)=a \neq 0$. In the latter case, since $\mathfrak{I}$ is an ideal and $F$ is a field, we can replace $f_{x}$ by the function $a^{-1} f_{x}$, so we may assume that $f_{x}(x)=1$. Multiplying $f_{x}$ by the function $g_{x}$, which maps $x$ to 1 and all other points of $X$ to 0 , we see that $\mathfrak{I}$ contains $g_{x}$ for all points $x \in X$. But then, since $X$ is finite, $\mathfrak{I}$ contains $\sum g_{x} \equiv 1$, which implies that $\mathfrak{I}$ is not a proper ideal.
+
+Hence, there is a nonempty set $Y$ such that $\mathfrak{I} \subset \mathfrak{I}_{Y}$. Let $Y$ be the largest such set. As for every $x \notin Y$, there is an $f_{x} \in \mathfrak{I}$ such that $f_{x}(x) \neq 0$ (otherwise we would have $\mathfrak{I} \subset \mathfrak{I}_{Y \cup\{x\}}$ ) by an argument similar to the above, $\mathfrak{I}$ contains all the functions $g_{x}, x \notin Y$. But, from these, we can construct any function in $\mathfrak{I}_{Y}$, so $\mathfrak{I}_{Y} \subset \mathfrak{J}$.
+
+Let $\mathfrak{I}$ and $\mathfrak{J}$ be two ideals, and the associated sets be $Y$ and $Z$. Then $\mathfrak{I} \subset \mathfrak{J}$ if and only if $Z \subset Y$. Therefore, an ideal is maximal if and only if its associated set is as small as possible without being empty. Hence, the maximal ideals are precisely those ideals consisting of functions which vanish at one point of $X$.
+
+Solution to 6.10.6: If $f, g \in E(U, W)$ then so is the homomorphism $f+g$ since its image on $U$ is contained in $f U+g U$. If $Y$ is a subspace and $h \in E(W, Y)$, then $h \circ f \in E(U, Y)$ since $f U \subseteq W+X$ for some finite dimensional subspace $X$ and $h(f(U)) \subseteq h(W)+h(X)$. Thus $E(W, Y) E(U, W) \subseteq E(U, Y)$. From this we see that $E(U, U)$ is a ring with left ideal $E(V, U)$ and right ideal $E(U, 0)$. Also, $E(U, U) \subseteq E(V, V)=E(0,0)$ so these latter two sets are also right and left ideals. The conclusion follows. Solution to 6.10.7: Let $\mathfrak{I}=\left\langle a^{n}-1, a^{m}-1\right\rangle$ and $\mathfrak{J}=\left\langle a^{d}-1\right\rangle$. For $n=r d$ the polynomial $x^{n}-1$ factors into $\left(x^{d}-1\right)\left(x^{r(d-1)}+x^{r(d-2)}+\cdots+x^{r}+1\right)$. Therefore, in $R, a^{n}-1=\left(a^{d}-1\right)\left(a^{r(d-1)}+a^{r(d-2)}+\cdots+a^{r}+1\right)$. A similar identity holds for $a^{m}-1$. Hence, the two generators of $\mathfrak{I}$ are in $\mathfrak{J}$, so $\mathfrak{I} \subset \mathfrak{J}$.
+
+Since $d=\operatorname{gcd}\{n, m\}$, there exist positive integers $x, y$ such that $x n-y m=d$. A calculation gives
+
+$$
+\begin{aligned}
+a^{d}-1=& a^{d}-1-a^{d+y m}+a^{x n} \\
+=&-a^{d}\left(a^{y m}-1\right)+a^{x n}-1 \\
+=&-a^{d}\left(a^{m}-1\right)\left(a^{y(m-1)}+\cdots+a^{y}+1\right) \\
+&+\left(a^{n}-1\right)\left(a^{x(n-1)}+\cdots+a^{x}+1\right) .
+\end{aligned}
+$$
+
+Hence, $a^{d}-1$ is in $\mathfrak{J}$, so $\mathfrak{J} \subset \mathfrak{I}$ and the two ideals are equal.
+
+Solution to 6.10.8: 1. If there is an ideal $\mathfrak{I} \neq R$ of index, at most, 4, then there is also a maximal ideal of index, at most, $4, \mathfrak{M}$, say. Then $R / \mathfrak{M}$ is a field of cardinality less than 5 containing an element $\alpha$ with $\alpha^{3}=\alpha+1$, namely $\alpha=a+\mathfrak{M}$. By direct inspection, we see that none of the fields $\mathbf{F}_{2}, \mathbf{F}_{3}, \mathbf{F}_{4}$ contains such an element. Therefore, $\mathfrak{I}=R$.
+
+2. Let $R=\mathbb{Z}_{5}, a=2(\bmod 5)$, and $\mathfrak{I}=\{0\}$.
+\textbf{Topic} :Rings and Their Homomorphisms \\
+\textbf{Book} :Berkeley Problems in Mathematics\\
+\textbf{Final Answer} :\\
+
+
+\textbf{Solution} : 1. Every element of $V$ can be uniquely written in the form $a_{1} v_{1}+\cdots+a_{n} v_{n}$, where the $v_{i}$ 's form a basis of $V$ and the $a_{i}$ 's are elements of F. Since $\mathbf{F}$ has $q$ elements it follows that $V$ has $q^{n}$ elements.
+
+2. A matrix $A$ in $G L_{n}(F)$ is nonsingular if and only if its columns are linearly independent vectors in $F^{n}$. Therefore, the first column $A_{1}$ can be any nonzero vector in $\mathbf{F}^{n}$, so there are $q^{n}-1$ possibilities. Once the first column is chosen, the second column, $A_{2}$, can be any vector which is not a multiple of the first, that is, $A_{2} \neq c A_{1}$, where $c \in \mathbf{F}$, leaving $q^{n}-q$ choices for $A_{2}$. In general, the $i^{t h}$ column $A_{i}$ can be any vector which cannot be written in the form $c_{1} A_{1}+c_{2} A_{2}+\cdots+c_{i-1} A_{i-1}$ where $c_{j} \in \mathbf{F}$. Hence, there are $q^{n}-q^{i-1}$ possibilities for $A_{i}$. By multiplying these together we see that the order of $G L_{n}(F)$ is then $\left(q^{n}-1\right)\left(q^{n}-q\right) \cdots\left(q^{n}-q^{n-1}\right)$.
+
+3. The determinant clearly induces a homomorphism from $G L_{n}(F)$ onto the multiplicative group $\mathbf{F}^{*}$, which has $q-1$ elements. The kernel of the homomorphism is $S L_{n}(F)$, and the cosets with respect to this kernel are the elements of $G L_{n}(F)$ which have the same determinant. Since all cosets of a group must have the same order, it follows that the order of $S L_{n}(F)$ is $\left|G L_{n}(F)\right| /(q-1)$.
+\textbf{Topic} :Vector Spaces \\
+\textbf{Book} :Berkeley Problems in Mathematics\\
+\textbf{Final Answer} :\\
+
+
+\textbf{Solution} : Suppose $v \in V$ is nonzero. Let $S_{v}=\{A \in$ End $V \mid A v=v\}$. Choose $w \in V$ so that $\{v, w\}$ is a basis. With respect to this basis, $S_{v}$ corresponds
+
+MATHPIX IMAGE
+if $v$ and $v^{\prime}$ are $F$-multiples of each other, and otherwise $S_{v} \cap S_{v^{\prime}}=\{I\}$, since if an endomorphism fixes a basis, it is the identity. There are $\left(q^{2}-1\right) /(q-1)=$ $q+1$ nonzero vectors in $V$ modulo the action of $F^{*}$, so the total number of endomorphisms fixing some nonzero vector is $(q+1) q^{2}-q$, where the $-q$ is there to avoid counting the identity $q+1$ times. Thus the answer is $q^{3}+q^{2}-q$.
+\textbf{Topic} :Vector Spaces \\
+\textbf{Book} :Berkeley Problems in Mathematics\\
+\textbf{Final Answer} :\\
+
+
+\textbf{Solution} : If $p$ is prime then the order of $G L_{2}\left(\mathbb{Z}_{p}\right)$ is the number of ordered bases of a two-dimensional vector space over the field $\mathbb{Z}_{p}$, namely $\left(p^{2}-1\right)\left(p^{2}-p\right)$, as in the solution to Part 2 of Problem 7.1.3 above.
+
+A square matrix $A$ over $\mathbb{Z}_{p^{n}}$ is invertible when $\operatorname{det}(A)$ is invertible modulo $p^{n}$, which happens exactly when $\operatorname{det}(A)$ is not a multiple of $p$. Let $\rho(A)$ denote the matrix over $\mathbb{Z}_{p}$ obtained from $A$ by reducing all its entries modulo $p$. We have $\operatorname{det}(\rho(A)) \equiv \operatorname{det}(A) \quad(\bmod p)$, thus
+
+$$
+A \in G L_{2}\left(\mathbb{Z}_{p^{n}}\right) \text { iff } \rho(A) \in G L_{2}\left(\mathbb{Z}_{p}\right),
+$$
+
+giving a surjective homomorphism
+
+$$
+\rho: G L_{2}\left(\mathbb{Z}_{p^{n}}\right) \rightarrow G L_{2}\left(\mathbb{Z}_{p}\right) .
+$$
+
+The kernel of $\rho$ is composed of the $2 \times 2$ matrices that reduce to the Identity modulo $p$ so the diagonal entries come from the set $\left\{1, p+1,2 p+1, \ldots, p^{n}-\right.$ $p+1)$ and the off-diagonal are drawn from the set that reduce to 0 modulo $p$, that is, $\left\{0, p, 2 p, \ldots, p^{n}-p\right\}$. Both sets have cardinality $p^{n-1}$, so the order of the kernel is $\left(p^{n-1}\right)^{4}$, and order of $G L_{2}\left(\mathbb{Z}_{p}\right)$ is
+
+$$
+p^{4 n-4}\left(p^{2}-1\right)\left(p^{2}-p\right)=p^{4 n-3}(p-1)\left(p^{2}-1\right) .
+$$
+\textbf{Topic} :Vector Spaces \\
+\textbf{Book} :Berkeley Problems in Mathematics\\
+\textbf{Final Answer} :\\
+
+
+\textbf{Solution} : 1. Let $A=\left(a_{i j}\right)$, and $R_{i}$ denote the $i^{i h}$ row of $A$. Let $r$, $1 \leqslant r \leqslant m$, be the row rank of $A$, and $S_{i}=\left(b_{i 1}, \ldots, b_{i n}\right), 1 \leqslant i \leqslant r$, be a basis for the row space. The rows are linear combinations of the $S_{i}$ 's:
+
+$$
+R_{i}=\sum_{j=1}^{r} k_{i j} S_{j}, \quad 1 \leqslant i \leqslant m .
+$$
+
+For $1 \leqslant l \leqslant n$, isolating the $l^{t h}$ coordinate of each of these equations gives
+
+$$
+\begin{aligned}
+a_{1 l} &=k_{11} b_{1 l}+\cdots+k_{1 r} b_{r l} \\
+a_{2 l} &=k_{21} b_{1 l}+\cdots+k_{2 r} b_{r l} \\
+& \vdots \\
+a_{m l} &=k_{m 1} b_{1 l}+\cdots+k_{m r} b_{r l} .
+\end{aligned}
+$$
+
+Hence, for $1 \leqslant l \leqslant n$ the $l^{t h}$ column of $A, C_{l}$, is given by the equation
+
+$$
+C_{l}=\sum_{j=1}^{r} b_{j l} K_{j},
+$$
+
+where $K_{j}$ is the column vector $\left(k_{1} j, \ldots, k_{m j}\right)^{l}$. Hence, the space spanned by the columns of $A$ is also spanned by the $r$ vectors $K_{j}$, so its dimension is less than or equal to $r$. Therefore, the column rank of $A$ is less than or equal to its row rank. In exactly the same way, we can show the reverse inequality, so the two are equal. 2. Using Gaussian elimination we get the matrix
+
+$$
+\left(\begin{array}{cccc}
+1 & 0 & 3 & -2 \\
+0 & 1 & -4 & 4 \\
+0 & 0 & 2 & 0 \\
+0 & 0 & 0 & 2 \\
+0 & 0 & 0 & 0
+\end{array}\right)
+$$
+
+so the four columns of $M$ are linearly independent.
+
+3. If a set of rows of $M$ is linearly independent over $\mathbf{K}$, then clearly it is also independent over $\mathbf{F}$, so the rank of $M$ over $\mathbf{K}$ is, at most, the rank of $M$ over F; but looking at the Gaussian elimination process one can see that it involves operations in the sub-field only, so the rank over both fields is the same.
+\textbf{Topic} :Rank and Determinants \\
+\textbf{Book} :Berkeley Problems in Mathematics\\
+\textbf{Final Answer} :\\
+
+
+\textbf{Solution} : The upper $k \times k$ square minor $A(k, k)$ of $A(m, n)$ is the Vandermonde matrix, which determinant is $\prod_{0 \leqslant i<j<k}(j-i)$. If $k \leqslant p$, this determinant is not zero $(\bmod p)$, which shows that $\operatorname{rank} A(m, n) \geqslant \min \{m, n, p\}$. Now if $A(m, n)$ has at most $p$ distinct columns $(\bmod p)$, so $\operatorname{rank} A(m, n) \leqslant p$. Since $\operatorname{rank} A(n, n) \leqslant \min \{n, m\}$, we have $\operatorname{rank} A(m, n)=\min \{m, n, p\}$.
+\textbf{Topic} :Rank and Determinants \\
+\textbf{Book} :Berkeley Problems in Mathematics\\
+\textbf{Final Answer} :\\
+
+
+\textbf{Solution} : Identify $M_{2 \times 2}$ with $\mathbb{R}^{4}$ via
+
+$$
+\left(\begin{array}{ll}
+a & b \\
+c & d
+\end{array}\right) \leftrightarrow\left(\begin{array}{l}
+a \\
+b \\
+c \\
+d
+\end{array}\right)
+$$
+
+and decompose $L$ into the multiplication of two linear transformations,
+
+$$
+M_{2 \times 2} \simeq \mathbb{R}^{4} \stackrel{L_{A}}{\longrightarrow} \mathbb{R}^{4} \stackrel{L_{B}}{\longrightarrow} \mathbb{R}^{4} \simeq M_{2 \times 2}
+$$
+
+where $L_{A}(X)=A X$ and $L_{B}(X)=X B$. is
+
+The matrices of these two linear transformations on the canonical basis of $\mathbb{R}^{4}$
+
+$$
+L_{A}=\left(\begin{array}{rrrr}
+1 & 0 & 2 & 0 \\
+0 & 1 & 0 & 2 \\
+-1 & 0 & 3 & 0 \\
+0 & -1 & 0 & 3
+\end{array}\right) \quad \text { and } L_{B}=\left(\begin{array}{llll}
+2 & 0 & 0 & 0 \\
+1 & 4 & 0 & 0 \\
+0 & 0 & 2 & 0 \\
+0 & 0 & 1 & 4
+\end{array}\right)
+$$
+
+then $\operatorname{det} L=\operatorname{det} L_{A} \cdot \operatorname{det} L_{B}=(9+6+2(2+3)) \cdot(2 \cdot 32)=2^{6} \cdot 5^{2}$, and to compute the trace of $L$, we only need the diagonal elements of $L_{A} \cdot L_{B}$, that is,
+
+$$
+\operatorname{tr} L=2+4+6+12=24 \text {. }
+$$
+\textbf{Topic} :Rank and Determinants \\
+\textbf{Book} :Berkeley Problems in Mathematics\\
+\textbf{Final Answer} :\\
+
+
+\textbf{Solution} : Let $X=\left(x_{i j}\right)$ be any element of $M_{3}(\mathbb{R})$. A calculation gives
+
+$$
+T(X)=\left(\begin{array}{ccc}
+x_{11} & 3 x_{12} / 2 & x_{13} \\
+3 x_{21} / 2 & 2 x_{22} & 3 x_{23} / 2 \\
+x_{31} & 3 x_{32} / 2 & x_{33}
+\end{array}\right) .
+$$
+
+It follows that the basis matrices $M_{i j}$ are eigenvectors of $T$. Taking the product of their associated eigenvalues, we get $\operatorname{det} T=2(3 / 2)^{4}=81 / 8$.
+\textbf{Topic} :Rank and Determinants \\
+\textbf{Book} :Berkeley Problems in Mathematics\\
+\textbf{Final Answer} :\\
+
+
+\textbf{Solution} :nan\\
+\textbf{Topic} :Rank and Determinants \\
+\textbf{Book} :Berkeley Problems in Mathematics\\
+\textbf{Final Answer} :\\
+
+
+\textbf{Solution} : Subtracting the first equation from the third we get $x_{1}=x_{7}$, continuing in this fashion subtracting the $k^{t h}$ equation from the $(k+2)^{t h}$ equation we obtain
+
+$$
+x_{k}=x_{k+6} \text { for every } k
+$$
+
+and we are left with a maximum of six independent parameters in the system. Solving the first and second equations, separatedly, we get
+
+$$
+\begin{aligned}
+&x_{5}=-\left(x_{1}+x_{3}\right) \\
+&x_{6}=-\left(x_{2}+x_{4}\right)
+\end{aligned}
+$$
+
+so four free parameters is all that is required.
+\textbf{Topic} :Systems of Equations \\
+\textbf{Book} :Berkeley Problems in Mathematics\\
+\textbf{Final Answer} :\\
+
+
+\textbf{Solution} : Let $x=\left(x_{1}, x_{2}, x_{3}\right)$ in the standard basis of $\mathbb{R}^{3}$. The line joining the points $x$ and $T x$ intersects the line containing $e$ at the point $f=\langle e, x\rangle e$ and is perpendicular to it. We then have $T x=2(f-x)+x=2 f-x$, or, in the standard basis, $T x=\left(2\langle e, x\rangle a-x_{1}, 2\langle e, x\rangle b-x_{2}, 2\langle e, x\rangle c-x_{3}\right)$. With respect to the standard basis for $\mathbb{R}^{3}$, the columns of the matrix of $T$ are $T e_{1}, T e_{2}$, and $T e_{3}$. Applying our formula and noting that $\left\langle e, e_{1}\right\rangle=a,\left\langle e, e_{2}\right\rangle=b$, and $\left\langle e, e_{3}\right\rangle=c$, we get that the matrix for $T$ is
+
+$$
+\left(\begin{array}{ccc}
+2 a^{2}-1 & 2 a b & 2 a c \\
+2 a b & 2 b^{2}-1 & 2 b c \\
+2 a c & 2 b c & 2 c^{2}-1
+\end{array}\right)
+$$
+\textbf{Topic} :Linear Transformations \\
+\textbf{Book} :Berkeley Problems in Mathematics\\
+\textbf{Final Answer} :\\
+
+
+\textbf{Solution} : 1 . Consider the basis $\left\{1, x, x^{2}, \ldots, x^{10}\right\}$ for this space of polynomials of dimension 11 . On this basis the operator takes each element into a multiple of a previous one, of one degree less, so the diagonal on this basis consist of zeroes and $\operatorname{tr} D=0$.
+
+2. Since $D$ decreases the degree of the polynomial by one, the equation
+
+$$
+D p(x)=\alpha p(x)
+$$
+
+has no non-trivial solutions for $\alpha$, and $D$ has only 0 as eigenvalue, the eigenvectors being the constant polynomials.
+
+Now since the $11^{\text {th }}$-derivative of any of the polynomials in this space is zero, the expression for the exponential of $D$ becomes a finite sum
+
+$$
+e^{D}=I+D+\frac{D^{2}}{2 !}+\cdots+\frac{D^{10}}{10 !}
+$$
+
+then any eigenvector $p(x)$ of degree $k$ of $e^{D}$ would have to satisfy
+
+$$
+p+p^{\prime}+\frac{p^{\prime \prime}}{2 !}+\cdots+\frac{p^{(10)}}{10 !}=\alpha p
+$$
+
+since $p$ is the only polynomial of degree $k$ in this sum, the eigenvalue $\alpha=1$ and the summation can be reduced to
+
+$$
+p^{\prime}+\frac{p^{\prime \prime}}{2 !}+\cdots+\frac{p^{(10)}}{10 !}=0
+$$
+
+now $p^{\prime}$ is the only polynomial of degree $k-1$ in the sum so its leading coefficient $k . a_{k}$ is zero and the same argument repeated over the lower degrees shows that all of them are zero except for the constant one, making it again the only eigenvector.
+\textbf{Topic} :Linear Transformations \\
+\textbf{Book} :Berkeley Problems in Mathematics\\
+\textbf{Final Answer} :\\
+
+
+\textbf{Solution} : 1. Being real and symmetric, $L$ has an orthonormal basis of eigenvectors $e_{1}, \ldots, e_{n}$. Let $\lambda_{1}, \ldots, \lambda_{n}$ be the associated eigenvalues. We can assume that $\lambda_{1}=0$ and $\lambda_{i} \neq 0$ for $i>1$. Write the two vectors $v=\sum_{i=1}^{n} v_{i}$ and $x=\sum_{i=1}^{n} x_{i}$ in terms of its coordinates, then the equation $L x+\varepsilon=v$ becomes $\lambda_{i} x_{i}+\varepsilon x_{i}=v_{i}$ for each $i$, which has the unique solution $x_{i}=v_{i} /\left(\lambda_{i}+\varepsilon\right)$, provided that $0<\varepsilon<\min _{i \neq 1}\left|\lambda_{i}\right|$.
+
+2. Writing $\varepsilon x$ in $e_{i}$ coordinates
+
+$$
+\varepsilon x=\sum_{i=1}^{n} \varepsilon x_{i} e_{i}=\sum_{i=1}^{n} \frac{\varepsilon}{\lambda_{i}+\varepsilon} v_{i} e_{i}
+$$
+
+as $\varepsilon \rightarrow 0$, all terms in the summation on the right tend to 0 , except the first which approaches $v_{1} e_{1}=\left\langle v, e_{1}\right\rangle e_{1}$.
+\textbf{Topic} :Eigenvalues and Eigenvectors \\
+\textbf{Book} :Berkeley Problems in Mathematics\\
+\textbf{Final Answer} :\\
+
+
+\textbf{Solution} : Denote the matrix by $A$. A calculation shows that $A$ is a root of the polynomial $p(t)=t^{3}-c t^{2}-b t-a$. In fact, this is the minimal polynomial of $A$. To prove this, it suffices to find a vector $x \in \mathbf{F}^{3}$ such that $A^{2} x, A x$, and $x$ are linearly independent. Let $x=(1,0,0)$. Then $A x=(0,1,0)$ and $A^{2} x=(0,0,1)$; these three vectors are linearly independent, so we are done.
+\textbf{Topic} :Eigenvalues and Eigenvectors \\
+\textbf{Book} :Berkeley Problems in Mathematics\\
+\textbf{Final Answer} :\\
+
+
+\textbf{Solution} : 1. For $\left(a_{1}, a_{2}, a_{3}, \ldots\right)$ to be an eigenvector associated with the eigenvalue $\lambda$, we must have
+
+$$
+S\left(\left(a_{1}, a_{2}, a_{3}, \ldots\right)\right)=\lambda\left(a_{2}, a_{3}, a_{4}, \ldots\right)
+$$
+
+which is equivalent to
+
+$$
+a_{2}=\lambda a_{1}, \quad a_{3}=\lambda a_{2}, \ldots, \quad a_{n}=\lambda a_{n-1}, \ldots
+$$
+
+so the eigenvectors are of the form $a_{1}\left(1, \lambda, \lambda^{2}, \ldots\right)$.
+
+2. Let $x=\left(x_{1}, x_{2}, \ldots\right) \in W$. Then $x$ is completely determined by the first two components $x_{1}$ and $x_{2}$. Therefore, the dimension of $W$ is, at most, two. If an element of $W$ is an eigenvector, it must be associated with an eigenvalue satisfying $\lambda^{2}=\lambda+1$, which gives the two possible eigenvalues
+
+$$
+\varphi=\frac{1+\sqrt{5}}{2} \text { and }-\varphi^{-1}=\frac{1-\sqrt{5}}{2} \text {. }
+$$
+
+A basis for $W$ is then
+
+$$
+\left\{\left(\varphi, \varphi^{2}, \varphi^{3}, \ldots\right),\left(-\varphi^{-1}, \varphi^{-2},-\varphi^{-3}, \ldots\right)\right\}
+$$
+
+which is clearly invariant under $S$.
+
+3. To express the Fibonacci sequence in the basis above, we have just to find the constants $k_{1}$ and $k_{2}$ that satisfy
+
+$$
+\left\{\begin{array}{l}
+1=k_{1} \varphi-k_{2} \varphi^{-1} \\
+1=k_{1} \varphi^{2}+k_{2} \varphi^{-2}
+\end{array}\right.
+$$
+
+which give $k_{1}=\frac{1}{\sqrt{5}}=-k_{2}$. We then have, for the Fibonacci numbers,
+
+$$
+f_{n}=\frac{1}{\sqrt{5}}\left(\left(\frac{1+\sqrt{5}}{2}\right)^{n}-\left(\frac{1-\sqrt{5}}{2}\right)^{n}\right) .
+$$
+\textbf{Topic} :Eigenvalues and Eigenvectors \\
+\textbf{Book} :Berkeley Problems in Mathematics\\
+\textbf{Final Answer} :\\
+
+
+\textbf{Solution} :
+
+$$
+A=u u^{t}-I \quad \text { where } \quad u=\left(\begin{array}{c}
+1 \\
+\vdots \\
+1
+\end{array}\right)
+$$
+
+and $I$ is the identity matrix. If $A x=\lambda x$, where $x \neq 0$, then
+
+$$
+u u^{t} x-x=\left(u^{t} x\right) u-x=\lambda x
+$$
+
+so $x$ is either perpendicular or parallel to $u$. In the latter case, we can suppose without loss of generality that $x=u$, so $u^{t} u u-u=\lambda u$ and $\lambda=n-1$. This gives a 1-dimensional eigenspace spanned by $u$ with eigenvalue $n-1$. In the former case $x$ lies in a $(n-1)$-dimensional eigenspace which is the null space of the rank one matrix $u u^{t}$, so
+
+$$
+A x=\left(u u^{t}-I\right) x=-I x=-x
+$$
+
+and the eigenvalue associated with this eigenspace is $-1$, with multiplicity $n-1$. Since the determinant is the product of the eigenvalues, we have $\operatorname{det}(A)=(-1)^{n-1}(n-1)$.
+\textbf{Topic} :Eigenvalues and Eigenvectors \\
+\textbf{Book} :Berkeley Problems in Mathematics\\
+\textbf{Final Answer} :\\
+
+
+\textbf{Solution} : Let $v$ be the column vector defined by $\left(\begin{array}{llll}a & b & c & d\end{array}\right)^{t}$, then the operator given, that we will call $T$, is literally the product of the two matrices $v v^{t}$. and the operator $T$ applied to a vector $x$ is:
+
+$$
+T x=\left(v v^{t}\right) x=v\left(v^{t} x\right)=v\langle v, x\rangle
+$$
+
+where $\langle$,$\rangle is the standard euclidean inner product in \mathbb{R}^{4}$.
+
+Let $u$ be the vector of norm 1 in the direction of $v$, that is, $u=v /|v|, V$ the uni-dimensional space generated by $v$, and $V^{\perp}$ its orthogonal complement in $\mathbb{R}^{4}$. Then any vector in $x \in \mathbb{R}^{4}$ can be written as $x=x_{\|}+x_{\perp}$ where
+
+$$
+\begin{aligned}
+x_{\|} &=\langle u, x\rangle u \\
+x_{\perp} &=x-\langle u, x\rangle u
+\end{aligned}
+$$
+
+In this decomposition $T u=|v|^{2} u|u|^{2}=|v|^{2} u$ and $u$ is an eigenvector of $T$ with eigenvalue $|v|^{2}$ and multiplicity 1 . For any vector in the $V^{\perp}$ space
+
+$$
+T x_{\perp}=|v|^{2} u\left\langle u, x_{\perp}\right\rangle=0
+$$
+
+so taking any basis for this 3-dimensional space, the matrix representing $T$ will be
+
+$$
+\left(\begin{array}{cccc}
+a^{2}+b^{2}+c^{2}+d^{2} & 0 & 0 & 0 \\
+0 & 0 & 0 & 0 \\
+0 & 0 & 0 & 0 \\
+0 & 0 & 0 & 0
+\end{array}\right)
+$$
+\textbf{Topic} :Eigenvalues and Eigenvectors \\
+\textbf{Book} :Berkeley Problems in Mathematics\\
+\textbf{Final Answer} :\\
+
+
+\textbf{Solution} : The characteristic polynomial of the matrix $A$ is $\chi_{A}(t)=t^{3}-8 t^{2}+20 t-16=(t-4)(t-2)^{2}$ and the minimal polynomial is $\mu_{A}(t)=(t-2)(t-4)$. By the Euclidean Algorithm [Her75, p. 155], there is a polynomial $p(t)$ and constants $a$ and $b$ such that
+
+$$
+t^{10}=p(t) \mu_{A}(t)+a t+b .
+$$
+
+Substituting $t=2$ and $t=4$ and solving for $a$ and $b$ yields $a=2^{9}\left(2^{10}-1\right)$ and $b=-2^{11}\left(2^{9}-1\right)$. Therefore, since $A$ is a root of its minimal polynomial,
+
+$$
+A^{10}=a A+b I=\left(\begin{array}{ccc}
+3 a+b & a & a \\
+2 a & 4 a+b & 2 a \\
+-a & -a & a+b
+\end{array}\right) \text {. }
+$$
+\textbf{Topic} :Canonical Forms \\
+\textbf{Book} :Berkeley Problems in Mathematics\\
+\textbf{Final Answer} :\\
+
+
+\textbf{Solution} : The characteristic polynomial of $A$ is $\chi_{A}(t)=t^{2}-2 t+1=$ $(t-1)^{2}$. By the Euclidean Algorithm [Her75, p. 155], there is a polynomial $q(t)$ and constants $a$ and $b$ such that $t^{100}=q(t)(t-1)^{2}+a t+b$. Differentiating both sides of this equation, we get $100 t^{99}=q^{\prime}(t)(t-1)^{2}+2 q(t)(t-1)+a$. Substituting $t=1$ into each equation and solving for $a$ and $b$, we get $a=100$ and $b=-99$. Therefore, since $A$ satisfies its characteristic equation, substituting it into the first equation yields $A^{100}=100 A-991$, or
+
+$$
+A^{100}=\left(\begin{array}{cc}
+51 & 50 \\
+-50 & -49
+\end{array}\right) \text {. }
+$$
+
+An identical calculation shows that $A^{7}=7 A-6 I$, so
+
+$$
+A^{7}=\left(\begin{array}{cc}
+9 / 2 & 7 / 2 \\
+-7 / 2 & -5 / 2
+\end{array}\right) \text {. }
+$$
+
+From this it follows immediately that
+
+$$
+A^{-7}=\left(\begin{array}{rr}
+-5 / 2 & -7 / 2 \\
+7 / 2 & 9 / 2
+\end{array}\right) .
+$$
+\textbf{Topic} :Canonical Forms \\
+\textbf{Book} :Berkeley Problems in Mathematics\\
+\textbf{Final Answer} :\\
+
+
+\textbf{Solution} : Since $A$ is upper-triangular, its eigenvalues are its diagonal entries, that is, 1,4 , and 9 . It can, thus, be diagonalized, and in, fact, we will have
+
+$$
+S^{-1} A S=\left(\begin{array}{ccc}
+1 & 0 & 0 \\
+0 & 4 & 0 \\
+0 & 0 & 9
+\end{array}\right)
+$$
+
+where $S$ is a matrix whose columns are eigenvectors of $A$ for the respective eigenvalues 1,4 , and 9. The matrix
+
+$$
+B=S\left(\begin{array}{lll}
+1 & 0 & 0 \\
+0 & 2 & 0 \\
+0 & 0 & 3
+\end{array}\right) S^{-1}
+$$
+
+will then be a square root of $A$.
+
+Carrying out the computations, one obtains
+
+$$
+S=\left(\begin{array}{lll}
+1 & 1 & 1 \\
+0 & 1 & 1 \\
+0 & 0 & 1
+\end{array}\right) \quad \text { and } \quad S^{-1}=\left(\begin{array}{ccc}
+1 & -1 & 0 \\
+0 & 1 & -1 \\
+0 & 0 & 1
+\end{array}\right)
+$$
+
+giving
+
+$$
+B=\left(\begin{array}{ccc}
+1 & 1 & -1 \\
+0 & 2 & 1 \\
+0 & 0 & 3
+\end{array}\right) \text {. }
+$$
+
+The number of square roots of $A$ is the same as the number of square roots of its diagonalization, $D=S^{-1} A S$. Any matrix commuting with $D$ preserves its eigenspaces and so is diagonal. In particular, any square root of $D$ is diagonal. Hence, $D$ has exactly eight square roots, namely
+
+$$
+\sqrt{\left(\begin{array}{lll}
+1 & 0 & 0 \\
+0 & 4 & 0 \\
+0 & 0 & 9
+\end{array}\right)}=\left(\begin{array}{ccc}
+\pm 1 & 0 & 0 \\
+0 & \pm 2 & 0 \\
+0 & 0 & \pm 3
+\end{array}\right) .
+$$
+\textbf{Topic} :Canonical Forms \\
+\textbf{Book} :Berkeley Problems in Mathematics\\
+\textbf{Final Answer} :\\
+
+
+\textbf{Solution} : Note that
+
+$$
+A=\left(\begin{array}{ccc}
+2 & 0 & 0 \\
+0 & 2 & 0 \\
+0 & -1 & 1
+\end{array}\right)
+$$
+
+can be decomposed into the two blocks $(2)$ and $\left(\begin{array}{cc}2 & 0 \\ -1 & 1\end{array}\right)$, since the space spanned by $(100)^{t}$ is invariant. We will find a $2 \times 2$ matrix $C$ such that $C^{4}=\left(\begin{array}{cc}2 & 0 \\ -1 & 1\end{array}\right)=D$, say.
+
+The eigenvalues of the matrix $D$ are 2 and 1 , and the corresponding Lagrange Polynomials [MH93, p. 286] are $p_{1}(x)=(x-2) /(1-2)=2-x$ and $p_{2}(x)=(x-1) /(2-1)=x-1$. Therefore, the spectral projection of $D$ can be given by
+
+$$
+\begin{aligned}
+&P_{1}=-\left(\begin{array}{cc}
+2 & 0 \\
+-1 & 1
+\end{array}\right)+2\left(\begin{array}{ll}
+1 & 0 \\
+0 & 1
+\end{array}\right)=\left(\begin{array}{cc}
+0 & 0 \\
+1 & 1
+\end{array}\right) \\
+&P_{2}=-\left(\begin{array}{ll}
+1 & 0 \\
+0 & 1
+\end{array}\right)+\left(\begin{array}{cc}
+2 & 0 \\
+-1 & 1
+\end{array}\right)=\left(\begin{array}{cc}
+1 & 0 \\
+-1 & 0
+\end{array}\right)
+\end{aligned}
+$$
+
+We have
+
+$$
+D=\left(\begin{array}{ll}
+0 & 0 \\
+1 & 1
+\end{array}\right)+2\left(\begin{array}{cc}
+1 & 0 \\
+-1 & 0
+\end{array}\right) .
+$$
+
+As $P_{1} \cdot P_{2}=P_{2} \cdot P_{1}=0$ and $P_{1}^{2}=P_{1}, P_{2}^{2}=P_{2}$, letting $C=\left(\begin{array}{cc}0 & 0 \\ 1 & 1\end{array}\right)+2^{1 / 4}\left(\begin{array}{cc}1 & 0 \\ -1 & 0\end{array}\right)=$ $1 P_{1}+2^{1 / 4} P_{2}$, we get
+
+$$
+C^{4}=P_{1}^{4}+\underbrace{\ldots}_{0}+\left(2^{1 / 4} P_{2}\right)^{4}=P_{1}+2 P_{2}=D .
+$$
+
+Then
+
+$$
+C=\left(\begin{array}{cc}
+2^{1 / 4} & 0 \\
+1-2^{1 / 4} & 1
+\end{array}\right)
+$$
+
+and $B$ is
+
+$$
+\left(\begin{array}{ccc}
+2^{1 / 4} & 0 & 0 \\
+0 & 2^{1 / 4} & 0 \\
+0 & 1-2^{1 / 4} & 1
+\end{array}\right)
+$$
+\textbf{Topic} :Canonical Forms \\
+\textbf{Book} :Berkeley Problems in Mathematics\\
+\textbf{Final Answer} :\\
+
+
+\textbf{Solution} : The characteristic polynomial of $A$ is
+
+$$
+\chi_{A}(x)=\left|\begin{array}{cc}
+x-7 & -15 \\
+2 & x+4
+\end{array}\right|=(x-1)(x-2)
+$$
+
+so $A$ is diagonalizable and a short calculation shows that eigenvectors associated with the eigenvalues 1 and 2 are $(5,-2)^{t}$ and $(3,-1)^{t}$, so the matrix $B$ is $\left(\begin{array}{cc}5 & 3 \\ -2 & -1\end{array}\right)$. Indeed, in this case, $B^{-1} A B=\left(\begin{array}{ll}1 & 0 \\ 0 & 2\end{array}\right)$.
+\textbf{Topic} :Canonical Forms \\
+\textbf{Book} :Berkeley Problems in Mathematics\\
+\textbf{Final Answer} :\\
+
+
+\textbf{Solution} : The characteristic polynomial is $\chi_{A}(t)=(t-1)(t-4)^{2}$. Since the minimal polynomial and the characteristic polynomial share the same irreducible factors, another calculation shows that $\mu_{A}(t)=(t-1)(t-4)^{2}$. Therefore, the Jordan Canonical Form [HK61, p. 247] of $A$ must have one Jordan block of order 2 associated with 4 and one Jordan block of order 1 associated with 1. Hence, the Jordan form of $A$ is
+
+$$
+\left(\begin{array}{lll}
+1 & 0 & 0 \\
+0 & 4 & 1 \\
+0 & 0 & 4
+\end{array}\right) \text {. }
+$$
+\textbf{Topic} :Canonical Forms \\
+\textbf{Book} :Berkeley Problems in Mathematics\\
+\textbf{Final Answer} :\\
+
+
+\textbf{Solution} : We have
+
+$$
+\begin{aligned}
+|A-\lambda I| &=\left|\begin{array}{ccc}
+2-\lambda & 1 & 1 \\
+1 & 2-\lambda & 1 \\
+1 & 1 & 2-\lambda
+\end{array}\right|=\left|\begin{array}{ccc}
+1-\lambda & 1 & 0 \\
+-1+\lambda & 2-\lambda & -1+\lambda \\
+0 & 1 & 1-\lambda
+\end{array}\right| \\
+&=(\lambda-1)^{2}\left|\begin{array}{ccc}
+-1 & 1 & 0 \\
+1 & 2-\lambda & 1 \\
+0 & 1 & -1
+\end{array}\right|=-(\lambda-1)^{3},
+\end{aligned}
+$$
+
+using column operations $C_{1}-C_{2}$ and $C_{3}-C_{2}$. The single eigenvalue of $A$ is $\lambda=1$ with algebraic multiplicity 3 .
+
+The eigenvectors of $A$ are the solutions to the equation $(A-I) x=0$. That is, $x_{1}+x_{2}+x_{3}=0$, or $x=\left(-x_{2}-x_{3}, x_{2}, x_{3}\right)$. The eigenvectors corresponding to the eigenvalue $\lambda=1$ are $x_{2}(-1,1,0)+x_{3}(-1,0,1), \quad\left(x_{2}, x_{3} \in \mathbf{F}_{3}\right)$ (including the zero vector).
+
+The characteristic polynomial of $A$ is $(x-1)^{3}$. Now
+
+$$
+A-I=\left(\begin{array}{lll}
+1 & 1 & 1 \\
+1 & 1 & 1 \\
+1 & 1 & 1
+\end{array}\right), \quad(A-I)^{2}=0 .
+$$
+
+The minimal polynomial of $A$ is $(x-1)^{2}$. The Jordan form has an elementary Jordan block of size 2 . The Jordan form of $A$ is therefore
+
+$$
+\left(\begin{array}{lll}
+1 & 1 & 0 \\
+0 & 1 & 0 \\
+0 & 0 & 1
+\end{array}\right) .
+$$
+\textbf{Topic} :Canonical Forms \\
+\textbf{Book} :Berkeley Problems in Mathematics\\
+\textbf{Final Answer} :\\
+
+
+\textbf{Solution} : Combining the equations, we get $\mu(x)^{2}=\mu(x)(x-i)\left(x^{2}+1\right)$ and, thus, $\mu(x)=(x-i)^{2}(x+i)$. So the Jordan blocks of the Jordan Canonical Form [HK61, p. 247] $J_{A}$, correspond to the eigenvalues $\pm i$. There is at least one block of size 2 corresponding to the eigenvalue $i$ and no larger block corresponding to $i$. Similarly, there is at least one block of size 1 corresponding to $-i$. We have $\chi(x)=(x-i)^{3}(x+i)$, so $n=\operatorname{deg} \chi=4$, and the remaining block is a block of size 1 corresponding to $i$, since the total dimension of the eigenspace is the degree with which the factor appears in the characteristic polynomial. Therefore,
+
+$$
+J_{A}=\left(\begin{array}{cccc}
+i & 1 & 0 & 0 \\
+0 & i & 0 & 0 \\
+0 & 0 & i & 0 \\
+0 & 0 & 0 & -i
+\end{array}\right) .
+$$
+\textbf{Topic} :Canonical Forms \\
+\textbf{Book} :Berkeley Problems in Mathematics\\
+\textbf{Final Answer} :\\
+
+
+\textbf{Solution} : 1 . As all the rows of $M$ are equal, $M$ must have rank 1 , so its nullity is $n-1$. It is easy to see that $M^{2}=n M$, or $M(M-n I)=0$, so the minimal polynomial is $\mu_{M}=x(x-n)$, since the null space associated with the characteristic value 0 is $n-1$, then the characteristic polynomial is $\chi_{M}=x^{n-1}(x-n)$
+
+2. If char $\mathbf{F}=0$ or if $\operatorname{char} \mathbf{F}=p$ and $p$ does not divide $n$, then 0 and $n$ are the two distinct eigenvalues, and since the minimal polynomial does not have repeated roots, $M$ is diagonalizable.
+
+If char $\mathbf{F}=p, p \mid n$, then $n$ is identified with 0 in $\mathbf{F}$. Therefore, the minimal polynomial of $M$ is $\mu_{M}(x)=x^{2}$ and $M$ is not diagonalizable. 3. In the first case, since the null space has dimension $n-1$, the Jordan form [HK61, p. 247] is
+
+$$
+\left(\begin{array}{cccc}
+n & 0 & \cdots & 0 \\
+0 & 0 & \cdots & 0 \\
+\vdots & \vdots & \ddots & \vdots \\
+0 & 0 & \cdots & 0
+\end{array}\right) .
+$$
+
+If char $\mathbf{F}=p, p \mid n$, then all the eigenvalues of $M$ are 0 , and there is one 2-block and $n-1$ 1-blocks in the Jordan form:
+
+$$
+\left(\begin{array}{cccc}
+0 & 1 & \cdots & 0 \\
+0 & 0 & \cdots & 0 \\
+\vdots & \vdots & \ddots & \vdots \\
+0 & 0 & \cdots & 0
+\end{array}\right) .
+$$
+\textbf{Topic} :Canonical Forms \\
+\textbf{Book} :Berkeley Problems in Mathematics\\
+\textbf{Final Answer} :\\
+
+
+\textbf{Solution} : A computation gives
+
+$$
+T\left(\begin{array}{ll}
+x_{11} & x_{12} \\
+x_{21} & x_{22}
+\end{array}\right)=\left(\begin{array}{cc}
+-x_{21} & x_{11}-x_{22} \\
+0 & x_{21}
+\end{array}\right) .
+$$
+
+In particular, for the basis elements
+
+$$
+E_{1}=\left(\begin{array}{ll}
+1 & 0 \\
+0 & 0
+\end{array}\right), \quad E_{2}=\left(\begin{array}{ll}
+0 & 1 \\
+0 & 0
+\end{array}\right), \quad E_{3}=\left(\begin{array}{ll}
+0 & 0 \\
+1 & 0
+\end{array}\right), \quad E_{4}=\left(\begin{array}{ll}
+0 & 0 \\
+0 & 1
+\end{array}\right)
+$$
+
+we have
+
+$$
+\begin{gathered}
+T E_{1}=\left(\begin{array}{ll}
+0 & 1 \\
+0 & 0
+\end{array}\right)=E_{2}, \quad T E_{2}=0 \\
+T E_{3}=\left(\begin{array}{cc}
+-1 & 0 \\
+0 & 1
+\end{array}\right)=-E_{1}+E_{4}, \quad T E_{4}=\left(\begin{array}{cc}
+0 & -1 \\
+0 & 0
+\end{array}\right)=-E_{2} .
+\end{gathered}
+$$
+
+The matrix for $T$ with respect to the basis $\left\{E_{1}, E_{2}, E_{3}, E_{4}\right\}$ is then
+
+$$
+S=\left(\begin{array}{cccc}
+0 & 0 & -1 & 0 \\
+1 & 0 & 0 & -1 \\
+0 & 0 & 0 & 0 \\
+0 & 0 & 1 & 0
+\end{array}\right) .
+$$
+
+A calculation shows that the characteristic polynomial of $S$ is $\lambda^{4}$. Thus, $S$ is nilpotent. Moreover, the index of nilpotency is 3 , since we have
+
+$$
+T^{2} E_{1}=T^{2} E_{2}=T^{2} E_{4}=0, \quad T^{2} E_{3}=-2 E_{2} .
+$$
+
+The only $4 \times 4$ nilpotent Jordan matrix [HK61, p. 247] with index of nilpotency 3 is
+
+$$
+\left(\begin{array}{llll}
+0 & 0 & 0 & 0 \\
+0 & 0 & 1 & 0 \\
+0 & 0 & 0 & 1 \\
+0 & 0 & 0 & 0
+\end{array}\right)
+$$
+
+which is, therefore, the Jordan Canonical Form of $T$. A basis in which $T$ is represented by the preceding matrix is
+
+$$
+\left\{E_{1}+E_{4}, E_{2}, \frac{E_{1}-E_{4}}{2},-\frac{E_{3}}{2}\right\} .
+$$
+\textbf{Topic} :Canonical Forms \\
+\textbf{Book} :Berkeley Problems in Mathematics\\
+\textbf{Final Answer} :\\
+
+
+\textbf{Solution} : A direct calculation shows that $(A-I)^{3}=0$ and this is the least positive exponent for which this is true. Hence, the minimal polynomial of $A$ is $\mu_{A}(t)=(t-1)^{3}$. Thus, its characteristic polynomial must be $\chi_{A}(t)=(t-1)^{6}$. Therefore, the Jordan Canonical Form [HK61, p. 247] of $A$ must contain one $3 \times 3$ Jordan block associated with 1 . The number of blocks is the dimension of the eigenspace associated with 1 . Letting $x=\left(x_{1}, \ldots, x_{6}\right)^{t}$ and solving $A x=x$, we get the two equations $x_{1}=0$ and $x_{2}+x_{3}+x_{4}+x_{5}=0$. Since $x_{6}$ is not determined, these give four degrees of freedom, so the eigenspace has dimension 4. Therefore, the Jordan Canonical Form of $A$ must contain four Jordan blocks and so it must be
+
+$$
+\left(\begin{array}{llllll}
+1 & 1 & 0 & 0 & 0 & 0 \\
+0 & 1 & 1 & 0 & 0 & 0 \\
+0 & 0 & 1 & 0 & 0 & 0 \\
+0 & 0 & 0 & 1 & 0 & 0 \\
+0 & 0 & 0 & 0 & 1 & 0 \\
+0 & 0 & 0 & 0 & 0 & 1
+\end{array}\right) .
+$$
+\textbf{Topic} :Canonical Forms \\
+\textbf{Book} :Berkeley Problems in Mathematics\\
+\textbf{Final Answer} :\\
+
+
+\textbf{Solution} :nan\\
+\textbf{Topic} :Canonical Forms \\
+\textbf{Book} :Berkeley Problems in Mathematics\\
+\textbf{Final Answer} :\\
+
+
+\textbf{Solution} : An easy calculation shows that $A$ has eigenvalues 0,1 , and 3 , so $A$ is similar to the diagonal matrix with entries 0,1 , and 3 . Since clearly the problem does not change when $A$ is replaced by a similar matrix, we may replace $A$ by that diagonal matrix. Then the condition on $a$ is that each of the sequences $\left(0^{n}\right),\left(a^{n}\right)$, and $\left((3 a)^{n}\right)$ has a limit, and that at least one of these limits is nonzero. This occurs if and only if $a=1 / 3$.
+\textbf{Topic} :Canonical Forms \\
+\textbf{Book} :Berkeley Problems in Mathematics\\
+\textbf{Final Answer} :\\
+
+
+\textbf{Solution} : Using the first condition the Jordan Canonical Form [HK61, p. 247] of this matrix is a $6 \times 6$ matrix with five l's and one $-1$ on the diagonal. The blocks corresponding to the eigenvalue 1 are either $1 \times 1$ or $2 \times 2$, by the second condition, with at least one of them having dimension 2 . Thus, there could be three 1-blocks and one 2-block (for the eigenvalue 1), or one 1-block and two 2-blocks. In this way, we get the following two possibilities for the Jordan Form of the matrix:
+
+$$
+\left(\begin{array}{rrrrrr}
+1 & 0 & 0 & 0 & 0 & 0 \\
+0 & 1 & 0 & 0 & 0 & 0 \\
+0 & 0 & 1 & 0 & 0 & 0 \\
+0 & 0 & 0 & 1 & 1 & 0 \\
+0 & 0 & 0 & 0 & 1 & 0 \\
+0 & 0 & 0 & 0 & 0 & -1
+\end{array}\right), \quad\left(\begin{array}{rrrrrr}
+1 & 0 & 0 & 0 & 0 & 0 \\
+0 & 1 & 1 & 0 & 0 & 0 \\
+0 & 0 & 1 & 0 & 0 & 0 \\
+0 & 0 & 0 & 1 & 1 & 0 \\
+0 & 0 & 0 & 0 & 1 & 0 \\
+0 & 0 & 0 & 0 & 0 & -1
+\end{array}\right) .
+$$
+\textbf{Topic} :Similarity \\
+\textbf{Book} :Berkeley Problems in Mathematics\\
+\textbf{Final Answer} :\\
+
+
+\textbf{Solution} : We have
+
+$$
+2 x_{1}^{2}+x_{2}^{2}+3 x_{3}^{2}+2 t x_{1} x_{2}+2 x_{1} x_{3}=\left(x_{1}, x_{2}, x_{3}\right)\left(\begin{array}{lll}
+2 & t & 1 \\
+t & 1 & 0 \\
+1 & 0 & 3
+\end{array}\right)\left(\begin{array}{l}
+x_{1} \\
+x_{2} \\
+x_{3}
+\end{array}\right)
+$$
+
+By the Solution to Problem 7.8.2 above, the form is positive definite if and only if the determinants
+
+$$
+\left|\begin{array}{lll}
+2 & t & 1 \\
+t & 1 & 0 \\
+1 & 0 & 3
+\end{array}\right|>0 \quad \text { and } \quad\left|\begin{array}{ll}
+2 & t \\
+t & 1
+\end{array}\right|>0
+$$
+
+that is, when $-1+3\left(2-t^{2}\right)=5-3 t^{2}>0$ and $2-t^{2}>0$.
+
+Both conditions hold iff $|t|<\sqrt{\frac{5}{3}}$. For these values of $t$ the form is positive definite.
+\textbf{Topic} :Bilinear, Quadratic Forms, and Inner Product Spaces \\
+\textbf{Book} :Berkeley Problems in Mathematics\\
+\textbf{Final Answer} :\\
+
+
+\textbf{Solution} : Every vector in $W$ is orthogonal to $v=(a, b, c)$. Let $Q$ be the orthogonal projection of $\mathbb{R}^{3}$ onto the space spanned by $v$, identified with its matrix. The columns of $Q$ are $Q e_{j}, 1 \leqslant j \leqslant 3$, where the $e_{j}$ 's are the standard basis vectors in $\mathbb{R}^{3}$. But
+
+$$
+\begin{aligned}
+&Q e_{1}=\left\langle v, e_{1}\right\rangle v=\left(a^{2}, a b, a c\right) \\
+&Q e_{2}=\left\langle v, e_{2}\right\rangle v=\left(a b, b^{2}, b c\right) \\
+&Q e_{3}=\left\langle v, e_{3}\right\rangle v=\left(a c, b c, c^{2}\right) .
+\end{aligned}
+$$
+
+Therefore, the orthogonal projection onto $W$ is given by
+
+$$
+P=I-Q=\left(\begin{array}{ccc}
+1-a^{2} & -a b & -a c \\
+-a b & 1-b^{2} & -b c \\
+-a c & -b c & 1-c^{2}
+\end{array}\right) \text {. }
+$$
+\textbf{Topic} :Bilinear, Quadratic Forms, and Inner Product Spaces \\
+\textbf{Book} :Berkeley Problems in Mathematics\\
+\textbf{Final Answer} :\\
+
+
+\textbf{Solution} : Since $p$ is even, it is orthogonal on $[-1,1]$ to all odd polynomials. Hence $a$ and $b$ are determined by the two conditions
+
+$$
+\int_{-1}^{1} p(x) d x=0, \quad \int_{-1}^{1} x^{2} p(x) d x=0 .
+$$
+
+Carrying out the integrations, one obtains the equations
+
+$$
+2 a+\frac{2 b}{3}-\frac{2}{5}=0, \quad \frac{2 a}{3}+\frac{2 b}{5}-\frac{2}{7}=0 \text {. }
+$$
+
+Solving these for $a$ and $b$, one gets $a=-\frac{3}{35}, b=\frac{6}{7}$, therefore
+
+$$
+p(x)=-\frac{3}{35}+\frac{6 x^{2}}{7}-x^{4} \text {. }
+$$
+\textbf{Topic} :Bilinear, Quadratic Forms, and Inner Product Spaces \\
+\textbf{Book} :Berkeley Problems in Mathematics\\
+\textbf{Final Answer} :\\
+
+
+\textbf{Solution} : From the Criteria proved in the Solution to Problem 7.8.2 we see that the matrix is positive definite and $v^{t} A v=N(v)$ defines a norm in $\mathbb{R}^{3}$. Now all norms in $\mathbb{R}^{3}$ are equivalent, see the Solution to Problem 2.1.6, so
+
+$$
+\alpha N(v) \leqslant\|v\| \leqslant \beta N(v)
+$$
+
+where $\alpha$ and $\beta$ are the minimum and the maximum of $\|v\|$ on the set $v^{t} A v=1$.
+
+We can use the Method of Lagrange Multipliers [MH93, p. 414] to find the maximum of the function
+
+$$
+f(x, y, z)=x^{2}+y^{2}+z^{2}
+$$
+
+over the surface defined by $\psi(x, y, z)=6$, where
+
+$$
+\psi=\frac{1}{6}\left(13 x^{2}+13 y^{2}+10 z^{2}-10 x y-4 x z-4 y z\right)
+$$
+
+is the quadratic form defined by the matrix $A$. Setting up the equations we have:
+
+$$
+\frac{\partial \psi}{\partial x}=26 x-10 y-4 z=\lambda \frac{\partial f}{\partial x}=2 \lambda x
+$$
+
+
+
+$$
+\begin{aligned}
+&\frac{\partial \psi}{\partial y}=26 y-10 x-4 z=\lambda \frac{\partial f}{\partial y}=2 \lambda y \\
+&\frac{\partial \psi}{\partial z}=20 z-4 x-4 y=\lambda \frac{\partial f}{\partial z}=2 \lambda z \\
+&\psi(x, y, z)=6
+\end{aligned}
+$$
+
+which is equivalent to the linear system of equations
+
+$$
+\left(\begin{array}{ccc}
+13-\lambda & -5 & -2 \\
+-5 & 13-\lambda & -2 \\
+-2 & -2 & 10-\lambda
+\end{array}\right)\left(\begin{array}{l}
+x \\
+y \\
+z
+\end{array}\right)=0
+$$
+
+together with the equation $\psi(x, y, z)=6$. Now if the determinant of the system is nonzero, there is only one solution to the system, the trivial one $x=y=z=0$ and that point is not in the surface $\psi(x, y, z)=6$, so let's consider the case where the determinant is zero. One can easily compute it and it is:
+
+$$
+-\lambda^{3}+36 \lambda^{2}-396 \lambda+1296
+$$
+
+and one can easily see that $\lambda=18$ is a root of the polynomial, because it renders the first two rows of the matrix the same, factoring it completely we get:
+
+$$
+(18-\lambda)(\lambda-6)(\lambda-12)
+$$
+
+Considering each one of the roots that will correspond to non-trivial solutions of the system of linear equations
+
+- $\lambda=18$. In this case the system becomes:
+
+$$
+\left(\begin{array}{lll}
+-5 & -5 & -2 \\
+-5 & -5 & -2 \\
+-2 & -2 & -8
+\end{array}\right)\left(\begin{array}{l}
+x \\
+y \\
+z
+\end{array}\right)=0
+$$
+
+which reduces to $\left\{\begin{array}{l}5 x+5 y+2 z=0 \\ 2 x+2 y+8 z=0\end{array}\right.$. Therefore $z=0$ and $y=-x$. Substituting this back in the equation of the ellipsoid, we find $x=\pm \frac{1}{\sqrt{6}}$,
+and the solution points are:
+
+$$
+\pm \frac{1}{\sqrt{6}}(1,-1,0)
+$$
+
+- $\lambda=6$. The system now is
+
+$$
+\left(\begin{array}{rrr}
+7 & -5 & -2 \\
+-5 & 7 & -2 \\
+-2 & -2 & 4
+\end{array}\right)\left(\begin{array}{l}
+x \\
+y \\
+z
+\end{array}\right)=0
+$$
+
+and the solutions are: $x=y=z$ and the only points in this line on the ellipsoid are:
+
+$$
+\pm \frac{1}{\sqrt{3}}(1,1,1)
+$$
+
+$-\lambda=12$. The system now is
+
+$$
+\left(\begin{array}{rrr}
+1 & -5 & -2 \\
+-5 & 1 & -2 \\
+-2 & -2 & -2
+\end{array}\right)\left(\begin{array}{l}
+x \\
+y \\
+z
+\end{array}\right)=0
+$$
+
+and the solutions are: $y=x$ and $z=-2 x$ the points in this line on the ellipsoid are:
+
+$$
+\pm \frac{1}{2 \sqrt{3}}(1,1,-2) \text {. }
+$$
+
+Computing the sizes of each (pair) of the vectors we obtain $1 / \sqrt{3}, 1$ and $1 / \sqrt{2}$, respectively; so the least upper bound is 1 .
+\textbf{Topic} :Bilinear, Quadratic Forms, and Inner Product Spaces \\
+\textbf{Book} :Berkeley Problems in Mathematics\\
+\textbf{Final Answer} :\\
+
+
+\textbf{Solution} :nan\\
+\textbf{Topic} :General Theory of Matrices \\
+\textbf{Book} :Berkeley Problems in Mathematics\\
+\textbf{Final Answer} :\\
+
+
+\textbf{Solution} : 1. Assume without loss of generality that $\lambda=0$ (otherwise replace $J$ by $J-\lambda I)$. Let $e_{1}, \ldots, e_{n}$ be the standard basis vectors for $\mathbb{C}^{n}$, so that $J e_{k}=e_{k-1}$ for $k=2, \ldots, n, J e_{1}=0$. Suppose $A J=J A$. Then, for $k=1, \ldots, n-1$,
+
+$$
+A e_{k}=A J^{n-k} e_{n}=J^{n-k} A e_{n},
+$$
+
+so $A$ is completely determined by $A e_{n}$. If $A e_{n}=\left(\begin{array}{c}c_{n} \\ \vdots \\ c_{1}\end{array}\right)$, then
+
+$$
+A=\left(\begin{array}{cccccc}
+c_{1} & c_{2} & c_{3} & \ldots & c_{n-1} & c_{n} \\
+0 & c_{1} & c_{2} & \ldots & c_{n-2} & c_{n-1} \\
+0 & 0 & c_{1} & \ldots & c_{n-3} & c_{n-2} \\
+\vdots & \vdots & \vdots & \ddots & \vdots & \vdots \\
+0 & 0 & 0 & \ldots & c_{1} & c_{2} \\
+0 & 0 & 0 & \ldots & 0 & c_{1}
+\end{array}\right) .
+$$
+
+In other words, $A$ has zero entries below the main diagonal, the entry $c_{1}$ at each position on the main diagonal, the entry $c_{2}$ at each position immediately above the main diagonal, the entry $c_{3}$ at each position two slots above the main diagonal, etc. From (*) it follows that every matrix of this form commutes with $J$. The commutant of $J$ thus has dimension $n$.
+
+2. Consider a $2 n \times 2 n$ matrix in block form $\left(\begin{array}{ll}A & B \\ C & D\end{array}\right)$ where $A, B, C, D$ are $n \times n$. A simple computation shows that it commutes with $J \oplus J$ if and only if $A, B, C, D$ all commute with $J$. The commutant of $J$, as a vector space, is thus the direct sum of 4 vector spaces of dimension $n$, so it has dimension $4 n$.
+\textbf{Topic} :General Theory of Matrices \\
+\textbf{Book} :Berkeley Problems in Mathematics\\
+\textbf{Final Answer} :\\
+
+
+\textbf{Solution} :nan\\
+\textbf{Topic} :General Theory of Matrices \\
+\textbf{Book} :Berkeley Problems in Mathematics\\
+\textbf{Final Answer} :\\
+
+
+\textbf{Solution} : 1. Let $A$ and $B$ be $n \times n$ real matrices and $k$ a positive integer. We have
+
+$$
+(A+t B)^{k}=A^{k}+t \sum_{i=0}^{k-1} A^{i} B A^{k-1-i}+O\left(t^{2}\right) \quad(t \rightarrow 0)
+$$
+
+where $O\left(t^{2}\right)$ is composed of terms with a power of $t$ higher than 1. Hence
+
+$$
+\lim _{t \rightarrow 0} \frac{1}{t}\left((A+t B)^{k}-A^{k}\right)=\sum_{i=0}^{k-1} A^{i} B A^{k-1-i} .
+$$
+
+2. We have
+
+$$
+\left.\frac{d}{d t} \operatorname{tr}(A+t B)^{k}\right|_{t=0}=\left.\operatorname{tr} \frac{d}{d t}(A+t B)^{k}\right|_{t=0}
+$$
+
+By definition,
+
+$$
+\left.\frac{d}{d t}(A+t B)^{k}\right|_{t=0}=\lim _{t \rightarrow 0} \frac{1}{t}\left((A+t B)^{k}-A^{k}\right) .
+$$
+
+Using the previous part of the problem we get
+
+$$
+\left.\frac{d}{d t} \operatorname{tr}(A+t B)^{k}\right|_{t=0}=\operatorname{tr} \sum_{j=0}^{k-1} A^{j} B A^{k-j-1}=\sum_{j=0}^{k-1} \operatorname{tr}\left(A^{j} B A^{k-j-1}\right) .
+$$
+\textbf{Topic} :General Theory of Matrices \\
+\textbf{Book} :Berkeley Problems in Mathematics\\
+\textbf{Final Answer} :\\\end{document}
