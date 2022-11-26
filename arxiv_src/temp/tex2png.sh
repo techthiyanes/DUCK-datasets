@@ -16,7 +16,7 @@ pdflatex --synctex=1 *.tex
 # Parse synctex
 gzip -d *.gz
 python extract.py
-rm *.py
+rm .py
 cd ..
 # Make folder for png output
 mkdir "png"
@@ -27,6 +27,6 @@ pdftoppm *.pdf out -png
 rm *.pdf
 cd ..
 # Clean up extra files
-rm *.tex
+rm $FILENAME.tex
 rm *.py
 cd ..

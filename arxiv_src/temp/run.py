@@ -11,7 +11,8 @@ def run(file_dir, verbose=True):
 
 def dispatch(file_dir):
     try:
-        pool.apply_async(run, [file_dir])
+        result = pool.apply_async(run, [file_dir])
+        result.get(10)
     except mp.context.TimeoutError:
         print("TIMEOUT")
         if os.path.isdir(file_dir):
