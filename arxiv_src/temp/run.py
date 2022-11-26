@@ -1,17 +1,23 @@
 import os
 import subprocess
 from tqdm import tqdm
-from threading import Thread, Semaphore
+import shutil
+import multiprocessing as mp
 
-sem = Semaphore(4)
 
-def run(sem, file_dir):
-    try:
+def run(file_dir, verbose=True):
+    if verbose:    
         subprocess.run(["./tex2png.sh", file_dir, "3&>/dev/null"], capture_output=False, stdout=subprocess.DEVNULL, stderr=subprocess.STDOUT)
-    finally:
-        sem.release()
 
-Ts = []
+def dispatch(file_dir):
+    try:
+        pool.apply_async(run, [file_dir])
+    except mp.context.TimeoutError:
+        print("TIMEOUT")
+        if os.path.isdir(file_dir):
+            shutil.rmtree(file_dir)
+
+pool = mp.Pool(2)
 for file_dir in tqdm(os.listdir()):
     if ".tex" in file_dir:
         # Check if \end{document} at end of file. If not add it
@@ -20,10 +26,4 @@ for file_dir in tqdm(os.listdir()):
             if "\end{document}" not in lines[-1]:
                 f.write("\n\\end{document}")
         file_dir = file_dir.split(".tex")[0]
-        sem.acquire()
-        T = Thread(target=run, args=(sem, file_dir))
-        T.start()
-        Ts.append(T)
-
-for T in Ts:
-    T.join()
+        dispatch(file_dir)
