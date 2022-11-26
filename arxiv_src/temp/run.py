@@ -3,6 +3,7 @@ import subprocess
 from tqdm import tqdm
 import shutil
 import multiprocessing as mp
+import time
 
 
 def run(file_dir, verbose=True):
@@ -33,11 +34,11 @@ for batch in tqdm(tex_batches):
         ps.append(p)
         p.start()
 
+    start_time = time.time()    
+
     for i, p in enumerate(ps):
-        if i == 0:
-            p.join(TIMEOUT)
-        else:
-            p.join(0)
+        remaining_time = TIMEOUT - (time.time() - start_time)
+        p.join(max(0, remaining_time))
         if p.is_alive():
             print("TIMEOUT")
             p.terminate()
