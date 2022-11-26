@@ -6,8 +6,9 @@ import multiprocessing as mp
 
 
 def run(file_dir, verbose=True):
-    if verbose:    
-        subprocess.run(["./tex2png.sh", file_dir, "3&>/dev/null"], capture_output=False, stdout=subprocess.DEVNULL, stderr=subprocess.STDOUT)
+    if verbose:
+        print(file_dir)
+    subprocess.run(["./tex2png.sh", file_dir, "3&>/dev/null"], capture_output=False, stdout=subprocess.DEVNULL, stderr=subprocess.STDOUT)
 
 def dispatch(file_dir):
     try:
