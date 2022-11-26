@@ -10,17 +10,9 @@ def run(file_dir, verbose=True):
         print(file_dir)
     subprocess.run(["./tex2png.sh", file_dir, "3&>/dev/null"], capture_output=False, stdout=subprocess.DEVNULL, stderr=subprocess.STDOUT)
 
-def dispatch(file_dir):
-    try:
-        result = pool.apply_async(run, [file_dir])
-        result.get(10)
-    except mp.context.TimeoutError:
-        print("TIMEOUT")
-        if os.path.isdir(file_dir):
-            shutil.rmtree(file_dir)
 
-batch_size = 2
-TIMEOUT = 10
+batch_size = 4
+TIMEOUT = 15
 pool = mp.Pool(batch_size)
 pool2 = mp.Pool(batch_size)
 tex_files = os.listdir()
@@ -41,8 +33,11 @@ for batch in tqdm(tex_batches):
         ps.append(p)
         p.start()
 
-    for p in ps:
-        p.join(TIMEOUT)
+    for i, p in enumerate(ps):
+        if i == 0:
+            p.join(TIMEOUT)
+        else:
+            p.join(0)
         if p.is_alive():
             print("TIMEOUT")
             p.terminate()
