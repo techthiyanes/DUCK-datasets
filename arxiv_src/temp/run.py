@@ -19,13 +19,33 @@ def dispatch(file_dir):
         if os.path.isdir(file_dir):
             shutil.rmtree(file_dir)
 
-pool = mp.Pool(2)
-for file_dir in tqdm(os.listdir()):
-    if ".tex" in file_dir:
-        # Check if \end{document} at end of file. If not add it
+batch_size = 2
+TIMEOUT = 10
+pool = mp.Pool(batch_size)
+pool2 = mp.Pool(batch_size)
+tex_files = os.listdir()
+tex_files = list(filter(lambda x: ".tex" in x, tex_files))
+num_batches = (len(tex_files) + batch_size - 1) // batch_size
+tex_batches = [tex_files[batch_size*i : batch_size*(i+1)] for i in range(num_batches)]
+
+for batch in tqdm(tex_batches):
+    # Check if \end{document} at end of file. If not add it
+    ps = []
+    for file_dir in batch:
         with open(file_dir, "r+") as f:
             lines = f.readlines()
             if "\end{document}" not in lines[-1]:
                 f.write("\n\\end{document}")
         file_dir = file_dir.split(".tex")[0]
-        dispatch(file_dir)
+        p = mp.Process(target=run, args=[file_dir])
+        ps.append(p)
+        p.start()
+
+    for p in ps:
+        p.join(TIMEOUT)
+        if p.is_alive():
+            print("TIMEOUT")
+            p.terminate()
+            p.join()
+            if os.path.isdir(file_dir):
+                shutil.rmtree(file_dir)     
