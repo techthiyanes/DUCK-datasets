@@ -1,5 +1,11 @@
 README 
 
+Version 1.2 (Updated 11.28.22)
+
+- Eliminated \\$ from "Problem Statement" and "Problem Choices" and replaced them with $. 
+
+
+
 Version 1.1 (Updated 11.28.22)
 
 - Added "categories" to final json. (i.e. list of labels for each law exam.)

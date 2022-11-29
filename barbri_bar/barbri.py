@@ -179,7 +179,8 @@ for n in range(len(sections)):
     output = pd.concat([output,convertPandas(sections[n],n)])
 
 output.sort_values(by=["Problem Number"])
-# output["Problem Choices"] = output["Problem Choices"].replace(r'\"', "")
+output["Problem Statement"] = output["Problem Statement"].str.replace('\\$', "$",regex=False)
+output["Problem Choices"] = list(map(lambda x: list(map(lambda y: y.replace("\\$","$"),x)), output["Problem Choices"]))
 
 
 
