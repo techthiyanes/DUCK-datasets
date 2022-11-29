@@ -122,6 +122,17 @@ def format(problems):
     problems = list(map(lambda y: list(map(lambda x: x.strip("\n") if type(x)== str else x, y)), problems))
     regex = r"\([A-D]\) "
     problems = list(map(lambda y: [y[0],y[1],list(map(lambda x: x.strip("\n"),re.split(regex,y[2],maxsplit=4,flags=re.DOTALL)))[1:]], problems))
+    regex_list = [
+        [r"\\\\\%"," "], 
+        [r"\\\\\$", " "],
+        [r' \"', " \""], 
+        [r'\\n',' '], 
+        ['\"\\\"',' ']
+    ]
+    for j in range(len(regex_list)): 
+        regex = regex_list[j]
+        for i in range(len(problems)): 
+            problems[i][1] = problems[i][1].replace(regex[0], regex[1])
     return problems
 
 def answerExtract(string,n): 
@@ -150,7 +161,7 @@ def convertPandas(string,n):
     problems = problemExtract(string,n) + multiPartExtract(string,n)
     problems = format(problems)
     answerKeys = answerExtract(string,n)
-    output     = pd.DataFrame([["NAN"]*len(collabel)]*len(problems))
+    output     = pd.DataFrame([[" "]*len(collabel)]*len(problems))
     val        = answerKeys.keys()
     for i in range(len(problems)): 
         if problems[i][0] in val: 
@@ -168,10 +179,34 @@ for n in range(len(sections)):
     output = pd.concat([output,convertPandas(sections[n],n)])
 
 output.sort_values(by=["Problem Number"])
+# output["Problem Choices"] = output["Problem Choices"].replace(r'\"', "")
+
+
+
+labels = [
+    [
+    "WTD Constitutional Law", 
+    "WTD Contracts", 
+    "WTD Criminal Law", 
+    "WTD Evidence", 
+    "WTD Real Property", 
+    "WTD Torts"], 
+    ["MSQ"]*6, 
+    ["AM Exam", 
+    "PM Exam"], 
+    ["RMQ Constitutional Law"],
+    ["RMQ Contracts"],
+    ["RMQ Criminal Law"], 
+    ["RMQ Evidence"], 
+    ["RMQ Real Property"], 
+    ["RMQ Torts"]
+]
+
 
 with open("output.json", "w") as f:
     result = output.to_json(orient="records")
     parsed = json.loads(result)
+    parsed = {"categories": labels, "entries": parsed}
     f.write(json.dumps(parsed,indent=4))
 
 

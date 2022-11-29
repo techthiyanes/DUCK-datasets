@@ -1,5 +1,12 @@
 README 
 
+Version 1.1 (Updated 11.28.22)
+
+- Added "categories" to final json. (i.e. list of labels for each law exam.)
+
+
+
+Version 1.0
 
 1. MATHPIX CONVERSION ERRORS. If there are any conversion errors (e.g. Mathpix incorrectly converted $12,000 to $\$ 12,000$), use the `regexes_clean` variable to eliminate it. `regexes_clean` is a list of lists of length 2 where the first element is the regex capturing the conversion errors and the second element specifies how the error should be converted. For instance, the above example can be corrected using [r"\$\\\$",r"\$"]
 
