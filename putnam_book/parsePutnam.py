@@ -34,36 +34,47 @@ def remove_irregularities(problem):
 
     return problem
 
+def parse_sections(text, is_problem):
 
-def parse_sections(text):
-    index_list = list(find_all(text, "\subsection")) + list(find_all(text, "\subsubsection"))
+    index_list = [0]
+
+    # get list of indexes of where numbers start and add it previous list
     for i in range(1,num_probs+1):
         try:
-            index_list.append(text.index("\n{}. ".format(i)))
-        except:
-            print("\n Error {}. ".format(i))
+            index_list.append(min([e for e in find_all(text, "\n{}. ".format(i)) if e>index_list[-1]]))
+        except Exception as e:
+            print("\n Error {}. ".format(i), e, index_list[-1])
+            print(index_list)
+
+    # list of stuff that marks sections (and therefore the end of a question)
+    index_list += list(find_all(text, "\subsection")) + list(find_all(text, "\subsubsection"))
     index_list = list(sorted(index_list))
-
+    
+    # get substrings between numbers / sections
     text = [text[e:index_list[c+1]] for c,e in enumerate(index_list[:-1])]
-    text = [e for e in text if "\subsection" not in e and "\subsubsection" not in e]
 
+    # removes stuff that has no problems in it (starts when a section starts, ends when a number starts)
+    text = [e for e in text if "\subsection" not in e and "\subsubsection" not in e][1:]
+
+    # add to dictionary and prettify
     problems = {}
     for problem in text:
-        if not any([e in problem.lower() for e in bad_words]):
+        if (not any([e in problem.lower() for e in bad_words])) or not is_problem:
             num = problem.split('.')[0][1:]
             problems[int(num)] = remove_irregularities(problem)
+    
     return problems
 
 
 with open("outputPutnam.csv", "w") as output_file, open("andreescu_putnam.md", 'r') as textfile:
-    output_file.write("Pputnamroblem Number, Problem Statement, Solution, Final Answer")
+    output_file.write("Problem Number, Problem Statement, Solution, Final Answer")
     text = textfile.read()
 
     problems = text.split("\section{SOLUTIONS}")[0]
     solutions = text.split("\section{SOLUTIONS}")[1]
 
-    problems = parse_sections(problems)
-    solutions = parse_sections(solutions)
+    problems = parse_sections(problems, True)
+    solutions = parse_sections(solutions, False)
 
     for i in range(1,num_probs+1):
         if i in problems and i in solutions:

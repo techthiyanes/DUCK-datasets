@@ -7,8 +7,6 @@ PUTNAM and
 BEYOND
 ![](https://cdn.mathpix.com/cropped/2022_10_30_5df578bdac2dccbf98f1g-001.jpg?height=150&width=402&top_left_y=214&top_left_x=92)
 
-18. 18
-
 ![](https://cdn.mathpix.com/cropped/2022_10_30_5df578bdac2dccbf98f1g-001.jpg?height=46&width=65&top_left_y=354&top_left_x=129)
 ![](https://cdn.mathpix.com/cropped/2022_10_30_5df578bdac2dccbf98f1g-001.jpg?height=342&width=462&top_left_y=314&top_left_x=97)
 
@@ -579,7 +577,9 @@ $$
 
 (a) divisible by $2^{n}$ and containing only the digits 2 and 3 ;
 
-(b) divisible by $5^{n}$ and containing only the digits $5,6,7,8,9$. 18. Prove that for any $n \geq 1$, a $2^{n} \times 2^{n}$ checkerboard with $1 \times 1$ corner square removed can be tiled by pieces of the form described in Figure 2 .
+(b) divisible by $5^{n}$ and containing only the digits $5,6,7,8,9$. 
+
+18. Prove that for any $n \geq 1$, a $2^{n} \times 2^{n}$ checkerboard with $1 \times 1$ corner square removed can be tiled by pieces of the form described in Figure 2 .
 
 19. Given a sequence of integers $x_{1}, x_{2}, \ldots, x_{n}$ whose sum is 1 , prove that exactly one of the cyclic shifts
 
@@ -13916,7 +13916,9 @@ We now look at repeated prime factors. Because the difference between two number
 
 $2,3,5,6,7,10,14,15,21,30,35,42,70,105,210$.
 
-Because the difference between the largest and the smallest of these three numbers is at most 9 , none of them can be greater than 21 . We have to look at the sequence $1,2,3, \ldots, 29$. Any subsequence of consecutive integers of length 9 that has a term greater than 10 contains a prime number greater than or equal to 11 , which is impossible. And from $1,2, \ldots, 10$ we cannot select nine consecutive numbers with the required property. This contradicts our assumption, and the problem is solved. 3. The example $2^{2}, 3^{2}, 5^{2}, \ldots, 43^{2}$, where we considered the squares of the first 14 prime numbers, shows that $n \geq 15$.
+Because the difference between the largest and the smallest of these three numbers is at most 9 , none of them can be greater than 21 . We have to look at the sequence $1,2,3, \ldots, 29$. Any subsequence of consecutive integers of length 9 that has a term greater than 10 contains a prime number greater than or equal to 11 , which is impossible. And from $1,2, \ldots, 10$ we cannot select nine consecutive numbers with the required property. This contradicts our assumption, and the problem is solved. 
+
+3. The example $2^{2}, 3^{2}, 5^{2}, \ldots, 43^{2}$, where we considered the squares of the first 14 prime numbers, shows that $n \geq 15$.
 
 Assume that there exist $a_{1}, a_{2}, \ldots, a_{16}$, pairwise relatively prime integers greater than 1 and less than 2005 , none of which is a prime. Let $q_{k}$ be the least prime number in the factorization of $a_{k}, k=1,2, \ldots, 16$. Let $q_{i}$ be the maximum of $q_{1}, q_{2}, \ldots, q_{15}$. Then $q_{i} \geq p_{16}=47$. Because $a_{i}$ is not a prime, $\frac{a_{i}}{q_{i}}$ is divisible by a prime number greater than or equal to $q_{i}$. Hence $a_{i} \geq q_{i}^{2}=47^{2}>2005$, a contradiction. We conclude that $n=15$.
 
