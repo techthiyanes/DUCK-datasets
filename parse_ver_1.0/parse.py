@@ -1,10 +1,15 @@
 import os  
 import pandas as pd
 import re 
+import argparse
 # also requires pdflatex on machine
 
+parser = argparse.ArgumentParser()
+parser.add_argument("--file", help="file to parse",
+                    default= "berkeley_output.json") # input("INPUT: Json file?")
+args = parser.parse_args()
 
-file = "berkeley_output.json" # input("INPUT: Json file?")
+file = args.file
 js = open(file, "r").read()
 df = pd.read_json(js)
 col = df.columns
