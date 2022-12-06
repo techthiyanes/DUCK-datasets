@@ -1,0 +1,695 @@
+%\newcommand*{\TWOCOLUMN}{}%
+\newcommand*{\EXAMPLES}{}%
+
+\ifdefined\TWOCOLUMN
+\documentclass[conference]{IEEEtran}
+%\documentclass[article,onecolumn]{IEEEtran}
+
+
+% \documentclass[article,twocolumn]{IEEEtran}
+
+\else
+\documentclass[journal,onecolumn,12pt,twoside]{IEEEtranTCOM}
+\fi 
+
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{amssymb,amsmath,amsthm}
+\usepackage{subcaption,siunitx,booktabs}
+%\usepackage[dvipsnames]{xcolor}
+\usepackage[table]{xcolor}
+
+\usepackage{tikz}
+\usetikzlibrary{fit,matrix}
+\usetikzlibrary{patterns,snakes}
+
+
+% \usetikzlibrary{fit}
+% \tikzset{%
+%   highlight/.style={rectangle,rounded corners,fill=red!15,draw,
+%     fill opacity=0.5,thick,inner sep=0pt}
+% }
+% \newcommand{\tikzmark}[2]{\tikz[overlay,remember picture,
+%   baseline=(#1.base)] \node (#1) {#2};}
+% %
+% \newcommand{\Highlight}[1][submatrix]{%
+%     \tikz[overlay,remember picture]{
+%     \node[highlight,fit=(left.north west) (right.south east)] (#1) {};}
+% }
+
+%\documentclass[journal,draftcls,onecolumn,12pt,twoside]{IEEEtranTCOM}
+% \normalsize
+% %\makeatother
+% %\pagestyle{headings}
+% % adjust as needed
+% %\addtolength{\footskip}{0\baselineskip}
+% \addtolength{\textheight}{2\baselineskip}
+% %\addtolength{\textheight}{-5\baselineskip}
+
+% %\documentclass[10pt,conference]{IEEEtran}
+% %\documentclass[12pt]{article}
+% % \usepackage{amssymb,amsmath}
+% % \usepackage{bbding}
+% % \usepackage{flushend,cuted}
+% % %\usepackage{amsmath}
+% % \usepackage{amsthm}
+% % \usepackage{amsfonts}
+% % \usepackage{float} % is used for \begin{figure}{H}
+% % \usepackage{srcltx}
+% % \usepackage{mathrsfs} % is required for \mathscr alwhichphabet.
+% % \usepackage{multirow}
+% % \usepackage{amssymb}
+% % \usepackage{enumitem}
+% \usepackage[utf8]{inputenc}
+% \usepackage{graphicx}
+% \usepackage{amssymb,amsmath}
+% \usepackage{subcaption,siunitx,booktabs}
+\setcounter{MaxMatrixCols}{20}
+% % \usepackage[utf8]{inputenc}
+% % \usepackage{siunitx,booktabs}
+
+% % \usepackage{algorithm}
+% % \usepackage[noend]{algpseudocode}
+% % \makeatletter
+% % \def\BState{\State\hskip-\ALG@thistlm}
+% \makeatother
+
+
+
+% \usepackage{graphicx}
+% \usepackage{epsfig}
+% \usepackage{psfrag}
+% \usepackage{subfigure}
+
+% \usepackage{setspace}
+% \usepackage{multicol}
+% \usepackage[noadjust]{cite}
+% \usepackage{hyperref}
+
+% %\usepackage{stfloats}
+% %\usepackage{amssymb}
+% %\usepackage{fancybox}
+% %\usepackage{latexsym}
+
+% \usepackage[]{units} % for nicefrac
+% \usepackage{url} % for URL bib
+% \usepackage[dvips]{color}
+% \usepackage{verbatim} % for comment environment
+% %\usepackage{hyperref} % for hyperlinks of references
+% %\usepackage{mathtools} \mathtoolsset{showonlyreftrue} % for removing the number from non-referenced equations
+% \usepackage{cite} % for [1]-[3]
+% \usepackage{ifthen} % for TpX
+% \usepackage{ifpdf} % for TpX
+% \usepackage{soul}
+% \usepackage{mathtools}
+
+% -------------------------------------------------------------------
+% Define the "Theorems" style
+% -------------------------------------------------------------------
+\newtheorem{claim}{Claim}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+\newtheorem{theorem}{Theorem}
+\newtheorem{definition}{Definition}
+%\newtheorem{algorithm}{Algorithm}
+\newtheorem{proposition}{Proposition}
+\newtheorem{example}{Example}
+\newtheorem{remark}{Remark}
+\newtheorem{question}{Question}
+\newtheorem{conjecture}{Conjecture}
+\newtheorem{property}{Property}
+
+% \newcommand\given[1][]{\:#1\vert\:}
+
+
+% \makeatletter
+% \def\widebreve#1{\mathop{\vbox{\m@th\ialign{##\crcr\noalign{\kern3\p@}%
+%       \brevefill\crcr\noalign{\kern3\p@\nointerlineskip}%
+%       $\hfil\displaystyle{#1}\hfil$\crcr}}}\limits}
+
+% \def\brevefill{$\m@th \setbox\z@\hbox{$\braceld$}%
+%   \bracelu\leaders\vrule \@height\ht\z@ \@depth\z@\hfill\braceru$}
+% \renewcommand*\env@matrix[1][*\c@Ma*matrixCols c]{%
+%   \hskip -\arraycolsep
+%   \let\@ifnextchar\new@ifnextchar
+%   \array{#1}}
+% \makeatletter
+
+% \DeclareRobustCommand{\Nt}[1][Nt]{\ensuremath {N}}
+% \DeclareRobustCommand{\PrecMat}[1][Nt]{\ensuremath{G}}
+% \DeclareRobustCommand{\PowerMat}[1][Nt]{\ensuremath{P}}
+% \ifdefined\TWOCOLUMN
+% \newcommand\figSize{0.92}
+% \else
+% \newcommand\figSize{0.92}
+% \fi
+
+\input{eli_macros.tex}
+\input{rv_defs.tex}
+
+%   %\documentclass[article,twocolumn]{IEEEtran}
+% \documentclass[conference]{IEEEtran}
+% %\documentclass[journal,draftcls,onecolumn,12pt,twoside]{IEEEtranTCOM}
+% %\usepackage{blindtext, graphicx}
+% \usepackage{cite}
+% \usepackage{graphicx}
+% \usepackage{amssymb,amsmath}
+% %\usepackage{amsthm}
+% \usepackage{amsfonts}
+% \usepackage{float} % is used for \begin{figure}{H}
+% \usepackage{srcltx}
+% \usepackage{mathrsfs} % is required for \mathscr alphabet.
+% \usepackage{multirow}
+% \usepackage{bbm}
+% \usepackage{cuted}
+% \setcounter{Ma*matrixCols}{64}
+
+% \usepackage{graphicx}
+% \usepackage{epsfig}
+% \usepackage{psfrag}
+% %\usepackage{subfigure}
+% %\usepackage{subcaption}
+
+% \usepackage{setspace}
+% %\usepackage{amssymb}
+% %\usepackage{fancybox}
+% %\usepackage{latexsym}
+
+% \usepackage[]{units} % for nicefrac
+% \usepackage{url} % for URL bib
+% \usepackage[dvips]{color}
+% \usepackage{verbatim} % for comment environment
+
+% \newcommand{\svv}[1]{\mathbf{#1}}
+% \DeclareRobustCommand{\Nt}[1][Nt]{\ensuremath {N_t}}
+% \DeclareRobustCommand{\alNt}[1][Nt]{\alpha(\Nt)}
+% \DeclareRobustCommand{\aNorm}[1][aNorm]{\ensuremath {\|{\bf a}\|}}
+
+\newcommand{\SNR}{\text{$\mathsf{SNR}$}}
+
+% \DeclareMathOperator{\Tr}{Tr}
+
+% \newtheorem{claim}{Claim}
+% \newtheorem{lemma}{Lemma}
+% \newtheorem{corollary}{Corollary}
+% \newtheorem{theorem}{Theorem}
+% \newtheorem{definition}{Definition}
+% \newtheorem{algorithm}{Algorithm}
+% \newtheorem{proposition}{Proposition}
+% \newtheorem{example}{Example}
+% \newtheorem{remark}{Remark}
+% \newtheorem{question}{Question}
+% \newtheorem{conjecture}{Conjecture}
+
+% \newcommand{\diag}{\mathop{\mathrm{diag}}}
+
+% %\input{eli_macros.tex}
+\DeclareRobustCommand{\prob}[1][{\rm Pr}]{\ensuremath {{#1}}}
+% \DeclareRobustCommand{\genGam}[1][\beta]{\ensuremath {{#1}}}
+
+% \input{eli_macros.tex}
+
+% % correct bad hyphenation here
+% \hyphenation{op-tical net-works semi-conduc-tor}
+
+\begin{document}
+
+\allowdisplaybreaks
+%
+% paper title
+% can use linebreaks \\ within to get better formatting as desired
+
+\title{An Explicit Rate-Optimal Streaming
+Code for Channels with Burst and Arbitrary Erasures}
+\ifdefined\TWOCOLUMN
+\author{
+\IEEEauthorblockN{Elad Domanovitz}
+\IEEEauthorblockA{
+School of Electrical Engineering \\
+Tel Aviv University\\
+Tel Aviv-Yafo, Israel\\
+                    E-mail: \texttt{domanovi@post.tau.ac.il}
+}  \and
+\IEEEauthorblockN{Silas L. Fong and Ashish Khisti}
+\IEEEauthorblockA{
+Department of Electrical and Computer Engineering\\
+  University of Toronto\\
+                    Toronto, ON M5S 3G4, Canada\\
+                    E-mail: \texttt{\{silas.fong, akhisti\}@utoronto.ca}
+}
+}
+\else
+\author{Elad Domanovitz, Silas L. Fong and Ashish Khisti %, \emph{Member, IEEE}
+%\thanks{The work of \mathbb{E}. Domanovitz and U. Erez was supported in part by the Israel Science Foundation under Grant No. 1956/17.}
+% \thanks{The material in this paper was presented in part at the 2016 IEEE
+% International Symposium on Information Theory, Barcelona.}
+\thanks{E.. Domanovitz is with the Department of Electrical Engineering -- Systems, Tel Aviv University, Tel Aviv, Israel (email: domanovi,eng.tau.ac.il).}
+\thanks{S. L. Fong and A. Khisti are with the Department of Electrical and Computer Engineering, University of Toronto, Toronto, ON M5S 3G4, Canada (email: silas.fong, akhisti@utoronto.ca}
+}
+\fi
+\maketitle
+% \date{September 2017}
+
+
+
+
+
+\begin{abstract}
+In this paper, we consider transmitting a sequence of messages (a streaming source) over a packet erasure channel, where every source message must be recovered perfectly at the destination subject to a fixed decoding delay. Recently, the capacity of such a channel was established. However, the codes shown to achieve the capacity are either non-explicit constructions (proven to exist) or explicit constructions requiring large field size that scales exponentially with the delay. This work presents an explicit rate-optimal construction for all channel and delay parameters over a field size that scales only quadratically with the delay.
+\end{abstract}
+
+\section{Introduction}
+With the development of many interactive multimedia applications such as high-quality video conferencing and virtual reality (VR), the need for reliable transmission with strict  latency constraints is a major consideration. The International Telecommunication Union recommends the end-to-end latency for such interactive applications to be less than 150 ms \cite{onewayTransTime},\cite{StockhammerHannuksela2005}. Packet loss at the physical layer often occurs in streaming application due to the unsteady nature of the link e.g. wireless or due to packet drops at transmission points in the network such as routers or switches due to high traffic. Since losses at the physical layer are inevitable, to prevent these losses two main error control schemes are currently implemented: Automatic Repeat Request (ARQ) and Forward Error Correction (FEC). The ARQ scheme presents limitations for the low-latency interactive application in the case of long-distance communication given that each retransmission of a lost packet requires an additional round-trip delay The solution studied in this paper relies on an FEC scheme which prevents the need for retransmission of dropped packets.
+
+%\subsection{Prior Work}
+Motivated by these considerations, the FEC streaming setup studied in this paper was  introduced by Martinian and Sunderberg in \cite{MartinianSundberg2004}. However their work only considered the case when the packet losses occur in bursts, separated by sufficiently long guard intervals. The sliding-window burst erasure model, considered in this paper, was proposed by Badr et al.\ in \cite{BKTA2013} along with upper and lower bounds on the capacity of the channel.
+\iffalse
+a bound for the maximum achievable rate of the channel $C_{(W,T,B,N)}$.
+\begin{align}
+C_{(W,T,B,N)} = \frac{T-N+1}{T+B-N+1}
+\end{align}
+\fi
+The exact capacity in this setup was determined in independent works by Fong et al.~\cite{fong2019optimal}  and Krishnan and Kumar~\cite{krishnan2018rate}.
+The proof of Fong et al.\ is existential in nature and involves a recursive construction for computing coefficients in the generator matrix however, the field size requirements are large ($O {{T}\choose{N}}$). Dudzicz, et al.\ \cite{Dudzicz2019} showed an explicit (and systematic) construction for all rates greater than or equal $1/2$, albeit the required field size is larger than the non-explicit constructions of \cite{fong2019optimal}. 
+
+Krishnan and Kumar \cite{krishnan2018rate} presented an explicit construction based on linearized polynomials and their construction is from first principles. However, except for a small range of parameters, the field-size requirements are still large ($\exp(T)$).  The field size was addressed in a recent paper in their follow-up work \cite{KrishnanShuklaKumar2019} which introduced a new rate-optimal code
+construction covering all channel and delay parameters, which requires the field size to grow quadratically $O(T^2)$). However, explicit constructions were presented only for specific cases. In this paper we present an explicit construction which requires only a quadratic field size for all channel and delay parameters.
+
+
+%For other recent works on streaming codes, see e.g., \cite{LQH2013,AdlerCassuto2017,rashmi,KuijperB16,napp2016constructing,almeida2016superregular} and references therein.
+
+
+% This paper presents a new class of optimal rate convolutional codes when the rate of the code is at-least $R \ge 1/2$.  Our construction uses  off-the-shelf MDS and MRD block codes as constituent codes. It uses a systematic generator matrix.  It  generalizes the construction of Martinian and Sundberg  \cite{MartinianSundberg2004} which was limited to correcting burst erasures, in a natural way.  The structure of the generator matrix is fully described for any set of parameters when $R \ge \frac{1}{2}$, and the field size requirements of the construction are discussed.
+\section{Problem Statement}
+\subsection{Notation}
+\label{sec:Notation}
+We denote by $\mathbb{F}_q$ the finite field of size $q$ where the elements of the matrix belong to. The extension field is denoted by $\mathbb{F}_{q^m}$. The symbol vectors are represented using the bold characters (e.g., ${\bf s}$). A generator matrix is denoted by $\svv{G}$. The $i^{\text{th}}$ column of $\svv{G}$ is denoted  as ${\bf g}_i$. The identity matrix of size $k$ is denoted by $I_k$. In a standard manner, we define by $R =\frac{k}{n}$ as the rate of the code.
+
+A $k\times n$ matrix $\svv{G}$ over a finite field $\mathbb{F}_{q}$, with $k \leq n$, will be referred to as an MDS matrix if any $k$ distinct
+columns of $\svv{G}$ form a linearly independent set. Clearly, an MDS matrix $\svv{G}$ can serve as the generator matrix of an $(n,k)$ MDS code. In the sequel we use the following definitions 
+\begin{definition}(Punctured Code)
+Let $\mathcal{C}$ be an $(n,k)$ linear code over $\mathbb{F}_{q}$. Given a subset $\mathcal{P}$ of $[0 : n-1]$, the code $\mathcal{C}$ punctured on the coordinates in $\mathcal{P}$, is the linear code of length  $(n - |P|)$ obtained from $\mathcal{C}$ by deleting all the coordinates in $\mathcal{P}$.
+
+When $\mathcal{C}$ is $(n,k)$ is an MDS code, puncturing it over $\mathcal{P}$ results with $(k,n-|\mathcal{P}|)$ MDS code.
+\end{definition}
+
+\begin{definition}(Shortened Code)
+Let $\mathcal{C}$ be an $(n,k)$ linear code over $\mathbb{F}_{q}$. Given a subset $\mathcal{P}$ of $[0 : n-1]$, consider the subcode $\mathcal{C}^*$ achieved when assuming
+\begin{align}
+    s_i = 0 ~~~\forall ~i \in \mathcal{P}.
+\end{align}
+
+Then by the phrase $\mathcal{C}$ shortened on the coordinates in $\mathcal{P}$, we will mean the linear code of length $(n - |P|)$ obtained from $\mathcal{C^*}$ after puncturing on the coordinates given by $\mathcal{P}$.
+
+When $\mathcal{C}$ is $(n,k)$ is an MDS code, shortening it over $\mathcal{P}$ results with a $(k-|\mathcal{P}|,n-|\mathcal{P}|)$ MDS code. In the sequel we denote the shortened code as $\mathcal{C}^{|\mathcal{P}|}$.
+\end{definition}
+\subsection{Streaming Codes}
+\label{sec:StreamingCodes}
+We consider sending a source $S$ which generates at each time instant $t\in\{0,1,2,\ldots\}$ a packet ${\bf s}[t]\triangleq[s_0[t],s_1[t],\ldots,s_{k-1}[t]]^T$ with $s_i[t]\in \mathbb{F}_q$ for $i\in\{0,1,2,\ldots,k-1\}$. Note that $\mathbb{F}_q$ is a finite field of size $q$ such that ${\bf s}[t]\in\mathbb{F}_k^q$. Each source packet ${\bf s}[t]$ is encoded using a causal convolutional encoder $\mathcal{E}$ such that the encoded packet ${\bf x}[t] = [x_0[t], x_1[t],\ldots,x_{n-1}[t]]^T =\mathcal{E}({\bf s}[0],{\bf s}[1],\ldots,{\bf s}[t])$. Where ${\bf x}[t]\in\mathbb{F}^n_q$ and $\mathcal{E}:\mathbb{F}^{k(t+1)}_q\to \mathbb{F}^n_q$ is the encoding function.
+
+Each encoded packet ${\bf x}[t]$ is transmitted over a channel which introduces erasures on a packet level. The receiver
+receives at each time $t\in\{0,1,2,\ldots\}$ the packet ${\bf y}[t]$ such that
+\begin{align}
+    {\bf y}[t]=\begin{cases}
+    *~~~~~~~\text{if}~{\bf x}[t]~\text{is erased}\\
+    {\bf x}[t]~~~~\text{Otherwise}
+    \end{cases}
+\end{align}
+
+At the receiver the decoder $\mathcal{D}$ must reconstruct perfectly the source packet ${\bf s}[t]$ within the delay $T$ given the previously received packets $\{y[0], y[1],\ldots, y[t + T ]\}$, i.e.,
+$\hat{\bf s}[t]=\mathcal{D}(y[0], y[1],\ldots, y[t + T]) = \hat{\bf s}[t]$ with $\mathcal{D}$ being the decoding function and $\hat{\bf s}[t]$ being the reconstituted source packet ${\bf s}[t]$ by the decoder.
+
+\subsection{Channel Model}
+The channel model considered in this work is the sliding-window burst erasure channel denoted by $\mathcal{C}(W,B,N)$ that was introduced by Badr et al. in \cite{BKTA2013}. This model introduces up to $B$ consecutive erasures or $N$ arbitrarily positioned arbitrary isolated erasures in any window of size $W$ among the sequence of transmitted packets ${\bf x}[t]$.
+
+Since a channel that introduces any $N$ arbitrary erasures can introduce any burst erasure of length $N$, we assume without loss of generality that
+\begin{align}
+    B\geq N.
+\end{align}
+
+We further assume that $W \geq T + 1$. In the setting when $B<W\leq T + 1$ we can achieve the capacity by reducing the effective delay to $T_{\rm eff} = W-1$ as discussed in \cite{badr2017layered}. Furthermore the capacity is trivially zero if $W\leq B$ as an erasure sequence that erases all the channel packets becomes admissible.
+
+Thus we can assume without loss of generality that
+\begin{align}
+    W>T\geq B\geq N \geq 1.
+\end{align}   
+For further details refer to Section I-B of \cite{fong2019optimal}.
+\subsection{Capacity}
+\label{sec:Capacity}
+A streaming code with the encoder and decoder definitions in Section II-A is feasible for the $\mathcal{C}(W,B,N)$ sliding window channel if every source packet can be recovered with a delay of $T$. The maximum achievable rate of a feasible code is the capacity.
+
+Recently, independent works in \cite{fong2019optimal}, \cite{krishnan2018rate} established that the capacity is given by:
+\begin{align}
+    C=\frac{T-N+1}{T-N+B+1}.
+\end{align}
+% \subsection{Related Work}
+% \label{sec:RelatedWork}
+
+
+\section{Code construction}
+In this Section we present the construction of the generator matrix $\svv{G}$ of the $(n,k)$ block code $\mathcal{C}$
+and show that it is a rate-optimal streaming code that can decode all the data symbols with maximal delay of $T$ from a burst of length $B$ or $N$ arbitrary erasures symbols in a sliding window of $W$.
+
+We define 
+\begin{align}
+    k&=T-N+1 \nonumber \\
+    n&=k+B 
+    \label{eq:def_k_n}
+\end{align}
+in the same manner as Fong et al. in \cite{fong2019optimal}. The code is constructed as follows.
+\begin{itemize}
+    \item We start with a $(n,k)$ MDS code $\mathcal{C''}$ over $\mathbb{F}_q$ with generator matrix\footnote{We note that $Y$ is not a constant element, but rather a place-holder.}
+  \begin{align*}
+    &\svv{G''}=\\
+    &\begin{bmatrix}
+        1 & 0 & 0 & 0 & \cdots & 0 &  Y & \cdots & \cdots & \cdots & \cdots & Y\\
+        0 & 1 & 0 & 0 & \cdots & 0 & Y & \cdots & \cdots & \cdots & \cdots & Y\\
+        0 & 0 & \ddots & 0 & \cdots & 0 & Y & \cdots & \cdots & \cdots & \cdots & Y \\
+        \vdots & \vdots &  & 1 & & \vdots & \vdots & & & & & \vdots\\
+        \vdots & \vdots &  & & \ddots & 0 & \vdots & & & & & \vdots \\
+        0 & 0 & \cdots & \cdots & 0 & 1 & Y & \cdots & \cdots & \cdots & \cdots & Y
+    \end{bmatrix}.
+\end{align*}  
+\item We perform row operations to generate code $\mathcal{C'}$ with the generator matrix
+\begin{equation*}
+    \renewcommand\arraystretch{1.8}
+    \begin{aligned}
+    &\svv{G'}= \\
+        &\underbrace{\left[\begin{matrix}
+        1 & X & \cdots & X & 0 & 0   \\
+        0 & 1 & X & \cdots & X & 0    \\
+        0 & 0 & \ddots & \ddots & \ddots & \ddots    \\
+        \vdots & \vdots &  & 1 &\ddots &\ddots   \\
+        \vdots & \vdots &  & & \ddots & X    \\
+        0 & 0 & \cdots & \cdots & 0 & 1   
+    \end{matrix}\right.}_{\let\scriptstyle\textstyle\substack{k}}
+    \underbrace{\left.\begin{matrix}
+        0 & \cdots & 0   \\
+        0 & \cdots & 0    \\
+        0 & \cdots & 0   \\
+        \ddots & & \vdots  \\
+        \cdots & X & 0  \\
+        X & \cdots & X  
+    \end{matrix}\right.}_{\let\scriptstyle\textstyle\substack{N-1}}
+    \underbrace{\left.\begin{matrix}
+        X & \cdots & X\\
+        \vdots & \cdots & \vdots \\
+        X & \cdots & X \\
+        X & & X\\
+        \vdots & & \vdots\\
+        X & \cdots & X
+    \end{matrix}\right]}_{\let\scriptstyle\textstyle\substack{B-N+1}},
+    \end{aligned}
+\end{equation*}
+where the goal is to ``spread'' $N-1$ parity symbols diagonally with the data symbols. As it is easy to see that code $\mathcal{C''}$ can recover from a burst of size $B$ starting at time $0$ only at time $n-k+B=2B$, it can't support any delay requirement of $T\leq2B$. As we show later this ``spreading'' is an essential step in constructing a code that would support any $T\geq B$ (as well as arbitrary $N$ erasures).
+
+This ``spreading'' is achieved via successive row cancellation. Equivalently, it can be denoted as  $\svv{G'}=\svv{M}\svv{G''}$ where matrix $\svv{M}$ is an upper triangular matrix which is denoted as
+\begin{align}
+    \svv{M}=\begin{bmatrix}
+    1 & Y' & Y' & \cdots & Y' \\
+    0 & 1 & Y' & \cdots & Y' \\
+    0 & 0 & \ddots & \cdots & Y' \\
+    0 & 0 & \cdots & 1 & Y' \\
+    0 & 0 & \cdots & 0 & 1 \\
+    \end{bmatrix},
+\end{align}
+ where $Y'$ denotes a function of one of the $Y$ symbols.
+
+Since all entries in $\svv{M}$ are linear combinations of elements from $\svv{G'}$ it is also over $\mathbb{F}_q$. Further, $\svv{M}$ is a full-rank matrix hence invertible. Since an erasure of any $l$ columns in $\svv{G'}$ can be translated to an erasure of $l$ columns in $\svv{G''}$ (by multiplying with the inverse of $\svv{M}$), the following property holds.
+\begin{property}
+\label{prop:prop1}
+block code $\mathcal{C'}$ with parity matrix $\svv{G'}$ is a $(n,k)$ MDS code over $\mathbb{F}_q$.
+\end{property}
+\item Finally, we replace the $(B-N+1)\times (B-N+1)$ upper right matrix with $\alpha\cdot\svv{I}_{B-N+1}$ where $\alpha\in\mathbb{F}_{q^2}\setminus\mathbb{F}_q$ to generate  code $\mathcal{C}$ with the generator matrix
+\begin{equation*}
+    \renewcommand\arraystretch{1.8}
+    \begin{aligned}
+    &\svv{G}= \\
+        &\underbrace{\left[\begin{matrix}
+        1 & X & \cdots & X & 0 & 0   \\
+        0 & 1 & X & \cdots & X & 0    \\
+        0 & 0 & \ddots & \ddots & \ddots & \ddots    \\
+        \vdots & \vdots &  & 1 &\ddots &\ddots   \\
+        \vdots & \vdots &  & & \ddots & X    \\
+        0 & 0 & \cdots & \cdots & 0 & 1   
+    \end{matrix}\right.}_{\let\scriptstyle\textstyle\substack{k}}
+    \underbrace{\left.\begin{matrix}
+        0 & \cdots & 0   \\
+        0 & \cdots & 0    \\
+        0 & \cdots & 0   \\
+        \ddots & & \vdots  \\
+        \cdots & X & 0  \\
+        X & \cdots & X  
+    \end{matrix}\right.}_{\let\scriptstyle\textstyle\substack{N-1}}
+    \underbrace{\left.\begin{matrix}
+        \alpha & \cdots & 0\\
+        0 & \ddots & 0 \\
+        0 & \cdots &  \alpha \\
+        X & \cdots & X \\
+        \vdots & & \vdots \\
+        X & \cdots & X
+    \end{matrix}\right]}_{\let\scriptstyle\textstyle\substack{B-N+1}}.
+    \end{aligned}
+\end{equation*}
+\end{itemize}
+
+% Since all entries in $\svv{M}$ are linear combinations of elements from $\svv{G'}$ it is also over $\mathbb{F}_q$. Further, it is a full-rank matrix hence it is an invertible matrix. Since an erasure of any $l$ columns in $\svv{G'}$ can be translated to an erasure of $l$ columns in $\svv{G''}$ (by multiplying with the inverse of $\svv{M}$) the following property holds.
+% \begin{property}
+% \label{prop:prop1}
+% block code $\mathcal{C'}$ with parity matrix $\svv{G'}$ is a $(n,k)$ MDS code over $\mathbb{F}_q$.
+% \end{property}
+
+The generator matrix $\svv{G}$ is composed of the following three blocks 
+\begin{itemize}
+    \item $H_1$ - The left $k\times (k+N-1)$ matrix.
+    \item $H_2$ - The lower right $\left(k-(B-N+1)\right)\times \left(n-(B-N+1)\right)$ matrix.
+    \item $H_3$ - The upper right $(B-N+1)\times (B-N+1)$ matrix.
+\end{itemize}
+These blocks are depicted below as
+\begin{equation*}
+    % \renewcommand\arraystretch{1.8}
+    \begin{aligned}
+    \svv{G}= \\
+        &
+        \tikz[baseline=(M.west)]{%
+    \node[matrix of math nodes,matrix anchor=west,left delimiter={[},right delimiter={]},ampersand replacement=\& ] (M) {
+        1 \& X \& \cdots \& X \& 0 \& 0 \& 0 \& \cdots \& 0 \& \alpha \& \cdots \& 0 \\
+        0 \& 1 \& X \& \cdots \& X \& 0 \& 0 \& \cdots \& 0 \& 0 \& \ddots \& 0 \\
+        0 \& 0 \& \ddots \& \ddots \& \ddots \& \ddots \& 0 \& \cdots \& 0 \&  0 \& \cdots \&  \alpha \\
+        \vdots \& \vdots \&  \& 1 \&\ddots \&\ddots \& \ddots \& \& \vdots \& X \& \cdots \& X \\
+        \vdots \& \vdots \&  \& \& \ddots \& X \& \cdots \& X \& 0 \& \vdots \& \& \vdots \\
+        0 \& 0 \& \cdots \& \cdots \& 0 \& 1 \&  X \& \cdots \& X \& X \& \cdots \& X \\
+        };
+    \node[draw,color=blue,fit=(M-1-1)(M-6-9),inner sep=-1.3pt,label={[xshift=-1cm, yshift=0cm]$H_1$}] {};
+    \node[draw,color=red,densely dashed,fit=(M-4-4)(M-6-12),inner sep=1.5pt,label={[xshift=-0.5cm, yshift=-2.8cm]$H_2$}] {};
+    \node[draw,color=green,dashdotted,fit=(M-1-10)(M-3-12),inner sep=4pt,label={[xshift=0cm, yshift=0cm]$H_3$}] {};
+    }
+    .
+    \end{aligned}.
+\end{equation*}
+
+% \begin{equation*}
+%   J_{5}=
+%   \tikz[baseline=(M.west)]{%
+%     \node[matrix of math nodes,matrix anchor=west,left delimiter=(,right delimiter=),ampersand replacement=\&] (M) {%
+%       \lambda \& 1 \& 0 \\
+%       0 \& \lambda \& 0 \\
+%       0 \& 0 \& \lambda \\
+%     };
+%     \node[draw,fit=(M-1-1)(M-2-2),inner sep=-1pt] {};
+%     \node[draw,fit=(M-3-3),inner sep=-1pt] {};
+%   }
+% \end{equation*}
+Before showing that block code $\mathcal{C}$ with generator matrix $\svv{G}$ is a capacity-achieving streaming code we  show the following properties of $H_1$ and $H_2$.
+\begin{property}
+\label{prop:pro2}
+Block $H_1$ is a ($k+N-1,k$) MDS code over $\mathbb{F}_q$.
+\end{property}
+
+This can be viewed from recalling that erasing any $l$ columns from a $(n,k)$ MDS code over $\mathbb{F}_q$ results with a $(n-l,k)$ MDS code over $\mathbb{F}_q$. Since block $H_1$ is generated from $G'$ (which following Property~\ref{prop:prop1} is an $(n,k)$ MDS code over $\mathbb{F}_q$) by erasing the last $B-N+1$ columns, it follows that $H_1$ is a ($n-(B-N+1,k$) MDS code over $\mathbb{F}_q$. Since $n=k+B$, the property holds.\footnote{This can be viewed as puncturing $(B-N-1)$ columns from $G'$.}
+\begin{property}
+\label{prop:pro3}
+Block $H_2$ is a $(n-(B-N+1),k-(B-N+1))$ MDS code over $\mathbb{F}_q$.
+\end{property}
+
+This property holds since one may assume that $H_2$ is generated from $\svv{G'}$ by assuming that the first $(B-N+1)$ symbols of $\svv{G'}$ ($\{x_0,\ldots,x_{B-N}\}$) were received without errors (equivalently assume that $\{s_0,\ldots,s_{B-N}\}=\{0,\ldots,0\}$). Even though $\svv{G'}$ is not systematic, due to its structure receiving $\{x_0,\ldots,x_{B-N}\}$ without errors means that $\{s_0,\ldots,s_{B-N}\}$ can be decoded correctly and hence can be cancelled from the other received symbols. Therefore, the remaining code is a $(n-(B-N+1),k-(B-N+1))$ MDS code over $\mathbb{F}_q$. This can be also viewed as shortening MDS code $\svv{C'}$ by $(B-N+1)$ data symbols. %In general we denote ``shortening'' of an MDS code by $i$ data symbols as $MDS^i$. 
+%\textcolor{red}{(Please define ``shortening" for the sake of clarity. You may do so here or in Notation.)}
+
+
+% $H_2$ is a submatrix of $\svv{G'}$ which is a $(n,k)$ MDS code over $\mathbb{F}_q$ which can be viewed as if the first $(N+M-1)$ symbols of $\svv{G'}$ were received without errors. Even though $\svv{G'}$ is not systematic, due to its structure receiving the first $(N+M-1)$ symbols means that the first $(B+N-1)$ data symbols are decoded correctly. Therefore, the remaining code is a $(n-(B+N-1),k-(B+N-1))$ MDS code over $\mathbb{F}_q$.
+
+Following Properties~\ref{prop:pro2} and \ref{prop:pro3} we denote $H_1$ as $MDS_1$ and $H_2$ as $MDS_2$.
+\begin{remark}
+Using \eqref{eq:def_k_n} we note that $H_2$ is a $(T,T-B)$ MDS codes.
+\label{rem:remark1}
+\end{remark}
+\begin{remark}
+In case $T>B$, symbols $\{x_B,\ldots,x_T\}$ contain information only from $\{s_{B-N+1},\ldots,s_k\}$, i.e., these are the only symbols of $MDS_2$ without interference from $\{s_{0},\ldots,s_{B-N}\}$ (which are not data symbols of $MDS_2$.
+\label{rem:remark2}
+\end{remark}
+
+The following Theorem is proved in Section~\ref{sec:proofOfThm1}.
+\begin{theorem}
+\label{thm:thm1}
+The block code $\mathcal{C}$ with generator matrix $\svv{G}$ is a capacity-achieving streaming code of any $\mathcal{C}(W,B,N)$ with quadratic field size.
+\end{theorem}
+\section{Example}
+As an example we take the case where $B=4$, $N=3$ and $T=6$. The generator matrix of the resulting code is:
+\begin{equation*}
+%   \left(
+        \tikz[baseline=(M.west)]{%
+    \node[matrix of math nodes,matrix anchor=west,left delimiter={(},right delimiter={)},ampersand replacement=\&] (M) {
+    1 \& X \& X \& 0 \& 0 \& 0 \& \alpha \& 0\\
+    0 \& 1 \& X \& X \& 0 \& 0 \& 0 \& \alpha \\
+    0 \& 0 \& 1 \& X \& X \& 0 \& X \& X  \\
+    0 \& 0 \& 0 \& 1 \& X \& X \& X \& X  \\
+     };
+    \node[draw,color=blue,fit=(M-1-1)(M-4-6),inner sep=-1.3pt] {};
+    \node[draw,color=red,densely dashed,fit=(M-3-3)(M-4-8),inner sep=1.5pt] {};
+    \node[draw,color=green,dashdotted,fit=(M-1-7)(M-2-8),inner sep=3pt] {};
+    },
+%   \right),
+\end{equation*}
+where 
+\begin{itemize}
+    \item $MDS_1$ is a $(6,4)$ MDS code.
+    \item $MDS_2$ is a $(6,2)$ MDS code.
+\end{itemize}
+We demonstrate the decoding process for several cases of erasures. We focus on decoding symbol $s_0$. As decoding symbol $s_0$ when symbol $x_0$ is immediate we focus only on cases where $x_0$ is erased.
+\begin{itemize}
+    \item A burst of size $B=4$ starting at time $0$
+\begin{equation*}
+  %\left(
+        \tikz[baseline=(M.west)]{%
+    \node[matrix of math nodes,matrix anchor=west,left delimiter={(},right delimiter={)},ampersand replacement=\&] (M) {
+    1 \& X \& X \& 0 \& 0 \& 0 \& \alpha \& 0\\
+    0 \& 1 \& X \& X \& 0 \& 0 \& 0 \& \alpha \\
+    0 \& 0 \& 1 \& X \& X \& 0 \& X \& X  \\
+    0 \& 0 \& 0 \& 1 \& X \& X \& X \& X  \\
+     };
+    %\node[draw,color=blue,fit=(M-1-1)(M-4-6),inner sep=-1.3pt] {};
+    \node[draw,color=red,densely dashed,fit=(M-3-3)(M-4-8),inner sep=1.5pt] {};
+    \node[draw,color=green,dashdotted,fit=(M-1-7)(M-2-8),inner sep=3pt] {};
+    \node[fill,color=olive,fit=(M-1-1)(M-4-4),inner sep=3pt,opacity=.3] {};
+    },
+  %\right),
+\end{equation*}    
+    Using $MDS_2$, $s_2$ and $s_3$ can be decoded at time $5$ since we have two linear independent symbols from a $(6,2)$ MDS code ($x_4$ and $x_5$). These symbols are cancelled from $x_6$ to recover $s_0$.
+    \item $N=3$ sporadic erasures where $x_5$ is erased:
+\begin{equation*}
+  %\left(
+        \tikz[baseline=(M.west)]{%
+    \node[matrix of math nodes,matrix anchor=west,left delimiter={(},right delimiter={)},ampersand replacement=\&] (M) {
+    1 \& X \& X \& 0 \& 0 \& 0 \& \alpha \& 0\\
+    0 \& 1 \& X \& X \& 0 \& 0 \& 0 \& \alpha \\
+    0 \& 0 \& 1 \& X \& X \& 0 \& X \& X  \\
+    0 \& 0 \& 0 \& 1 \& X \& X \& X \& X  \\
+     };
+    \node[draw,color=blue,fit=(M-1-1)(M-4-6),inner sep=-1.3pt] {};
+    %\node[draw,color=red,densely dashed,fit=(M-3-3)(M-4-8),inner sep=1.5pt] {};
+    %\node[draw,color=green,dashdotted,fit=(M-1-7)(M-2-8),inner sep=3pt] {};
+    \node[fill,color=olive,fit=(M-1-1)(M-4-1),inner sep=3pt,opacity=.3] {};
+    \node[fill,color=olive,fit=(M-1-6)(M-4-7),inner sep=3pt,opacity=.3] {};
+    }.
+  %\right).
+\end{equation*} 
+    Using $MDS_1$, all data symbols can be decoded at time $4$ since we have four linear independent symbols from a $(6,4)$ MDS code.
+    \item $N=3$ sporadic erasures where $x_5$ is not erased:
+\begin{equation*}
+  %\left(
+        \tikz[baseline=(M.west)]{%
+    \node[matrix of math nodes,matrix anchor=west,left delimiter={(},right delimiter={)},ampersand replacement=\&] (M) {
+    1 \& X \& X \& 0 \& 0 \& 0 \& \alpha \& 0\\
+    0 \& 1 \& X \& X \& 0 \& 0 \& 0 \& \alpha \\
+    0 \& 0 \& 1 \& X \& X \& 0 \& X \& X  \\
+    0 \& 0 \& 0 \& 1 \& X \& X \& X \& X  \\
+     };
+    \node[draw,color=blue,fit=(M-1-1)(M-4-6),inner sep=0pt] {};
+    \node[draw,color=blue,densely dashed,fit=(M-2-2)(M-4-6),inner sep=-2pt] {};
+    \node[draw,color=magenta,densely dashed,fit=(M-2-7)(M-4-7),inner sep=-2pt] {};
+    %\node[draw,color=red,densely dashed,fit=(M-3-3)(M-4-8),inner sep=1.5pt] {};
+    %\node[draw,color=green,dashdotted,fit=(M-1-7)(M-2-8),inner sep=3pt] {};
+    \node[fill,color=olive,fit=(M-1-1)(M-4-1),inner sep=3pt,opacity=.3] {};
+    \node[fill,color=olive,fit=(M-1-5)(M-4-6),inner sep=3pt,opacity=.3] {};
+    }.
+  %\right).
+  \end{equation*}
+    We note the the $(3\times 5)$ lower right matrix of $H_1$ (marked as dashed blue) above is a $(5,3)$ MDS code which is the outcome of ``shortening'' $H_1$ by one symbol (denoted as $MDS_1^1$). Recieving symbols $\{x_1,x_2,x_3\}$ with no erasures means that data symbols $\{s_1,s_2,s_3\}$ can be decoded from $MDS_1^1$ with known interference from $s_0$ (denoted as $\{\tilde{s}_1,\tilde{s}_2,\tilde{s}_3\}$). Than $\tilde{s}_2$ and $\tilde{s}_3$ can be cancelled from $x_6$. Since we assume $\alpha\in\mathbb{F}_{q^2}\setminus\mathbb{F}_q$, it is guaranteed that $\alpha$ is not nulled out hence $s_0$ can be recovered.
+    
+    Alternatively, the dashed part of ${\bf g}_6$ (interference from $\{s_0,s_1,s_2\}$) is in the span of $MDS_1^1$. Since we have three symbols from $MDS_1^1$ ($\{x_1,x_2,x_3\}$) the dashed part of ${\bf g}_6$ can be cancelled. Since we assumed $\alpha\in\mathbb{F}_{q^2}\setminus\mathbb{F}_q$, it is guaranteed that $\alpha$ is not nulled out hence $s_0$ can be recovered.
+\end{itemize}
+\section{Proof Of Theorem~\ref{thm:thm1}}
+\label{sec:proofOfThm1}
+\begin{itemize}
+    \item Decoding data symbols $\{s_0,\ldots,s_{B-N}\}$\newline % $i\in\{0,\ldots,B-N\}$\newline
+    We analyze the two different types of erasures:
+    \begin{itemize}
+        \item A Burst of length B starting at time $i$\newline
+        {\bf Decoding data symbol $s_0$} \newline
+        Following Property~\ref{prop:pro3} and Remark~\ref{rem:remark1} we recall that $MDS_2$ is a \mbox{($T,T-B$)} MDS code. A burst of $B$ symbols starting at time $0$ means that symbols $\{x_B,\ldots,x_{T-1}\}$ are not erased. Recalling Remark~\ref{rem:remark2}, these symbols don't have an interference from data symbols $\{s_0,\ldots,s_{B-N}\}$. Therefore, data symbols $\{s_{B-N+1},\ldots,s_{k}\}$ can be recovered using $MDS_2$ and cancelled from symbol $x_T$ to recover data symbol $s_0$.\footnote{In case $T=B$ it can be shown that $MDS_1$ and $MDS_2$ unites thus symbols $T$ belongs to $H_3$ hence $s_0$ can be recovered directly from it.}
+        
+        {\bf Decoding data symbols $\{s_1,\ldots,s_{B-N}\}$}\newline
+        Focusing on data symbol $s_i\in\{s_1,\ldots,s_{B-N}\}$ we may assume that data symbols $\{s_0,\ldots,s_{i-1}\}$ were correctly decoded until time $T+i$. We further assume that their impact on symbols $\{x_T,\ldots,x_{T+i}\}$ is cancelled. Therefore, a burst of length $B$ starting at time $i$ means that symbols $\{x_{i+B},\ldots,x_{i+T-1}\}$ are not erased. Further, these symbols belong to $MDS_2$ without an interference from ``external'' interference. This holds for symbols $\{x_{i+B},\ldots,x_{T-1}\}$ following Remark~\ref{rem:remark2} and for symbols $\{x_{T},\ldots,x_{i+T-1}\}$ since we assumed data symbols $s_i\in\{s_1,\ldots,s_{B-N}\}$ have been correctly decoded and cancelled. Thus, we have $T-B$ symbols from $MDS_2$ without any  interference from $\{s_0,\ldots,s_{B-N}\}$ hence which data symbols $\{s_{B-N+1},\ldots,s_{k}\}$ can be recovered and cancelled from symbol $x_T+i$ to recover data symbol $s_i$.
+        
+        % The same procedure as for data symbol $0$ holds since we can assume that previous symbols \mbox{$j\in\{0,i-1\}$} were correctly recovered up to $T+i$ (and hence their impact on symbols \mbox{$j\in\{T,T+i\}$} is cancelled). Therefore, $T-B$ symbols from $MDS_2$ are not erased which means that the data symbols of $MDS_2$ can be recovered and than cancelled from symbol $T+i$. 
+        \item N arbitrary erasures\newline
+        {\bf Decoding data symbol $s_0$}\newline
+        First, we note that we assume that symbol $x_0$ is one of the erased symbols otherwise decoding is trivial.\footnote{If $N=1$ it means that the only erasure is that of symbol $x_0$ and hence decoding is done as described next for the case when symbol $x_T$ is not erased.}
+        We further differentiate between the following two cases
+        \begin{itemize}
+            \item Symbol $x_T$ is erased\newline
+            We note that in this case, in $MDS_1$ we have $N-1$ erasures. Following Property~\ref{prop:pro2} $MDS_1$ can correct any $N-1$ erasures and hence data symbol $s_0$ can be recovered.
+            \item Symbol $x_T$ is not erased\newline
+            % To show that we can recover data symbol $s_0$ at time $T$ we first note that at time $T-1$, {\em data symbols $\{s_{1},\ldots,s_k\}$ can be recovered up to a (known) interference from data symbol $s_0$}. To show it 
+            Note that the \mbox{$(k-1)\times (k-1+N-1)$} lower right submatrix of $H_1$ (marked as the dashed matrix below) is a $(k-1+N-1,k-1)$ MDS code (can be viewed as ``shortening" $MDS_1$ by one data symbol) and we denote it as $MDS_1^1$.
+            \begin{equation*}
+    % \renewcommand\arraystretch{1.8}
+    \begin{aligned}
+    %\left[
+        \tikz[baseline=(M.west)]{%
+    \node[matrix of math nodes,matrix anchor=west,left delimiter={[},right delimiter={]},ampersand replacement=\&] (M) {
+        1 \& X \& \cdots \& X \& 0 \& 0 \& 0 \& \cdots \& 0 \& \alpha \& \\
+        0 \& 1 \& X \& \cdots \& X \& 0 \& 0 \& \cdots \& 0 \& 0 \& \\
+        0 \& 0 \& \ddots \& \ddots \& \ddots \& \ddots \& 0 \& \cdots \& 0 \& 0 \& \\
+        \vdots \& \vdots \&  \& 1 \&\ddots \&\ddots \& \ddots \& \& \vdots \& X \&\\
+        \vdots \& \vdots \&  \& \& \ddots \& X \& \cdots \& X \& 0 \& \vdots \&\\
+        0 \& 0 \& \cdots \& \cdots \& 0 \& 1 \&  X \& \cdots \& X \& X \& \\
+    };
+    \node[draw,color=blue,fit=(M-1-1)(M-6-9),inner sep=1pt,label={[xshift=0cm, yshift=0cm]$H_1$}] {};
+    \node[draw,color=blue,densely dashed,fit=(M-2-2)(M-6-9),inner sep=-1.3pt] {};
+    \node[draw,color=red, dash dot,fit=(M-2-10)(M-6-10),inner sep=-1.5pt,xshift=2pt] {};
+    \draw [thick, black,decorate,decoration={brace,amplitude=4pt,mirror},xshift=0pt,yshift=-0.4pt](0,-2) -- (0.4,-2) node[black,midway,yshift=-0.6cm] {${\bf g}_0$};
+    \draw [thick, black,decorate,decoration={brace,amplitude=4pt,mirror},xshift=0pt,yshift=-0.4pt](0.6,-2) -- (5.4,-2) node[black,midway,yshift=-0.6cm] {${\bf g}_1,\ldots,{\bf g}_{T-1}$};
+    \draw [thick, black,decorate,decoration={brace,amplitude=4pt,mirror},xshift=0pt,yshift=-0.4pt](5.5,-2) -- (5.9,-2) node[black,midway,yshift=-0.6cm] {${\bf g}_T$};
+
+    % \node[draw,color=red,densely dashed,fit=(M-4-4)(M-6-12),inner sep=1.5pt,label={[xshift=-0.5cm, yshift=-2.5cm]$H_2$}] {};
+    % \node[draw,color=green,dashdotted,fit=(M-1-10)(M-3-12),inner sep=4pt,label={[xshift=0cm, yshift=0cm]$H_3$}] {};
+    }
+    %\right]
+    \end{aligned}
+    \end{equation*}
+    Since we may assume that symbols $\{x_1,\ldots,x_{T-1}\}$ have up to $N-1$ erasures, using $MDS_1^1$, data symbols $\{s_{1},\ldots,s_k\}$ can be recovered up to a known interference from $s_0$ (denoted as $\{\tilde{s}_{1},\ldots,\tilde{s}_k\}$). Since $\alpha\in\mathbb{F}_{q^2}\setminus\mathbb{F}_q$, $\{\tilde{s}_{1},\ldots,\tilde{s}_{B-N}\}$ can be cancelled from symbol $x_T$ while it is guaranteed that $\alpha$ is not nulled out\footnote{Since all elements in $MDS_2$ belong to $\mathbb{F}_q$, the cancellation is done by multiplying $\{\tilde{s}_{1},\ldots,\tilde{s}_{B-N}\}$ with coefficients from the base field.} and thus symbol $s_0$ can be recovered.
+    
+    Alternatively we note that the dashed part of ${\bf g}_T$ is in the span of $MDS_1^1$ (and further can be denoted as linear combination from the base field of the symbols of $MDS_1$). Since we have enough linear independent columns from $MDS_1^1$, the dashed part of ${\bf g}_T$ can be cancelled while it is guratneed that $\alpha\in\mathbb{F}_{q^2}\setminus\mathbb{F}_q$, is not nulled out and thus data symbol $s_0$ can be recovered.
+    \end{itemize}
+    {\bf Decoding data symbols $\{s_1,\ldots,s_{B-N}\}$} \newline
+    Focusing on data symbol $s_i\in\{s_1,\ldots,s_{B-N}\}$ we may assume that data symbols $\{s_0,\ldots,s_{i-1}\}$ have been correctly decoded by time $T+i$. We further assume that their impact on symbols $\{x_T,\ldots,x_{T+i}\}$ is cancelled. After cancelling symbols $\{s_0,\ldots,s_{i-1}\}$ from $MDS_1$ we are left with a \mbox{$(k-i+N-1,k-i)$} MDS code (which can recover $N-1$ erasures). Equivalently, this can be viewed as ``shortening'' $MDS_1$ by $i$ symbols. We denote it as $MDS_1^i$.
+    
+    Further, we may assume that symbol $x_i$ is one of the erased symbols, or otherwise decoding of data symbol $s_i$ is trivial (since we assumed $\{s_0,\ldots,s_{i-1}\}$ have been decoded correctly). We differentiate again between the following two cases:
+    \begin{itemize}
+            \item Symbol $x_{T+i}$ is erased\newline
+            Assuming $x_{T+i}$ is erased means that there are at most $N-1$ erasures in $MDS_1^i$ (which can recover $N-1$ erasures). Thus all data symbols can be decoded up to time $T+i$.
+            \item Symbol $x_{T+i}$ not erased\newline
+            We note that the lower right \mbox{$k-(i+1)\times k-(i+1)+N-1$} sub-matrix of $H_1$ is also $(k-(i+1)+N-1,k-(i+1))$ MDS code (can be also viewed as ``shortening'' $MDS_1^i$ by one symbol therefore we denote it as $MDS_1^{i+1}$). We may assume that symbols $\{x_{i+1},\ldots,x_{T-1}\}$ have up to $N-1$ erasures hence $MDS_1^{i+1}$ can decode data symbols $\{s_{i+1},\ldots,s_k\}$ up to a (known) interference from data symbol $s_i$ (denoted by $\{\tilde{s}_{i+1},\ldots,\tilde{s}_k\}$. Next, $\{\tilde{s}_{i+1},\ldots,\tilde{s}_{B-N}\}$ are cancelled from symbol $T+i$ and, again, it is guaranteed that $\alpha\in\mathbb{F}_{q^2}\setminus\mathbb{F}_q$ is not cancelled, thus $s_i$ can be recovered. 
+            %\textcolor{red}{(need to elaborate, may consider using submatrix notations. I suggest to include key phrases like ``linear combination from the base field" and ``coefficients form the base field")}
+        \end{itemize}
+    \end{itemize}
+
+\item Decoding data symbol $\{s_{B-N+1},\ldots,s_k\}$\newline
+    We may assume that data symbols \mbox{$j\in\{0,\ldots,B-N\}$} were correctly decoded until symbol $T+i$ and cancelled from the received symbols. This means that we are left with $MDS_2$ which following Property~\ref{prop:pro3} is a $(k-(B-N+1)\times(n-(B-N+1)$ MDS code which means it can correct any $B$ erasures. Recalling that $B\geq N$ it means that either a burst of $B$ erasures or arbitrary $N$ erasures can be correctly decoded at time $T+i$.
+\end{itemize}
+
+\bibliographystyle{IEEEtran}
+\bibliography{main.bbl}
+
+\end{document}
