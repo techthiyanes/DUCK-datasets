@@ -29,8 +29,14 @@ After that the next problem will be loaded.
 
 Final problems will be saved to `final_problems_file`, and rejected problems will be saved to `rejected_problems_file`, while the original `problems_file` will not be modified.
 
-Your progress is saved every time you click "Accept" or "Reject", so you can stop the script at any time and resume later. Note that if you edit and skip a problem, your changes will be lost.
-To resume, simply run the script again with the same arguments.
+> **Note**
+> Your progress is saved every time you click "Accept" or "Reject", so you can stop the script at any time and resume later. Note that if you edit and skip a problem, your changes will be lost.
+> 
+> To resume, simply run the script again with the same arguments.
+
+When you re-run the script, please close the old browser tab and open a new one. Also, please don't refresh the page while using the script.
 
 ## Notes
-The script uses ![KaTeX](https://katex.org/) to render LaTeX. While it supports most LaTeX commands, it doesn't support all of them. If you encounter a valid LaTeX formula that KaTeX doesn't render, you can edit it or just leave it as is (this is probably not very relevant for our purposes).
+The script uses ![KaTeX](https://katex.org/) to render LaTeX. While it supports most LaTeX commands, it doesn't support all of them. If you encounter a valid LaTeX formula that KaTeX doesn't render, you can edit it or probably just leave it as is.
+> **Warning**
+> Right now, stuff like `\sqrt{x}` and `\sqrt[3]{x}` are not rendered correctly with KaTeX (the square root symbol is missing). I'm trying to figure out why, but in the meantime, just ignore it.

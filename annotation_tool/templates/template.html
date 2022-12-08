@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.3/dist/katex.min.css" integrity="sha384-Juol1FqnotbkyZUT5Z7gUPjQ9gzlwCENvUZTpQBAPxtusdwFLRy382PSDx5UUJ4/" crossorigin="anonymous">
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.3/dist/katex.min.js" integrity="sha384-97gW6UIJxnlKemYavrqDHSX3SiygeOwIZhwyOKRfSaf0JWKRVj9hLASHgFTzT+0O" crossorigin="anonymous"></script>
@@ -50,6 +50,10 @@
 </style>
 
 <script>
+    function escapeHTML(str) {
+        return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;');
+    }
+
     function renderKatex() {
         var problem_statement = document.getElementById("problem_statement");
         var solution = document.getElementById("solution");
@@ -59,9 +63,9 @@
         var solution_display = document.getElementById("solution_display");
         var final_answer_display = document.getElementById("final_answer_display");
 
-        problem_statement_display.innerHTML = problem_statement.value;
-        solution_display.innerHTML = solution.value;
-        final_answer_display.innerHTML = final_answer.value;
+        problem_statement_display.innerHTML = escapeHTML(problem_statement.value);
+        solution_display.innerHTML = escapeHTML(solution.value);
+        final_answer_display.innerHTML = escapeHTML(final_answer.value);
 
         renderMathInElement(document.body, {
             delimiters: [
