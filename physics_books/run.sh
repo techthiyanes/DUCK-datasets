@@ -41,7 +41,7 @@ python preprocess.py --output tmp.txt --input data/quantum.txt
 python extract_problems.py --input tmp.txt \
                            --output data/quantum_output.json \
                            --book "Problems and Solutions on Quantum Mechanics" \
-                           --topic "Basic Principles and One-dimensional Motions" 1001 1071 \
+                           --topic "Basic Principles and One-dimensional Motions" 1001 1072 \
                            --topic "Central Potentials" 2001 2023 \
                            --topic "Spin and Angular Momentum" 3001 3048 \
                            --topic "Motion in Electromagnetic Fields" 4001 4016 \

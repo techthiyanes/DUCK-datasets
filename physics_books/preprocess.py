@@ -27,6 +27,8 @@ if "\section{Index to Problems}" in lines:
 
 # replace "\section{Solution:}" with "Solution:"
 lines = [line.replace(r"\section{Solution:}", "Solution:") for line in lines]
+lines = [line.replace(r"\section{Solution}", "Solution:") for line in lines]
+lines = [line.replace(r"\section{Solution: \\ Solution:}", "Solution:") for line in lines]
 
 # remove all "\section{...}" that contain only uppercase letters -- those correspond to headings
 lines = [line for line in lines if not (line.startswith(r'\section{') and line[8:].isupper())]
@@ -39,6 +41,8 @@ assert sum(line.startswith(r"\section{") for line in lines) == sum(line.find(r"\
 #assert all(line.endswith("}") for line in lines if line.startswith(r"\section{"))
 lines = [line[9:-1] if line.startswith(r"\section{") and line.endswith("}") else line for line in lines]
 lines = [line[9:] if line.startswith(r"\section{") else line for line in lines]
+# same for subsections
+lines = [line[12:-1] if line.startswith(r"\subsection{") and line.endswith("}") else line for line in lines]
 
 # remove all problem sources
 lines = "\n".join(lines)
@@ -74,11 +78,24 @@ lines = [line for line in lines if not line.startswith(r"\begin{abstract}") and 
 # manual fixes
 lines = "\n".join(lines)
 lines = lines.replace("$$\n\\begin{gathered}\n1001 \\\\", "1001\n$$\n\\begin{gathered}")
-lines = lines.replace(r"\section{Solution: \\ Solution:}", "Solution:")
 if "optics" in INPUT_FILE:
     lines = lines.replace("1084", "1034")
     lines = lines.replace("2081", "2031")
     lines = lines.replace("2083", "2033")
+    lines = lines.replace("A glass cube", "Problem:\n\nA glass cube")
+    lines = lines.replace("A rainbow", "Problem:\n\nA rainbow")
+lines = lines.replace("Solutlon", "Solution")
+lines = lines.replace("Solntion", "Solution")
+lines = lines.replace("Alternative Solution:", "Alternative solution:")  # hack so that it's not confused with "Solution:"
+lines = lines.replace("〉", ">")
+lines = lines.replace("〈", "<")
+lines = lines.replace("ẹ", "e")
+lines = lines.split("\n")
+
+# split every "Solution:" into a separate line
+lines = "\n".join(lines)
+lines = lines.replace("Solution: ", "Solution:\n")
+lines = lines.replace(" Solution:", "\nSolution:")
 lines = lines.split("\n")
 
 # replace all occurrences of a problem number with "Problem (number):"
@@ -103,12 +120,6 @@ print("Number of solutions:", len([line for line in lines if line.startswith("So
 print("Number of problems without number:", len([line for line in lines if line == "Problem:"]))
 print("Number of problems with number:", len([line for line in lines if line.startswith("Problem:[")]))
 print("Total number of problems:", len([line for line in lines if line.startswith("Problem:")]))
-
-with open(OUTPUT_FILE, "w") as f:
-    f.write("\n".join(lines))
-
-# remove empty lines
-#lines = [line for line in lines if line != ""]
 
 with open(OUTPUT_FILE, "w") as f:
     f.write("\n".join(lines))

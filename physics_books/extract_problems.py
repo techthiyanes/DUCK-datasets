@@ -149,24 +149,37 @@ for p in problems:
             answer = answer.replace(r"\text {. }", "")
             answer = answer.replace(" .", "")
             answer = answer.replace(",", "")
-            answer = answer.replace("\end{aligned}", "")
-            answer = answer.replace("\end{align}", "")
-            answer = answer.replace("\end{array}", "")
-            answer = answer.replace("\end{gathered}", "")
             answer = answer.replace("&", "")
             answer = answer.replace(r"\\", "")
+            answer = answer.replace("\n", "")
+            if r"\begin{aligned}"  not in answer: answer = answer.replace(r"\end{aligned}", "")
+            if r"\begin{align}"    not in answer: answer = answer.replace(r"\end{align}", "")
+            if r"\begin{array}"    not in answer: answer = answer.replace(r"\end{array}", "")
+            if r"\begin{gathered}" not in answer: answer = answer.replace(r"\end{gathered}", "")
+            if r"\begin{gather}"   not in answer: answer = answer.replace(r"\end{gather}", "")
+            if r"\begin{cases}"    not in answer: answer = answer.replace(r"\end{cases}", "")
             answer = answer.strip()
             answer = "$$" + answer + "$$"
 
             if answer.count("left") != answer.count("right"):
                 answer = ""
+            if answer.count("begin") != answer.count("end"):
+                answer = ""
         if not answer:
             #print("No answer found for problem", num_with_part)
             cnt_no_ans += 1
 
+        statement = statement.strip()
+        solution = solution.strip()
+        # remove consecutive newlines
+        while "\n\n\n" in statement:
+            statement = statement.replace("\n\n\n", "\n\n")
+        while "\n\n\n" in solution:
+            solution = solution.replace("\n\n\n", "\n\n")
+
         output[num_with_part] = {
-            "Problem Statement": statement.lstrip(),
-            "Solution": solution.lstrip(),
+            "Problem Statement": statement,
+            "Solution": solution,
             "Topic": topic,
             "Book": BOOK,
             "Final Answer": answer,
