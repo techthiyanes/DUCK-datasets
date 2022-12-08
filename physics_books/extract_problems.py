@@ -89,7 +89,7 @@ for p in problems:
             if len(line) >= 3 and line[0] == '(' and line[2] == ')' and line[1].isalpha():
                 cur_key = line[1]
                 parts[cur_key] = ""
-                line = line[3:]
+                line = line[4:]
             parts[cur_key] += line + "\n"
         return parts
 

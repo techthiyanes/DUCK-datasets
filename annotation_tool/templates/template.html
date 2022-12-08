@@ -1,0 +1,86 @@
+<!doctype html>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.3/dist/katex.min.css" integrity="sha384-Juol1FqnotbkyZUT5Z7gUPjQ9gzlwCENvUZTpQBAPxtusdwFLRy382PSDx5UUJ4/" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.3/dist/katex.min.js" integrity="sha384-97gW6UIJxnlKemYavrqDHSX3SiygeOwIZhwyOKRfSaf0JWKRVj9hLASHgFTzT+0O" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.3/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"></script>
+
+<form>
+    <div>
+        <p><b>ID:</b> <input type="text" size="50" name="id" id="id" value="{{id}}"></p>
+    </div>
+
+    <div>
+        <p><b>Book:</b> <input type="text" size="50" name="book" id="book" value="{{book}}"></p>
+    </div>
+
+    <div>
+        <p><b>Topic:</b> <input type="text" size="50" name="topic" id="topic" value="{{topic}}"></p>
+    </div>
+
+    <div>
+        <p><b>Problem Statement:</b></p>
+        <textarea rows="10" cols="100" name="problem_statement" id="problem_statement">{{problem_statement}}</textarea>
+        <p id="problem_statement_display"></p>
+    </div>
+
+    <div style="display: inline-form">
+        <p><b>Solution:</b></p>
+        <textarea rows="10" cols="100" name="solution" id="solution">{{solution}}</textarea>
+        <p id="solution_display"></p>
+    </div>
+
+    <div>
+        <p><b>Final Answer:</b></p>
+        <textarea rows="2" cols="100" name="final_answer" id="final_answer">{{final_answer}}</textarea>
+        <p id="final_answer_display"></p>
+    </div>
+
+    <div>
+        <input type="submit" name="accept" value="Accept">
+        <input type="submit" name="reject" value="Reject">
+        <input type="submit" name="skip" value="Skip">
+    </div>
+</form>
+
+<style>
+    input[type=submit] {
+        width: 80px;
+        height: 30px;
+    }
+</style>
+
+<script>
+    function renderKatex() {
+        var problem_statement = document.getElementById("problem_statement");
+        var solution = document.getElementById("solution");
+        var final_answer = document.getElementById("final_answer");
+
+        var problem_statement_display = document.getElementById("problem_statement_display");
+        var solution_display = document.getElementById("solution_display");
+        var final_answer_display = document.getElementById("final_answer_display");
+
+        problem_statement_display.innerHTML = problem_statement.value;
+        solution_display.innerHTML = solution.value;
+        final_answer_display.innerHTML = final_answer.value;
+
+        renderMathInElement(document.body, {
+            delimiters: [
+                {left: "$$", right: "$$", display: true},
+                {left: "\\[", right: "\\]", display: true},
+                {left: "$", right: "$", display: false},
+                {left: "\\(", right: "\\)", display: false}
+            ],
+            throwOnError: false,
+            errorColor: "#cc0000"
+        });
+
+        problem_statement_display.innerHTML = problem_statement_display.innerHTML.replace(/\n/g, "<br>");
+        solution_display.innerHTML = solution_display.innerHTML.replace(/\n/g, "<br>");
+        final_answer_display.innerHTML = final_answer_display.innerHTML.replace(/\n/g, "<br>");
+    }
+
+    document.addEventListener("DOMContentLoaded", renderKatex);
+    document.getElementById("problem_statement").addEventListener("input", renderKatex);
+    document.getElementById("solution").addEventListener("input", renderKatex);
+    document.getElementById("final_answer").addEventListener("input", renderKatex);
+</script>
