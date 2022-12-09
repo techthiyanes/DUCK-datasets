@@ -47,8 +47,8 @@ python extract_problems.py --input tmp.txt \
                            --topic "Motion in Electromagnetic Fields" 4001 4016 \
                            --topic "Perturbation Theory" 5001 5083 \
                            --topic "Scattering Theory and Quantum Transitions" 6001 6061 \
-                            --topic "Many-Particle Systems" 7001 7037 \
-                            --topic "Miscellaneous Topics" 8001 8040
+                           --topic "Many-Particle Systems" 7001 7037 \
+                           --topic "Miscellaneous Topics" 8001 8040
 echo --------------------------------
 
 # statmech

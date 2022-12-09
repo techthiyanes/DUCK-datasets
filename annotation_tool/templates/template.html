@@ -67,6 +67,9 @@
         solution_display.innerHTML = escapeHTML(solution.value);
         final_answer_display.innerHTML = escapeHTML(final_answer.value);
 
+        problem_statement_display.innerHTML = problem_statement_display.innerHTML.replace(/!\[\]\((.*?)\)/g, '<img src="$1">');
+        solution_display.innerHTML = solution_display.innerHTML.replace(/!\[\]\((.*?)\)/g, '<img src="$1">');
+
         renderMathInElement(document.body, {
             delimiters: [
                 {left: "$$", right: "$$", display: true},

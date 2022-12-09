@@ -44,6 +44,13 @@ lines = [line[9:] if line.startswith(r"\section{") else line for line in lines]
 # same for subsections
 lines = [line[12:-1] if line.startswith(r"\subsection{") and line.endswith("}") else line for line in lines]
 
+# remove all "\title{...}" and "\author{...}" environments
+for i in range(len(lines)):
+    if lines[i].startswith(r"\title{") or lines[i].startswith(r"\author{"):
+        assert lines[i + 2].startswith("}")
+        lines[i] = ""
+        lines[i + 2] = ""
+
 # remove all problem sources
 lines = "\n".join(lines)
 lines = lines.replace("(Wisconsin)", "")
@@ -61,6 +68,13 @@ lines = lines.replace("$(U C$, Berkeley)", "")
 lines = lines.replace("(SUNY, Buffalo)", "")
 lines = lines.replace("$(S U N Y, B u f f a l o)$", "")
 lines = lines.replace("$(W$ isconsin)", "")
+lines = lines.replace("$(U C$, Berkeley $)$", "")
+lines = lines.replace("(Princeton $)$", "")
+lines = lines.replace("$(C U S P E A)$", "")
+lines = lines.replace("$(U C, B$ Berkeley $)$", "")
+lines = lines.replace("$(U C$, Berkele $y)$", "")
+lines = lines.replace("(Wisconsin )", "")
+lines = lines.replace("(Buffalo)", "")
 lines = lines.split("\n")
 
 # count lines that start with "![](https://cdn.mathpix.com"
@@ -90,6 +104,8 @@ lines = lines.replace("Alternative Solution:", "Alternative solution:")  # hack 
 lines = lines.replace("〉", ">")
 lines = lines.replace("〈", "<")
 lines = lines.replace("ẹ", "e")
+lines = lines.replace("Fis.", "Fig.")
+lines = lines.replace("Pig.", "Fig.")
 lines = lines.split("\n")
 
 # split every "Solution:" into a separate line

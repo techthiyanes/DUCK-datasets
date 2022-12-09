@@ -77,41 +77,73 @@ for p in problems:
         cnt_mcq += 1
         continue
 
-    def extract_parts(s):
+    def extract_parts(s, is_statement):
         s = s.replace(". (", ".\n(")
         s = s.replace(", (", ",\n(")
 
         parts = {}
         cur_key = "context"
         parts[cur_key] = ""
+        cur_text = ""
         for line in s.split("\n"):
             # if line starts with (a), (b)...
             if len(line) >= 3 and line[0] == '(' and line[2] == ')' and line[1].isalpha():
-                cur_key = line[1]
-                parts[cur_key] = ""
-                line = line[4:]
-            parts[cur_key] += line + "\n"
+                if is_statement:
+                    last_char = parts[cur_key].strip()[-1] if len(parts[cur_key].strip()) > 0 else ""
+                    if last_char == ":" or last_char.isalpha():
+                        parts[cur_key] += cur_text + "\n"
+                        cur_text = ""
+                        cur_key = line[1]
+                        parts[cur_key] = line[4:] + "\n"
+                    else:
+                        cur_key = line[1]
+                        parts[cur_key] = cur_text + "\n" + line[4:] + "\n"
+                        cur_text = ""
+                else:
+                    cur_key = line[1]
+                    parts[cur_key] = line[4:] + "\n"
+            else:
+                if is_statement and cur_key != "context":
+                    cur_text += line + "\n"
+                else:
+                    parts[cur_key] += line + "\n"
+
+        if is_statement and cur_key != "context":
+            last_char = parts[cur_key].strip()[-1] if len(parts[cur_key].strip()) > 0 else ""
+            if last_char == ":" or last_char.isalpha():
+                parts[cur_key] += cur_text
+                parts["end_context"] = ""
+            else:
+                parts["end_context"] = cur_text
+
         return parts
 
-    statement_parts = extract_parts(full_statement)
-    solution_parts = extract_parts(full_solution)
+    statement_parts = extract_parts(full_statement, True)
+    solution_parts = extract_parts(full_solution, False)
     has_parts = len(statement_parts) > 1
 
-    if statement_parts.keys() != solution_parts.keys():
+    statement_parts_keys = set(statement_parts.keys())
+    solution_parts_keys = set(solution_parts.keys())
+    statement_parts_keys.discard("context")
+    statement_parts_keys.discard("end_context")
+    solution_parts_keys.discard("context")
+    if statement_parts_keys != solution_parts_keys:
         #print("Skipping problem", num, "because it's hard to match parts")
         cnt_skip += 1
         continue
     
-    solution = ""
+    solution = solution_parts["context"] if "context" in solution_parts else ""
     for key in sorted(statement_parts.keys()):
         if key == "context":
             if has_parts:
                 continue
             else:
                 statement = full_statement
+        elif key == "end_context":
+            continue
         else:
-            statement = statement_parts["context"] + statement_parts[key]
-        solution += solution_parts[key]
+            statement = statement_parts["context"] + statement_parts[key] + statement_parts["end_context"]
+            solution += solution_parts[key]
 
         num_with_part = num + "." + key if has_parts else num
 
