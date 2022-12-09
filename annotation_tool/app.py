@@ -2,7 +2,7 @@ import argparse
 import json
 import random
 
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, redirect
 
 app = Flask(__name__)
 
@@ -17,6 +17,7 @@ def index():
             "Solution": request.args.get("solution"),
             "Final Answer": request.args.get("final_answer"),
         }
+
         if request.args.get("accept"):
             final_problems[key] = problem
             remaining_problems.pop(key)
@@ -29,6 +30,8 @@ def index():
             remaining_problems[key] = problem
         else:
             raise ValueError("Unknown action")
+        
+        return redirect("/")
 
     if not remaining_problems:
         return "<p>There are no more problems!</p>"
@@ -44,10 +47,17 @@ def index():
         problem_statement=problem["Problem Statement"],
         solution=problem["Solution"],
         final_answer=problem["Final Answer"],
-        accepted_problems_cnt = len(final_problems),
-        rejected_problems_cnt = len(rejected_problems),
-        remaining_problems_cnt = len(remaining_problems),
+        accepted_problems_cnt=len(final_problems),
+        accepted_problems_with_images_cnt=len([p for p in final_problems.values() if "cdn.mathpix.com" in p["Problem Statement"]]),
+        rejected_problems_cnt=len(rejected_problems),
+        remaining_problems_cnt=len(remaining_problems),
     )
+
+@app.after_request
+def add_header(response):
+    response.cache_control.no_store = True
+    return response
+
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--problems_file', type=str, required=True)

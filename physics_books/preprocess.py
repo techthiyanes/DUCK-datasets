@@ -52,30 +52,33 @@ for i in range(len(lines)):
         lines[i + 2] = ""
 
 # remove all problem sources
-lines = "\n".join(lines)
-lines = lines.replace("(Wisconsin)", "")
-lines = lines.replace("(UC, Berkeley)", "")
-lines = lines.replace("(Columbia)", "")
-lines = lines.replace("(Princeton)", "")
-lines = lines.replace("(Chicago)", "")
-lines = lines.replace("(CUSPEA)", "")
-lines = lines.replace("$(S U N Y$, Buffalo)", "")
-lines = lines.replace("$(M I T)$", "")
-lines = lines.replace("$(\operatorname{MIT})$", "")
-lines = lines.replace("$(C C T)$", "")
-lines = lines.replace("(Coulumbia)", "")
-lines = lines.replace("$(U C$, Berkeley)", "")
-lines = lines.replace("(SUNY, Buffalo)", "")
-lines = lines.replace("$(S U N Y, B u f f a l o)$", "")
-lines = lines.replace("$(W$ isconsin)", "")
-lines = lines.replace("$(U C$, Berkeley $)$", "")
-lines = lines.replace("(Princeton $)$", "")
-lines = lines.replace("$(C U S P E A)$", "")
-lines = lines.replace("$(U C, B$ Berkeley $)$", "")
-lines = lines.replace("$(U C$, Berkele $y)$", "")
-lines = lines.replace("(Wisconsin )", "")
-lines = lines.replace("(Buffalo)", "")
-lines = lines.split("\n")
+PROBLEM_SOURCES = [
+    "(Wisconsin)",
+    "(UC,Berkeley)",
+    "(UC,BBerkeley)",
+    "(Columbia)",
+    "(Coulumbia)",
+    "(Princeton)",
+    "(Chicago)",
+    "(CUSPEA)",
+    "(SUNY,Buffalo)",
+    "(MIT)",
+    "(CCT)",
+    "(Buffalo)",
+]
+new_lines = []
+for line in lines:
+    mod_line = line.strip() \
+                   .replace("$", "") \
+                   .replace(" ", "") \
+                   .replace(r"\operatorname", "") \
+                   .replace(r"\text", "") \
+                   .replace("{", "") \
+                   .replace("}", "")
+    if mod_line in PROBLEM_SOURCES:
+        continue
+    new_lines.append(line)
+lines = new_lines
 
 # count lines that start with "![](https://cdn.mathpix.com"
 print("Number of image links:", len([line for line in lines if line.startswith("![](https://cdn.mathpix.com")]))

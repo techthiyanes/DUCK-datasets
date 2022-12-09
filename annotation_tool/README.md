@@ -31,11 +31,11 @@ Final problems will be saved to `final_problems_file`, and rejected problems wil
 
 > **Note**
 > 
-> Your progress is saved every time you click "Accept" or "Reject", so you can stop the script at any time and resume later. Note that if you edit and skip a problem, your changes will be lost.
+> Your progress is saved every time you click "Accept" or "Reject", so you can stop the script at any time and resume later. Note that if you edit and skip a problem, your changes will be lost when you stop the script.
 > 
 > To resume, simply run the script again with the same arguments.
 
-When you re-run the script, please close the old browser tab and open a new one. Also, please don't refresh the page while using the script.
+When you re-run the script, please close the old browser tab and open a new one.
 
 ## Notes
 The script uses ![KaTeX](https://katex.org/) to render LaTeX. While it supports most LaTeX commands, it doesn't support all of them. If you encounter a valid LaTeX formula that KaTeX doesn't render, you can edit it or probably just leave it as is.
