@@ -1,4 +1,5 @@
 import argparse
+import itertools
 import json
 import random
 
@@ -17,6 +18,8 @@ def index():
             "Solution": request.args.get("solution"),
             "Final Answer": request.args.get("final_answer"),
         }
+        for field in problem:
+            problem[field] = problem[field].replace("\r", "")
 
         if request.args.get("accept"):
             final_problems[key] = problem
@@ -86,9 +89,8 @@ try:
 except FileNotFoundError:
     rejected_problems = {}
 
-for key in final_problems:
-    remaining_problems.pop(key)
-for key in rejected_problems:
-    remaining_problems.pop(key)
+for key in itertools.chain(final_problems.keys(), rejected_problems.keys()):
+    if key in remaining_problems:
+        remaining_problems.pop(key)
 
 app.run()
