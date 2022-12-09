@@ -39,6 +39,3 @@ When you re-run the script, please close the old browser tab and open a new one.
 
 ## Notes
 The script uses ![KaTeX](https://katex.org/) to render LaTeX. While it supports most LaTeX commands, it doesn't support all of them. If you encounter a valid LaTeX formula that KaTeX doesn't render, you can edit it or probably just leave it as is.
-> **Warning**
-> 
-> Right now, stuff like `\sqrt{x}` and `\sqrt[3]{x}` are not rendered correctly with KaTeX (the square root symbol is missing). I'm trying to figure out why, but in the meantime, just ignore it.
