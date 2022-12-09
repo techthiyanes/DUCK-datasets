@@ -44,6 +44,9 @@ def index():
         problem_statement=problem["Problem Statement"],
         solution=problem["Solution"],
         final_answer=problem["Final Answer"],
+        accepted_problems_cnt = len(final_problems),
+        rejected_problems_cnt = len(rejected_problems),
+        remaining_problems_cnt = len(remaining_problems),
     )
 
 parser = argparse.ArgumentParser()
