@@ -35,7 +35,7 @@ Final problems will be saved to `final_problems_file`, and rejected problems wil
 > 
 > To resume, simply run the script again with the same arguments.
 
-When you re-run the script, please close the old browser tab and open a new one.
+When you re-run the script, please close the old browser tab and open a new one. Also, please don't edit the problem files while the script is running.
 
 ## Notes
 The script uses ![KaTeX](https://katex.org/) to render LaTeX. While it supports most LaTeX commands, it doesn't support all of them. If you encounter a valid LaTeX formula that KaTeX doesn't render, you can edit it or probably just leave it as is.
