@@ -29,6 +29,18 @@
         <p id="problem_statement_display" class="display"></p>
     </div>
 
+    <div{% if not show_choices %} style="display:none"{% endif %}>
+        <p><b>Problem Choices:</b></p>
+        <textarea rows="7" cols="100" name="problem_choices" id="problem_choices">{{problem_choices}}</textarea>
+        <p id="problem_choices_display" class="display"></p>
+    </div>
+
+    <div{% if not show_images %} style="display:none"{% endif %}>
+        <p><b>Images:</b></p>
+        <textarea rows="3" cols="100" name="images" id="images">{{images}}</textarea>
+        <p id="images_display" class="display"></p>
+    </div>
+
     <div>
         <p><b>Solution:</b></p>
         <textarea rows="10" cols="100" name="solution" id="solution">{{solution}}</textarea>
@@ -64,21 +76,19 @@
         return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;');
     }
 
+    var fields = ["problem_statement", "problem_choices", "images", "solution", "final_answer"];
+
     function renderKatex() {
-        var problem_statement = document.getElementById("problem_statement");
-        var solution = document.getElementById("solution");
-        var final_answer = document.getElementById("final_answer");
+        for (var i = 0; i < fields.length; i++) {
+            var field = fields[i];
+            var field_display = field + "_display";
+            
+            var field_value = document.getElementById(field).value;
+            document.getElementById(field_display).innerHTML = escapeHTML(field_value);
+        }
 
-        var problem_statement_display = document.getElementById("problem_statement_display");
-        var solution_display = document.getElementById("solution_display");
-        var final_answer_display = document.getElementById("final_answer_display");
-
-        problem_statement_display.innerHTML = escapeHTML(problem_statement.value);
-        solution_display.innerHTML = escapeHTML(solution.value);
-        final_answer_display.innerHTML = escapeHTML(final_answer.value);
-
-        problem_statement_display.innerHTML = problem_statement_display.innerHTML.replace(/!\[\]\((.*?)\)/g, '<img src="$1">');
-        solution_display.innerHTML = solution_display.innerHTML.replace(/!\[\]\((.*?)\)/g, '<img src="$1">');
+        images_display = document.getElementById("images_display");
+        images_display.innerHTML = images_display.innerHTML.replace(/https:\/\/cdn\.mathpix\.com\/[^\n]+/g, "<img src='$&'>");
 
         renderMathInElement(document.body, {
             delimiters: [
@@ -93,7 +103,7 @@
     }
 
     document.addEventListener("DOMContentLoaded", renderKatex);
-    document.getElementById("problem_statement").addEventListener("input", renderKatex);
-    document.getElementById("solution").addEventListener("input", renderKatex);
-    document.getElementById("final_answer").addEventListener("input", renderKatex);
+    for (var i = 0; i < fields.length; i++) {
+        document.getElementById(fields[i]).addEventListener("input", renderKatex);
+    }
 </script>
