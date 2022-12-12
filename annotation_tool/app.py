@@ -17,10 +17,10 @@ PROBLEM_FIELDS = [
 ]
 
 def list_to_str(l):
-    return "\n\n".join(l)
+    return "\n".join(l)
 
 def str_to_list(s):
-    l = [x.strip() for x in s.split("\n\n")]
+    l = [x.strip() for x in s.split("\n")]
     l = [x for x in l if x]
     return l
 

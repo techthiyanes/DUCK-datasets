@@ -28,7 +28,7 @@ You can then open the link in your browser and should see something like this:
 You can edit the problem fields, and the displays below should update accordingly.
 A doc with instructions can be found on Discord.
 
-Entries in fields that are supposed to be lists, i.e. "Problem Choices" and "Images", should be separated by a blank line.
+Entries in fields that are supposed to be lists, i.e. "Problem Choices" and "Images", should each be on a separate line.
 
 When you're done, click the "Accept" button to save the problem. If the problem is not suitable (e.g. it's not a computational problem, see the instructions doc), click "Reject". If you're not sure for now, or you want to come back to it later, click "Skip".
 After that the next problem will be loaded.

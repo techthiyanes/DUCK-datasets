@@ -78,7 +78,7 @@
 
     var fields = ["problem_statement", "problem_choices", "images", "solution", "final_answer"];
 
-    function renderKatex() {
+    function updateDisplay() {
         for (var i = 0; i < fields.length; i++) {
             var field = fields[i];
             var field_display = field + "_display";
@@ -87,8 +87,12 @@
             document.getElementById(field_display).innerHTML = escapeHTML(field_value);
         }
 
-        images_display = document.getElementById("images_display");
-        images_display.innerHTML = images_display.innerHTML.replace(/https:\/\/cdn\.mathpix\.com\/[^\n]+/g, "<img src='$&'>");
+        var problem_choices_display = document.getElementById("problem_choices_display");
+        problem_choices_display.innerHTML = problem_choices_display.innerHTML.replace(/^(.+)$/gm, "<li>$1</li>");
+        problem_choices_display.innerHTML = "<ol type='A'>" + problem_choices_display.innerHTML + "</ol>";
+
+        var images_display = document.getElementById("images_display");
+        images_display.innerHTML = images_display.innerHTML.replace(/^https:\/\/cdn\.mathpix\.com\/[^\n]+$/gm, "<img src='$&'>");
 
         renderMathInElement(document.body, {
             delimiters: [
@@ -102,8 +106,8 @@
         });
     }
 
-    document.addEventListener("DOMContentLoaded", renderKatex);
+    document.addEventListener("DOMContentLoaded", updateDisplay);
     for (var i = 0; i < fields.length; i++) {
-        document.getElementById(fields[i]).addEventListener("input", renderKatex);
+        document.getElementById(fields[i]).addEventListener("input", updateDisplay);
     }
 </script>
