@@ -13,7 +13,7 @@ bad_unicode = "\u0941"
 citation_keywords = ["olympiad", "proposed", "competition", "roegen", "communicated", "maa", "exam","contest", "problems", "examination", "mathematical", "mathematics", "matematic", "matematica", "gnedenko", "wiley", "rotkiewicz", "brahmagupta", "andreescu"]
 topic_list = ["Methods of Proof", "Algebra", "Real Analysis", "Geometry", "Number Theory", "Probability"]
 
-topic_indexes = [80, 296, 572, 698, 905, 935]
+topic_indexes = [0, 80, 296, 572, 698, 905, 935]
 
 def find_all(a_str, sub):
     start = 0
@@ -27,10 +27,14 @@ def find_all(a_str, sub):
 def remove_irregularities(problem):
     problem = problem.replace("\n\n", "")
     problem = problem.translate({ord(x): '' for x in bad_unicode}) #remove bad unicode chars
+
     last_paren_open =  ([None] + list(find_all(problem, "(")))[-1]
     last_paren_close =  ([None] + list(find_all(problem, ")")))[-1]
     if last_paren_close and last_paren_open and any([citation in problem[last_paren_open:last_paren_close].lower() for citation in citation_keywords]):
         problem = problem[:last_paren_open] + problem[last_paren_close+1:]
+
+    problem = problem.strip("\n")
+    problem = "$$".join([e.replace('\n',' ') if c%2==1 else e for c,e in enumerate(problem.split("$$"))])
 
     return problem
 
@@ -81,7 +85,7 @@ with open("outputPutnam.csv", "w") as output_file, open("andreescu_putnam.md", '
             output.at[i,0] = str(i)
             output.at[i,1] = problems[i]
             output.at[i,2] = solutions[i]
-            output.at[i,3] = topic_list[max([c for c,e in enumerate(topic_indexes) if i <= topic_indexes[c]])]
+            output.at[i,3] = topic_list[max([c for c,e in enumerate(topic_indexes) if i >= topic_indexes[c]])]
 
 
 
