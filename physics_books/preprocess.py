@@ -27,6 +27,8 @@ if "\section{Index to Problems}" in lines:
 
 # replace "\section{Solution:}" with "Solution:"
 lines = [line.replace(r"\section{Solution:}", "Solution:") for line in lines]
+lines = [line.replace(r"\section{Solution}", "Solution:") for line in lines]
+lines = [line.replace(r"\section{Solution: \\ Solution:}", "Solution:") for line in lines]
 
 # remove all "\section{...}" that contain only uppercase letters -- those correspond to headings
 lines = [line for line in lines if not (line.startswith(r'\section{') and line[8:].isupper())]
@@ -39,25 +41,44 @@ assert sum(line.startswith(r"\section{") for line in lines) == sum(line.find(r"\
 #assert all(line.endswith("}") for line in lines if line.startswith(r"\section{"))
 lines = [line[9:-1] if line.startswith(r"\section{") and line.endswith("}") else line for line in lines]
 lines = [line[9:] if line.startswith(r"\section{") else line for line in lines]
+# same for subsections
+lines = [line[12:-1] if line.startswith(r"\subsection{") and line.endswith("}") else line for line in lines]
+
+# remove all "\title{...}" and "\author{...}" environments
+for i in range(len(lines)):
+    if lines[i].startswith(r"\title{") or lines[i].startswith(r"\author{"):
+        assert lines[i + 2].startswith("}")
+        lines[i] = ""
+        lines[i + 2] = ""
 
 # remove all problem sources
-lines = "\n".join(lines)
-lines = lines.replace("(Wisconsin)", "")
-lines = lines.replace("(UC, Berkeley)", "")
-lines = lines.replace("(Columbia)", "")
-lines = lines.replace("(Princeton)", "")
-lines = lines.replace("(Chicago)", "")
-lines = lines.replace("(CUSPEA)", "")
-lines = lines.replace("$(S U N Y$, Buffalo)", "")
-lines = lines.replace("$(M I T)$", "")
-lines = lines.replace("$(\operatorname{MIT})$", "")
-lines = lines.replace("$(C C T)$", "")
-lines = lines.replace("(Coulumbia)", "")
-lines = lines.replace("$(U C$, Berkeley)", "")
-lines = lines.replace("(SUNY, Buffalo)", "")
-lines = lines.replace("$(S U N Y, B u f f a l o)$", "")
-lines = lines.replace("$(W$ isconsin)", "")
-lines = lines.split("\n")
+PROBLEM_SOURCES = [
+    "(Wisconsin)",
+    "(UC,Berkeley)",
+    "(UC,BBerkeley)",
+    "(Columbia)",
+    "(Coulumbia)",
+    "(Princeton)",
+    "(Chicago)",
+    "(CUSPEA)",
+    "(SUNY,Buffalo)",
+    "(MIT)",
+    "(CCT)",
+    "(Buffalo)",
+]
+new_lines = []
+for line in lines:
+    mod_line = line.strip() \
+                   .replace("$", "") \
+                   .replace(" ", "") \
+                   .replace(r"\operatorname", "") \
+                   .replace(r"\text", "") \
+                   .replace("{", "") \
+                   .replace("}", "")
+    if mod_line in PROBLEM_SOURCES:
+        continue
+    new_lines.append(line)
+lines = new_lines
 
 # count lines that start with "![](https://cdn.mathpix.com"
 print("Number of image links:", len([line for line in lines if line.startswith("![](https://cdn.mathpix.com")]))
@@ -74,11 +95,26 @@ lines = [line for line in lines if not line.startswith(r"\begin{abstract}") and 
 # manual fixes
 lines = "\n".join(lines)
 lines = lines.replace("$$\n\\begin{gathered}\n1001 \\\\", "1001\n$$\n\\begin{gathered}")
-lines = lines.replace(r"\section{Solution: \\ Solution:}", "Solution:")
 if "optics" in INPUT_FILE:
     lines = lines.replace("1084", "1034")
     lines = lines.replace("2081", "2031")
     lines = lines.replace("2083", "2033")
+    lines = lines.replace("A glass cube", "Problem:\n\nA glass cube")
+    lines = lines.replace("A rainbow", "Problem:\n\nA rainbow")
+lines = lines.replace("Solutlon", "Solution")
+lines = lines.replace("Solntion", "Solution")
+lines = lines.replace("Alternative Solution:", "Alternative solution:")  # hack so that it's not confused with "Solution:"
+lines = lines.replace("〉", ">")
+lines = lines.replace("〈", "<")
+lines = lines.replace("ẹ", "e")
+lines = lines.replace("Fis.", "Fig.")
+lines = lines.replace("Pig.", "Fig.")
+lines = lines.split("\n")
+
+# split every "Solution:" into a separate line
+lines = "\n".join(lines)
+lines = lines.replace("Solution: ", "Solution:\n")
+lines = lines.replace(" Solution:", "\nSolution:")
 lines = lines.split("\n")
 
 # replace all occurrences of a problem number with "Problem (number):"
@@ -103,12 +139,6 @@ print("Number of solutions:", len([line for line in lines if line.startswith("So
 print("Number of problems without number:", len([line for line in lines if line == "Problem:"]))
 print("Number of problems with number:", len([line for line in lines if line.startswith("Problem:[")]))
 print("Total number of problems:", len([line for line in lines if line.startswith("Problem:")]))
-
-with open(OUTPUT_FILE, "w") as f:
-    f.write("\n".join(lines))
-
-# remove empty lines
-#lines = [line for line in lines if line != ""]
 
 with open(OUTPUT_FILE, "w") as f:
     f.write("\n".join(lines))

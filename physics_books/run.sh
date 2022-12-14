@@ -41,14 +41,14 @@ python preprocess.py --output tmp.txt --input data/quantum.txt
 python extract_problems.py --input tmp.txt \
                            --output data/quantum_output.json \
                            --book "Problems and Solutions on Quantum Mechanics" \
-                           --topic "Basic Principles and One-dimensional Motions" 1001 1071 \
+                           --topic "Basic Principles and One-dimensional Motions" 1001 1072 \
                            --topic "Central Potentials" 2001 2023 \
                            --topic "Spin and Angular Momentum" 3001 3048 \
                            --topic "Motion in Electromagnetic Fields" 4001 4016 \
                            --topic "Perturbation Theory" 5001 5083 \
                            --topic "Scattering Theory and Quantum Transitions" 6001 6061 \
-                            --topic "Many-Particle Systems" 7001 7037 \
-                            --topic "Miscellaneous Topics" 8001 8040
+                           --topic "Many-Particle Systems" 7001 7037 \
+                           --topic "Miscellaneous Topics" 8001 8040
 echo --------------------------------
 
 # statmech
