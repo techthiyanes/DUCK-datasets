@@ -1,0 +1,156 @@
+{
+    "1.3.3": {
+        "Topic": "Sequences, Series, and Products ",
+        "Book": "Berkeley Problems in Mathematics",
+        "Problem Statement": "Let $x_{0}=1$ and\n\n$$\nx_{n+1}=\\frac{3+2 x_{n}}{3+x_{n}}, \\quad n \\geqslant 0 .\n$$\n\nProve that $x_{\\infty}=\\lim _{n \\rightarrow \\infty} x_{n}$ exists, and find its value.\n\n",
+        "Solution": " Obviously, $x_{n} \\geqslant 1$ for all $n$; so, if the limit exists, it is $\\geqslant 1$, and we can pass to the limit in the recurrence relation to get\n\n$$\nx_{\\infty}=\\frac{3+2 x_{\\infty}}{3+x_{\\infty}} \\text {; }\n$$\n\nin other words, $x_{\\infty}^{2}+x_{\\infty}-3=0$. So $x_{\\infty}$ is the positive solution of this quadratic equation, that is, $x_{\\infty}=\\frac{1}{2}(-1+\\sqrt{13})$.\n\nTo prove that the limit exists, we use the recurrence relation to get\n\n$$\n\\begin{aligned}\nx_{n+1}-x_{n} &=\\frac{3+2 x_{n}}{3+x_{n}}-\\frac{3+2 x_{n-1}}{3+x_{n-1}} \\\\\n&=\\frac{3\\left(x_{n}-x_{n-1}\\right)}{\\left(3+x_{n}\\right)\\left(3+x_{n+1}\\right)}\n\\end{aligned}\n$$\n\nHence, $\\left|x_{n+1}-x_{n}\\right| \\leqslant \\frac{1}{3}\\left|x_{n}-x_{n-1}\\right|$. Iteration gives\n\n$$\n\\left|x_{n+1}-x_{n}\\right| \\leqslant 3^{-n}\\left|x_{1}-x_{0}\\right|=\\frac{1}{3^{n} \\cdot 4} .\n$$\n\nThe series $\\sum_{n=1}^{\\infty}\\left(x_{n+1}-x_{n}\\right)$, of positive terms, is dominated by the convergent series $\\frac{1}{4} \\sum_{n=1}^{\\infty} 3^{-n}$ and so converges. We have $\\sum_{n=1}^{\\infty}\\left(x_{n+1}-x_{n}\\right)=\\lim x_{n}-x_{1}$ and we are done.\n\n",
+        "Final Answer": "$\\frac{1}{2}(-1 + \\sqrt{13})$"
+    },
+    "3.2.3": {
+        "Topic": "Second Order Equations ",
+        "Book": "Berkeley Problems in Mathematics",
+        "Problem Statement": "Find all solutions of the differential equation\n\n$$\n\\frac{d^{2} x}{d t^{2}}-2 \\frac{d x}{d t}+x=\\sin t\n$$\n\nsubject to the condition $x(0)=1$ and $x^{\\prime}(0)=0$.\n\n",
+        "Solution": "The characteristic polynomial of the associated homogeneous equation is\n\n$$\nr^{2}-2 r+1=(r-1)^{2}\n$$\n\nso the general solution of the homogeneous equation\n\n$$\n\\frac{d^{2} x}{d t^{2}}-2 \\frac{d x}{d t}+x=0\n$$\n\nis\n\n$$\nA e^{t}+B t e^{t} \\quad(A, B \\in \\mathbb{R}) .\n$$\n\n$(\\cos t) / 2$ is easily found to be a particular solution of the original equation, so the general solution is\n\n$$\nA e^{t}+B t e^{t}+\\frac{\\cos t}{2} \\text {. }\n$$\n\nThe initial conditions give $A=-\\frac{1}{2}$ and $B=\\frac{1}{2}$, so the solution is\n\n$$\n\\frac{1}{2}\\left(e^{t}-t e^{t}+\\cos t\\right) \\text {. }\n$$\n\n",
+        "Final Answer": "$\\frac{1}{2}\\left(e^{t}-t e^{t}+\\cos t\\right)$"
+    },
+    "1.5.23": {
+        "Topic": "Integral Calculus ",
+        "Book": "Berkeley Problems in Mathematics",
+        "Problem Statement": "Compute\n\n$$\n\\int_{0}^{\\infty} \\frac{\\log x}{x^{2}+a^{2}} d x\n$$\n\nwhere $a>0$ is a constant. ",
+        "Solution": "$\\log x$ is integrable near zero, and near infinity it is dominated by $\\sqrt{x}$, so the given integral exists finitely. Making the change of variables $x=a / t$, it becomes \n\n$$\n\\begin{aligned}\n\\int_{0}^{\\infty} \\frac{\\log x}{x^{2}+a^{2}} d x &=\\frac{\\log a}{a} \\int_{0}^{\\infty} \\frac{d t}{1+t^{2}}-\\frac{1}{a} \\int_{0}^{\\infty} \\frac{\\log t}{1+t^{2}} d t \\\\\n&=\\left.\\frac{\\log a}{a} \\arctan t\\right|_{0} ^{\\infty}-J \\\\\n&=\\frac{\\pi \\log a}{2 a}-J .\n\\end{aligned}\n$$\n\nIf we treat $J$ in a similar way, we get $J=-J$, so $J=0$ and the given integral equals\n\n$$\n\\frac{\\pi \\log a}{2 a}\n$$\n\n",
+        "Final Answer": "$\\frac{\\pi \\log a}{2 a}$"
+    },
+    "1.1.11": {
+        "Topic": "Elementary Calculus ",
+        "Book": "Berkeley Problems in Mathematics",
+        "Problem Statement": "Suppose that $f$ is a twice differentiable real function such that $f^{\\prime \\prime}(x)>0$ for all $x \\in[a, b]$. Find all numbers $c \\in[a, b]$ at which the area between the graph $y=f(x)$, the tangent to the graph at $(c, f(c))$, and the lines $x=a, x=b$, attains its minimum value.\n\n",
+        "Solution": " Let $A(c)$ denote the area the problem refers. The condition on $f^{\\prime \\prime}$ implies the convexity of $f$, so the graph of $f$ is always above any tangent to it, and we have\n\n$$\nA(c)=\\int_{a}^{b}\\left(f(x)-f(c)-f^{\\prime}(c)(x-c)\\right) d x .\n$$\n\nThe derivative of $A$ is given by\n\n$$\n\\begin{aligned}\nA^{\\prime}(c) &=-\\int_{a}^{b} f^{\\prime \\prime}(c)(x-c) d x \\\\\n&=-f^{\\prime \\prime}(c) \\frac{b^{2}-a^{2}}{2}+(b-a) c f^{\\prime}(c) \\\\\n&=f^{\\prime \\prime}(c)(b-a)\\left(c-\\frac{a+b}{2}\\right)\n\\end{aligned}\n$$\n\nso the minimum occurs at $c=(a+b) / 2$. As $A^{\\prime}$ is an increasing function, $A$ is convex, so its minimum in $[a, b]$ corresponds to the only critical point in $(a, b)$.\n\n",
+        "Final Answer": "$\\frac{a+b}{2}$"
+    },
+    "1.1.18": {
+        "Topic": "Elementary Calculus ",
+        "Book": "Berkeley Problems in Mathematics",
+        "Problem Statement": "Find all pairs of integers $a$ and $b$ satisfying $0<a<b$ and $a^{b}=b^{a}$.\n\n",
+        "Solution": "Consider the function $f(x)=\\log x / x$. We have $a^{b}=b^{a}$ iff $f(a)=f(b)$. Now $f^{\\prime}(x)=(1-\\log x) / x^{2}$, so $f$ is increasing for $x<e$ and decreasing for $x>e$. For the above equality to hold, we must have $0<a<e$, so $a$ is either 1 or 2 , and $b>e$. For $a=1$, clearly there are no solutions, and for $a=2$ and $b=4$ works; since $f$ is decreasing for $x>e$, this is the only solution. ",
+        "Final Answer": "$(a, b) = (2, 4)$"
+    },
+    "2.3.6": {
+        "Topic": "Integral Calculus ",
+        "Book": "Berkeley Problems in Mathematics",
+        "Problem Statement": " Let $\\mathcal{S}=\\left\\{(x, y, z) \\in \\mathbb{R}^{3} \\mid x^{2}+y^{2}+z^{2}=1\\right\\}$ denote the unit sphere in $\\mathbb{R}^{3}$. Evaluate the surface integral over $\\mathcal{S}$ :\n\n$$\n\\iint_{\\mathcal{S}}\\left(x^{2}+y+z\\right) d A .\n$$\n\n",
+        "Solution": " Using the change of variables\n\n$$\n\\begin{cases}x=\\sin \\varphi \\cos \\theta & 0<\\theta<2 \\pi \\\\ y=\\sin \\varphi \\sin \\theta & 0<\\varphi<\\pi \\\\ z=\\cos \\varphi & \\end{cases}\n$$\n\nwe have\n\n$$\nd A=\\sin \\varphi d \\theta d \\varphi\n$$\n\nand\n\n$$\n\\iint_{\\mathcal{S}}\\left(x^{2}+y+z\\right) d A=\\int_{0}^{\\pi} \\int_{0}^{2 \\pi}\\left(\\sin ^{2} \\varphi \\cos ^{2} \\theta+\\sin \\varphi \\sin \\theta+\\cos \\varphi\\right) \\sin \\varphi d \\theta d \\varphi .\n$$\n\nBreaking the integral in three terms, we get\n\n$$\n\\begin{aligned}\n\\int_{0}^{\\pi} \\int_{0}^{2 \\pi} \\sin \\varphi \\cos \\varphi d \\theta d \\varphi=2 \\pi \\cdot \\frac{1}{2} \\int_{0}^{\\pi} \\sin 2 \\varphi d \\varphi=0 \\\\\n\\int_{0}^{\\pi} \\int_{0}^{2 \\pi} \\sin ^{2} \\varphi \\sin \\theta d \\theta d \\varphi=\\left(\\int_{0}^{\\pi} \\sin ^{2} \\varphi d \\varphi\\right) \\int_{0}^{2 \\pi} \\sin \\theta d \\theta=0 \\\\\n\\int_{0}^{\\pi} \\int_{0}^{2 \\pi} \\sin ^{3} \\varphi \\cos ^{2} \\theta d \\theta d \\varphi &=\\left(\\int_{0}^{\\pi} \\sin ^{3} \\varphi d \\varphi\\right)\\left(\\int_{0}^{2 \\pi} \\cos ^{2} \\theta d \\theta\\right) \\\\\n&=\\int_{0}^{\\pi} \\frac{1}{4}\\left(3 \\sin \\varphi-\\sin ^{3} \\varphi\\right) d \\varphi \\int_{0}^{2 \\pi} \\cos ^{2} \\theta d \\theta \\\\\n&=\\frac{1}{4}\\left(-3 \\cos \\varphi+\\left.\\frac{1}{3} \\cos ^{3} \\varphi\\right|_{0} ^{\\pi}\\right)\\left(\\int_{0}^{2 \\pi} \\frac{1+\\cos 2 \\theta}{2} d \\theta\\right) \\\\\n&=\\frac{1}{4}\\left(-3(-2)+\\frac{1}{3}(-2)\\right) \\pi \\\\\n&=\\frac{1}{4}\\left(6-\\frac{2}{3}\\right) \\pi=\\frac{4}{3} \\pi .\n\\end{aligned}\n$$\n\nTherefore,\n\n$$\n\\iint_{\\mathcal{S}}\\left(x^{2}+y+z\\right) d A=\\frac{4}{3} \\pi\n$$\n\n",
+        "Final Answer": "$\\frac{4}{3} \\pi$"
+    },
+    "1.1.35": {
+        "Topic": "Elementary Calculus ",
+        "Book": "Berkeley Problems in Mathematics",
+        "Problem Statement": " Define\n\n$$\nF(x)=\\int_{\\sin x}^{\\cos x} e^{\\left(t^{2}+x t\\right)} d t .\n$$\n\nCompute $F^{\\prime}(0)$.\n\n",
+        "Solution": " Let\n\n$$\nG(u, v, x)=\\int_{v}^{u} e^{t^{2}+x t} d t .\n$$\n\nThen $F(x)=G(\\cos x, \\sin x, x)$, so\n\n$$\n\\begin{aligned}\nF^{\\prime}(x) &=\\frac{\\partial G}{\\partial u} \\frac{\\partial u}{\\partial x}+\\frac{\\partial G}{\\partial v} \\frac{\\partial v}{\\partial x}+\\frac{\\partial G}{\\partial x} \\\\\n&=e^{u^{2}+x u}(-\\sin x)-e^{\\left(v^{2}+x v\\right)} \\cos x+\\int_{v}^{u} t e^{t^{2}+x t} d t\n\\end{aligned}\n$$\n\nand\n\n$$\nF^{\\prime}(0)=-1+\\int_{0}^{1} t e^{t^{2}} d t=\\frac{1}{2}(e-3) .\n$$\n\n",
+        "Final Answer": "$\\frac12(e - 3)$"
+    },
+    "5.7.4": {
+        "Topic": "Cauchy's Theorem ",
+        "Book": "Berkeley Problems in Mathematics",
+        "Problem Statement": " For $0<a<b$, evaluate the integral\n\n$$\nI=\\frac{1}{2 \\pi} \\int_{0}^{2 \\pi} \\frac{1}{\\left|a e^{i \\theta}-b\\right|^{4}} d \\theta .\n$$\n\n",
+        "Solution": " The integrand equals\n\n$$\n\\frac{1}{\\left(a e^{i \\theta}-b\\right)^{2}\\left(a e^{-i \\theta}-b\\right)^{2}}=\\frac{e^{2 i \\theta}}{\\left(a e^{i \\theta}-b\\right)^{2}\\left(a-b e^{i \\theta}\\right)^{2}}\n$$\n\nThus, I can be written as a complex integral,\n\n$$\nI=\\frac{1}{2 \\pi i} \\int_{|z|=1} \\frac{z}{(a z-b)^{2}(a-b z)^{2}} d z=\\frac{1}{2 \\pi i b^{2}} \\int_{|z|=1} \\frac{z}{(a z-b)^{2}\\left(z-\\frac{a}{b}\\right)^{2}} d z\n$$\n\nBy Cauchy's Theorem for derivatives, we have\n\n$$\nI=\\left.\\frac{1}{b^{2}} \\frac{d}{d z}\\left(\\frac{z}{(a z-b)^{2}}\\right)\\right|_{z=\\frac{a}{b}}=\\frac{a^{2}+b^{2}}{\\left(b^{2}-a^{2}\\right)^{3}}\n$$\n\n",
+        "Final Answer": "$\\frac{a^{2}+b^{2}}{\\left(b^{2}-a^{2}\\right)^{3}}$"
+    },
+    "5.7.2": {
+        "Topic": "Cauchy's Theorem ",
+        "Book": "Berkeley Problems in Mathematics",
+        "Problem Statement": " Evaluate\n\n$$\n\\int_{0}^{2 \\pi} e^{\\left(e^{i \\theta}-i \\theta\\right)} d \\theta .\n$$\n\n",
+        "Solution": " By Cauchy's Integral Formula for derivatives, we have\n\ntherefore,\n\n$$\n\\left.\\frac{d}{d z} e^{z}\\right|_{z=0}=\\frac{1}{2 \\pi i} \\int_{|z|=1} \\frac{e^{z}}{z^{2}} d z=\\frac{1}{2 \\pi} \\int_{0}^{2 \\pi} e^{e^{i \\theta}-i \\theta} d \\theta\n$$\n\n$$\n\\int_{0}^{2 \\pi} e^{e^{i \\theta}-i \\theta} d \\theta=2 \\pi .\n$$\n\n",
+        "Final Answer": "$2\\pi$"
+    },
+    "7.4.26": {
+        "Topic": "Linear Transformations ",
+        "Book": "Berkeley Problems in Mathematics",
+        "Problem Statement": " Let $e=(a, b, c)$ be a unit vector in $\\mathbb{R}^{3}$ and let $T$ be the linear transformation on $\\mathbb{R}^{3}$ of rotation by $180^{\\circ}$ about e. Find the matrix for $T$ with respect to the standard basis. ",
+        "Solution": " Let $x=\\left(x_{1}, x_{2}, x_{3}\\right)$ in the standard basis of $\\mathbb{R}^{3}$. The line joining the points $x$ and $T x$ intersects the line containing $e$ at the point $f=\\langle e, x\\rangle e$ and is perpendicular to it. We then have $T x=2(f-x)+x=2 f-x$, or, in the standard basis, $T x=\\left(2\\langle e, x\\rangle a-x_{1}, 2\\langle e, x\\rangle b-x_{2}, 2\\langle e, x\\rangle c-x_{3}\\right)$. With respect to the standard basis for $\\mathbb{R}^{3}$, the columns of the matrix of $T$ are $T e_{1}, T e_{2}$, and $T e_{3}$. Applying our formula and noting that $\\left\\langle e, e_{1}\\right\\rangle=a,\\left\\langle e, e_{2}\\right\\rangle=b$, and $\\left\\langle e, e_{3}\\right\\rangle=c$, we get that the matrix for $T$ is\n\n$$\n\\left(\\begin{array}{ccc}\n2 a^{2}-1 & 2 a b & 2 a c \\\\\n2 a b & 2 b^{2}-1 & 2 b c \\\\\n2 a c & 2 b c & 2 c^{2}-1\n\\end{array}\\right)\n$$\n\n",
+        "Final Answer": "$$\n\\left(\\begin{array}{ccc}\n2 a^{2}-1 & 2 a b & 2 a c \\\\\n2 a b & 2 b^{2}-1 & 2 b c \\\\\n2 a c & 2 b c & 2 c^{2}-1\n\\end{array}\\right)\n$$"
+    },
+    "1.3.11": {
+        "Topic": "Sequences, Series, and Products ",
+        "Book": "Berkeley Problems in Mathematics",
+        "Problem Statement": " Let $f(x)=\\frac{1}{4}+x-x^{2}$. For any real number $x$, define a sequence $\\left(x_{n}\\right)$ by $x_{0}=x$ and $x_{n+1}=f\\left(x_{n}\\right)$. If the sequence converges, let $x_{\\infty}$ denote the limit.\n\n1. For $x=0$, show that the sequence is bounded and nondecreasing, and find $x_{\\infty}=\\lambda$.\n\n\n",
+        "Solution": " 1. We have\n\n$$\nf(x)=\\frac{1}{2}-\\left(x-\\frac{1}{2}\\right)^{2}\n$$\n\nso $x_{n}$ is bounded by $1 / 2$ and, by the Induction Principle, nondecreasing. Let $\\lambda$ be its limit. Then\n\n$$\n\\lambda=\\frac{1}{2}-\\left(\\lambda-\\frac{1}{2}\\right)^{2}\n$$\n\nand, as the sequence takes only positive values,\n\n$$\n\\lambda=\\frac{1}{2} \\text {. }\n$$\n\n",
+        "Final Answer": "$\\lambda=\\frac12$"
+    },
+    "7.6.40": {
+        "Topic": "Canonical Forms ",
+        "Book": "Berkeley Problems in Mathematics",
+        "Problem Statement": " Let $A$ be the $3 \\times 3$ matrix\n\n$$\n\\left(\\begin{array}{rrr}\n1 & -1 & 0 \\\\\n-1 & 2 & -1 \\\\\n0 & -1 & 1\n\\end{array}\\right)\n$$\n\nDetermine all real numbers $a$ for which the limit $\\lim _{n \\rightarrow \\infty} a^{n} A^{n}$ exists and is nonzero (as a matrix).\n\n",
+        "Solution": " An easy calculation shows that $A$ has eigenvalues $\\{0,1,3\\}$ , so $A$ is similar to the diagonal matrix with entries $0,1,3$ . Since clearly the problem does not change when $A$ is replaced by a similar matrix, we may replace $A$ by that diagonal matrix. Then the condition on $a$ is that each of the sequences $\\left(0^{n}\\right),\\left(a^{n}\\right)$, and $\\left((3 a)^{n}\\right)$ has a limit, and that at least one of these limits is nonzero. This occurs if and only if $a=1 / 3$.\n\n",
+        "Final Answer": "$a=\\frac13$"
+    },
+    "7.8.3": {
+        "Topic": "Bilinear, Quadratic Forms, and Inner Product Spaces ",
+        "Book": "Berkeley Problems in Mathematics",
+        "Problem Statement": " Find the infimum and supremum of the set of real numbers $t$ for which the quadratic form $Q_{t}$ on $\\mathbb{R}^{3}$, defined by\n\n$$\nQ_{t}\\left(x_{1}, x_{2}, x_{3}\\right)=2 x_{1}^{2}+x_{2}^{2}+3 x_{3}^{2}+2 t x_{1} x_{2}+2 x_{1} x_{3},\n$$\n\nis positive definite.\n\n",
+        "Solution": " We have\n\n$$\n2 x_{1}^{2}+x_{2}^{2}+3 x_{3}^{2}+2 t x_{1} x_{2}+2 x_{1} x_{3}=\\left(x_{1}, x_{2}, x_{3}\\right)\\left(\\begin{array}{lll}\n2 & t & 1 \\\\\nt & 1 & 0 \\\\\n1 & 0 & 3\n\\end{array}\\right)\\left(\\begin{array}{l}\nx_{1} \\\\\nx_{2} \\\\\nx_{3}\n\\end{array}\\right)\n$$\n\nThe form is positive definite if and only if the determinants\n\n$$\n\\left|\\begin{array}{lll}\n2 & t & 1 \\\\\nt & 1 & 0 \\\\\n1 & 0 & 3\n\\end{array}\\right|>0 \\quad \\text { and } \\quad\\left|\\begin{array}{ll}\n2 & t \\\\\nt & 1\n\\end{array}\\right|>0\n$$\n\nthat is, when $-1+3\\left(2-t^{2}\\right)=5-3 t^{2}>0$ and $2-t^{2}>0$.\n\nBoth conditions hold iff $|t|<\\sqrt{\\frac{5}{3}}$. For these values of $t$ the form is positive definite.\n\n",
+        "Final Answer": "$\\left(-\\sqrt{\\frac53}, \\sqrt{\\frac53}\\right)$"
+    },
+    "5.8.8": {
+        "Topic": "Zeros and Singularities ",
+        "Book": "Berkeley Problems in Mathematics",
+        "Problem Statement": " Find the number of roots of\n\n$$\nz^{7}-4 z^{3}-11=0\n$$\n\nwhich lie between the two circles $|z|=1$ and $|z|=2$.\n\n",
+        "Solution": " Let $p(z)=z^{7}-4 z^{3}-11$. For $z$ in the unit circle, we have\n\n$$\n|p(z)-11|=\\left|z^{7}-4 z^{3}\\right| \\leqslant 5<11\n$$\n\nso, by Rouch\u00e9's Theorem, the given polynomial has no zeros in the unit disc. For $|z|=2$,\n\n$$\n\\left|p(z)-z^{7}\\right|=\\left|4 z^{3}+11\\right| \\leqslant 43<128=\\left|z^{7}\\right|\n$$\n\nso there are seven zeros inside the disc $\\{z|| z \\mid<2\\}$ and they are all between the two given circles.\n\n",
+        "Final Answer": "$7$"
+    },
+    "6.5.7": {
+        "Topic": "S_{n}, A_{n}, D_{n}, ",
+        "Book": "Berkeley Problems in Mathematics",
+        "Problem Statement": " Let $S_{9}$ denote the group of permutations of nine objects and let $A_{9}$ be the subgroup consisting of all even permutations. Denote by $1 \\in S_{9}$ the identity permutation. Determine the minimum of all positive integers $m$ such that every $\\sigma \\in S_{9}$ satisfies $\\sigma^{m}=1$. Determine also the minimum of all positive integers $m$ such that every $\\sigma \\in A_{9}$ satisfies $\\sigma^{m}=1$.\n\n",
+        "Solution": " The order of a $k$-cycle is $k$, so the smallest $m$ which simultaneously annihilates all 9-cycles, 8-cycles, 7-cycles, and 5-cycles is $2^{3} \\cdot 3^{2} \\cdot 5 \\cdot 7= 2520$. Any $n$-cycle, $n \\leqslant 9$, raised to this power is annihilated, so $n=2520$.\n\nTo compute $n$ for $A 9$, note that an 8-cycle is an odd permutation, so no 8-cycles are in $A_{9}$. Therefore, $n$ need only annihilate 4-cycles (since a 4-cycle times a transposition is in A9), 9-cycles, 7-cycles, and 5-cycles. Thus, $n=2520 / 2= 1260$.\n\n",
+        "Final Answer": "$(2520, 1260)$"
+    },
+    "2.2.4": {
+        "Topic": "Differential Calculus ",
+        "Book": "Berkeley Problems in Mathematics",
+        "Problem Statement": " Let $f: \\mathbb{R}^{2} \\rightarrow \\mathbb{R}$ be defined by:\n\n$$\nf(x, y)=\\left\\{\\begin{array}{lll}\nx^{4 / 3} \\sin (y / x) & \\text { if } & x \\neq 0 \\\\\n0 & \\text { if } & x=0\n\\end{array}\\right.\n$$\n\nDetermine all points at which $f$ is differentiable.\n\n",
+        "Solution": " The function $f$ is differentiable at the point $z=\\left(x_{0}, y_{0}\\right) \\in U$ if there is a linear transformation $f^{\\prime}(z) \\in L\\left(\\mathbb{R}^{2}, \\mathbb{R}^{1}\\right)$ such that\n\n$$\n\\lim _{h \\rightarrow 0} \\frac{\\left|f(z+h)-f(z)-f^{\\prime}(z) h\\right|}{\\|h\\|}=0 .\n$$\n\nContinuity of the partial derivatives is a sufficient condition for differentiability. A calculation gives\n\n$$\n\\begin{gathered}\n\\frac{\\partial f}{\\partial x}(x, y)= \\begin{cases}(4 / 3) x^{1 / 3} \\sin y / x-y x^{-2 / 3} \\cos y / x & \\text { if } x \\neq 0 \\\\\n0 & \\text { if } x=0\\end{cases} \\\\\n\\frac{\\partial f}{\\partial y}(x, y)= \\begin{cases}x^{1 / 3} \\cos (y / x) & \\text { if } x \\neq 0 \\\\\n0 & \\text { if } x=0\\end{cases}\n\\end{gathered}\n$$\n\nwhich are continuous on $\\mathbb{R}^{2} \\backslash\\{(0, y) \\mid y \\in \\mathbb{R}\\}$. Thus, $f$ is differentiable there. At any point $(0, y)$, we have\n\n$$\n\\frac{f(h, k)-f(0, y)}{\\|(h, k)\\|}=O\\left(|h|^{1 / 3}\\right)=o(1) \\quad(h \\rightarrow 0)\n$$\n\nso $f$ is differentiable at these points also.\n\n",
+        "Final Answer": "$\\mathbb{R}^2$"
+    },
+    "2.3.5": {
+        "Topic": "Integral Calculus ",
+        "Book": "Berkeley Problems in Mathematics",
+        "Problem Statement": " Let $\\varphi(x, y)$ be a function with continuous second order partial derivatives such that\n\n1. $\\varphi_{x x}+\\varphi_{y y}+\\varphi_{x}=0$ in the punctured plane $\\mathbb{R}^{2} \\backslash\\{0\\}$,\n\n2. $r \\varphi_{x} \\rightarrow \\frac{x}{2 \\pi r}$ and $r \\varphi_{y} \\rightarrow \\frac{y}{2 \\pi r}$ as $r=\\sqrt{x^{2}+y^{2}} \\rightarrow 0$.\n\nLet $C_{R}$ be the circle $x^{2}+y^{2}=R^{2}$. Show that the line integral\n\n$$\n\\int_{C_{R}} e^{x}\\left(-\\varphi_{y} d x+\\varphi_{x} d y\\right)\n$$\n\nis independent of $R$, and evaluate it.\n\n",
+        "Solution": "Consider the annular region $\\mathcal{A}$ between the circles of radius $r$ and $R$, then by Green's Theorem\n\n$$\n\\begin{aligned}\n&\\int_{R} e^{x}\\left(-\\varphi_{y} d x+\\varphi_{x} d y\\right)-\\int_{r} e^{y}\\left(-\\varphi_{y} d x+\\varphi_{x} d y\\right)= \\\\\n&=\\int_{\\partial \\mathcal{A}} e^{x}\\left(-\\varphi_{x} d x+\\varphi_{x} d y\\right) \\\\\n&=\\iint_{\\mathcal{A}} d\\left(e^{x}\\left(-\\varphi_{y} d x+\\varphi_{x} d y\\right)\\right) \\\\\n&=\\iint_{\\mathcal{A}}-e^{x} \\varphi_{y y} d y \\wedge d x+\\left(e^{x} \\varphi_{x}+e^{x} \\varphi_{x x}\\right) d x \\wedge d y \\\\\n&=\\iint_{\\mathcal{A}} e^{x}\\left(\\varphi_{x x}+e^{x} \\varphi_{x x}+\\varphi_{x}\\right) d x \\wedge d y=0\n\\end{aligned}\n$$\n\nshowing that the integral does not depend on the radius $r$. Now, parametrizing the circle of radius $r$\n\n$$\n\\begin{aligned}\n&\\int_{C_{r}} e^{x}\\left(-\\varphi_{y} d x+\\varphi_{x} d y\\right)= \\\\\n&=\\int_{0}^{2 \\pi} e^{r \\cos \\theta}\\left(\\varphi_{y}(r \\cos \\theta, r \\sin \\theta) \\sin \\theta+\\varphi_{x}(r \\cos \\theta, r \\sin \\theta) \\cos \\theta\\right) r d \\theta\n\\end{aligned}\n$$\n\nbut when $r \\rightarrow 0$ the integrand converges uniformly to\n\n$$\n\\frac{\\sin \\theta}{2 \\pi} \\cdot \\sin \\theta+\\frac{\\cos \\theta}{2 \\pi} \\cdot \\cos \\theta=\\frac{1}{2 \\pi}\n$$\n\nso the integral approaches $1$ when $r \\rightarrow 0$ and that is the value of the integral.\n\n",
+        "Final Answer": "$1$"
+    },
+    "7.9.19": {
+        "Topic": "General Theory of Matrices ",
+        "Book": "Berkeley Problems in Mathematics",
+        "Problem Statement": " 1. Determine the commutant of the $n \\times n$ Jordan matrix\n\n$$\nA B=\\left(\\begin{array}{cccccc}\n\\lambda & 1 & 0 & \\ldots & 0 & 0 \\\\\n0 & \\lambda & 1 & \\ldots & 0 & 0 \\\\\n0 & 0 & \\lambda & \\ldots & 0 & 0 \\\\\n\\vdots & \\vdots & \\vdots & \\ddots & \\vdots & \\vdots \\\\\n0 & 0 & 0 & \\ldots & \\lambda & 1 \\\\\n0 & 0 & 0 & \\ldots & 0 & \\lambda\n\\end{array}\\right)\n$$\n\nIn particular, find the dimension of the commutant as a complex vector space.",
+        "Solution": " 1. Assume without loss of generality that $\\lambda=0$ (otherwise replace $J$ by $J-\\lambda I)$. Let $e_{1}, \\ldots, e_{n}$ be the standard basis vectors for $\\mathbb{C}^{n}$, so that $J e_{k}=e_{k-1}$ for $k=2, \\ldots, n, J e_{1}=0$. Suppose $A J=J A$. Then, for $k=1, \\ldots, n-1$,\n\n$$\nA e_{k}=A J^{n-k} e_{n}=J^{n-k} A e_{n},\n$$\n\nso $A$ is completely determined by $A e_{n}$. If $A e_{n}=\\left(\\begin{array}{c}c_{n} \\\\ \\vdots \\\\ c_{1}\\end{array}\\right)$, then\n\n$$\nA=\\left(\\begin{array}{cccccc}\nc_{1} & c_{2} & c_{3} & \\ldots & c_{n-1} & c_{n} \\\\\n0 & c_{1} & c_{2} & \\ldots & c_{n-2} & c_{n-1} \\\\\n0 & 0 & c_{1} & \\ldots & c_{n-3} & c_{n-2} \\\\\n\\vdots & \\vdots & \\vdots & \\ddots & \\vdots & \\vdots \\\\\n0 & 0 & 0 & \\ldots & c_{1} & c_{2} \\\\\n0 & 0 & 0 & \\ldots & 0 & c_{1}\n\\end{array}\\right) .\n$$\n\nIn other words, $A$ has zero entries below the main diagonal, the entry $c_{1}$ at each position on the main diagonal, the entry $c_{2}$ at each position immediately above the main diagonal, the entry $c_{3}$ at each position two slots above the main diagonal, etc. From (*) it follows that every matrix of this form commutes with $J$. The commutant of $J$ thus has dimension $n$.\n\n",
+        "Final Answer": "$n$"
+    },
+    "1.3.1": {
+        "Topic": "Sequences, Series, and Products ",
+        "Book": "Berkeley Problems in Mathematics",
+        "Problem Statement": " Let $A_{1} \\geqslant A_{2} \\geqslant \\cdots \\geqslant A_{k} \\geqslant 0$. Evaluate\n\n$$\n\\lim _{n \\rightarrow \\infty}\\left(A_{1}^{n}+A_{2}^{n}+\\cdots+A_{k}^{n}\\right)^{1 / n} .\n$$\n\n",
+        "Solution": " $A_{1}^{n} \\leqslant A_{1}^{n}+\\cdots+A_{k}^{n} \\leqslant k A_{1}^{n}$, so we have\n\n$$\nA_{1}=\\lim _{n \\rightarrow \\infty}\\left(A_{1}^{n}\\right)^{1 / n} \\leqslant \\lim _{n \\rightarrow \\infty}\\left(A_{1}^{n}+\\cdots+A_{k}^{n}\\right)^{1 / n} \\leqslant \\lim _{n \\rightarrow \\infty}\\left(k A_{1}^{n}\\right)^{1 / n}=A_{1} .\n$$\n\nshowing that the limit equals $A_{1}$.\n\n",
+        "Final Answer": "$A_1$"
+    },
+    "5.7.1": {
+        "Topic": "Cauchy's Theorem ",
+        "Book": "Berkeley Problems in Mathematics",
+        "Problem Statement": "Evaluate\n\n$$\n\\int_{0}^{2 \\pi} e^{e^{i \\theta}} d \\theta .\n$$\n\n\n\n",
+        "Solution": " By Cauchy's Integral Formula, we have\n\n$$\ne^{0}=\\frac{1}{2 \\pi i} \\int_{|z|=1} \\frac{e^{z}}{z} d z=\\frac{1}{2 \\pi} \\int_{0}^{2 \\pi} e^{e^{i \\theta}} d \\theta\n$$\n\ntherefore,\n\n$$\n\\int_{0}^{2 \\pi} e^{e^{i \\theta}} d \\theta=2 \\pi .\n$$\n\n",
+        "Final Answer": "$2\\pi$"
+    },
+    "1.3.5": {
+        "Topic": "Sequences, Series, and Products ",
+        "Book": "Berkeley Problems in Mathematics",
+        "Problem Statement": " Let $\\alpha$ be a number in $(0,1)$. Prove that any sequence $\\left(x_{n}\\right)$ of real numbers satisfying the recurrence relation\n\n$$\nx_{n+1}=\\alpha x_{n}+(1-\\alpha) x_{n-1}\n$$\n\nhas a limit, and find an expression for the limit in terms of $\\alpha, x_{0}$ and $x_{1}$.\n\n",
+        "Solution": " By the given relation $x_{n+1}-x_{n}=(\\alpha-1)\\left(x_{n}-x_{n-1}\\right)$. Therefore, by the Induction Principle [MH93, p. 7], we have $x_{n}-x_{n-1}=(\\alpha-1)^{n-1}\\left(x_{1}-x_{0}\\right)$, showing that the sequence is Cauchy and then converges. Hence,\n\n$$\nx_{n}-x_{0}=\\sum_{k=1}^{n}\\left(x_{k}-x_{k-1}\\right)=\\left(x_{1}-x_{0}\\right) \\sum_{k=1}^{n}(\\alpha-1)^{k-1} \\text {. }\n$$\n\nTaking limits, we get\n\n$$\n\\lim _{n \\rightarrow \\infty} x_{n}=\\frac{(1-\\alpha) x_{0}+x_{1}}{2-\\alpha} .\n$$\n\n",
+        "Final Answer": "$$\\frac{(1-\\alpha) x_{0}+x_{1}}{2-\\alpha}$$"
+    },
+    "1.5.15": {
+        "Topic": "Integral Calculus ",
+        "Book": "Berkeley Problems in Mathematics",
+        "Problem Statement": " Evaluate the integral\n\n$$\nI=\\int_{0}^{1 / 2} \\frac{\\sin x}{x} d x\n$$\n\nto an accuracy of three decimal places; that is, find a number $I^{*}$ such that $\\left|I-I^{*}\\right|<0.0005$.\n\n",
+        "Solution": " Using the Maclaurin expansion of $\\sin x$, we get\n\n$$\n\\frac{\\sin x}{x}=\\sum_{0}^{\\infty}(-1)^{n} \\frac{x^{2 n}}{(2 n+1) !} .\n$$\n\nThe series above is alternating for every value of $x$, so we have\n\n$$\n\\left|\\frac{\\sin x}{x}-\\sum_{0}^{k}(-1)^{n} \\frac{x^{2 n+1}}{(2 n+1) !}\\right| \\leqslant \\frac{x^{2 k+2}}{(2 k+3) !} .\n$$\n\nTaking $k=2$, we have\n\n$$\n\\left|I-\\int_{0}^{1 / 2}\\left(1-\\frac{x^{2}}{3 !}\\right) d x\\right| \\leqslant \\int_{0}^{1 / 2} \\frac{x^{4}}{5 !} d x\n$$\n\nwhich gives an approximate value of $71 / 144 \\approx 0.493$ with an error bounded by $0.00013$.\n\n",
+        "Final Answer": "$0.493$"
+    }
+}
