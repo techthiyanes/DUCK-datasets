@@ -1,3 +1,7 @@
+WARNING: This script is known to produce some parsing errors. If you want to reuse this script, ask Tom or Daniel.  
+
+
+Instructions: 
 - run the file with simply "python3 berkeley.py" on the terminal. It will generate a "output.json" file containing the required information. Json beautifier:  https://codebeautify.org/jsonviewer 
 
 - Set problem_path and solution_path to respectively be the file paths to the txt files containing the problems and solutions
@@ -10,7 +14,6 @@
 
 ------
 Changes in version 1.1: 
-
 
 - Added "Final Answer" and "Topic" in output.json
 - Made title "Berkeley Problems in Mathematics"
