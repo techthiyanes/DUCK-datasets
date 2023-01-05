@@ -6,6 +6,8 @@ from itertools import count, filterfalse
 
 output = pd.DataFrame()
 
+remove_list = ["\n\nFoundations of Living Systems MCAT\n\n", "Answers and Explanations MCAT"]
+
 def find_all(a_str, sub):
     start = 0
     while True:
@@ -27,8 +29,7 @@ def parse_section(text):
             except:
                 break
     index_list = list(sorted(index_list))
-    print(index_list)
-    print("INDEX LIST ST ST ST______ \n\n\n\n")
+
 
     broken_text = [text[e:index_list[c+1]] for c,e in enumerate(index_list[:-1])]
     
@@ -38,12 +39,11 @@ def parse_section(text):
     questions = {int(e.split('.')[0]) : e for e in broken_text if "Questions " not in e and "STOP." not in e}
     passages = [e for e in broken_text if "Questions " in e]
 
-    print('\n\n\nYEEEAST'.join(broken_text))
     for passage in passages:
         if '-' in passage:
             question_numbers = list((lambda start, end: range(int(start), int(end)+1))(*next(e for e in passage.split(" ") if "-" in e).split('-')))
             for question in question_numbers:
-                questions[question] = passage + "\n" + questions[question]
+                questions[question] = passage.strip() + "\n" + questions[question].strip()
     
     return questions
 
@@ -67,7 +67,7 @@ def parse_solution(text):
     if len(index_list) > 0:
         broken_text.append(text[index_list[-1]:])
 
-    answers = {int(e.split('.')[0]) : e for e in broken_text}
+    answers = {int(e.split('.')[0]) : e.strip() for e in broken_text}
     
     return answers
 
@@ -120,9 +120,8 @@ for number in ["1", "2", "3"]:
 
 
 
-
-
 output["Final Answer"] = [""]*len(output.index)
+output = output[output['Solution'].map(lambda x: 'http' not in x)]
 
 pd.set_option('display.max_colwidth', None)
 pd.set_option('display.max_columns', None)
