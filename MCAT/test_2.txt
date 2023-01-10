@@ -1346,7 +1346,10 @@ D. The major conformer in the $(1 S, 4 R)$-isomer lacks the proper orbital align
 A. single enantiomer exhibiting optical activity
 B. single enantiomer exhibiting no optical activity
 C. racemic mixture exhibiting optical activity
-D. racemic mixture exhibiting no optical activity 58. The MOST accurate structure for compound 3 is:
+D. racemic mixture exhibiting no optical activity 
+
+58. The MOST accurate structure for compound 3 is:
+A.
 
 ![](https://cdn.mathpix.com/cropped/2022_12_09_6cd4336cff91b16b536cg-39.jpg?height=98&width=280&top_left_y=420&top_left_x=391)
 

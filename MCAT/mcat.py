@@ -72,7 +72,12 @@ def parse_solution(text):
     return answers
 
 
-
+def filter_answer_links(x):
+    try:
+        return 'http' in x.split("A.")[1]
+    except Exception as e:
+        print("AHHHH")
+        print(x)
 
 
 
@@ -97,6 +102,9 @@ for number in ["1", "2", "3"]:
                 #print(section[0:1000])
                 problem_dict = parse_section(section)
                 for problem in problem_dict:
+                    if filter_answer_links(problem_dict[problem]):
+                        continue
+
                     # get links of problem
                     link = [e[4:-1] for e in problem_dict[problem].split('A. ')[0].replace("\n", " ").split(" ") if "https" in e] if "https" in problem_dict[problem] else []
                     
@@ -104,7 +112,7 @@ for number in ["1", "2", "3"]:
                     problem_dict[problem] = '\n'.join(filterfalse(lambda L, c=count(): 'https' in L and next(c) < len(link), problem_dict[problem].split('\n'))) if "https" in problem_dict[problem] else problem_dict[problem]
 
                     # add row to dataframe
-                    new_row = {"Problem Number" : f"{number}_{c}_{problem}", "Problem Statement" : problem_dict[problem], "Image" : link, "Topic": topic, "Book" : f"MCAT_{number}", "Solution" : ""}
+                    new_row = {"Problem Number" : f"{number}_{c}_{problem}", "Problem Statement" : problem_dict[problem], "Image" : link, "Topic": topic, "Book" : f"MCAT_{number}", "Solution" : "", "Final Answer" : ""}
                     output = output.append(new_row, ignore_index = True)
 
                     questions[f"{number}_{c}_{problem}"] = problem_dict[problem]
@@ -115,13 +123,16 @@ for number in ["1", "2", "3"]:
             for sol in sol_dict:
                 # add row to dataframe
                 print(f"{number}_{c}_{sol}")
+
                 output.loc[output['Problem Number'] == f"{number}_{c}_{sol}", 'Solution'] = sol_dict[sol]
 
+                final_ans = next(e for e in reversed(sol_dict[sol].split("The correct answer is ")[1].split(".")[0]) if e in "QWERTYUIOPLKJHGFDSAZXCVBNM")
+                output.loc[output['Problem Number'] == f"{number}_{c}_{sol}", 'Final Answer'] = final_ans
 
+# note to self, this does not work rn need to filter by answer
+# currently is none, need to skip adding solutions when there is no row for that solution
 
-
-output["Final Answer"] = [""]*len(output.index)
-output = output[output['Solution'].map(lambda x: 'http' not in x)]
+#output = output[output['Problem Statement'].map(filter_answer_links)]
 
 pd.set_option('display.max_colwidth', None)
 pd.set_option('display.max_columns', None)
@@ -134,4 +145,4 @@ with open('output.json', 'w') as f:
     f.write(js)
 
 
-# ignore if answer has images
+# ignore if anwer in the problem has images

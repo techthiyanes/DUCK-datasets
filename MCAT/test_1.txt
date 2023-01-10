@@ -475,15 +475,7 @@ B. The urethra of a female is closer to the intestinal tract than in a male, mak
 C. The E. coli bacteria in women are more likely to be resistant to antibiotic treatments.
 D. The immune system is less efficient in women, making infection more likely to occur.
 
-SECTION 1:
-
-Biological and
-
-Biochemical
-
-Foundations of Living Systems MCAT
-
-Practice Test 1 46. If the antibiotic treatment used in the graph was continued for a period of 30 days, the MOST likely prediction would be that the:
+46. If the antibiotic treatment used in the graph was continued for a period of 30 days, the MOST likely prediction would be that the:
 
 A. Colony-forming units per milliliter of E. coli cell counts would begin to increase.
 
@@ -543,13 +535,7 @@ B. osmosis
 C. endocytosis
 D. diffusion
 
-53. At the end of the electron transport chain in aerobic cellular respiration, the final acceptor of the electrons is which will then produce a molecule SECTION 1:
-
-Biological and
-
-Biochemical
-
-Foundations of Living Systems
+53. At the end of the electron transport chain in aerobic cellular respiration, the final acceptor of the electrons is which will then produce a molecule 
 A. $\mathrm{CO}_{2} ; \mathrm{O}_{2}$
 B. $\mathrm{NAD}^{+} ; \mathrm{NADH}$
 C. $\mathrm{O}_{2} ; \mathrm{H}_{2} \mathrm{O}$
@@ -1183,11 +1169,7 @@ $\alpha$-D-glucose and $\beta$-D-glucose are interconverted through a process kn
 
 ![](https://cdn.mathpix.com/cropped/2022_12_09_d0387ee1dfec4e017221g-035.jpg?height=209&width=854&top_left_y=1809&top_left_x=516)
 
-In solution, $\alpha$-D-glucose and $\beta$-D-glucose exist in a 9:16 ratio at equilibrium, but this is not what would be predicted from sterics alone. The discrepancy is largely due to the anomeric effect, which involves the interaction of the lone pairs on the ring oxygen with the C-1 hydroxy group. SECTION 2:
-
-Chemical and Physical
-
-Foundations of Biological Systems MCAT
+In solution, $\alpha$-D-glucose and $\beta$-D-glucose exist in a 9:16 ratio at equilibrium, but this is not what would be predicted from sterics alone. The discrepancy is largely due to the anomeric effect, which involves the interaction of the lone pairs on the ring oxygen with the C-1 hydroxy group. 
 
 Practice Test 1 48. The best term for describing the difference between $\alpha$-D-glucose and $\beta$-D-glucose is:
 A. enantiomers
@@ -3107,7 +3089,9 @@ Passage VII 43. The correct answer is C. The chromate esters of their hydrates c
 ![](https://cdn.mathpix.com/cropped/2022_12_09_d0387ee1dfec4e017221g-103.jpg?height=239&width=979&top_left_y=1572&top_left_x=451)
 
 51. The correct answer is C. The difference between hexoses and pentoses is in the total number of carbons contained in the sugar-hexoses are C6 compounds and pentoses are C5 compounds. The difference between furanoses and pyranoses is in the size of the ring formed-furanoses form 5-membered rings and pyranoses form 6-membered rings. The nomenclature is derived from the simple cyclic ethers: Answers and Explanations Passage VIII
-![](https://cdn.mathpix.com/cropped/2022_12_09_d0387ee1dfec4e017221g-103.jpg?height=126&width=396&top_left_y=2125&top_left_x=737)52. The correct answer is A. With respect to the lone pairs on the ring oxygen, the
+![](https://cdn.mathpix.com/cropped/2022_12_09_d0387ee1dfec4e017221g-103.jpg?height=126&width=396&top_left_y=2125&top_left_x=737)
+
+52. The correct answer is A. With respect to the lone pairs on the ring oxygen, the
 
 Practice Test 1 $\beta$-hydroxy group suffers from unfavorable dipole-dipole interactions, whereas the $\alpha$-isomer minimizes this electrostatic repulsion, resulting in lower energy:
 

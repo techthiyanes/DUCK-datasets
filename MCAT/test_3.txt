@@ -74,13 +74,7 @@ Questions 9-12 are based on the following passage.
 
 Passage II
 
-Within the cells of the body, mitochondria are present in variable numbers. Some cell types have a few of these organelles, and other cell types have hundreds of mitochondria. An interesting feature of mitochondria that distinguishes them from other organelles is that they have their own DNA, termed mitochondrial DNA (mtDNA). The mtDNA is completely distinct from the nuclear chromosomes and is presumed to have evolved separately from the nuclear DNA. Mitochondrial DNA is circular and consists of 37 genes coding for proteins, transfer RNA (tRNA), and ribosomal RNA (rRNA). Each mitochondrion has about five copies of the mtDNA. All of the mitochondria within the SECTION 1:
-
-Biological and
-
-Biochemical Foundations of Living Systems MCAT
-
-Practice Test 3 body's cells are descendants of the mitochondria present in an egg cell before it was fertilized. Because all mitochondria are derived from those present in an egg cell, they contain the mtDNA from the mother. Sperm contribute no mitochondria or mtDNA to the egg cell during fertilization. This mode of inheritance is often called maternal inheritance.
+Within the cells of the body, mitochondria are present in variable numbers. Some cell types have a few of these organelles, and other cell types have hundreds of mitochondria. An interesting feature of mitochondria that distinguishes them from other organelles is that they have their own DNA, termed mitochondrial DNA (mtDNA). The mtDNA is completely distinct from the nuclear chromosomes and is presumed to have evolved separately from the nuclear DNA. Mitochondrial DNA is circular and consists of 37 genes coding for proteins, transfer RNA (tRNA), and ribosomal RNA (rRNA). Each mitochondrion has about five copies of the mtDNA. All of the mitochondria within the body's cells are descendants of the mitochondria present in an egg cell before it was fertilized. Because all mitochondria are derived from those present in an egg cell, they contain the mtDNA from the mother. Sperm contribute no mitochondria or mtDNA to the egg cell during fertilization. This mode of inheritance is often called maternal inheritance.
 
 Although mtDNA composes a small portion of the cell's total DNA, it is subject to mutation, and several diseases are known to be caused by mutations to mtDNA. One of those diseases is Leber's optic atrophy, which causes deterioration of the optic nerve and a progressive loss of central vision. Most people with this condition have inherited both normal mtDNA and mtDNA that carries the mutation. When mutated mitochondria outnumber normal mitochondria, symptoms of the disease occur.
 
@@ -144,15 +138,7 @@ B. sugar
 C. nucleotide
 D. lipid
 
-SECTION 1:
-
-Biological and
-
-Biochemical
-
-Foundations of Living Systems MCAT
-
-Practice Test 3 15. Some of the advertisements for NO hemodilator supplements imply that the product contains NO. What would be the MOST likely ingredient in these supplements?
+15. Some of the advertisements for NO hemodilator supplements imply that the product contains NO. What would be the MOST likely ingredient in these supplements?
 
 A. The products would have to contain NO to have any of the alleged effects in the body.
 
@@ -228,15 +214,7 @@ B. the presence of lots of cells arranged in sheets
 C. the presence of a basement membrane
 D. the presence of collagen fibers
 
-SECTION 1:
-
-Biological and
-
-Biochemical
-
-Foundations of Living Systems MCAT
-
-Practice Test 3 Questions 25-28 are based on the following passage.
+Questions 25-28 are based on the following passage.
 
 Passage IV
 
@@ -280,13 +258,7 @@ B. translate its RNA
 C. initiate transcription
 D. recombine with the host cell's chromosomes
 
-SECTION 1:
-
-Biological and
-
-Biochemical Foundations of Living Systems MCAT
-
-Practice Test 3 30. Suppose a drug had been made to target the RSV. This drug attempts to prevent the packaging and release of the virus from its host cell. This drug would MOST likely target which of the RSV genes?
+30. Suppose a drug had been made to target the RSV. This drug attempts to prevent the packaging and release of the virus from its host cell. This drug would MOST likely target which of the RSV genes?
 A. gag and env
 B. pol and src
 C. src only
@@ -336,13 +308,7 @@ B. the DNA nucleotides
 C. the ribosomes
 D. the cytoplasm
 
-SECTION 1:
-
-Biological and
-
-Biochemical
-
-Foundations of Living Systems 37. Some human males have three sex chromosomes (XXY) and suffer from a genetic disease known as Klinefelter's syndrome. The symptoms include a failure to develop sexually and an impairment of intelligence. Klinefelter's syndrome is an example of a disease related to:
+37. Some human males have three sex chromosomes (XXY) and suffer from a genetic disease known as Klinefelter's syndrome. The symptoms include a failure to develop sexually and an impairment of intelligence. Klinefelter's syndrome is an example of a disease related to:
 A. karyotype
 B. point mutation
 C. homeostasis
@@ -397,14 +363,6 @@ A. Replacing the plasma would decrease the number of lymphocytes attacking myeli
 B. There would be less of an attack on peripheral myelin when the antibodies against myelin are removed with the plasma.
 C. Replacing the plasma makes the immune system more capable of fighting the infections that are characteristic of GBS.
 D. Replacing the plasma would remove any toxins responsible for the symptoms.
-
-SECTION 1:
-
-Biological and
-
-Biochemical
-
-Foundations of Living Systems MCAT
 
 Practice Test 3 Questions 45-48 are not based on a passage.
 
@@ -472,11 +430,9 @@ B. sodium
 C. potassium
 D. iodine
 
-SECTION 1:
+Questions 53-56 are based on the following passage.
 
-Biological and
-
-Biochemical Foundations of Living Systems The process of induced erythrocythemia, or blood doping, has become common among certain circles of athletes such as cyclists. The purpose of blood doping is to provide an endurance advantage to the athlete. There are several ways to induce erythrocythemia, including the injection of synthetic oxygen carriers, blood transfusions, and the injection of hormones.
+The process of induced erythrocythemia, or blood doping, has become common among certain circles of athletes such as cyclists. The purpose of blood doping is to provide an endurance advantage to the athlete. There are several ways to induce erythrocythemia, including the injection of synthetic oxygen carriers, blood transfusions, and the injection of hormones.
 
 Synthetic oxygen carriers are modified proteins that have a relatively high affinity for oxygen. These can provide short-term increases in the oxygen-carrying ability of blood, but they are quickly degraded. Blood transfusions can be used right before an athletic event. The transfused erythrocytes can be homologous in nature, meaning that they are harvested from a donor's blood, or they can be autologous, meaning they are removed from the athlete 5 to 10 weeks before the event and stored. The cells are then reinfused right before an athletic event. Another approach to blood doping involves injections of the hormone erythropoietin (EPO). The EPO used for this purpose is a recombinant molecule. It is available by prescription for certain medical conditions, but it has been widely abused by some athletes.
 
@@ -610,16 +566,6 @@ D.
 
 275
 
-SECTION 2:
-
-Chemical and
-
-Physical
-
-Foundations of
-
-Living Systems
-
 Questions 6-7 are not based on a passage.
 
 6. When hydrogen is heated, the atoms that are formed enter an excited state and energy is released in the form of light. The electrons can move between the various principal energy levels as shown in the following diagram:
@@ -636,7 +582,11 @@ D. 6 to 2
 A. $1.8 \mathrm{~g} / \mathrm{cm}^{3}$
 B. $2.5 \mathrm{~g} / \mathrm{cm}^{3}$
 C. $4.2 \mathrm{~g} / \mathrm{cm}^{3}$
-D. $5.7 \mathrm{~g} / \mathrm{cm}^{3}$ Bromine, discovered in the early 1800s, has an atomic number of 35 and is located in group 17. Besides being able to exist as a diatomic liquid, bromine can frequently be found in salts and is useful in preparing organic molecules with a range of functions. Some of these uses include pesticides, water purification, prescription drugs, photochemicals, and flame retardants. In some sodas, one can find brominated vegetable oil added as an emulsifying agent. In addition to its strong odor, bromine is a dark, brown-orange liquid at room temperature. Bromine has two stable isotopes, Br-79 and Br-81, and a relative atomic abundance, which causes the atomic mass of bromine to be 79.904. Bromine-80 is one of the many unstable isotopes of bromine. It readily undergoes beta decay to form $\mathrm{Kr}-80$. Bromine can also undergo other modes of decay to form $\mathrm{Kr}-80$. When analyzing organic compounds that have bromine in them, the mass spectrometric analysis of the compound frequently shows a peak of equal intensity at $\mathrm{m} / \mathrm{z}=79$ and $\mathrm{m} / \mathrm{z}=81$, or $\mathrm{M}^{+}$and $\mathrm{M}^{+2}$ peaks of equal height as well.
+D. $5.7 \mathrm{~g} / \mathrm{cm}^{3}$ 
+
+Questions 8-11 are based on the following passage.
+
+Bromine, discovered in the early 1800s, has an atomic number of 35 and is located in group 17. Besides being able to exist as a diatomic liquid, bromine can frequently be found in salts and is useful in preparing organic molecules with a range of functions. Some of these uses include pesticides, water purification, prescription drugs, photochemicals, and flame retardants. In some sodas, one can find brominated vegetable oil added as an emulsifying agent. In addition to its strong odor, bromine is a dark, brown-orange liquid at room temperature. Bromine has two stable isotopes, Br-79 and Br-81, and a relative atomic abundance, which causes the atomic mass of bromine to be 79.904. Bromine-80 is one of the many unstable isotopes of bromine. It readily undergoes beta decay to form $\mathrm{Kr}-80$. Bromine can also undergo other modes of decay to form $\mathrm{Kr}-80$. When analyzing organic compounds that have bromine in them, the mass spectrometric analysis of the compound frequently shows a peak of equal intensity at $\mathrm{m} / \mathrm{z}=79$ and $\mathrm{m} / \mathrm{z}=81$, or $\mathrm{M}^{+}$and $\mathrm{M}^{+2}$ peaks of equal height as well.
 
 8. From the masses of the isotopes and the atomic mass of bromine, you can conclude that the relative abundances of the isotopes are approximately:
 A. $35.0 \% \mathrm{Br}-79$ and $75.0 \% \mathrm{Br}-81$
@@ -690,15 +640,9 @@ Questions 16-20 are based on the following passage.
 
 \section{Passage III}
 
-Electromagnetic radiation is often described in physics textbooks as a transverse wave that travels in a vacuum at a speed of $c=3 \times 10^{8} \mathrm{~m} / \mathrm{s}$. Formed by coupled oscillating electric and magnetic fields, electromagnetic radiation comprises all of the types of waves represented within the electromagnetic spectrum, varying in frequency, $f$, SECTION 2:
+Electromagnetic radiation is often described in physics textbooks as a transverse wave that travels in a vacuum at a speed of $c=3 \times 10^{8} \mathrm{~m} / \mathrm{s}$. Formed by coupled oscillating electric and magnetic fields, electromagnetic radiation comprises all of the types of waves represented within the electromagnetic spectrum, varying in frequency, $f$, 
 
-Chemical and
-
-Physical
-
-Foundations of Living Systems MCAT
-
-Practice Test 3 and wavelength, $\lambda$, according to the equation, $c=f \lambda$. In addition to its wavelike properties, electromagnetic radiation behaves as waves do. However, classic experiments in quantum physics have also discovered that light behaves as a particle. The particle of light, known as a photon, has energy $E=h f$ where $h$ is Planck's constant $\left(h=6.63 \times 10^{-34} \mathrm{~J} \cdot \mathrm{s}\right.$ ) and $f$ is frequency. This apparent contradiction is accepted as the "wave-particle duality of light." Two classical experiments that substantiated the "wave-particle duality of light" were Fraunhofer single-slit diffraction and the Compton scattering (see figure).
+and wavelength, $\lambda$, according to the equation, $c=f \lambda$. In addition to its wavelike properties, electromagnetic radiation behaves as waves do. However, classic experiments in quantum physics have also discovered that light behaves as a particle. The particle of light, known as a photon, has energy $E=h f$ where $h$ is Planck's constant $\left(h=6.63 \times 10^{-34} \mathrm{~J} \cdot \mathrm{s}\right.$ ) and $f$ is frequency. This apparent contradiction is accepted as the "wave-particle duality of light." Two classical experiments that substantiated the "wave-particle duality of light" were Fraunhofer single-slit diffraction and the Compton scattering (see figure).
 
 ![](https://cdn.mathpix.com/cropped/2022_12_09_cc4dbbdf5b0a8f473618g-24.jpg?height=561&width=1219&top_left_y=771&top_left_x=564)
 
@@ -714,7 +658,9 @@ B. Single-slit diffraction supports the particle nature of light, whereas Compto
 
 C. Both single-slit diffraction and Compton scattering support the wave nature of light.
 
-D. Both single-slit diffraction and Compton scattering support the particle nature of light. 17. If the electromagnetic radiation in the single-slit diffraction experiment were to behave as a particle, the interference pattern would probably look like which of the following?
+D. Both single-slit diffraction and Compton scattering support the particle nature of light. 
+
+17. If the electromagnetic radiation in the single-slit diffraction experiment were to behave as a particle, the interference pattern would probably look like which of the following?
 
 A.
 
@@ -752,7 +698,11 @@ D. $E_{\mathrm{el}}=\frac{\left[E_{\mathrm{ph}}-E_{\mathrm{ph}}^{\prime} \sin (\
 A. $h / \lambda$
 B. $h v$
 C. $\lambda h$
-D. $\lambda / h$ A group of students were assigned the task of assembling a slingshot constructed from rubber bands secured with clamps at the edge of a tabletop that is a known distance, $\Delta y$, from the floor and then predicting the horizontal range distance, $\Delta x$, that a launched projectile (marble) will land from the base of the table. A schematic of the rubber band slingshot is shown in the following illustration:
+D. $\lambda / h$ 
+
+Questions 21-26 are based on the following passage.
+
+A group of students were assigned the task of assembling a slingshot constructed from rubber bands secured with clamps at the edge of a tabletop that is a known distance, $\Delta y$, from the floor and then predicting the horizontal range distance, $\Delta x$, that a launched projectile (marble) will land from the base of the table. A schematic of the rubber band slingshot is shown in the following illustration:
 
 ![](https://cdn.mathpix.com/cropped/2022_12_09_cc4dbbdf5b0a8f473618g-26.jpg?height=447&width=1219&top_left_y=763&top_left_x=564)
 
@@ -807,15 +757,7 @@ B. increase by $\sqrt{2}$
 C. decrease by 2
 D. no change
 
-SECTION 2:
-
-Chemical and
-
-Physical
-
-Foundations of Living Systems MCAT
-
-Practice Test 3 Question 27 is not associated with a passage.
+Question 27 is not associated with a passage.
 
 27. Which of the following is the MOST stable conformation of chlorocyclohexane?
 
@@ -895,15 +837,7 @@ B. $\left[\mathrm{N}_{2}\right]\left[\mathrm{H}_{2}\right]^{3} /\left[\mathrm{NH
 C. $\left[\mathrm{NH}_{3}\right]^{2} /\left[\mathrm{N}_{2}\right]+\left[\mathrm{H}_{2}\right]^{3}$
 D. $\left[\mathrm{N}_{2}\right]\left[\mathrm{H}_{2}\right] /\left[\mathrm{NH}_{3}\right]$
 
-SECTION 2:
-
-Chemical and
-
-Physical
-
-Foundations of Living Systems MCAT
-
-Practice Test 3 34. Which of the following scenarios shifts the reaction to the left?
+34. Which of the following scenarios shifts the reaction to the left?
 A. not cooling the ammonia once it is formed
 B. reacting the nitrogen and hydrogen at a higher pressure
 C. adding more nitrogen gas and hydrogen gas to the reaction
@@ -941,19 +875,13 @@ D. $\mathrm{CaO}+\mathrm{SiO}_{2} \rightarrow \mathrm{CaSiO}_{3}$
 A. sodium methoxide in methanol
 B. methyl iodide in methanol
 C. $p$-toluenesulfonic acid in methanol
-D. sodium iodide in methanol Questions 40-43 are based on the following passage.
+D. sodium iodide in methanol 
+
+Questions 40-43 are based on the following passage.
 
 Passage VII
 
-When Compound A (shown) is treated with ozone followed by dimethylsulfide, two new products (B and C) are formed, both of which contain carbonyl groups. On the other hand, treatment of Compound A with pyridinium chlorochromate (PCC) results in a single new product (D). SECTION 2:
-
-Chemical and
-
-Physical
-
-Foundations of
-
-Living Systems
+When Compound A (shown) is treated with ozone followed by dimethylsulfide, two new products (B and C) are formed, both of which contain carbonyl groups. On the other hand, treatment of Compound A with pyridinium chlorochromate (PCC) results in a single new product (D). 
 ![](https://cdn.mathpix.com/cropped/2022_12_09_cc4dbbdf5b0a8f473618g-31.jpg?height=322&width=730&top_left_y=781&top_left_x=578)
 
 40. What is the best International Union of Pure and Applied Chemistry (IUPAC) name for Compound A?
@@ -1061,17 +989,7 @@ Passage IX
 
 Human tooth enamel is composed of the mineral hydroxyapatite, which has the formula $\mathrm{Ca}_{5}\left(\mathrm{PO}_{4}\right)_{3} \mathrm{OH}$. It is insoluble in water, but due to its basicity, it is soluble in acid solution.
 
-Plaque forms on teeth due to a combination of carbohydrates and proteins, called mucin, which produces a film that builds up if not removed by thorough cleaning of the teeth and gums. Plaque traps food particles, which can be fermented by bacteria and produce lactic acid. Saliva does contain buffering agents that can neutralize acid SECTION 2:
-
-Chemical and
-
-Physical
-
-Foundations of
-
-Living Systems MCAT
-
-Practice Test 3 in the mouth, but saliva cannot penetrate solid plaque. Lactic acid levels can drop to as low as pH $4.5$ inside the plaque. As the plaque becomes more acidic, hydroxyapatite is converted to calcium hydrogen phosphate, which dissolves in water. The equation is as follows:
+Plaque forms on teeth due to a combination of carbohydrates and proteins, called mucin, which produces a film that builds up if not removed by thorough cleaning of the teeth and gums. Plaque traps food particles, which can be fermented by bacteria and produce lactic acid. Saliva does contain buffering agents that can neutralize acid in the mouth, but saliva cannot penetrate solid plaque. Lactic acid levels can drop to as low as pH $4.5$ inside the plaque. As the plaque becomes more acidic, hydroxyapatite is converted to calcium hydrogen phosphate, which dissolves in water. The equation is as follows:
 
 $$
 \mathrm{Ca}_{5}\left(\mathrm{PO}_{4}\right)_{3} \mathrm{OH}(s)+4 \mathrm{H}_{3} \mathrm{O}^{+}(a q) \rightarrow 3 \mathrm{CaHPO}_{4}(a q)+2 \mathrm{Ca}^{+2}(a q)+5 \mathrm{H}_{2} \mathrm{O}
@@ -1141,7 +1059,7 @@ Foundations of Living Systems
 
 \section{Psychological, Social, and Biological Foundations of Behavior}
 
-Choose the best answer to each of the following questions. Question 1 is not based on a passage.
+Choose the best answer to each of the following questions. 
 
 1. The theory of hearing that BEST explains perception of low-pitched sounds is called . The theory of hearing that BEST explains perception of very high-pitched sounds is called
 A. place theory, frequency theory
@@ -1189,25 +1107,15 @@ B. The faster the tempo of the initial/target stimulus, the greater the proporti
 C. The slower the tempo of the initial/target stimulus, the greater the difference required between the initial and comparison tempos for participants to per- ceive a difference.
 D. The slower the tempo of the initial/target stimulus, the greater the proportion of change needed for participants to perceive a difference.
 
-Question 6 is not based on a passage.
-
 6. A researcher inserts electrodes into the brain of a monkey. When the monkey is shown lines aligned at different orientations, the cells respond preferentially to lines of certain particular orientations. It is MOST likely that the researcher has inserted the electrodes into which region of the brain?
 A. occipital lobe
 B. temporal lobe
 C. frontal lobe
 D. parietal lobe
 
-SECTION 3:
+Questions 7-10 are based on the following passage.
 
-Psychological,
-
-Social, and
-
-Biological
-
-Foundations
-
-of Behavior Jean Piaget, a prominent figure in developmental psychology, believed that the development of all cognitive abilities occurred during the first two years of life. Piaget devised various procedures for examining development in young children. These activities focused on how children (and people) think and how they interact with the world around them. Piaget asserted that biological changes interacted with childhood experiences, resulting in unique developmental stages characterized by schemas, or mental structures. The following table lists the four stages of development identified by Piaget and their function.
+Jean Piaget, a prominent figure in developmental psychology, believed that the development of all cognitive abilities occurred during the first two years of life. Piaget devised various procedures for examining development in young children. These activities focused on how children (and people) think and how they interact with the world around them. Piaget asserted that biological changes interacted with childhood experiences, resulting in unique developmental stages characterized by schemas, or mental structures. The following table lists the four stages of development identified by Piaget and their function.
 
 ![](https://cdn.mathpix.com/cropped/2022_12_09_cc4dbbdf5b0a8f473618g-40.jpg?height=590&width=952&top_left_y=922&top_left_x=695)
 
@@ -1237,25 +1145,15 @@ B. sensory motor, transitivity
 C. preoperational, egocentrism
 D. concrete operational, classification
 
-\section{Question 11 is not based on a passage.}
-
 11. Which field of psychology examines positive stresses as well as positive emotions in general?
 A. psychodynamic approach
 B. human-focused psychology
 C. positive psychology
 D. motivation and emotion approach
 
-\section{5}
+Questions 13-15 are based on the following passage.
 
-SECTION 3:
-
-Psychological,
-
-Social, and
-
-Biological
-
-Foundations of Behavior The study of emotional experience is often characterized by the attempt to answer the question, "Which comes first, the experience or the label?" Some researchers suggest that the physiological arousal occurs, then the individual contextualizes the experience based on his or her environment, resulting in emotion such as "fear" or "happiness." Other researchers suggest that humans can subconsciously identify the difference in arousal caused by various emotional states or that the arousal and classification occur in parallel.
+The study of emotional experience is often characterized by the attempt to answer the question, "Which comes first, the experience or the label?" Some researchers suggest that the physiological arousal occurs, then the individual contextualizes the experience based on his or her environment, resulting in emotion such as "fear" or "happiness." Other researchers suggest that humans can subconsciously identify the difference in arousal caused by various emotional states or that the arousal and classification occur in parallel.
 
 Recent research has examined the relationship between culture and emotion. One such study examined the differences between how American and Japanese participants contextualize emotion. The researchers examined athletes' use of emotionrelated words in interviews. Compared to American athletes, Japanese athletes were found to be more likely to identify emotions with others than with themselves. Based on these findings, the researchers conducted a second experiment in which they asked Japanese and American participants to describe typical emotions experienced by Olympic medalists. The researchers counted the number of emotion-related words and assigned them to either self-focused or self+other-focused groups for comparison.
 
@@ -1291,19 +1189,7 @@ B. conducting the experiment on additional groups from different cultures and co
 C. conducting the experiment on the same group of participants over time but changing the narrative scripts
 D. asking participants to wear heart rate monitors and measuring their arousal while reading narrative scripts
 
-SECTION 3:
-
-Psychological,
-
-Social, and
-
-Biological
-
-Foundations
-
-of Behavior MCAT
-
-Practice Test 3 Questions 16-17 are not based on a passage.
+Questions 16-17 are not based on a passage.
 
 16. Jane is able to remember and consciously reexperience her 15 th birthday party when her parents gave her a Beatles album. She also remembers the Beatles' classic look because her parents described it to her in detail. Which type of memory BEST characterizes the first example, and which type of memory BEST explains the second?
 
@@ -1359,17 +1245,7 @@ B. Wavelength primarily characterizes brightness, and amplitude primarily char- 
 C. Both wavelength and amplitude characterize color equally.
 D. Wavelength characterizes color, but amplitude has no impact on perception.
 
-SECTION 3:
-
-Psychological,
-
-Social, and
-
-Biological
-
-Foundations
-
-of Behavior 23. Which personality theory characterizes personality as comprised by the interaction between three factors: the id, the ego, and the superego?
+23. Which personality theory characterizes personality as comprised by the interaction between three factors: the id, the ego, and the superego?
 A. psychoanalytic theory
 B. social-cognitive theory
 C. humanistic theory
@@ -1415,15 +1291,10 @@ B. Individuals are often faking symptoms of existing medical conditions.
 C. Individuals will often explicitly cause harm to themselves to create medical conditions.
 D. Pain can easily be identified as somatoform or real.
 
-SECTION 3:
 
-Psychological,
+Questions 29-31 are based on the following passage.
 
-Social, and
-
-Biological
-
-Foundations of Behavior In a famous series of experiments, the social psychologist Stanley Milgram captured important observations about human compliance. Participants in the experiments were told to play the role of "teachers" and ask "learners" to answer questions. They were not told that the learners were actually actors. Every time a learner gave an incorrect answer, a confederate posing as an authority figure instructed the teacher to administer an electric shock to the learner. The learner would then pretend to suffer pain, even though the "shock" delivered via a realistic-looking apparatus was actually harmless. If a learner continued to provide incorrect answers, the authority figure told the teacher to increase the intensity of the "shock" all the way up to what was said to be a lethal level.
+In a famous series of experiments, the social psychologist Stanley Milgram captured important observations about human compliance. Participants in the experiments were told to play the role of "teachers" and ask "learners" to answer questions. They were not told that the learners were actually actors. Every time a learner gave an incorrect answer, a confederate posing as an authority figure instructed the teacher to administer an electric shock to the learner. The learner would then pretend to suffer pain, even though the "shock" delivered via a realistic-looking apparatus was actually harmless. If a learner continued to provide incorrect answers, the authority figure told the teacher to increase the intensity of the "shock" all the way up to what was said to be a lethal level.
 
 The results from the experiment are depicted in the following graph.
 
@@ -1469,15 +1340,7 @@ Questions 34-37 are based on the following passage.
 
 Passage VII
 
-Classical conditioning is a long-studied and well-documented scientific concept. The Russian physiologist Ivan Pavlov is most associated with this concept and described the SECTION 3:
-
-Psychological,
-
-Social, and
-
-Biological
-
-Foundations of Behavior 
+Classical conditioning is a long-studied and well-documented scientific concept. The Russian physiologist Ivan Pavlov is most associated with this concept and described the 
 upon them.
 
 The following graph shows a hypothetical example of conditioning trials for one of Pavlov's dogs over a number of days. During these trials, a bell has been paired with the presentation of food. Trial numbers are displayed on the $x$-axis and the number of drops of the dog's saliva is displayed on the $y$-axis.
@@ -1534,17 +1397,7 @@ Passage VIII
 
 The psychologist Harry Harlow conducted a series of famous experiments investigating maternal attachment in monkeys, with multiple derivations on his classic study comparing infant attachment to nutrients versus comforting inanimate objects. This research is often referenced to show the development of early attachment and is an example of comparative psychology. The results of Harlow's research present some compelling evidence for the criticality of infant relationships.
 
-The graphs that follow show one of Harlow's later experiments in infant monkey attachment, with hypothetical data representing the behavior captured by Harlow in that study. This data set represents the amount of time (hours per day) that infant monkeys spent with surrogate (artificial) representations of their mothers. The surrogates were either made of wood covered in cloth or made of bare wire. Both the cloth surrogate and the wire surrogate were provided with a rubber nipple that allowed for feeding. Both surrogates were present for all monkeys. The aim of the study was to determine which of the two surrogates the infant monkeys would choose to spend SECTION 3:
-
-Psychological,
-
-Social, and
-
-Biological
-
-Foundations
-
-of Behavior 
+The graphs that follow show one of Harlow's later experiments in infant monkey attachment, with hypothetical data representing the behavior captured by Harlow in that study. This data set represents the amount of time (hours per day) that infant monkeys spent with surrogate (artificial) representations of their mothers. The surrogates were either made of wood covered in cloth or made of bare wire. Both the cloth surrogate and the wire surrogate were provided with a rubber nipple that allowed for feeding. Both surrogates were present for all monkeys. The aim of the study was to determine which of the two surrogates the infant monkeys would choose to spend 
 gate. The time spent with the cloth surrogate is represented by the heavy blue line. The time spent with the wire surrogate is represented by the dotted line.
 
 ![](https://cdn.mathpix.com/cropped/2022_12_09_cc4dbbdf5b0a8f473618g-52.jpg?height=612&width=1222&top_left_y=651&top_left_x=560)
@@ -1585,15 +1438,9 @@ B. It results from low self-efficacy and an external locus of control.
 C. It results from high self-efficacy and an external locus of control.
 D. It results from low self-efficacy and an internal locus of control.
 
-SECTION 3:
+Questions 44-47 are based on the following passage.
 
-Psychological,
-
-Social, and
-
-Biological
-
-Foundations of Behavior Attribution theory seeks to explain how individuals think about themselves and how they behave toward individuals around them. This theory also examines how an individual views internal and external traits, how he or she acts upon them, and how those views influence self-identity.
+Attribution theory seeks to explain how individuals think about themselves and how they behave toward individuals around them. This theory also examines how an individual views internal and external traits, how he or she acts upon them, and how those views influence self-identity.
 
 The following graphs show hypothetical data regarding last year's academic competition between students from two rival schools. The competition consists of three rounds of quizzes. Last year's competition ended in a tie since each side scored the same number of points.
 
@@ -1610,18 +1457,6 @@ whether the test questions favored one team over the other
 Percent of questions answered correctly by each school team by round. 
 
 ![](https://cdn.mathpix.com/cropped/2022_12_09_cc4dbbdf5b0a8f473618g-55.jpg?height=569&width=1236&top_left_y=377&top_left_x=325)
-
-SECTION 3:
-
-Psychological,
-
-Social, and
-
-Biological
-
-Foundations
-
-of Behavior
 
 Survey results showing which factor students believed most helped contestants pick correct answers.
 
@@ -1643,9 +1478,9 @@ B. The results are consistent with a self-effacing bias.
 
 C. The results are not consistent with the attribution error, but are the result of testing errors.
 
-D. The results do not show any attribution error, because the overall competition resulted in a tie. MCAT
+D. The results do not show any attribution error, because the overall competition resulted in a tie. 
 
-Practice Test 3 46. Based on attribution theory, if you were to ask students which factors caused them and their opponents to pick wrong answers, what would be the MOST likely result?
+46. Based on attribution theory, if you were to ask students which factors caused them and their opponents to pick wrong answers, what would be the MOST likely result?
 
 A. Students would say that their own team picked wrong answers due to test question bias, but their opponents picked wrong answers due to lack of study and preparation.
 
@@ -1661,13 +1496,13 @@ B. I did a great job on my class presentation because of all the help I got from
 C. The sound system was great, but my speech really wasn't very good.
 D. I got a terrible performance evaluation because those evaluations never mea- sure actual skill.
 
-Question 48 is not based on a passage.
-
 48. Mental health hospitals and prisons are forms of:
 A. agencies
 B. institutions
 C. functionalism
-D. social cohesion Questions 49-52 are based on the following passage.
+D. social cohesion 
+
+Questions 49-52 are based on the following passage.
 
 Passage $\mathrm{X}$
 
@@ -1695,19 +1530,8 @@ B. Financial aid is being offered to greater numbers of women to pursue their ed
 C. Women are completing bachelor's degrees more often than men.
 D. More women than men are pursuing higher-paid careers.
 
-SECTION 3:
 
-Psychological,
-
-Social, and
-
-Biological
-
-Foundations
-
-of Behavior MCAT
-
-Practice Test 3 52. Despite their increased education levels, women earn less money than their male counterparts. What sociological phenomenon might explain this?
+52. Despite their increased education levels, women earn less money than their male counterparts. What sociological phenomenon might explain this?
 
 A. In the United States, ascribed statuses influence women's master status more strongly than achieved statuses.
 
@@ -1739,17 +1563,6 @@ B. Meritocracy
 C. Social conflict
 D. Nepotism
 
-SECTION 3:
-
-Psychological,
-
-Social, and
-
-Biological
-
-Foundations
-
-of Behavior
 
 Questions 56-59 are based on the following passage.
 
@@ -1763,7 +1576,6 @@ A researcher interested in the effect of noise pollution on those living near th
 
 Nighttime actigraphy levels by distance from the airport. 56. What does this graph show?
 
-Practice Test 3
 A. Living close to an airport has a significant impact on sleep coherency.
 B. There is an inverse correlation between proximity to the airport and sleep quality.
 C. Sleep and nighttime activity are not correlated.
@@ -1850,11 +1662,7 @@ Longfellow took as his subject his country's historical imagination, writing on 
 
 Walt Whitman, Longfellow's contemporary, wrote poetry similar to that of Longfellow-romantic and sentimental, with conventional rhyme and meter. But in the 1850s, indeed two years before The Song of Hiawatha, he wrote and published Leaves of Grass; a more radical departure from his previous work could not have been imagined. The 12 unnamed poems comprising Leaves of Grass are written in free verse-that is, without conventional rhyme and meter. Yet, like Longfellow, he was determined to explore the subject of America and his love for his country.
 
-Whitman looked to the writings of Ralph Waldo Emerson for inspiration. Emerson wrote "America is a poem in our eyes; its ample geography dazzles the imagination, and it will not wait long for metres." Indeed, Whitman paraphrased Emerson in his preface SECTION 4:
-
-Critical
-
-Analysis and Reasoning Skills Whitman's groundbreaking free verse changed the trajectory of American poetry. The next generation of poets, including Ezra Pound, Hart Crane, Sherwood Anderson, and William Carlos Williams, celebrated their debt to Whitman. Decades later, the influence of Whitman's work on Allen Ginsberg and Langston Hughes, among many others, continues his legacy.
+Whitman looked to the writings of Ralph Waldo Emerson for inspiration. Emerson wrote "America is a poem in our eyes; its ample geography dazzles the imagination, and it will not wait long for metres." Indeed, Whitman paraphrased Emerson in his preface. Whitman's groundbreaking free verse changed the trajectory of American poetry. The next generation of poets, including Ezra Pound, Hart Crane, Sherwood Anderson, and William Carlos Williams, celebrated their debt to Whitman. Decades later, the influence of Whitman's work on Allen Ginsberg and Langston Hughes, among many others, continues his legacy.
 
 5. According to the passage, what might be the current reputation of poets such as Whittier and Holmes?
 
@@ -1914,11 +1722,9 @@ Passage III
 
 On what basis might it be said that animals have rights? To partisans on either side of the debate, the question itself seems absurd. Supporters of animal rights would reply that animals, as living creatures, have the same type of rights enjoyed by all living beings. Opponents of the cause would rejoin that rights are the product of rationalism and thus are the sole province of humans.
 
-One interesting moral perspective from which to view the debate comes from the philosophy of utilitarianism. Jeremy Bentham, widely credited as the father of utilitarianism, believed that the rightness or wrongness of actions should be judged by the effect they have on all the beings affected by the action. The entire world comprised a closed system to which the actions of any member of the system either added to the SECTION 4:
+One interesting moral perspective from which to view the debate comes from the philosophy of utilitarianism. Jeremy Bentham, widely credited as the father of utilitarianism, believed that the rightness or wrongness of actions should be judged by the effect they have on all the beings affected by the action. The entire world comprised a closed system to which the actions of any member of the system either added to the
 
-Critical
-
-Analysis and Reasoning Skills Bentham himself believed that the good of animals should be taken into consideration in utilitarianism. The issue for him was not whether animals could reason (debatable) or talk (obviously not), but whether they could suffer (absolutely). An animal's capacity for suffering, argued Bentham, implied not necessarily that it should have rights equal to those of man, but that its pain should be given equal consideration when determining exactly what rights it had. It is from this perspective that animal rights can be most justified.
+Bentham himself believed that the good of animals should be taken into consideration in utilitarianism. The issue for him was not whether animals could reason (debatable) or talk (obviously not), but whether they could suffer (absolutely). An animal's capacity for suffering, argued Bentham, implied not necessarily that it should have rights equal to those of man, but that its pain should be given equal consideration when determining exactly what rights it had. It is from this perspective that animal rights can be most justified.
 
 Obviously, it doesn't make sense to say that animals should have the right to free speech or the right to vote, because these are capacities the animal does not and cannot ever possess. But it would be sensible to say that animals have a right to be free from unnecessary pain or suffering. This view of animal rights would preclude many current practices, such as using animals to test new drugs and cosmetics and even perhaps the mass production of animals for food and clothing.
 
@@ -1964,11 +1770,7 @@ Passage IV
 
 In literature, the period typically referred to as the 20th century actually begins in the previous century. To many, Queen Victoria's Jubilee in 1887 effectively marked the end of a literary epoch. The prevailing aesthetic sensibility, art for art's sake, was dying a slow death, as the gulf between artists and writers and the rest of the public widened, resulting in the widespread idea of the artist as one alienated from the rest of society. This viewpoint was spurred on by the bohemian culture movement, which arose in France and quickly spread. At its core, the bohemian movement scoffed at the limits placed on the individual by polite society and sought to isolate the artist from society as one who both rejects and is rejected by society.
 
-Across the English Channel, developments in England further accentuated the separation of the artist from society at large. The Education Act of 1870 made elementary education mandatory, creating a massive class of literate, though still mostly uneducated, consumers. In response to this new market, new forms of entertainment were created, including the cheap and sensational "yellow press," which focused on scandal, crime, and other base aspects of human nature. Furthermore, publishers SECTION 4:
-
-Critical
-
-Analysis and Reasoning Skills 
+Across the English Channel, developments in England further accentuated the separation of the artist from society at large. The Education Act of 1870 made elementary education mandatory, creating a massive class of literate, though still mostly uneducated, consumers. In response to this new market, new forms of entertainment were created, including the cheap and sensational "yellow press," which focused on scandal, crime, and other base aspects of human nature. Furthermore, publishers 
 audiences, the degree and the speed at which these audiences became fragmented occurred at an unprecedented rate in the early 20th century.
 
 The emergence and mass production of such so-called popular literature provided more fodder for the artistic elite's war on the crude and unsophisticated philistines in the public square. Perhaps this divide and the artist's growing awareness of difference led to a prevalence of pessimism and stoicism in the literature of the late Victorian period. Hardy, Housman, and Stevenson all expressed at least some form of overweening negativity or passivity in their prose and poetry.
@@ -1997,8 +1799,8 @@ D. I, II, and III
 
 20. The author implies that the Education Act of 1870 :
 A. increased the education level of the English population
-B. led to more people attending secondary school C. had mixed results
-
+B. led to more people attending secondary school 
+C. had mixed results
 D. angered the artistic elite
 
 21. The passage indicates the 20 th century differed from earlier artistic periods because:
@@ -2039,11 +1841,8 @@ Engineers and computer scientists are intrigued by the potential power of nanoco
 
 A professor at Massachusetts Institute of Technology (MIT) has attempted to calculate the computational limits of a computer with a weight of 1 kilogram and a volume of 1 liter. According to the laws of physics, the potential amount of computational power is a function of the available energy. Basically, each atom and subatomic particle in the computer has an amount of energy attached to it. Furthermore, the energy of each particle or atom is increased by the frequency of its movement. Thus the power of a computer that uses nanotechnology is bounded by the energy available from its atoms.
 
-Specifically, the relationship between the energy of an object and its computation potential is a proportionate one. As Einstein has famously calculated, the energy of an object is equal to its mass times the speed of light squared. Thus, a theoretical computer weighing a mere kilogram has a huge amount of potential energy. To find the total computational power, the minimum amount of energy required to perform an operation is divided by the total amount of energy. SECTION 4:
+Specifically, the relationship between the energy of an object and its computation potential is a proportionate one. As Einstein has famously calculated, the energy of an object is equal to its mass times the speed of light squared. Thus, a theoretical computer weighing a mere kilogram has a huge amount of potential energy. To find the total computational power, the minimum amount of energy required to perform an operation is divided by the total amount of energy. 
 
-Critical
-
-Analysis and Reasoning Skills 
 of energy possessed by a 1-kilogram computer by Planck's constant yields a tremendously large number, roughly $5 \times 10^{50}$ operations per second. Using even the most conservative estimates of the computing power of the human brain, such a computer would have the computational power of five trillion trillion human civilizations. The computer would also have a memory capacity, calculated by determining the degrees of freedom allowed by the state of all the particles comprising it, of $10^{31} \mathrm{bits}$.
 
 These numbers are purely theoretical, however. Were the computer to convert all of its mass to energy, it would be the equivalent of a thermonuclear explosion. And it is unreasonable to expect human technology to ever achieve abilities even close to these limits. However, a project at the University of Oklahoma has succeeded in storing 50 bits of data per atom, albeit on only a limited number of atoms. Given that there are $10^{25}$ atoms in 1 kilogram of material, it may be possible to fit up to $10^{27}$ bits of information in the computer. And if scientists are able to exploit the many properties of atoms to store information, including the position, spin, and quantum state of all its particles, it may be possible to exceed even that number.
@@ -2106,11 +1905,8 @@ Language consists of three main parts. The first is simply vocabulary, the lexic
 
 Morphology has two major subdivisions. They are derivation and inflection. Derivation refers to those rules by which new words may be formed out of preexisting words. Inflection, sometimes referred to as conjugation and declension, states how words are changed to indicate their function within a sentence.
 
-Although common mythology holds that English is one of the most difficult languages to learn, many linguists would beg to differ. In fact, when it comes to inflection, SECTION 4:
+Although common mythology holds that English is one of the most difficult languages to learn, many linguists would beg to differ. In fact, when it comes to inflection, 
 
-Critical
-
-Analysis and Reasoning Skills 
 the conditional, the subjunctive, the imperative, and others. Languages from outside the Indo-European family tree may be even more complex. The Bantu language of Kivunjo has roughly half a million combinations of prefixes and suffixes for a verb. English, however, has a mere four combinations. A verb such as to walk is limited to the following forms: walk, walks, walked, and walking.
 
 Although there are only four basic verb forms, the English language does have more than 13 possible inflections. It just makes do with these four forms for the various functions. English also differs significantly from many other Indo-European languages in that in English, the stem of the word can be pronounced and is in fact part of the language. In Spanish, the stem of the verb to walk is camin-, but this is not a word in the language. In order to pronounce this word, it must be conjugated and combined with a suffix. English uses the stem form of the verb for four inflections: the present tense (except for the third-person singular), the infinitive, the imperative, and the subjunctive. The verb form ending in $-s$ is used in only one case, the third-person singular.
@@ -2171,13 +1967,7 @@ B. The Russian language may be of the Indo-European family.
 C. Russian is harder to learn than Spanish.
 D. The Russian language has more inflections than the English language.
 
-SECTION 4:
-
-Critical
-
-Analysis and Reasoning Skills MCAT
-
-Practice Test 3 Questions 38-44 are based on the following passage.
+Questions 38-44 are based on the following passage.
 
 Passage VII
 
@@ -2229,13 +2019,7 @@ B. a review of his work in the assembly and governor's office
 C. descriptions of his three runs for the presidency
 D. a list of the famous names that supported his candidacies
 
-SECTION 4:
-
-Critical
-
-Analysis and Reasoning Skills MCAT
-
-Practice Test 3 44. If Smith were to run for office today on a platform similar to his original plan, which of the following outcomes would MOST likely occur?
+44. If Smith were to run for office today on a platform similar to his original plan, which of the following outcomes would MOST likely occur?
 
 A. He would be supported by Progressives and union leaders.
 
@@ -2291,13 +2075,8 @@ B. The number of people living below the poverty level will climb in less devel-
 C. Inflationary trends in heating oil and gasoline prices will limit most people's discretionary spending.
 D. New methods of birth control will limit the population explosion in the devel- oping world.
 
-SECTION 4:
 
-Critical
-
-Analysis and Reasoning Skills MCAT
-
-Practice Test 3 Questions 50-53 are based on the following passage.
+Questions 50-53 are based on the following passage.
 
 Passage IX
 
@@ -2313,7 +2092,9 @@ In the Chicano neighborhoods of the southwestern United States, political murali
 
 One extraordinary thing about this kind of public art is that it is truly for everyone. You do not need to enter the halls of a museum to see it; it resides on the walls of your local bodega or school or health clinic; you bounce your ball off of it in the basketball or handball court; you cover it over with posters for your favorite band or flyers about your lost pet.
 
-Certainly, many of the graffiti artists were reviled as nuisances, and their art was erased. For some, however, graffiti would prove a launching point into the world of fine art. Today, modern murals in Austin, San Antonio, Los Angeles, and Tucson, among others, attest to the power of the Mexican tradition of the muralist as purveyor of political thought. 50. In the context of the passage, the word radicalism means:
+Certainly, many of the graffiti artists were reviled as nuisances, and their art was erased. For some, however, graffiti would prove a launching point into the world of fine art. Today, modern murals in Austin, San Antonio, Los Angeles, and Tucson, among others, attest to the power of the Mexican tradition of the muralist as purveyor of political thought. 
+
+50. In the context of the passage, the word radicalism means:
 A. extremism
 B. intolerance
 C. discrimination
