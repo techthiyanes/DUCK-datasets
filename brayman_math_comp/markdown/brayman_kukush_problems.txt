@@ -1,0 +1,1422 @@
+\title{
+1995
+}
+
+1. (1-year) Prove that for every $n \in \mathbb{N}$ there exists a unique $t(n)>0$ such that $(t(n)-1) \ln t(n)=n$. Calculate $\lim _{n \rightarrow \infty}\left(t(n) \frac{\ln n}{n}\right)$.
+
+2. (1-year) Let $\left\{a_{n}, n \geq 1\right\} \subset \mathbb{R}$ be a bounded sequence. Define
+
+$$
+b_{n}=\frac{1}{n}\left(a_{1}+\ldots+a_{n}\right), n \geq 1 .
+$$
+
+Assume that the set $A$ of partial limits of $\left\{a_{n}, n \geq 1\right\}$ coincides with the set of partial limits of $\left\{b_{n}, n \geq 1\right\}$. Prove that $A$ is either a segment or a single point. Prove or disprove the following: if $A$ is either a segment or a single point then $A$ and $B$ coincide.
+
+3. (1-year) Let $f: \mathbb{R} \rightarrow \mathbb{R}$ have a primitive function $F$ on $\mathbb{R}$ and satisfy $2 x F(x)=$ $f(x), x \in \mathbb{R}$. Find $f$.
+
+4. (1-year) Let $f \in C([0,1])$. Prove that there exists a number $c \in(0,1)$ such that $\int_{0}^{c} f(x) d x=(1-c) f(c)$
+
+5. (1-2-years) A sequence of $m \times m$ real matrices $\left\{A_{n}, n \geq 0\right\}$ is defined as follows: $A_{0}=A, A_{n+1}=A_{n}^{2}-A_{n}+\frac{3}{4} I, n \geq 0$, where $A$ is a positive definite matrix such that $\operatorname{tr}(A)<1$, and $I$ is the identity matrix. Find $\lim _{n \rightarrow \infty} A_{n}$.
+
+6. (1-2-years) Let $\left\{x_{n}, n \geq 1\right\} \subset \mathbb{R}$ be a bounded sequence and $a$ be a real number such that $\lim _{n \rightarrow \infty} \frac{1}{n} \sum_{k=1}^{n} x_{k}^{j}=a^{j}, j=1,2$. Prove that $\lim _{n \rightarrow \infty} \frac{1}{n} \sum_{k=1}^{n} \sin x_{k}=\sin a$. 7. (1-4-years) Let $F$ be any quadrangle with area 1 and $G$ be a disc with radius $\frac{1}{\pi}$. For every $n \geq 1$, let $a(n)$ be the maximum number of figures of area $\frac{1}{n}$ similar to $F$ with disjoint interiors, which is possible to pack into $G$. In a similar way, define $b(n)$ as the maximum number of discs of area $\frac{1}{n}$ with disjoint interiors, which is possible to pack into $F$. Prove that $\limsup _{n \rightarrow \infty} \frac{b(n)}{n}<\lim _{n \rightarrow \infty} \frac{a(n)}{n}=1$.
+
+8. (1-4-years) Find the maximal length of a convex piecewise-smooth contour with diameter $d$.
+
+9. (2-year) Prove that the equation
+
+$$
+y^{\prime}(x)-(2+\cos x) y(x)=\arctan x, x \in \mathbb{R},
+$$
+
+has a unique bounded on $\mathbb{R}$ solution in the class $C^{(1)}(\mathbb{R})$.
+
+10. (2-year) Find all the solutions to the Cauchy problem
+
+$$
+\left\{\begin{array}{l}
+y^{\prime}(x)=\int_{0}^{x} \sin (y(x)) d u+\cos x, x \geq 0, \\
+y(0)=0 .
+\end{array}\right.
+$$
+
+11. (3-year) A series $f(z)=\sum_{n=0}^{\infty} c_{n} z^{n}$ has a unit radius of convergence, and $c_{n}=0$ for $n=k m+l, m \in \mathbb{N}$, where $k \geq 2$ and $0 \leq l \leq k-1$ are fixed. Prove that $f$ has at least two singular points on the unit circle.
+
+12. (3-4-years) Let $K=\{z \in \mathbb{C}|1 \leq| z \mid \leq 2\}$. Consider the set $W$ of functions $u$ which are harmonic in $K$ and satisfy $\int_{S_{j}} \frac{\partial u}{\partial n} d s=2 \pi$, where
+
+$$
+S_{j}=\{z \in \mathbb{C}|| z \mid=j\}, j=1,2,
+$$
+
+and $n$ is a normal to $S_{j}$ inside $K$. Let $u^{*} \in W$ be such a function that $D\left(u^{*}\right)=$ $\min _{u \in W} D(u)$, where
+
+$$
+D(u)=\iint_{K}\left(u_{x}^{\prime 2}+u_{y}^{\prime 2}\right) d x d y .
+$$
+
+Prove that $u^{*}$ is constant on both $S_{1}$ and $S_{2}$.
+
+13. (3-4-years) Each positive integer is a trap with probability $0.4$ independently of other integers. A hare is jumping over positive integers. It starts from 1 and jumps each time to the right at distance 0,1 , or 2 with probability $\frac{1}{3}$ and independently of previous jumps. Prove that the hare will be trapped eventually with probability 1.
+14. (4-year) Let $H$ be a Hilbert space and $A_{n}, n \geq 1$ be continuous linear operators such that for every $x \in H$ it holds $\left\|A_{n} x\right\| \rightarrow \infty$, as $n \rightarrow \infty$. Prove that for every compact operator $K$ it holds $\left\|A_{n} K\right\| \rightarrow \infty$, as $n \rightarrow \infty$.
+
+THE PROBLEMS ARE PROPOSED BY A.Ya. Dorogovtsev $(1,4)$ and A.G. Kukush $(5,6)$ 1. Let $a, b, c \in \mathbb{C}$. Find $\limsup _{n \rightarrow \infty}\left|a^{n}+b^{n}+c^{n}\right|^{1 / n}$.
+
+2. A function $f \in C([1,+\infty))$ is such that for every $x \geq 1$ there exists a limit
+
+$$
+\lim _{A \rightarrow \infty} \int_{A}^{A x} f(u) d u=: \varphi(x),
+$$
+
+$\varphi(2)=1$, and moreover the function $\varphi$ is continuous at point $x=1$. Find $\varphi(x)$.
+
+3. A function $f \in C([0,+\infty))$ is such that
+
+$$
+f(x) \int_{0}^{x} f^{2}(u) d u \rightarrow 1 \text {, as } x \rightarrow+\infty
+$$
+
+Prove that
+
+$$
+f(x) \sim\left(\frac{1}{3 x}\right)^{1 / 3}, \text { as } x \rightarrow+\infty
+$$
+
+4. Find
+
+$$
+\sup _{\lambda}\left(\frac{\sum_{k=0}^{n-1}\left(x_{k+1}-x_{k}\right) \sin 2 \pi x_{k}}{\sum_{k=0}^{n-1}\left(x_{k+1}-x_{k}\right)^{2}}\right),
+$$
+
+where the supremum is taken over all possible partitions of $[0,1]$ of the form $\lambda=$ $\left\{0=x_{0}<x_{1}<\ldots<x_{n-1}<x_{n}=1\right\}, n \geq 1$.
+
+(0) Springer International Publishing AG 2017
+
+V. Brayman and A. Kukush, Undergraduate Mathematics
+
+Competitions (1995-2016), Problem Books in Mathematics, DOI 10.1007/978-3-319-58673-1_2 5. Find general form of a function $f(z)$, which is analytic on the upper half-plane except the point $z=i$, and satisfies the following conditions:
+
+$\diamond$ the point $z=i$ is a simple pole of $f(z)$;
+
+$\diamond$ the function $f(z)$ is continuous and real-valued on the real axis;
+
+$\diamond \lim _{\substack{z \rightarrow \infty \\ \operatorname{Im} z \geq 0}} f(z)=A(A \in \mathbb{R})$
+
+6. Let $\mathscr{D}$ be a bounded connected domain with boundary $\partial \mathscr{D}$, and $f(z), F(z)$ be functions analytic on $\bar{D}$. It is known that $F(z) \neq 0$ and $\operatorname{Im} \frac{f(z)}{F(z)} \neq 0$ for every $z \in \partial \mathscr{D}$. Prove that the functions $F(z)$ and $F(z)+f(z)$ have equal number of zeros in $\mathscr{D}$.
+
+7. A linear operator $A$ on a finite-dimensional space satisfies
+
+$$
+A^{1996}+A^{998}+1996 I=0 .
+$$
+
+Prove that $A$ has an eigenbasis. Here $I$ is the unit operator.
+
+8. Let $A_{1}, A_{2}, \ldots, A_{n+1}$ be $n \times n$ matrices. Prove that there exist numbers $a_{1}, a_{2}$, $\ldots, a_{n+1}$ (not all of them equal 0 ) such that a matrix
+
+$$
+a_{1} A_{1}+\ldots+a_{n+1} A_{n+1}
+$$
+
+is singular.
+
+9. The trace of a matrix $A$ equals 0 . Prove that $A$ can be decomposed into a finite sum of matrices, such that the square of each of them equals to zero matrix. 
+
+\section{Problems for 1-4-Years Students}
+
+1. Let $1 \leq k \leq n$. Consider all possible decompositions of $n$ into a sum of two or more positive integer summands. (Two decompositions that differ by order of summands are assumed distinct.) Prove that the summand equal $k$ appears exactly $(n-k+3) 2^{n-k-2}$ times in the decompositions.
+
+2. Prove that the field $\mathbb{Q}(x)$ of rational functions contains two subfields $F$ and $K$ such that $[\mathbb{Q}(x): F]<\infty$ and $[\mathbb{Q}(x): K]<\infty$, but $[\mathbb{Q}(x):(F \cap K)]=\infty$
+
+3. Let a matrix $A \in M_{n}(\mathbb{C})$ have a unique eigenvalue $a$. Prove that $A$ commutes only with polynomials of $A$ if and only if $\operatorname{rk}(A-a I)=n-1$. Here $I$ is the identity matrix.
+
+4. Solve an equation
+
+$$
+2^{x}=\frac{2}{3} x^{2}+\frac{1}{3} x+1
+$$
+
+5. Find a limit
+
+$$
+\lim _{n \rightarrow \infty}\left(\int_{0}^{1} e^{x^{2} / n} d x\right)^{n}
+$$
+
+6. Let $a \in \mathbb{R}^{m}$ be a column vector and $I$ be the identity matrix of size $m$. Simplify
+
+$$
+\left(1-a^{\mathrm{T}}\left(I+a a^{\mathrm{T}}\right) a\right)^{-1} .
+$$
+
+7. Find the global maximum of a function $f(x)=e^{\sin x}+e^{\cos x}, x \in \mathbb{R}$. 8. Let $f$ be a positive nonincreasing function on $[1,+\infty)$ such that
+
+$$
+\int_{1}^{+\infty} x f(x) d x<\infty
+$$
+
+Prove convergence of an integral
+
+$$
+\int_{1}^{+\infty} \frac{f(x)}{|\sin x|^{1-\frac{1}{x}}} d x
+$$
+
+9. See William Lowell Putnam Mathematical Competition, 1961, Morning Session, Problem 3.
+
+10. See William Lowell Putnam Mathematical Competition, 1962, Morning Session, Problem 4.
+
+11. Non-constant complex polynomials $P$ and $Q$ have the same set of roots (possibly of different multiplicities), and the same is true for the polynomials $P+1$ and $Q+1$. Prove that $P \equiv Q$.
+
+THE PROBLEMS ARE PROPOSED BY O. G. Ganyushkin (1-3) and A. G. Kukush (4-8). 
+
+\section{8}
+
+\section{Problems for 1-4-Years Students}
+
+1. See William Lowell Putnam Mathematical Competition, 1996, Problem B1.
+
+2. See William Lowell Putnam Mathematical Competition, 1989, Problem A4.
+
+3. See William Lowell Putnam Mathematical Competition, 1997, Problem B6.
+
+4. Let $q \in \mathbb{C}, q \neq 1$. Prove that for every nonsingular matrix $A \in M_{n}(\mathbb{C})$ there exists a nonsingular matrix $B \in M_{n}(\mathbb{C})$ such that $A B-q B A=I$.
+
+5. See William Lowell Putnam Mathematical Competition, 1992, Problem B6.
+
+6. See William Lowell Putnam Mathematical Competition, 1989, Problem A6.
+
+7. See William Lowell Putnam Mathematical Competition, 1997, Problem B2.
+
+8. Does there exist a function $f \in C(\mathbb{R})$ such that for every real number $x$ it holds
+
+$$
+\int_{0}^{1} f(x+t) d t=\arctan t ?
+$$
+
+9. See William Lowell Putnam Mathematical Competition, 1997, Problem A4.
+
+10. A sequence $\left\{x_{n}, n \geq 1\right\} \subset \mathbb{R}$ is defined as follows:
+
+$$
+x_{1}=1, \quad x_{n+1}=\frac{1}{2+x_{n}}+\{\sqrt{n}\}, n \geq 1,
+$$
+
+where $\{a\}$ denotes the fractional part of $a$. Find the limit
+
+$$
+\lim _{N \rightarrow \infty} \frac{1}{N} \sum_{k=1}^{N} x_{k}^{2} .
+$$
+
+11. See William Lowell Putnam Mathematical Competition, 1995, Problem A5.
+
+12. Let $B$ be a complex Banach space and operators $A, C \in \mathscr{L}(B)$ be such that
+
+$$
+\sigma\left(A C^{2}\right) \bigcap\{x+i y \mid x+y=1\}=\varnothing .
+$$
+
+Prove that
+
+$$
+\sigma(C A C) \bigcap\{x+i y \mid x+y=1\}=\varnothing .
+$$
+
+THE PROBLEMS ARE PROPOSED BY A. A. Dorogovtsev (10), A. Ya. Dorogovtsev (12), A. G. Kukush (8), and V. S. Mazorchuk (4). Problems 1-9 for 1-2-Years Students and Problems 5-11 for 3-4-Years Students
+
+1. See Problem 4, 1997.
+
+2. Find the global maximum of a function $2^{\sin x}+2^{\cos x}$.
+
+3. See William Lowell Putnam Mathematical Competition, 1998, Problem A3.
+
+4. See William Lowell Putnam Mathematical Competition, 1988, Problem A6.
+
+5. See William Lowell Putnam Mathematical Competition, 1998, Problem B5.
+
+6. See William Lowell Putnam Mathematical Competition, 1962, Morning Session, Problem 6.
+
+7. See Problem 5, 1997.
+
+8. See William Lowell Putnam Mathematical Competition, 1961, Morning Session, Problem 7.
+
+9. Let $\left\{S_{n}, n \geq 1\right\}$ be a sequence of $m \times m$ matrices such that $S_{n} S_{n}^{\mathrm{T}}$ tends to the identity matrix. Prove that there exists a sequence $\left\{U_{n}, n \geq 1\right\}$ of orthogonal matrices such that $S_{n}-U_{n} \rightarrow O$, as $n \rightarrow \infty$.
+
+10. Let $\xi$ and $\eta$ be independent random variables such that $\mathbf{P}(\xi=\eta)>0$. Prove that there exists a real number $a$ such that $\mathrm{P}(\xi=a)>0$ and $\mathrm{P}(\eta=a)>0$.
+
+11. Find a set of linearly independent elements $\mathscr{M}=\left\{e_{i}, i \geq 1\right\}$ in an infinitedimensional separable Hilbert space $H$, such that the closed linear hull of $\mathscr{M} \backslash\left\{e_{i}\right\}$ coincides with $H$ for every $i \geq 1$.
+
+PROBLEM 2 IS PROPOSED BY A. G. Kukush. 
+
+\section{Problems for 1-2-Years Students}
+
+1. Let $\left\{a_{n}, n \geq 1\right\}$ be an arbitrary sequence of positive numbers. Denote by $b_{n}$ the number of terms $a_{k}$ such that $a_{k} \geq \frac{1}{n}$. Prove that at least one of the series $\sum_{n=1}^{\infty} a_{n}$ and $\sum_{n=1}^{\infty} \frac{1}{b_{n}}$ is divergent.
+
+2. Let $\left\{M_{\alpha}, \alpha \in \mathscr{A}\right\}$ be a class of subsets of $\mathbb{N}$ such that for every $\alpha_{1}, \alpha_{2} \in \mathscr{A}$ it holds either $M_{\alpha_{1}} \subset M_{\alpha_{2}}$ or $M_{\alpha_{2}} \subset M_{\alpha_{1}}$, and moreover $M_{\alpha_{1}} \neq M_{\alpha_{2}}$ for each $\alpha_{1} \neq \alpha_{2}$. Is it possible that $\mathscr{A}$ is uncountable?
+
+3. Find all strictly increasing functions $f:[0,+\infty) \rightarrow \mathbb{R}$ such that for every $x>y \geq 0$, the equality $f\left(\frac{x+y}{x-y}\right)=\frac{f(x)+f(y)}{f(x)-f(y)}$ holds.
+
+4. A sequence $\left\{x_{n}, n \geq 1\right\}$ is defined as follows: $x_{1}=a$ and $x_{n+1}=x_{n}^{3}-3 x_{n}$, $n \geq 1$. Find the set of real numbers $a$ for which the sequence converges.
+
+5. Denote by $d(n)$ the number of positive integer divisors of a positive integer $n$ (including 1 and $n$ ). Prove that $\sum_{n=1}^{\infty} \frac{d(n)}{n^{2}}<4$.
+
+6. Two wolves and a hare run on the surface of a torus
+
+$$
+\left\{(x, y, z) \mid\left(\sqrt{x^{2}+y^{2}}-2000\right)^{2}+z^{2} \leq 2000\right\}
+$$
+
+at a speed not exceeding 1 . Initial distances from each wolf to the hare exceed 2000. The wolves will catch the hare if the distance between at least one of them and the hare becomes smaller then 1 . The wolves and the hare see one another at any distance. Can the wolves catch the hare in finite time?
+
+7. In the ring $\mathbb{Z}_{n}$ of residues modulo $n$, calculate determinants of matrices $A_{n}$ and $B_{n}$, where $A_{n}=(\bar{i}+\bar{j})_{\bar{i}, \bar{j}=0,1, \ldots, n-1}, B_{n}=(\bar{i} \cdot \bar{j})_{\bar{i}, \bar{j}=1, \ldots, n-1}, n \geq 2$.
+
+8. Prove that a complex number $z$ satisfies $|z|-\operatorname{Re} z \leq \frac{1}{2}$ if and only if there exist complex numbers $u, v$ such that $z=u v$ and $|u-\bar{v}| \leq 1$.
+
+9. Two (not necessarily distinct) subsets $A_{1}$ and $A_{2}$ are selected randomly from the class of all subsets of $X=\{1,2, \ldots, n\}$. Calculate the probability that $A_{1} \bigcap A_{2}=\varnothing$.
+
+10. There are $N$ chairs in the first row of the Room 41. Assume that all possible ways for $n$ persons to choose their places are equally possible. Calculate the probability that no two persons are sitting alongside.
+
+\section{Problems for 3-4-Years Students}
+
+11. Compare the integrals $\int_{0}^{1} x^{x} d x$ and $\int_{0}^{1} \int_{0}^{1}(x y)^{x y} d x d y$.
+
+12. A sequence $\left\{x_{n}, n \geq 1\right\}$ is defined as follows: $x_{1}=a$ and $x_{n+1}=3 x_{n}-x_{n}^{3}$, $n \geq 1$. Find the set of real numbers $a$ for which the sequence converges.
+
+13. An element $x$ of a finite group $G,|G|>1$, is called self-double if there exist non-necessarily distinct elements $u \neq e, v \neq e \in G$ such that $x=u v=v u$. Prove that if $x \in G$ is not self-double then $x$ has order 2 and $G$ contains $2(2 k-1)$ elements for some $k \in \mathbb{N}$.
+
+14. Find the number of homomorphisms of the rings $M_{2}(\mathbb{C}) \rightarrow M_{3}(\mathbb{C})$, such that the image of the $2 \times 2$ identity matrix is the $3 \times 3$ identity matrix.
+
+15. Prove that the system of differential equations
+
+$$
+\left\{\begin{array}{l}
+\frac{d x}{d t}=y^{2}-x y \\
+\frac{d y}{d t}=x^{4}-x^{3} y
+\end{array}\right.
+$$
+
+has no nonconstant periodic solution.
+
+16. A function $f$ satisfies the Lipschitz condition in a neighborhood of the origin in $\mathbb{R}^{n}$ and $f(\overrightarrow{0})=\overrightarrow{0}$. Denote by $x\left(t, t_{0}, x_{0}\right), t \geq t_{0}$, the solution to Cauchy problem for the system $\frac{d x}{d t}=f(x)$ under initial condition $x\left(t_{0}\right)=x_{0}$. Prove that:
+
+(a) If zero solution $x\left(t, t_{0}, \overrightarrow{0}\right), t \geq t_{0}$, is stable in the sense of Lyapunov for some $t_{0} \in \mathbb{R}$, then it is stable in the sense of Lyapunov for every $t_{0} \in \mathbb{R}$ and uniformly in $t_{0}$.
+
+(b) If zero solution $x\left(t, t_{0}, \overrightarrow{0}\right), t \geq t_{0}$, is asymptotically stable in the sense of Lyapunov then it holds $\lim _{t \rightarrow+\infty}\left\|x\left(t, t_{0}, x_{0}\right)\right\|=0$ uniformly in $x_{0}$ from some neighborhood of the origin in $\mathbb{R}^{n}$. 17. A function $f:[1,+\infty) \rightarrow[0,+\infty)$ is Lebesgue measurable, and $\int_{1}^{\infty} f(x)$ $d \lambda(x)<\infty$ (here $\lambda$ denotes the Lebesgue measure). Prove that:
+
+(a) the series $\sum_{n=1}^{\infty} f(n x)$ converges for $\lambda$-almost all $x \in[1,+\infty)$.
+
+(b) $\lim _{T \rightarrow+\infty} \frac{1}{T} \int_{1}^{T} x f(x) d \lambda(x)=0$.
+
+18. Let $\xi$ be a nonnegative random variable. Suppose that for every $x \geq 0$, the expectations $f(x)=\mathrm{E}(\xi-x)_{+} \leq \infty$ are known. Evaluate the expectation $\mathrm{E} e^{\xi}$. (Here $y_{+}$denotes $\max (y, 0)$.)
+
+19. The number of passengers at the bus stop is a homogeneous Poisson process with parameter $\lambda$, which starts at zero moment. A bus has arrived at time $t$. Find the expectation of the sum of waiting times for all the passengers.
+
+20. See Problem 10.
+
+THE PROBLEMS ARE PROPOSED BY A.G. Kukush $(4,12,18)$, V.S. Mazorchuk (7, 13, 14), Yu.S. Mishura (17), V.M. Radchenko (3, 8, 11), G.M. Shevchenko (1, 5, 6), I.O. Shevchuk (2), O.M. Stanzhytskyi $(15,16)$, and M.Y. Yadrenko $(9,10,19,20)$. 
+
+\section{1}
+
+\section{Problems for 1-2-Years Students}
+
+1. Is it true that $\lim _{n \rightarrow \infty}|n \sin n|=+\infty$ ?
+
+2. Let $f \in C^{(2)}(\mathbb{R})$.
+
+(a) Prove that there exists $\theta \in \mathbb{R}$ such that $f(\theta) f^{\prime \prime}(\theta)+2\left(f^{\prime}(\theta)\right)^{2} \geq 0$.
+
+(b) Prove that there exists a function $G: \mathbb{R} \rightarrow \mathbb{R}$ such that
+
+$$
+\left(\forall x \in \mathbb{R} f(x) f^{\prime \prime}(x)+2\left(f^{\prime}(x)\right)^{2} \geq 0\right) \Longleftrightarrow G(f(x)) \text { is convex on } \mathbb{R} .
+$$
+
+3. Prove that the sequence
+
+$$
+a_{n}=\frac{3}{2} \cdot \frac{5}{4} \cdot \frac{9}{8} \cdot \ldots \cdot \frac{2^{n}+1}{2^{n}}
+$$
+
+converges to some number $a \in\left(\frac{3}{2} \sqrt[4]{e}, \frac{3}{2} \sqrt{e}\right)$.
+
+4. Find all complex solutions of a system of equations
+
+$$
+x_{1}^{k}+x_{2}^{k}+\ldots+x_{n}^{k}=0, k=1,2, \ldots, n .
+$$
+
+5. Let $A$ be a nonsingular matrix. Prove that if $\mathrm{rk} A=\mathrm{rk}\left(\begin{array}{ll}A & B \\ C & B\end{array}\right)$ then $D=C A^{-1} B$.
+
+6. Denote by $b(n, k)$ the number of permutations of $n$ elements in which exactly $k$ elements are fixed points. Calculate $\sum_{k=1}^{n} b(n, k)$. 
+
+\section{Problems for 3-4-Years Students}
+
+\section{See Problem 4.}
+
+![](https://cdn.mathpix.com/cropped/2022_10_28_5077707915482dff1562g-15.jpg?height=52&width=1249&top_left_y=500&top_left_x=438)
+of initial values $x(0)$ for which the solution $x(t)$ to a system $\frac{d x}{d t}=A(t) x$ is bounded on $[0,+\infty)$. Prove that $B$ is a subspace of $\mathbb{R}^{n}$, and if for every $f \in C\left([0,+\infty), \mathbb{R}^{n}\right)$ the system
+
+$$
+\frac{d x}{d t}=A(t) x+f(t)
+$$
+
+has a bounded on $[0,+\infty)$ solution, then for every $f \in C\left([0,+\infty), \mathbb{R}^{n}\right)$, there exists a unique solution $x(t)$ to $(*)$ which is bounded on $[0,+\infty)$ and satisfies $x(0) \in B^{\perp}$. (Here $B^{\perp}$ denotes the orthogonal complement of $B$.)
+
+9. Let $\sigma$ be a random permutation of the set $1,2, \ldots, n$. (The probability of each permutation is $\frac{1}{n !}$.) Find the expectation of number of the elements which are fixed points of the permutation $\sigma$.
+
+10. Find all analytic on $\mathbb{C} \backslash\{0\}$ functions such that the image of every circle with center at zero lies on some circle with center at zero.
+
+11. A cone in $\mathbb{R}^{n}$ is a set obtained by shift and rotation from the set
+
+$$
+\left\{\left(x_{1}, \ldots, x_{n}\right): x_{1}^{2}+\ldots+x_{n-1}^{2} \leq r x_{n}^{2}\right\}
+$$
+
+for some $r>0$. Prove that if $A$ is an unbounded convex subset of $\mathbb{R}^{n}$ which does not contain any cone, then there exists a two-dimensional subspace $B \subset \mathbb{R}^{n}$ such that the projection of $A$ onto $B$ does not contain any cone in $\mathbb{R}^{2}$.
+
+12. Let $\left\{\gamma_{k}, k \geq 1\right\}$ be independent standard Gaussian random variables. Prove that
+
+$$
+\frac{\max _{1 \leq k \leq n} \gamma_{k}^{2}}{\sum_{k=1}^{n} \gamma_{k}^{2}}: \frac{\ln n}{n} \stackrel{\mathrm{P}}{\rightarrow} 2 \text {, as } n \rightarrow \infty .
+$$
+
+THE PROBLEMS ARE PROPOSED BY A.G. Kukush (2, 3, 12), A.S. Oliynyk $(4,5,7)$, V.M. Radchenko (1), G.M. Shevchenko (6,9-11), and O.M. Stanzhytskyi (8). 
+
+\section{Problems for 1-2-Years Students}
+
+1. Does there exist a function $F: \mathbb{R}^{2} \rightarrow \mathbb{N}$ such that the equality $F(x, y)=F(y, z)$ holds if and only if $x=y=z$ ?
+
+2. Consider graphs of functions $y=a^{\sin x}+a^{\cos x}, x \in \mathbb{R}$, where $a \in[1,2.5]$. Prove that there exists a point $M$ such that the distance from $M$ to each of the graphs is less than $0.4$.
+
+3. Consider a function $f \in C^{(1)}([-1,1])$, for which $f(-1)=f(1)=0$. Prove that
+
+$$
+\exists x \in[-1,1]: f(x)=\left(1+x^{2}\right) f^{\prime}(x) .
+$$
+
+4. Each entry of a matrix $A=\left(a_{i j}\right) \in M_{n}(\mathbb{R})$ is equal to 0 or 1 , and moreover $a_{i i}=0, a_{i j}+a_{j i}=1,1 \leq i<j \leq n$. Prove that rk $A \geq n-1$.
+
+5. Prove the inequality
+
+$$
+\int_{0}^{\frac{\pi}{2}} \frac{(\cos x)^{\sin x}}{(\cos x)^{\sin x}+(\sin x)^{\cos x}} d x<1 .
+$$
+
+6. Find the dimension of the subspace of linear operators $\varphi$ on $M_{n}(\mathbb{R})$ which satisfy $\varphi\left(A^{T}\right)=(\varphi(A))^{T}$ for every matrix $A \in M_{n}(\mathbb{R})$.
+
+7. For every $k \in \mathbb{N}$ prove that
+
+$$
+a_{k}=\sum_{j=1}^{\infty} \frac{j^{k}}{j !} \notin \mathbb{Q}
+$$
+
+8. Find all the functions $f \in C(\mathbb{R})$ such that for every $x, y, z \in \mathbb{R}$ it holds
+
+$$
+f(x)+f(y)+f(z)=f\left(\frac{3}{7} x+\frac{6}{7} y-\frac{2}{7} z\right)+f\left(\frac{6}{7} x-\frac{2}{7} y+\frac{3}{7} z\right)+f\left(-\frac{2}{7} x+\frac{3}{7} y+\frac{6}{7} z\right) .
+$$
+
+9. Construct a set $A \subset \mathbb{R}$ and a function $f: A \rightarrow \mathbb{R}$ such that
+
+$$
+\forall a_{1}, a_{2} \in A \quad\left|f\left(a_{1}\right)-f\left(a_{2}\right)\right| \leq\left|a_{1}-a_{2}\right|^{3},
+$$
+
+and the range of $f$ is uncountable.
+
+10. Prismatoid is a convex polyhedron such that all its vertices lie in two parallel planes, which are called bases. Given a prismatoid, consider its cross-section which is parallel to the bases and lies at a distance $x$ from the lower base. Prove that the area of this cross-section is a polynomial of $x$ of at most second degree.
+
+\section{Problems for 3-4-Years Students}
+
+11. Let $\xi$ be a random variable with finite expectation at a probability space $(\Omega, \mathscr{F}, \mathrm{P})$. Let $\omega$ be a signed measure on $\mathscr{F}$ such that
+
+$$
+\forall A \in \mathscr{F}: \inf _{x \in A} \xi(x) \cdot \mathrm{P}(A) \leq \omega(A) \leq \sup _{x \in A} \xi(x) \cdot \mathrm{P}(A) .
+$$
+
+Prove that
+
+$$
+\forall A \in \mathscr{F}: \omega(A)=\int_{A} \xi(x) d \mathrm{P}(x) .
+$$
+
+12. For every positive integer $n$ consider a function $f_{n}(x)=n^{\sin x}+n^{\cos x}, x \in \mathbb{R}$. Prove that there exists a sequence $\left\{x_{n}\right\}$ such that for every $n$ the function $f_{n}$ has a global maximum at $x_{n}$, and $x_{n} \rightarrow 0$, as $n \rightarrow \infty$.
+
+13. Let $U$ be a nonsingular real $n \times n$ matrix, $a \in \mathbb{R}^{n}$, and $L$ be a subspace of $\mathbb{R}^{n}$. Prove that
+
+$$
+\left\|P_{U^{T} L}\left(U^{-1} a\right)\right\| \leq\left\|U^{-1}\right\| \cdot\left\|P_{L} a\right\|,
+$$
+
+where $P_{M}$ is the projector onto a subspace $M$.
+
+14. Let $f: \mathbb{C} \backslash\{0\} \rightarrow(0,+\infty)$ be a continuous function, $\lim _{z \rightarrow 0} f(z)=0$, $\lim _{|z| \rightarrow \infty}$ $f(z)=\infty$. Prove that for every $T>0$ there exists a solution to a differential equation $\frac{d z}{d t}=i z f(z)$ with a period $T$
+
+15. See Problems 5 .
+
+16. See Problems 6.
+
+17. See Problems 7. 18. See Problems 8.
+
+19. See Problems 9.
+
+20. See Problems 10.
+
+THE PROBLEMS ARE PROPOSED BY V.B. Brayman $(8,9,18,19)$, V.B. Brayman and Yu.V.Shelyazhenko (7, 17), A.G. Kukush (2, 5, 11-13, 15), A.G. Kukush and R.P. Ushakov (10, 20), A.S. Oliynyk (4, 6, 16), A.V. Prymak (3), and O.M. Stanzhytskyi (14). Problems 1-8 for 1-2-Years Students and problems 5-12 for 3-4-Years Students
+
+1. Evaluate
+
+$$
+\sum_{n=1}^{\infty} \frac{9 n+4}{n(3 n+1)(3 n+2)}
+$$
+
+2. Find the limit
+
+$$
+\lim _{N \rightarrow \infty} \sqrt{N}\left(1-\max _{1 \leq n \leq N}\{\sqrt{n}\}\right),
+$$
+
+where $\{x\}$ denotes the fractional part of $x$.
+
+3. For every $n \in \mathbb{N}$, find the minimal $k \in \mathbb{N}$ for which there exist $\overrightarrow{x_{1}}, \ldots, \overrightarrow{x_{k}} \in \mathbb{R}^{n}$ such that
+
+$$
+\forall \vec{x} \in \mathbb{R}^{n} \exists a_{1}, \ldots, a_{k}>0: \vec{x}=\sum_{i=1}^{k} a_{i} \overrightarrow{x_{i}}
+$$
+
+4. For which $n \in \mathbb{N}$ there exist $n \times n$ matrices $A$ and $B$ such that $\operatorname{rk} A+\operatorname{rk} B \leq n$ and every square real matrix $X$ which commutes with $A$ and $B$ is proportional to the identity matrix (i.e., it has a form $X=\lambda I, \lambda \in \mathbb{R}$ )?
+
+5. Prove the inequality
+
+$$
+\sqrt{2 \sqrt[3]{3 \sqrt[4]{4 \ldots \sqrt[n]{n}}}}<2, n \geq 2
+$$
+
+6. For every real $x \neq 1$ find the sum
+
+$$
+\sum_{n=0}^{\infty} \frac{x^{3^{n}}+\left(x^{3^{n}}\right)^{2}}{1-x^{3^{n+1}}} .
+$$
+
+7. For every positive integers $m \leq n$ prove the inequality
+
+$$
+\sum_{k=0}^{m}(-1)^{m+k}\left(\begin{array}{l}
+m \\
+k
+\end{array}\right)\left(\frac{k}{m}\right)^{n} \leq\left(\begin{array}{l}
+n \\
+m
+\end{array}\right) \frac{m !}{m^{m}}
+$$
+
+8. A parabola with focus $F$ and a triangle $T$ are drawn in the plane. Using a compass and a ruler, construct a triangle similar to $T$ such that one of its vertices is $F$ and other two vertices lie on the parabola.
+
+9. Does there exist a Lebesgue measurable set $A \subset \mathbb{R}^{2}$ such that for every set $E$ of zero Lebesgue measure the set $A \backslash E$ is not Borel measurable?
+
+10. A real symmetric matrix $A=\left(a_{i j}\right)_{i, j=1}^{n}$ with eigenvectors $\left\{e_{k}, 1 \leq k \leq n\right\}$ and eigenvalues $\lambda_{k}, 1 \leq k \leq n$, is given. Construct a real symmetric positive semidefinite matrix $X=\left(x_{i j}\right)_{i, j=1}^{n}$ which minimizes the distance $d(X, A)=\sqrt{\sum_{i, j=1}^{n}\left(x_{i j}-a_{i j}\right)^{2}}$.
+
+11. Let $\varphi$ be a conform mapping from $\Omega=\{\operatorname{Im} z>0\} \backslash T$ onto $\{\operatorname{Im} z>0\}$, where $T$ is a triangle with vertices $\{1,-1, i\}$. Point $z_{0} \in \Omega$ is such that $\varphi\left(z_{0}\right)=z_{0}$. Prove that $\left|\varphi^{\prime}\left(z_{0}\right)\right| \geq 1$.
+
+12. The vertices of a triangle are independent random points uniformly distributed at a unit circle. Find the expectation of the area of this triangle.
+
+THE PROBLEMS ARE PROPOSED BY T.O. Androshchuk (11), A. V. Bondarenko $(3$, 4, 9), A. G. Kukush $(1,5,6,10$, 12), D. Yu. Mitin (2, 7), and G. M. Shevchenko (8). 
+
+\section{Problems for 1-2-Years Students}
+
+1. Prove that for every positive integer $n$ the inequality
+
+$$
+\frac{1}{3 !}+\frac{3}{4 !}+\ldots+\frac{2 n-1}{(n+2) !}<\frac{1}{2}
+$$
+
+holds.
+
+2. One cell is erased from the $2 \times n$ table in arbitrary way. Find the probability of the following event: It is possible to cover the rest of the table with figures $\square$ of any orientation without overlapping.
+
+3. For every continuous and convex on $[0,1]$ function $f$ prove the inequality
+
+$$
+\frac{2}{5} \int_{0}^{1} f(x) d x+\frac{2}{3} \int_{0}^{3 / 5} f(x) d x \geq \int_{0}^{4 / 5} f(x) d x .
+$$
+
+4. Find all odd continuous functions $f: \mathbb{R} \rightarrow \mathbb{R}$ such that the equality $f(f(x))=x$ holds for every real $x$.
+
+5. Using a compass and a ruler, construct a circle of the maximal radius which lies inside the given parabola and touches it in its vertex.
+
+6. Let $A, B, C$, and $D$ be (not necessarily square) real matrices such that
+
+$$
+A^{\mathrm{T}}=B C D, B^{\mathrm{T}}=C D A, C^{\mathrm{T}}=D A B, D^{\mathrm{T}}=A B C .
+$$
+
+For the matrix $S=A B C D$ prove that $S^{3}=S$. 7. Denote by $A_{n}$ the maximal determinant of $n \times n$ matrix with entries $\pm 1$. Does there exist a finite limit $\lim _{n \rightarrow \infty} \sqrt[n]{A_{n}}$ ?
+
+8. Let $\left\{x_{n}, n \geq 1\right\}$ be a sequence of positive numbers which contains at least two distinct elements. Is it always
+
+$$
+\liminf _{n \rightarrow \infty}\left(x_{1}+\ldots+x_{n}-n \sqrt[n]{x_{1} \ldots x_{n}}\right)>0 ?
+$$
+
+9. A permutation of the entries of matrix maps each nonsingular $n \times n$ matrix into a nonsingular one and maps the identity matrix into itself. Prove that the permutation preserves the determinant of a matrix.
+
+10. A rectangle with side lengths $a_{0}$ and $b_{0}$ is dissected into smaller rectangles with side lengths $a_{k}$ and $b_{k}, 1 \leq k \leq n$. The sides of the smaller rectangles are parallel to the corresponding sides of the big rectangle. Prove that
+
+$$
+\left|\sin a_{0} \sin b_{0}\right| \leq \sum_{k=1}^{n}\left|\sin a_{k} \sin b_{k}\right|
+$$
+
+\section{Problems for 3-4-Years Students}
+
+11. A random variable $\xi$ is distributed as $|\gamma|^{\alpha}, \alpha \in \mathbb{R}$, where $\gamma$ is a standard normal variable. For which $\alpha$ does there exist $\mathrm{E} \xi$ ?
+
+12. See Problem 2.
+
+13. A normed space $Y$ is called strictly normed if for every $y_{1}, y_{2} \in Y$ the equality $\left\|y_{1}\right\|=\left\|y_{2}\right\|=\left\|\frac{y_{1}+y_{2}}{2}\right\|$ implies $y_{1}=y_{2}$. Let $X$ be a normed space, $G$ be a subspace of $X$ and the adjoint space $X^{*}$ be strictly normed. Prove that for every functional from $G^{*}$ there exists a unique extension in $X^{*}$ which preserves the norm.
+
+14. Let $R(z)=\frac{z^{2}}{2}-z+\ln (1+z), z \in \mathbb{C}, z \neq-1$. Prove that for every real $x$ the inequality $|R(i x)| \leq \frac{|x|^{3}}{3}$ holds.
+
+(Here "ln" means the value of the logarithm from the branch with $\ln 1=0$.)
+
+15. Let $A, B, C$, and $D$ be (not necessarily square) real matrices such that
+
+$$
+A^{\mathrm{T}}=B C D, B^{\mathrm{T}}=C D A, C^{\mathrm{T}}=D A B, D^{\mathrm{T}}=A B C .
+$$
+
+For $S=A B C D$ prove that $S^{2}=S$.
+
+Remark: for 1-2-years students it is proposed to prove that $S^{3}=S$.
+
+16. Let $e$ be a nonzero vector in $\mathbb{R}^{2}$. Construct a nonsingular matrix $A \in \mathbb{R}^{2 \times 2}$ such that for $f_{d}(x):=\|A(x+d)\|^{2}, x, d \in \mathbb{R}^{2}$, there exist at least 8 couples of points $(x, y)$ such that $f_{e}(x)=1, f_{-e}(y)=1$, and moreover there exist real numbers $\lambda$ and $\mu$ such that $(x, y)$ is a stationary point of Lagrange function
+
+$$
+F(x, y):=\|x-y\|^{2}+\lambda f_{e}(x)+\mu f_{-e}(y) .
+$$
+
+17. See Problem 9.
+
+18. A croupier and two players play the following game. The croupier chooses an integer in the interval [1, 2004] with uniform probability. The players guess the integer in turn. After each guess, the croupier informs them whether the chosen integer is higher or lower or has just been guessed. The player who guesses the integer first wins. Prove that both players have strategies such that their chances to win are at least $\frac{1}{2}$.
+
+19. See Problem 10.
+
+20. Does there exist a sequence $\left\{x_{n}, n \geq 1\right\}$ of vectors from $l_{2}$ with unit norm satisfying $\left(x_{n}, x_{m}\right)<-\frac{1}{2004}$ for $n \neq m, n, m \in \mathbb{N}$ ?
+
+THE PROBLEMS ARE PROPOSED BY A.V. Bondarenko (7, 20), V.B. Brayman $(6,9,15,17)$, Zh.T. Chernousova (5), A.G. Kukush $(2,4,12,16)$, Yu.S. Mishura (11), D.Yu. Mitin (8, 14), O.N. Nesterenko (13), Zsolt Páles (Hungary) (10, 19), A.V. Prymak (3), S.V. Shklyar (18), and R.P. Ushakov (1). 
+
+\section{5}
+
+\section{Problems for 1-2-Years Students}
+
+1. Is it true that a sequence $\left\{x_{n}, n \geq 1\right\}$ of real numbers converges if and only if
+
+$$
+\lim _{n \rightarrow \infty} \limsup _{m \rightarrow \infty}\left|x_{n}-x_{m}\right|=0 ?
+$$
+
+2. Let $A, B$, and $C$ be real matrices of the same size. Prove the inequality
+
+$$
+\operatorname{tr}\left(A\left(A^{T}-B^{T}\right)+B\left(B^{T}-C^{T}\right)+C\left(C^{T}-A^{T}\right)\right) \geq 0 .
+$$
+
+3. A billiard table is obtained by cutting out some squares from the chessboard. The billiard ball is shot from one of the table corners in such a way that its trajectory forms angle $\alpha$ with the side of the billiard table, $\tan \alpha \in \mathbb{Q}$. When the ball hits the border of the billiard table it reflects according to the rule: the incidence angle equals the reflection angle. If the ball lands on any corner it falls into a hole. Prove that the ball will necessarily fall into some hole.
+
+4. Solve an equation
+
+$$
+\lim _{n \rightarrow \infty} \sqrt{1+\sqrt{x+\sqrt{x^{2}+\ldots+\sqrt{x^{n}}}}}=2 .
+$$
+
+5. Do there exist matrices $A, B$, and $C$ which have no common eigenvectors and satisfy the condition $A B=B C=C A$ ?
+
+6. Prove that
+
+$$
+\int_{-\pi}^{\pi} \cos 2 x \cos 3 x \cos 4 x \ldots \cos 2005 x d x>0
+$$
+
+( ) Springer International Publishing AG 2017 7. Let $f \in C^{(1)}(\mathbb{R})$ and $a_{1}<a_{2}<a_{3}<b_{1}<b_{2}<b_{3}$. Do there always exist real numbers $c_{1} \leq c_{2} \leq c_{3}$ such that $c_{i} \in\left[a_{i}, b_{i}\right]$ and
+
+$$
+f^{\prime}\left(c_{i}\right)=\frac{f\left(b_{i}\right)-f\left(a_{i}\right)}{b_{i}-a_{i}}, i=1,2,3 ?
+$$
+
+8. Call $\mathbb{Z}$-ball a set of points of the form
+
+$$
+S=\left\{(x, y, z) \mid x^{2}+y^{2}+z^{2} \leq R^{2}, x, y, z \in \mathbb{Z}\right\}, R \in \mathbb{R} .
+$$
+
+Prove that there is no $\mathbb{Z}$-ball which contains exactly 2005 distinct points.
+
+9. Consider a triangle $A_{1} A_{2} A_{3}$ at Cartesian plane with sides and their extensions not passing through the origin $O$. Call such triangle positive if for at least two of numbers $i=1,2,3$ vector $\overrightarrow{O A}$ turns counterclockwise when point $A$ moves from $A_{i}$ to $A_{i+1}$ (here $A_{4}=A_{1}$ ), and negative otherwise. Let $\left(x_{i}, y_{i}\right)$ be coordinates of points $A_{i}, i=1,2,3$. Prove that there is no polynomial $P\left(x_{1}, y_{1}, x_{2}, y_{2}, x_{3}, y_{3}\right)$ which is positive for positive triangles $A_{1} A_{2} A_{3}$ and negative for negative ones.
+
+\section{Problems for 3-4-Years Students}
+
+10. Let $K$ be a compact set in the space $C([0,1])$ with uniform metric. Prove that the function $f(t)=\min \{x(t)+x(1-t): x \in K\}, t \in[0,1]$ is continuous.
+
+11. Find all $\lambda \in \mathbb{C}$ such that every sequence $\left\{a_{n}, n \geq 1\right\} \subset \mathbb{C}$, which satisfies $\left|\lambda a_{n+1}-\lambda^{2} a_{n}\right|<1$ for each $n \geq 1$, is bounded.
+
+12. Let $X$ and $Y$ be linear normed spaces. An operator $K: X \rightarrow Y$ is called supercompact if for every bounded set $M \subset X$ the set
+
+$$
+K(M)=\{y \in Y \mid \exists x \in M: y=K(x)\}
+$$
+
+is compact in $Y$. Prove that among linear continuous operators from $X$ to $Y$, only zero operator is supercompact.
+
+13. Let $A$ be a real orthogonal matrix such that $A^{2}=I$, where $I$ is the identity matrix. Prove $A$ can be written as $A=U B U^{T}$, where $U$ is an orthogonal matrix and $B$ is a diagonal matrix with entries $\pm 1$ on the diagonal.
+
+14. Let $B$ be a bounded subset of a connected metric space $X$. Does there always exist a connected and bounded subset $A \subset X$ such that $B \subset A$ ?
+
+15. Let $t>0$ and $\mu$ be a measure on Borel sigma-algebra of $\mathbb{R}^{+}$such that $\int_{\mathbb{R}^{+}} \exp \left(\alpha x^{t}\right) d \mu(x)<\infty$ for every $\alpha<1$. Prove that $\int_{\mathbb{R}^{+}} \exp \left(\alpha(x+1)^{t}\right) d \mu(x)<\infty$ for every $\alpha<1$.
+
+16. See Problem 8. 17. See Problem 9.
+
+18. Let $x_{0}<x_{1}<\ldots<x_{n}$ and $y_{0}<y_{1}<\ldots<y_{n}$. Prove that there exists a strictly increasing on $\left[x_{0}, x_{n}\right]$ polynomial $p$ such that $p\left(x_{j}\right)=y_{j}, j=0, \ldots, n$.
+
+THE PROBLEMS ARE PROPOSED BY A. V. Bondarenko $(8,16)$, V. B. Brayman $(5,7)$, V. S. Grinberg (USA) $(9,17)$, G. V. Kryukova (3), A. G. Kukush $(4,10,13,15)$, O. N. Nesterenko (1), A. V. Prymak $(11,18)$, M. S. Pupashenko $(6,14)$, I. O. Senko (12), and M. S. Viazovska (2). 
+
+\section{Problems for 1-2-Years Students}
+
+1. Find all positive integers $n$ such that the polynomial $\left(x^{4}-1\right)^{n}+\left(x^{2}-x\right)^{n}$ is divisible by $x^{5}-1$.
+
+2. Let $z \in \mathbb{C}$ be such that points $z^{3}, 2 z^{3}+z^{2}, 3 z^{3}+3 z^{2}+z$, and $4 z^{3}+6 z^{2}+4 z+$ 1 are the vertices of some inscribed quadrangle on the complex plane. Find Re $z$.
+
+3. Find the minimum of the expression $\max _{1 \leq i<j \leq n+1}\left(x_{i}, x_{j}\right)$ over all the unit vectors $x_{1}, \ldots, x_{n+1} \in \mathbb{R}^{n}$
+
+4. Let $I_{m}$ be the identity $m \times m$ matrix, $A \in M_{m \times n}(\mathbb{R})$, and $B$ be a symmetric $n \times n$ matrix such that the block matrix $\left(\begin{array}{ll}I_{m} & A \\ A^{T} & B\end{array}\right)$ is positive definite. Prove that the "matrix determinant" $B-A^{T} A$ is positive definite as well.
+
+5. Does there exist an infinite set $\mathscr{M}$ of symmetric matrices such that for every distinct matrices $A, B \in \mathscr{M}$ it holds $A B^{2}=B^{2} A$ but $A B \neq B A$ ?
+
+6. Let $f:(0,+\infty) \rightarrow \mathbb{R}$ be a continuous concave function, for which $\lim _{x \rightarrow+\infty} f(x)=$ $+\infty$ and $\lim _{x \rightarrow+\infty} \frac{f(x)}{x}=0$. Prove that $\sup _{n \in \mathbb{N}}\{f(n)\}=1$, where $\{a\}$ is the fractional part of $a$.
+
+7. Does there exist a continuous function $f: \mathbb{R} \rightarrow(0,1)$ such that the sequence $a_{n}=\int_{-n}^{n} f(x) d x, n \geq 1$, converges, and the sequence $b_{n}=\int_{-n}^{n} f(x) \ln f(x) d x$, $n \geq 1$, diverges? 8. Let $P(x)$ be a polynomial such that there exist infinitely many couples of integers $(a, b)$ for which $P(a+3 b)+P(5 a+7 b)=0$. Prove that the polynomial has an integer root.
+
+9. For every real numbers $a_{1}, a_{2}, \ldots, a_{n} \in \mathbb{R} \backslash\{0\}$ prove the inequality
+
+$$
+\sum_{i, j=1}^{n} \frac{a_{i} a_{j}}{a_{i}^{2}+a_{j}^{2}} \geq 0 .
+$$
+
+\section{Problems for 3-4-Years Students}
+
+10. See Problem 2.
+
+11. Does there exist a continuous function $f: \mathbb{R} \rightarrow(0,1)$ such that $\int_{-\infty}^{\infty} f(x) d x<$ $\infty$ while $\int_{-\infty}^{\infty} f(x) \ln f(x) d x$ diverges?
+
+12. See Problem 4.
+
+13. See Problem 5.
+
+14. (a) Random variables $\xi$ and $\eta$ (not necessarily independent) have a continuous cumulative distribution functions. Prove that $\min (\xi, \eta)$ has a continuous cumulative distribution function as well.
+
+(b) Random variables $\xi$ and $\eta$ have a probability density functions. Is it true that $\min (\xi, \eta)$ has a probability density function as well?
+
+15. Is it possible to choose an uncountable set $\mathscr{A} \subset l_{2}$ of elements with unit norm such that for every distinct $x=\left(x_{1}, \ldots, x_{n}, \ldots\right), y=\left(y_{1}, \ldots, y_{n}, \ldots\right)$ from $\mathscr{A}$ the series $\sum_{n=1}^{\infty}\left|x_{n}-y_{n}\right|$ diverges?
+
+16. Let $\xi$ and $\eta$ be independent identically distributed random variables such that $\mathrm{P}(\xi \neq 0)=1$. Prove the inequality
+
+$$
+\mathrm{E} \frac{\xi \eta}{\xi^{2}+\eta^{2}} \geq 0 .
+$$
+
+17. For every $n \in \mathbb{N}$ find the minimal $\lambda>0$ such that for every convex compact set $K \subset \mathbb{R}^{n}$ there exists a point $x \in K$ with the following property: a set which is homothetic to $K$ with the center $x$ and coefficient $(-\lambda)$ contains $K$.
+
+18. Let $X=L_{1}[0,1]$ and $T_{n}: X \rightarrow X$ be a sequence of nonnegative (i.e., $f \geq 0$ $\Longrightarrow T_{n} f \geq 0$ ) continuous linear operators such that $\left\|T_{n}\right\| \leq 1$ and $\lim _{n \rightarrow \infty} \| f-$ $T_{n} f \|_{X}=0$, for $f(x) \equiv x$ and for $f(x) \equiv 1$. Prove that $\lim _{n \rightarrow \infty}\left\|f-T_{n} f\right\|_{X}=0$ for every $f \in X$. THE PROBLEMS ARE PROPOSED BY A. V. Bondarenko (15), A. V. Bondarenko and M. S. Viazovska (3), V. B. Brayman (2, 5, 8, 10, 13), A. G. Kukush (1, 4, 7, 11, 12), A. G. Kukush and G. M. Shevchenko (14), O. Lytvak (Canada) (17), O. N. Nesterenko (6), S. Novak (Great Britain) $(9,16)$, and A. V. Prymak (18). 
+
+\section{Problems for 1-2-Years Students}
+
+1. Let $p, q, r$, and $s$ be positive integers. Find the limit
+
+$$
+\lim _{n \rightarrow \infty} \prod_{k=1}^{n} \frac{(k+p)(k+q)}{(k+r)(k+s)} .
+$$
+
+2. Is it true that for every $n \geq 2$ the number $\sum_{k=1}^{n} k\left(\begin{array}{c}2 n \\ k\end{array}\right)$ is divisible by 8 ?
+
+3. Two players in turn replace asterisks in the matrix $\left(\begin{array}{c}* * \ldots * \\ * * \ldots * \\ \cdots \cdots \ldots \\ * * \ldots *\end{array}\right)$ of size $10 \times 10$ with positive integers $1, \ldots, 100$ (at each step, one can put any number which had not been used earlier instead of any asterisk). If they form a nonsingular matrix then the first player wins, otherwise the second player wins. Has any of the players a winning strategy? If somebody has, then who?
+
+4. Prove that a function $f \in C^{(1)}((0,+\infty))$, for which
+
+$$
+f^{\prime}(x)=\frac{1}{1+x^{4}+\cos f(x)}, x>0,
+$$
+
+is bounded on $(0,+\infty)$.
+
+5. Does there exist a polynomial which attains the value $k$ exactly at $k$ distinct real points for every $1 \leq k \leq 2007$ ? 6. The clock-face is a disk of radius 1 . The hour-hand is a disk of radius $1 / 2$ is internally tangent to the circle of the clock-face, and the minute-hand is a line segment of length 1 . Find the area of the figure formed by all intersections of the hands in 12 hours (i.e., in one full turn of the hour-hand).
+
+7. Find the maximum of $x_{1}^{3}+\ldots+x_{10}^{3}$ for $x_{1}, \ldots, x_{10} \in[-1,2]$ such that
+
+$$
+x_{1}+\ldots+x_{10}=10
+$$
+
+8. Let $a_{0}=1, a_{1}=1$, and $a_{n}=a_{n-1}+(n-1) a_{n-2}, n \geq 2$. Prove that for every odd number $p$ the number $a_{p}-1$ is divisible by $p$.
+
+9. Find all positive integers $n$ for which there exist infinitely many $n \times n$ matrices $A$ with integer entries such that $A^{n}=I$ (here $I$ is the identity matrix).
+
+\section{Problems for 3-4-Years Students}
+
+10. Does the Riemann integral
+
+$$
+\int_{0}^{\infty} \frac{\sin x d x}{x+\ln x}
+$$
+
+converge?
+
+11. See Problem 6.
+
+12. See Problem 4.
+
+13. See Problem 5.
+
+14. Let $f: \mathbb{R} \rightarrow[0,+\infty)$ be a Lebesgue measurable function such that $\int_{A} f d \lambda<$ $+\infty$ for every set $A$ of finite Lebesgue measure. Prove that there exist a constant $M$ and a Lebesgue integrable function $g: \mathbb{R} \rightarrow[0,+\infty)$ such that $f(x) \leq g(x)+$ $M, x \in \mathbb{R}$.
+
+15. Investigate the character of monotonicity of the function $f(\sigma)=\mathrm{E} \frac{1}{1+e^{\xi}}$, $\sigma>0$, where $\xi$ is normal random variable with mean $m$ and variance $\sigma^{2}$ (here $m$ is a real parameter).
+
+16. See Problem 7.
+
+17. Let $A$ and $B$ be symmetric real positive definite matrices and the matrix $A+$ $B-I$ be positive definite as well, where $I$ is the identity matrix. Is it possible that the matrix
+
+$$
+A^{-1}+B^{-1}-\frac{1}{2}\left(A^{-1} B^{-1}+B^{-1} A^{-1}\right)
+$$
+
+is negative definite? 18. Let $P(z)$ be a polynomial with leading coefficient 1 . Prove that there exists a point $z_{0}$ on the unit circle $\{z \in \mathbb{C}:|z|=1\}$ such that $\left|P\left(z_{0}\right)\right| \geq 1$.
+
+THE PROBLEMS ARE PROPOSED BY A. V. Bondarenko and M. S. Viazovska (9), V. B. Brayman (3, 5, 13), A. G. Kukush (2, 10, 15, 17), D. Yu. Mitin (7, 16), O. N. Nesterenko (4, 12), V. M. Radchenko (14), O. V. Rybak (8, 18), G. M. Shevchenko $(6,11)$, and R.P. Ushakov (1). 
+
+\section{8}
+
+\section{Problems for 1-2-Years Students}
+
+1. Find $\inf \left\{a+b+c: a, b, c>0, \sin a \cdot \sin b \cdot \sin c=\frac{3}{\pi} a b c\right\}$.
+
+2. Let $f$ be a continuous and bounded on $\mathbb{R}$ function such that
+
+$$
+\sup _{x \in \mathbb{R}}|f(x+h)-2 f(x)+f(x-h)| \rightarrow 0, \text { as } h \rightarrow 0 .
+$$
+
+Does it follow that $f$ is uniformly continuous on $\mathbb{R}$ ?
+
+3. Let $f$ be 4 times differentiable even function on $\mathbb{R}$, and $g(x)=f(\sqrt{x}), x \geq 0$. Prove that $g$ is twice differentiable at $x=0$, and find $g^{\prime \prime}(0)$ in terms of derivatives of $f$ at zero.
+
+4. A function $f:[4,+\infty) \rightarrow \mathbb{R}$ satisfies the following conditions:
+
+(a) $f\left(x^{2}\right)=f(x)+\left[\log _{2} \log _{2} x\right]^{-2}$, where $[t]$ is the integer part of $t$;
+
+(b) there exists $\lim _{x \rightarrow+\infty} f(x)$.
+
+Prove that $f$ is monotone.
+
+5. A polynomial $P(x)=x^{n}+p_{n-1} x^{n-1}+\ldots+p_{0}$ has exactly $m(2 \leq m \leq n)$ distinct complex roots. Prove that at least one of the coefficients $p_{n-1}, \ldots, p_{n-m}$ is nonzero.
+
+6. Let $A$ be a complex matrix of size $n \times k$ such that $A^{T} A=0$. Find the maximal possible $\operatorname{rank}$ of $A$.
+
+7. Let $f \in C^{(\infty)}(\mathbb{R} \backslash\{0\}) \cap C(\mathbb{R})$ be such that $f(x)=o\left(x^{n}\right)$, as $x \rightarrow 0$, for all $n \in \mathbb{N}$. Is it necessary that $f \in C^{(1)}(\mathbb{R})$ ? 8. For a real square matrix $A=\left(a_{i j}\right)_{i, j=1}^{n}$ set $A^{S}=\left(a_{i j}\right)$, where
+
+$$
+\tilde{a}_{i j}= \begin{cases}a_{i j} & \text { if } i+j \text { is even, } \\ a_{j i} & \text { if } i+j \text { is odd. }\end{cases}
+$$
+
+Find all square matrices $A$ such that for every matrix $B$ of the same size the equality $(A B)^{S}=B^{S} A^{S}$ holds.
+
+9. Some $n$ points with positive integer coordinates are marked at the coordinate plane. It is known that if a point $(x, y)$ is marked then all the points with positive integer coordinates $\left(x^{\prime}, y^{\prime}\right)$ such that $x^{\prime} \leq x, y^{\prime} \leq y$ are marked as well. For every marked point $(x, y)$, denote by $R(x, y)$ the number of marked points $\left(x^{\prime}, y^{\prime}\right)$ such that $x^{\prime} \geq x$ and $y^{\prime} \geq y$. Prove that there exist at least $n / 4$ points $(x, y)$ for which $R(x, y)$ is odd.
+
+\section{Problems for 3-4-Years Students}
+
+10. See Problem 5.
+
+11. Let $\xi$ be a random variable such that $\xi$ and $\xi^{2}$ are independent. Prove that there exists a real number $c$ such that $\cos \xi=c$, almost surely.
+
+12. See Problem 6.
+
+13. Let $f$ be $2 k$ times differentiable even function on $\mathbb{R}$, and $g(x)=f(\sqrt{x}), x \geq 0$. Prove that $g$ is $k$ times differentiable at $x=0$, and find $g^{(k)}(0)$ in terms of derivatives of $f$ at zero.
+
+14. Let $A=\left(a_{i j}\right)_{i, j=1}^{n}, B=\left(b_{i j}\right)_{i, j=1}^{n}$ be real symmetric matrices and $\lambda_{\min }(A), \lambda_{\min }(B)$ be their smallest eigenvalues. Prove the inequality
+
+$$
+\left|\lambda_{\min }(A)-\lambda_{\min }(B)\right| \leq n \cdot \max _{1 \leq i, j \leq n}\left|a_{i j}-b_{i j}\right| .
+$$
+
+15. Let $f: \mathbb{R}^{2} \rightarrow \mathbb{R}^{2}$ be a continuously differentiable mapping such that for every $x \in \mathbb{R}^{2}$ the matrix $D f(x)+(D f(x))^{T}$ is nonsingular and $D f(0)=I$ (here $D f(x)$ is the Jacobian matrix at point $x$ and $I$ is the identity matrix). Is it necessary that $f$ is an injection?
+
+16. Let $\xi$ be a random variable with positive probability density function. Is it always true that there exist two distinct functions $f, g \in C(\mathbb{R})$ such that $f(\xi)$ and $g(\xi)$ are identically distributed?
+
+17. Let $f:[0,1] \rightarrow \mathbb{R}$ be a Lebesgue measurable function, $\lambda$ be Lebesgue measure on $[0,1]$. It is known that for every open set $A \subset[0,1]$ it holds
+
+$$
+\int_{A} f^{2 n-1}(x) d \lambda(x) \rightarrow 0, \text { as } n \rightarrow \infty .
+$$
+
+Prove that $\lambda(\{x:|f(x)| \geq 1\})=0$.
+
+18. Let $M$ be the set of all nonsingular $3 \times 3$ matrices over the field $\mathbb{Z}_{2}$. Find the smallest positive integer $n$ such that $A^{n}=I$ for all $A \in M$.
+
+THE PROBLEMS ARE PROPOSED BY A.V. Bondarenko (18), A.V. Bondarenko and A.V. Prymak (2), V.B. Brayman (1,8), V.B. Brayman and O.V. Rudenko $(6,12)$, O.V. Ivanov and A.G. Kukush (14), A.G. Kukush $(3,4,15)$, A.G. Kukush and V.B. Brayman (13), O.N. Nesterenko (7), S. Novak (Great Britain) (11, 16), V.M. Radchenko (17), and O.V. Rybak $(5,9,10)$. 
+
+\section{Problems for 1-2-Years Students}
+
+1. Triangle $A B C$ is inscribed into a circle. Does there always exist a point $D$ on this circle such that $A B C D$ is a circumscribed quadrilateral?
+
+2. Let $F_{0}=0, F_{1}=1, F_{k}=F_{k-1}+F_{k-2}, k \geq 2$ be the Fibonacci numbers. Find all positive integers $n$ for which the polynomial $F_{n} x^{n+1}+F_{n+1} x^{n}-1$ is irreducible in the ring $\mathbb{Q}[x]$ of polynomials with rational coefficients.
+
+3. Let $A, B$, and $C$ be the angles of an acute triangle. Prove the inequalities
+
+$$
+\begin{aligned}
+&\text { (a) } \frac{\cos A}{\sin B \sin C}+\frac{\cos B}{\sin C \sin A}+\frac{\cos C}{\sin A \sin B} \geq 2 \\
+&\text { (b) } \frac{\cos A}{\sqrt{\sin B \sin C}}+\frac{\cos B}{\sqrt{\sin C \sin A}}+\frac{\cos C}{\sqrt{\sin A \sin B}} \leq \sqrt{3} \text {. }
+\end{aligned}
+$$
+
+4. Find all the positive integers $n$ for which there exist matrices $A, B, C \in M_{n}(\mathbb{Z})$ such that $A B C+B C A+C A B=I$. Here $I$ is the identity matrix.
+
+5. Let $x, y: \mathbb{R} \rightarrow \mathbb{R}$ be a couple of functions such that
+
+$$
+\forall t, s \in \mathbb{R} \quad(x(t)-x(s))(y(t)-y(s)) \geq 0 .
+$$
+
+Prove that there exist two nondecreasing functions $f, g: \mathbb{R} \rightarrow \mathbb{R}$ and a function $z: \mathbb{R} \rightarrow \mathbb{R}$ such that $x(t)=f(z(t))$ and $y(t)=g(z(t))$ for all $t \in \mathbb{R}$.
+
+6. Let $\left\{x_{n}, n \geq 1\right\}$ be a sequence of real numbers such that there exists a finite limit $\lim _{n \rightarrow \infty} \frac{1}{n} \sum_{k=1}^{n} x_{k}$. Prove that for every $p>1$ there exists a finite limit $\lim _{n \rightarrow \infty} \frac{1}{n^{p}} \sum_{k=1}^{n} k^{p-1} x_{k}$. 7. Let $K(x)=x e^{-x}, x \in \mathbb{R}$. For every $n \geq 3$ find
+
+$$
+\sup _{x_{1}, \ldots, x_{n} \in \mathbb{R}} \min _{1 \leq i<j \leq n} K\left(\left|x_{i}-x_{j}\right|\right)
+$$
+
+8. Does there exist a function $f: \mathbb{Q} \rightarrow \mathbb{Q}$ such that $f(x) f(y) \leq|x-y|$ for every $x, y \in \mathbb{Q}, x \neq y$, and for each $x \in \mathbb{Q}$ the set $\{y \in \mathbb{Q}|f(x) f(y)=| x-y \mid\}$ is infinite?
+
+9. Find all $n \geq 2$ for which it is possible to enumerate all permutations of the set $\{1, \ldots, n\}$ with numbers $1, \ldots, n !$ in such a way that for each couple of permutations $\sigma, \tau$ with adjacent indices, as well as for the couple of permutations with indices 1 and $n$ !, it holds $\sigma(k) \neq \tau(k)$ for every $1 \leq k \leq n$.
+
+\section{Problems for 3-4-Years Students}
+
+10. See Problem 4.
+
+11. See Problem 6.
+
+12. See Problem 5.
+
+13. See Problem 7.
+
+14. See Problem 8.
+
+15. Let $\mu$ be a measure on Borel sigma-algebra in $\mathbb{R}$ such that
+
+$$
+\forall a \in \mathbb{R} \int_{\mathbb{R}} e^{a x} d \mu(x)<\infty,
+$$
+
+moreover $\mu((-\infty, 0))>0$ and $\mu((0,+\infty))>0$. Prove that there exists a unique real $a$ such that $\int_{\mathbb{R}} x e^{a x} d \mu(x)=0$.
+
+16. Let $\left\{\xi_{n}, n \geq 0\right\}$ and $\left\{v_{n}, n \geq 1\right\}$ be two independent sets of independent identically distributed random variables (here the probability distributions could be different in the first and the second sets). It is known that $\mathrm{E} \xi_{0}=0$ and $\mathrm{P}\left\{v_{1}=1\right\}=p$, $\mathrm{P}\left\{v_{1}=0\right\}=1-p, p \in(0,1)$. Let $x_{0}=0$ and $x_{n}=\sum_{k=1}^{n} v_{k}, n \geq 1$. Prove that $\frac{1}{n} \sum_{k=0}^{n} \xi_{x_{k}} \rightarrow 0$, almost surely, as $n \rightarrow \infty$
+
+17. Let $X_{1}, \ldots, X_{2 n}$ be a set of independent identically distributed random variables such that $X_{1} \neq 0$ almost surely. Define
+
+$$
+Y_{k}=\frac{\left|\sum_{i=1}^{k} X_{i}\right|}{\sqrt{\sum_{i=1}^{k} X_{i}^{2}}}, 1 \leq k \leq 2 n .
+$$
+
+Prove the inequality $\mathrm{E}\left(Y_{2 n}^{2}\right) \leq 1+4\left(\mathrm{E} Y_{n}\right)^{2}$. 18. See Problem 9.
+
+THE PROBLEMS ARE PROPOSED BY A. V. Bondarenko and E. Saff (USA) (7, 13), V. B. Brayman $(4,8,10,14)$, J. Dhaene (Belgium) and V. B. Brayman $(5,12)$, A. A. Dorogovtsev (16), A. G. Kukush (1, 15), A. G. Kukush and M. M. Rozhkova (3), D. Yu. Mitin (6, 11), S. Novak (Great Britain) (17), O. B. Rudenko $(9,18)$, and R. P. Ushakov (2). 
+
+\section{Problems for 1-2-Years Students}
+
+1. Does there exist a family of functions $f_{\alpha}:[0,1] \rightarrow \mathbb{R}, \alpha \in \mathbb{R}$, such that the intersection of graphs of any two distinct functions from the family contains exactly 3 points, while the intersection of graphs of any three distinct functions contains exactly 2 points?
+
+2. A sequence $\left\{a_{n}, n \geq 1\right\}$ satisfies the condition $\left[(n+1) a_{n}\right]=\left[n a_{n+1}\right], n \geq 1$ (here $[x]$ is the integer part of $x$ ). Prove that there exists $c \in \mathbb{R}$ such that the inequality $\left|a_{n}-c n\right|<1$ holds for every $n \geq 1$.
+
+3. Functions $f, g \in C([a, b])$ are differentiable on $(a, b)$, and $g(x) \neq 0, x \in[a, b]$. Prove that there exists $x \in(a, b)$ such that
+
+$$
+f^{\prime}(x)(a g(b)-b g(a))-g^{\prime}(x)(a f(b)-b f(a))=\left(\frac{f}{g}\right)^{\prime}(x)(a-b) g(a) g(b) .
+$$
+
+4. Let $S=S\left(A_{1}, \ldots, A_{k}\right)$ be the smallest set of real matrices of size $n \times n, n \geq 2$, which has the following properties:
+
+(a) $A_{1}, \ldots, A_{k} \in S$;
+
+(b) if $A, B \in S$ and $\alpha, \beta \in \mathbb{R}$ then $\alpha A+\beta B \in S$ and $A B \in S$.
+
+For which minimal $k$ do there exist matrices $A_{1}, \ldots, A_{k}$ such that $S\left(A_{1}, \ldots, A_{k}\right)=$ $M_{n}(\mathbb{R})$ ?
+
+5. A sequence $\left\{x_{n}, n \geq 1\right\}$ satisfies $x_{n+1}=x_{n}+e^{-x_{n}}, n \geq 1$, and $x_{1}=1$. Find $\lim _{n \rightarrow \infty} \frac{x_{n}}{\ln n}$.
+
+6. Let $n$ be a fixed positive integer. Find the smallest $k$ such that for any real numbers $a_{i j}, 1 \leq i, j \leq n$, there exists a real polynomial $P(x, y)$ of degree at most $k$ such that $P(i, j)=a_{i j}$ for every $1 \leq i, j \leq n$.
+
+(O) Springer International Publishing AG 2017 7. Let $A$ be a symmetric singular matrix of size $n \times n, n \geq 2$, with integer entries. Denote by $A_{i}$ the matrix obtained from $A$ by erasing $i$ th row and $i$ th column, $1 \leq$ $i \leq n$. Assume that det $A_{1}=2010$. Prove that det $A_{i}$ is divisible by 2010 for every $2 \leq i \leq n$.
+
+8. Points $P_{1}, \ldots, P_{n}$ are chosen at a plane such that not all of them are collinear. For every $1 \leq i, j, k \leq n, i \neq j$, set
+
+$$
+\delta_{i j k}=\left\{\begin{array}{l}
+1 \text { if point } P_{k} \text { lies on the straight line } P_{i} P_{j}, \\
+0 \text { if point } P_{k} \text { does not lie on of the straight line } P_{i} P_{j} .
+\end{array}\right.
+$$
+
+Prove that the linear span of vectors $\vec{v}_{i j}=\left(\delta_{i j 1}, \delta_{i j 2}, \ldots, \delta_{i j n}\right), 1 \leq i<j \leq n$, coincides with $\mathbb{R}^{n}$.
+
+9. Find for which minimal $N \geq 3$ it is possible to place $N+1$ equal ellipses $E, E_{1}, \ldots, E_{N}$ on a plane in such a way that no two ellipses intersect, and for each $1 \leq i \leq N$ the ellipse $E_{i}$ touches the ellipses $E_{i-1}, E_{i+1}$, and $E$ (here $E_{0}=E_{N}$ and $\left.E_{N+1}=E_{1}\right)$
+
+\section{Problems for 3-4-Years Students}
+
+10. Let $f$ be a Lebesgue measurable function on $\mathbb{R}$ such that $x^{3} f(x) \rightarrow 1$, as $x \rightarrow+\infty$. Find $\lim _{c \rightarrow+\infty}\left(c \cdot \int_{c}^{+\infty}(x-c) f(x) d x\right)$.
+
+11. Let $f$ be a convex function on $[-1,1], 0<\alpha<1$. Prove the inequality
+
+$$
+\int_{-\pi / 2}^{\pi / 2} f(\alpha \sin x) d x \leq \int_{-\pi / 2}^{\pi / 2} f(\sin x) d x .
+$$
+
+12. Assume that random vectors $(\xi, \eta)$ and $(\xi, f(\xi))$ have equal distributions, where $f$ is a Borel measurable function on $\mathbb{R}$. Prove that $\eta=f(\xi)$, almost surely.
+
+13. See Problem 4.
+
+14. See Problem 6.
+
+15. Does there exist a norm on the linear space
+
+$$
+X=\left\{x=\left(x_{1}, \ldots, x_{n}, 0,0, \ldots\right) \mid n \geq 1, x_{1}, \ldots, x_{n} \in \mathbb{R}\right\}
+$$
+
+such that the function $f(x)=x_{1}, x \in X$, is discontinuous?
+
+16. See Problem 8.
+
+17. See Problem 9. 18. Let $\xi_{1}, \ldots, \xi_{n}$ be independent normal random vectors in $\mathbb{R}^{n}$, with zero mean and unit covariance matrix. Find the expectation of the Gram determinant
+
+$$
+G\left(\xi_{1}, \ldots, \xi_{n}\right)=\operatorname{det}\left(\left(\xi_{i}, \xi_{j}\right)\right)_{i, j=1}^{n} .
+$$
+
+THE PROBLEMS ARE PROPOSED BY V.B. Brayman (2,6, 14), A.A. Dorogovtsev $(5,18)$, A.G. Kukush (1, 10, 12), A.G. Kukush and S.V. Shklyar (15), D. Yu. Mitin $(3,11)$, D.V. Radchenko (7), S.V. Slobodyanyuk $(9,17)$, T.D. Tymoshkevych $(8,16)$, and M.V. Zeldich $(4,13)$. 
+
+\section{1}
+
+\section{Problems for 1-2-Years Students}
+
+1. Do there exist two different strictly convex functions with domain $[0,1]$ such that their graphs intersect countably many times?
+
+2. Let $\varphi: \mathbb{R} \rightarrow \mathbb{R}$ be an $n$ times continuously differentiable bijective map. Prove that there exists a unique continuous function $f: \mathbb{R} \rightarrow \mathbb{R}$ for which $\varphi^{(n)}=f(\varphi)$.
+
+3. For every $n$, find all symmetric $n \times n$ matrices with entries 0 and 1 such that all their eigenvalues are positive.
+
+4. Denote by $e(P, Q, R)$ the ellipse with foci $P$ and $Q$ which passes through the point $R$. Find all the triangles $A B C$ such that the ellipses $e(A, B, C), e(B, C, A)$, and $e(C, A, B)$ share a common point.
+
+5. Solve the equation $9^{x}+4^{x}+2^{x}=8^{x}+6^{x}+1$.
+
+6. Consider a sequence $x_{n}=x_{n-1}-x_{n-1}^{2}, n \geq 2, x_{1} \in(0,1)$. Calculate
+
+$$
+\lim _{n \rightarrow \infty} \frac{n^{2} x_{n}-n}{\ln n} .
+$$
+
+7. A function $f: \mathbb{R} \rightarrow \mathbb{R}$ is called $n$-positive if for all $n$ real numbers $x_{1}, x_{2}, \ldots, x_{n}$ satisfying $x_{1}+x_{2}+\ldots+x_{n} \geq 0$, it holds
+
+$$
+\frac{1}{n}\left(f\left(x_{1}\right)+f\left(x_{2}\right)+\ldots+f\left(x_{n}\right)\right) \geq f(0) .
+$$
+
+Does there exist a function $f$, which is 2010-positive but not 2011-positive? 8. Let
+
+$$
+a_{n}=\frac{1}{2^{n / 2} \sqrt{n}} \sum_{k=0}^{n} \sqrt{\left(\begin{array}{l}
+n \\
+k
+\end{array}\right) .} \text {. }
+$$
+
+Find $\lim _{n \rightarrow \infty} a_{n}$
+
+\section{Problems for 3-4-Years Students}
+
+9. Let $\xi$ and $\eta$ be random variables such that $\xi+\eta$ is equally distributed with $\xi$, and $\eta \geq 0$, almost surely. Prove that $\eta=0$, almost surely.
+
+10. See Problem 3.
+
+11. Given a space $X$ with measure $\lambda$ and functions $f_{n}, f: X \rightarrow \mathbb{R}$, such that
+
+$$
+\left(f_{n}(x)\right)^{2011} \stackrel{\lambda}{\rightarrow}(f(x))^{2011} \text { as } n \rightarrow \infty,
+$$
+
+prove that $f_{n}(x) \stackrel{\lambda}{\rightarrow} f(x)$, as $n \rightarrow \infty$
+
+12. How many rings, up to isomorphism, do there exist on a set with 2011 elements?
+
+13. Let
+
+$$
+a_{n}=\frac{1}{\sqrt{n}} \sum_{k=0}^{n} \sqrt{\left(\begin{array}{l}
+n \\
+k
+\end{array}\right) p^{k}(1-p)^{n-k}} \text { for some } 0<p<1 .
+$$
+
+Find $\lim _{n \rightarrow \infty} a_{n}$.
+
+14. Let $x_{1}, \ldots, x_{n} \geq 0, \sum_{i=1}^{n} x_{i}=1$. Do there exist matrices
+
+$$
+A_{1}, \ldots, A_{n} \in M_{n}(\mathbb{R})
+$$
+
+such that $A_{i}^{2}=A_{i}, A_{i} A_{j}=0$ for $i \neq j$, and $\left(A_{i}\right)_{11}=x_{i}$ ?
+
+15. Let $\xi_{1}, \xi_{2}$, and $\xi_{3}$ be random variables with probability density function $2 x$, $x \in[0,1]$. For all $K \geq 0$, find
+
+$$
+f(K)=\min \mathrm{E}\left(\xi_{1}+\xi_{2}+\xi_{3}-K\right)_{+}
+$$
+
+Here $t_{+}=\max (t, 0), t \in \mathbb{R}$, and the minimum is taken over all possible joint distributions of variables $\xi_{1}, \xi_{2}$, and $\xi_{3}$.
+
+16. Let $(X, d)$ be a compact metric space and $T$ be a continuous mapping of the space $X$ into itself. Assume that for all $x, y \in X$ the condition $\frac{1}{2} d(x, T x)<d(x, y)$ implies that $d(T x, T y)<d(x, y)$. Prove that $T$ has a unique fixed point. THE PROBLEMS ARE PROPOSED BY V.K. Bezborodov $(8,13)$, A.V. Bondarenko (3, 10), V.B. Brayman (4, 5, 7, 15), M.S. Viazovska (16), A.G. Kukush (9), D. Yu. Mitin (6), O.N. Nesterenko (1), I.O. Parasyuk (2), V.M. Radchenko (11), S.V. Slobodyanyuk (12), and Ya. V. Zhurba (14). 
+
+\section{2}
+
+\section{Problems for 1-2-Years Students}
+
+1. Let $a_{i j}=\tan (i-j), i, j=0,1, \ldots, 2012$. Find $\operatorname{det}\left(a_{i j}\right)$.
+
+2. A function is defined on a segment, monotone, and has a primitive function. Is it necessary that the function is uniformly continuous on the segment?
+
+3. Find the locus of incenters of triangles, for which two vertices are in the foci of a given ellipse and the third vertex lies on this ellipse.
+
+4. For all positive numbers $x_{1}, \ldots, x_{n}$ such that
+
+$$
+x_{1}+\ldots+x_{n} \geq \max \left(n, x_{1} x_{2}+x_{2} x_{3}+\ldots+x_{n-1} x_{n}+x_{n} x_{1}\right)
+$$
+
+prove the inequality
+
+$$
+\frac{1}{x_{1}^{x_{2}}}+\frac{1}{x_{2}^{x_{3}}}+\ldots+\frac{1}{x_{n-1}^{x_{n}}}+\frac{1}{x_{n}^{x_{1}}} \geq \frac{n^{2}}{x_{1}^{2}+\ldots+x_{n}^{2}} \text {. }
+$$
+
+5. Denote by $p(n)$ the number of solutions $\left(x_{1}, \ldots, x_{n}\right)$ of the equation
+
+$$
+x_{1}+2 x_{2}+\ldots+n x_{n}=n
+$$
+
+in nonnegative integers. Prove that $p(n)=O\left(\alpha^{n}\right)$, as $n \rightarrow \infty$, for all $\alpha>1$.
+
+6. Find all the functions $f: \mathbb{R} \rightarrow \mathbb{R}$ such that for each $x, y \in \mathbb{R}$ it holds
+
+$$
+f(x+y)+f(x-y)=2 f(x)+2 f(y),
+$$
+
+and $f$ is continuous at the point 1. 7. A sequence $\left\{a_{n}: n \geq 1\right\}$ is defined by $a_{1}=1, a_{n+1}=3 a_{n}+2 \sqrt{2\left(a_{n}^{2}-1\right)}, n \geq$ 1. Prove that all its members are positive integers; moreover, the numbers $a_{n+1}$ and $a_{2 n+1}$ are relatively prime.
+
+8. Do there exist real $2 \times 2$ matrices $A$ and $B$ such that det $A>1$, det $B>1$, and for each $u_{0} \in \mathbb{R}^{2}$ there exists a matrix sequence $\left\{M_{i}: i \geq 1\right\} \subset\{A, B\}$, for which the vector sequence $u_{i}=M_{i} u_{i-1}, i \geq 1$, is bounded?
+
+9. Let $n \geq 3$, and $k^{*}=k^{*}(n)$ be the least number $k$ which satisfies the inequality
+
+$$
+\frac{1}{n-k} \sum_{j=k}^{n} \frac{n-j}{j} \leq 1
+$$
+
+Prove that there exists $\lim _{n \rightarrow \infty} \frac{k^{*}(n)}{n}$.
+
+\section{Problems for 3-5-Years Students}
+
+10. Let $(X, \rho)$ and $(Y, \sigma)$ be metric spaces, both containing at least two points. Does there always exist a continuous function of two variables $f(x, y), x \in X, y \in Y$, which cannot be decomposed as $g(x)+h(y)$, where $g$ and $h$ are some univariate functions?
+
+11. Let $\xi$ and $\eta$ be random variables such that $\mathbf{P}(\xi \neq 0, \eta \neq 0)=0$, and $u: \mathbb{R} \rightarrow \mathbb{R}$ be a Borel measurable bounded function. Prove that
+
+$$
+\mathrm{E} u(\xi+\eta)=\mathrm{E} u(\xi)+\mathrm{E} u(\eta)-u(0) .
+$$
+
+12. A function $f \in C(\mathbb{R})$ has a finite limit $\lim _{t \rightarrow+\infty} f(t)$. Prove that
+
+(a) for $a>0$, all the solutions to the equation $\dot{x}+a x=f(t)$ have the same limit, as $t \rightarrow+\infty$, and find this limit;
+
+(b) for $a<0$, only one of solutions to the equation has a finite limit, as $t \rightarrow+\infty$.
+
+13. Let $A$ and $B$ be $3 \times 3$ complex matrices such that $A^{2}=B^{2}=0$. What can be the set of eigenvalues of the matrix $A+B$ ?
+
+14. Let $\lambda$ be a finite measure on $(X, \mathscr{F})$, and $g_{n}: X \rightarrow \mathbb{R}, n \geq 1$ be nonnegative measurable functions such that
+
+$$
+\int_{X} \frac{g_{n}^{2}}{1+g_{n}} d \lambda \rightarrow 0, \quad \text { as } \quad n \rightarrow \infty .
+$$
+
+Prove that $\int_{X} g_{n} d \lambda \rightarrow 0$, as $n \rightarrow \infty$
+
+15. Find all $a \in \mathbb{C}$, for which there exist vectors $v_{1}, v_{2}, \ldots$ in the complex Hilbert space $l_{2}$ such that $\left|v_{k}\right|=1$ for $k \geq 1$ and $\left(v_{i}, v_{j}\right)=a$ for $i>j \geq 1$. 16. Let $f: \mathbb{R} \rightarrow \mathbb{R}$ be a function, which satisfies the equality
+
+$$
+f(x+y)+f(x-y)=2 f(x)+2 f(y), \quad x, y \in \mathbb{R},
+$$
+
+and $f$ is continuous at zero point. Prove that the function
+
+$$
+\varphi(x)=f(x) / x, x \neq 0, \varphi(0)=0,
+$$
+
+satisfies the equality $\varphi(x+y)=\varphi(x)+\varphi(y), x, y \in \mathbb{R}$.
+
+17. See Problem 8.
+
+18. See Problem 9.
+
+THE PROBLEMS ARE PROPOSED BY A.V. Bondarenko (5), S.I. Dotsenko and A.G. Kukush $(9,18)$, A.G. Kukush $(6,10,11)$, D. Yu. Mitin (1, 4), O.N. Nesterenko (2), I.O. Parasyuk (12), V.M. Radchenko (14), M.M. Rozhkova (3), O.V. Rudenko (7), S.V. Shklyar and A.G. Kukush (16), R.V. Skuratovskyi (8, 17), and I.S. Feshchenko $(13,15)$ 
+
+\section{3}
+
+\section{Problems for 1-2-Years Students}
+
+1. Find all continuous functions $f:[1,2] \rightarrow[1,2]$ such that $f(1)=2$, and
+
+$$
+f(f(x)) f(x)=2 \text { for all } x \in[1,2] .
+$$
+
+2. Does there exist a finite ring (not necessarily commutative or with identity), such that for every its element $x$ there exists an element $y$ different from $x$, for which $y^{2}=x ?$
+
+3. In a given triangle, the lengths of the sides and tangents of the angles are arithmetic progressions. Find the angles of the triangle.
+
+4. Let $x_{1}, \ldots, x_{n}$ and $c$ be positive numbers. Prove the inequality
+
+$$
+\sqrt{x_{1}+\sqrt{x_{2}+\sqrt{\ldots+\sqrt{x_{n}+c}}}}<\sqrt{x_{1}+\sqrt{x_{2}+\sqrt{\ldots+\sqrt{x_{n}}}}}+\frac{c}{2^{n} \sqrt{x_{1} \cdot \ldots \cdot x_{n}}} .
+$$
+
+5. Let $A$ and $B$ be $n \times n$ matrices such that for every $n \times n$ matrix $C$ the equation $A X+Y B=C$ has a solution $X, Y$. Prove that for every matrix $C$ the equation $A^{2013} X+Y B^{2013}=C$ has a solution as well.
+
+6. Functions $f, g: \mathbb{R} \rightarrow \mathbb{R}$ are such that for every two different numbers $x$ and $y$ the inequality $f(x)+g(y)>0$ or the inequality $f(y)+g(x)>0$ holds. Prove that there are no numbers $a$ and $b$ such that for all $x \in(a, b)$ it holds $f(x)+g(x)<0$.
+
+7. A number is called good if it is the $k$-th power of a positive integer for some integer $k \geq 2$. Is the set of all positive integers which can be represented as a sum of two good numbers finite or infinite?
+
+(C) Springer International Publishing AG 2017 8. Let $A=\left(\begin{array}{ll}1 & 2 \\ 0 & 1\end{array}\right)$ and $B=\left(\begin{array}{cc}1 & 0 \\ -2 & 1\end{array}\right)$. Can a product $X_{1} X_{2} \ldots X_{n}$ be equal to the identity matrix if every multiplier $X_{i}$ equals either $A$ or $B$ ?
+
+\section{Problems for 3-4-Years Students}
+
+9. Find the sum of the series
+
+$$
+\sum_{n=0}^{\infty} \frac{1}{n ! 2^{n}} \cos \frac{\pi n-1}{2} .
+$$
+
+10. Does there exist a finite nonzero ring (not necessarily commutative or with identity), such that for every its nonzero element $x$ there exists an element $y$ different from $x$, for which $y^{2}=x$ ?
+
+\section{See Problem 6.}
+
+12. Let $A$ and $B$ be $n \times n$ complex matrices such that for every $n \times n$ matrix $C$ the equation $A X+Y B=C$ has a solution $X, Y$. Prove that $k_{0}(A)+k_{0}(B) \leq n$, where $k_{0}(U)$ is the number of zeros on the main diagonal of the Jordan form of $U$.
+
+13. Let $f: \mathbb{R}^{2} \rightarrow \mathbb{R}$ be a Lebesgue measurable function. Is it always true that
+
+$$
+\underset{x \in \mathbb{R}}{\operatorname{ess} \sup }(\underset{y \in \mathbb{R}}{\operatorname{ess} \sup } f(x, y))=\underset{y \in \mathbb{R}}{\operatorname{ess} \sup }(\underset{x \in \mathbb{R}}{\operatorname{ess} \sup } f(x, y)) ?
+$$
+
+(Here the essential suprema are taken with respect to Lebesgue measure on $\mathbb{R}$.)
+
+14. Do there exist real nonconstant rational functions $\varphi(x)$ and $\psi(x)$ such that $\psi^{\prime}(x)=\frac{\varphi^{\prime}(x)}{\varphi(x)}$ for all $x$ from the intersection of domains of left-hand and right-hand sides of the equality?
+
+15. Let $P$ be a probability measure on Borel sigma-algebra on $\mathbb{R}^{2}$ such that for every straight line $\ell$ it holds $\mathrm{P}(\ell)<1$. Is it necessary that there exists a bounded Borel measurable set $A$ such that for every straight line $\ell$ it holds $\mathrm{P}(A \cap \ell)<\mathrm{P}(A)$ ?
+
+16. Let $\left\{a_{n}\right\}$ be a sequence of real numbers such that $\sum_{n=1}^{\infty} a_{n}^{2}<\infty,\left\{\xi_{n}\right\}$ be a sequence of independent identically distributed random variables with distribution $P\left\{\xi_{1}=1\right\}=2 / 3, \mathrm{P}\left\{\xi_{1}=0\right\}=1 / 3$, and $S_{n}=\sum_{k=1}^{n} \xi_{k}$. Prove that the series $\sum_{n=1}^{\infty}(-1)^{S_{n}} a_{n}$ converges in probability.
+
+THE PROBLEMS ARE PROPOSED BY A.V. Bondarenko (7), I.S. Feshchenko $(1,4,5,12)$, A.G. Kukush (13, 15), A.G. Kukush and M.M. Rozhkova (3), Y.O. Makedonskyi $(8,14)$, D.Yu. Mitin (9), O.V. Rudenko (6, 11), G.M. Shevchenko (16), and S.V. Slobodyanyuk $(2,10)$. 
+
+\section{4}
+
+\section{Problems for 1-2-Years Students}
+
+1. Prove that $\cos x<e^{-x^{2} / 2}$ for all $0<x \leq \pi$.
+
+2. It is allowed to replace a polynomial $p(x)$ with one of the polynomials $p(p(x))$, $x p(x)$, or $p(x)+x-1$. Is it possible to transform some polynomial of the form $x^{k}(x-2)^{2 n}$ into some polynomial of the form $x^{l}(x-2)^{2 m+1}$ in several such steps, where $k, l, m, n$ are positive integers?
+
+3. Let $M_{A}, M_{B}, M_{C}$, and $M_{D}$ be the intersection points of the medians of the faces $B C D, A C D, A B D$, and $A B C$ of a tetrahedron $A B C D$. Points $A_{1}$ and $A_{2}$, which are symmetric with respect to $M_{A}$, are chosen on the face $B C D$, and points $B_{1}$ and $B_{2}$, which are symmetric with respect to $M_{B}$, are chosen on the face $A C D$. Prove that $V_{A_{1} B_{1} M_{C} M_{D}}=V_{A_{2} B_{2} M_{C} M_{D}}$
+
+4. Does there exist a real nonconstant polynomial without real roots, such that after erasing any of its terms we obtain a polynomial, which has a real root?
+
+5. Let $x_{1}, x_{2} \in(0,1)$ and $\left(x_{1}, x_{2}\right) \neq\left(\frac{1}{2}, \frac{1}{2}\right)$. Prove the inequality
+
+$$
+\sqrt{x_{1}\left(1-x_{2}\right)}+\sqrt{x_{2}\left(1-x_{1}\right)} \geq \sqrt{\frac{\left|x_{1}-x_{2}\right|}{\max \left(\left|2 x_{1}-1\right|,\left|2 x_{2}-1\right|\right)}} \text {. }
+$$
+
+When does the equality hold?
+
+6. A square matrix $P$ is such that $P^{2}=P$, besides $P$ is neither zero matrix nor the identity one. Does there always exist a matrix $Q$ such that $Q^{2}=Q, P Q=Q P Q$ but $Q P \neq P Q$ ? 7. Let $f, g \in C([0,1])$, and the function $f$ attains its maximum only at the point $x_{0} \in[0,1]$. Prove that the function
+
+$$
+\varphi(t)=\max _{x \in[0,1]}(f(x)+t \cdot g(x))
+$$
+
+has a derivative at zero point, and $\varphi^{\prime}(0)=g\left(x_{0}\right)$.
+
+\section{Problems for 3-5-Years Students}
+
+8. Find $\int_{0}^{\pi}(\sin x)^{\cos x} d x$.
+
+9. Real polynomials $P_{n}$ of degree 2014 and a real polynomial $P$ satisfy
+
+$$
+\int_{0}^{2014}\left|P_{n}(x)-P(x)\right|^{2014} d x \rightarrow 0 \text {, as } n \rightarrow \infty
+$$
+
+Is it necessary that
+
+$$
+\int_{0}^{2014}\left|P_{n}^{\prime}(x)-P^{\prime}(x)\right|^{2014} d x \rightarrow 0, \text { as } n \rightarrow \infty ?
+$$
+
+10. Let $f_{n}:[0,1] \times[0,1] \rightarrow \mathbb{R}, n \geq 1$, be Borel measurable functions, $\lambda_{1}$ and $\lambda_{2}$ be the Lebesgue measures in $\mathbb{R}$ and $\mathbb{R}^{2}$, respectively. It is given that $f_{n}\left(x, g_{n}(x)\right) \stackrel{\lambda_{1}}{\longrightarrow}$ 0 , as $n \rightarrow \infty$, for any sequence of Borel measurable functions $g_{n}:[0,1] \rightarrow[0,1]$. Prove that $f_{n}(x, y) \stackrel{\lambda_{2}}{\longrightarrow} 0$, as $n \rightarrow \infty$.
+
+11. See Problem 4.
+
+12. See Problem 5.
+
+13. Do there exist a sequence of independent random variables $\left\{\varepsilon_{k}, k \geq 3\right\}$ such that $\mathrm{E} \varepsilon_{k}=0, \operatorname{Var}\left(\varepsilon_{k}\right)=1, k \geq 3$, and a sequence of random variables $\left\{x_{k}, k \geq 1\right\}$, where
+
+$$
+x_{k}=x_{k-1}-x_{k-2}+x_{k-3}+\varepsilon_{k}+\frac{1}{2} \varepsilon_{k-1}, k \geq 4,
+$$
+
+such that the sequence $\left\{\mathrm{E} x_{k}^{2}, k \geq 1\right\}$ is bounded?
+
+14. A square matrix $P$ is such that $P^{2}=P$, besides $P$ is neither zero matrix nor the identity one. Does there always exist a matrix $Q$ such that $Q^{2}=Q, P Q=Q P Q$ but $Q P \neq P Q P$ ?
+
+THE PROBLEMS ARE PROPOSED BY V.K. Bezborodov (7), V.B. Brayman $(4,11)$, A.G. Kukush $(5,8,9,12)$, A.G. Kukush and M.M. Rozhkova (3), D.Yu. Mitin (1, 2), V.M. Radchenko (10), O.V. Rudenko $(6,14)$, and S.V. Shklyar (13). 
+
+\section{5}
+
+\section{Problems for 1-2-Years Students}
+
+1. Is it possible that the middle point and one of the endpoints of a segment belong to the hyperbola $y=\frac{1}{x}$, while the other endpoint of the segment belongs to the hyperbola $y=\frac{8}{x}$ ?
+
+2. Solve the system of equations
+
+![](https://cdn.mathpix.com/cropped/2022_10_28_5077707915482dff1562g-52.jpg?height=213&width=687&top_left_y=1379&top_left_x=711)
+
+3. Let $f$ be a real continuous non-monotonic function on $[0,1]$. Prove that there exist numbers $0 \leq x<y<z \leq 1$ such that $z-y=y-x$ and $(f(z)-f(y))(f(y)-$ $f(x))<0$.
+
+4. Let $f$ be a bijection on a finite set $X$. Prove that the number of sets $A \subseteq X$ such that $f(A)=A$ is an integer power of 2 .
+
+5. Bilbo chooses real numbers $x, y$ and tells the numbers $x^{n}+y^{n}$ and $x^{k}+y^{k}$ to Gollum. Find all positive integers $n$ and $k$ for which Gollum can determine $x y$.
+
+6. Let $a_{0}, a_{1}, \ldots, a_{n}$ be real numbers such that not all of them coincide. Prove that there exists a unique solution to the equation
+
+$$
+2^{n} \sum_{i=0}^{n} a_{i} e^{a_{i} x}=\sum_{i=0}^{n}\left(\begin{array}{l}
+n \\
+i
+\end{array}\right) a_{i} \cdot \sum_{i=0}^{n} e^{a_{i} x}
+$$
+
+7. Let $A$ be a singular $n \times n$ matrix and $B, C$ be column vectors of size $n \times 1$. Prove
+
+![](https://cdn.mathpix.com/cropped/2022_10_28_5077707915482dff1562g-53.jpg?height=60&width=957&top_left_y=390&top_left_x=432)
+
+\section{Problems for 3-4-Years Students}
+
+8. Does the sequence of functions
+
+$$
+f_{n}(x)=\sin ^{n} \pi x \mathrm{I}_{[0, n]}(x), n \geq 1,
+$$
+
+converge in Lebesgue measure on $\mathbb{R}$ ?
+
+9. Let $f \in C\left(\mathbb{R}^{2}, \mathbb{R}\right)$ and let $B \subset f\left(\mathbb{R}^{2}\right)$ be a compact set. Prove that there exists a compact set $A \subset \mathbb{R}^{2}$, for which $f(A)=B$.
+
+10. Let $K_{C}$ be the set of random variables distributed on $[0,1]$, for which probability density function $p(x) \leq C, x \in[0,1]$. Prove that there exists a number $a(C)>0$ such that $\operatorname{Var}(\xi)>a(C)$ for every $\xi \in K_{C}$.
+
+11. See Problem 5.
+
+12. Let $\xi$ be a random variable such that $\mathrm{P}(\xi>0)>0$ and $\mathrm{E} e^{a \xi}<\infty$ for every $a>0$. Prove that there exists a number $\sigma>0$ such that $\mathrm{E} e^{2 \sigma \xi}=2 \mathrm{E} e^{\sigma \xi}$.
+
+13. See Problem 7.
+
+14. Prove that for every $x_{1}<-1, x_{2}>1, y_{1} \geq-1$, and $y_{2} \geq-1$, the differential equation
+
+$$
+x y^{\prime}=\sqrt{1+\left(y^{\prime}\right)^{2}}+y
+$$
+
+has a solution $y(\cdot) \in C^{(1)}(\mathbb{R})$ such that $y\left(x_{1}\right)=y_{1}$ and $y\left(x_{2}\right)=y_{2}$.
+
+THE PROBLEMS ARE PROPOSED BY V.B. Brayman (1, 5, 11), A.G. Kukush (12), A.G. Kukush and S.V. Shklyar (6), O.N. Nesterenko and A.V. Chaikovskiy (9), Yu.S. Mishura (10), I.O. Parasyuk (14), V.M. Radchenko (8), O.V. Rudenko (3), S.V. Shklyar $(7,13)$, V.G. Yurashev $(2,4)$. 
+
+\section{6}
+
+\section{Problems for 1-2-Years Students}
+
+1. Find minimal possible value of the expression
+
+$$
+4 \cos ^{2} \frac{n \pi}{9}+\sqrt[3]{7-12 \cos ^{2} \frac{n \pi}{9}},
+$$
+
+where $n \in \mathbb{Z}$.
+
+2. It is said that a set of positive integers $\left\{a_{1}<a_{2}<\ldots<a_{n}<\ldots\right\}$ has a density $\alpha$ if
+
+$$
+\lim _{n \rightarrow \infty} \frac{\max \left\{k: a_{k} \leq n\right\}}{n}=\alpha .
+$$
+
+Does there exists a subset of positive integers with density 1 which contains no infinite increasing geometric progression?
+
+3. Let $A B C$ be a right isosceles triangle in $\mathbb{R}^{3}$, and $A_{1} B_{1} C_{1}$ be its orthogonal projection onto some plane. It is known that $A_{1} B_{1} C_{1}$ is a right isosceles triangle as well. Find all possible ratios of leg length $A B$ to leg length $A_{1} B_{1}$.
+
+4. A sequence is defined recursively:
+
+$$
+x_{0}=1, \quad x_{n+1}=x_{n}-\frac{x_{n}^{2}}{2016}, n \geq 0 .
+$$
+
+Prove that $x_{2016}<\frac{1}{2}<x_{2015}$. 5. Let $A$ and $B$ be square matrices (a) of size 2016; (b) of size 2017. Do there always exist real numbers $a$ and $b$ such that $a^{2}+b^{2} \neq 0$ and the matrix $a A+b B$ is singular?
+
+6. Positive integers $x, m$, and $n$ are such that $x$ is divisible by 7 and $\sqrt{x}>\frac{m}{n}$. Prove that $\sqrt{x}>\frac{m^{4}+2 m^{2}+2}{m^{3} n+m n}$.
+
+7. Let $\left\{x_{1}, x_{2}, \ldots, x_{n}\right\}$ and $\left\{y_{1}, y_{2}, \ldots, y_{n}\right\}$ be two sets of pairwise distinct real numbers, and $a_{i j}=x_{i}+y_{j}, 1 \leq i, j \leq n$. It is known that the product of elements in each column of the matrix $A=\left(a_{i j}\right)$ is equal to $c$. Find all possible products of elements in a row of the matrix $A$.
+
+\section{Problems for 3-4-Years Students}
+
+8. Some numbers are written on each face of a cubic die which falls on each edge with probability $1 / 12$. Is it possible that numbers on its two upper faces sum up to each of values $1,2, \ldots, 6$ with probability $1 / 6$ ?
+
+9. Let $f \in C^{(1)}([0,1])$, and $\lambda_{1}$ be the Lebesgue measure on $\mathbb{R}$. Prove that
+
+$$
+\lambda_{1}(\{x \in[0,1]: f(x)=0\})=\lambda_{1}\left(\left\{x \in[0,1]: f(x)=f^{\prime}(x)=0\right\}\right) .
+$$
+
+10. See Problem 5.
+
+11. Let $\{A(t), t \in \mathbb{R}\}$ be a continuous family of skew-symmetric $n \times n$ matrices, $I$ be the identity matrix of size $n$, and $X(t)$ be the solution to the matrix differential equation $\frac{d X(t)}{d t}=A(t) X(t)$, with initial value $X(0)=I$. Prove that for every point $y \in \mathbb{R}^{n}$, there exists a point $z \in \mathbb{R}^{n}$ and a sequence $\left\{t_{i}, i \geq 1\right\} \subset \mathbb{R}$ such that $t_{i} \rightarrow \infty$ and $X\left(t_{i}\right) z \rightarrow y$, as $i \rightarrow \infty$
+
+12. Let
+
+$$
+p(x, a, b)= \begin{cases}\exp \left(a x+b x^{2}+f(a, b)+g(x)\right), & x \in[0 ; 1], \\ 0, & x \in \mathbb{R} \backslash[0 ; 1],\end{cases}
+$$
+
+be a family of probability density functions with parameters $a, b \in \mathbb{R}$, and $g \in C(\mathbb{R})$. Prove that
+
+$$
+\left(f_{a}^{\prime}(a, b)\right)^{2}+f_{b}^{\prime}(a, b)<0, \quad a, b \in \mathbb{R} .
+$$
+
+13. Let $K:[0,1] \rightarrow[0,1]$ be the Cantor's function, i.e., $K$ is the nondecreasing function such that $K\left(\sum_{i \in S} \frac{2}{3^{i}}\right)=\sum_{i \in S} \frac{1}{2^{i}}$, for every set $S \subset \mathbb{N}$. Find
+
+$$
+\lim _{n \rightarrow \infty} n \int_{[0,1]} K^{n}(x) d \lambda_{1} .
+$$
+
+14. Let $A$ be a real matrix of size $m \times n, m<n$, such that rk $A=m$, and $I$ be the identity matrix of size $m$. Construct a real $n \times m$ matrix $X$ with the least possible sum of squared entries, for which $A X=I$.
+
+THE PROBLEMS ARE PROPOSED BY A. V. Bondarenko $(5,10)$, V. B. Brayman $(3,8)$, D. I. Khilko (2), A. G. Kukush (12, 14), I. O. Parasyuk (11), V. M. Radchenko (13), O. V. Rudenko (9), D. V. Tkachenko $(4,7)$, and V. G. Yurashev $(1,6)$.
