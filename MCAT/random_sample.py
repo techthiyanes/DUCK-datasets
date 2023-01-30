@@ -10,7 +10,8 @@ with open('output.json') as file:
         if data[i]["Topic"] == "MCAT Reading":
             reading[data[i]["Problem Number"]] = data[i]
         else:
-            science[data[i]["Problem Number"]] = data[i]
+            if data[i]["Final Answer"] != "":
+                science[data[i]["Problem Number"]] = data[i]
 
 
 sample = {**dict(random.sample(science.items(), 200)), **reading}

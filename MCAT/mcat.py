@@ -3,6 +3,7 @@ import markdown
 import re
 import pandas as pd
 from itertools import count, filterfalse
+import urllib.request
 
 output = pd.DataFrame()
 
@@ -107,12 +108,28 @@ for number in ["1", "2", "3"]:
 
                     # get links of problem
                     link = [e[4:-1] for e in problem_dict[problem].split('A. ')[0].replace("\n", " ").split(" ") if "https" in e] if "https" in problem_dict[problem] else []
+                    for c,url in enumerate(link):
+                        try:
+                            url = url.split(")")[0]
+                            urllib.request.urlretrieve(url, f"{number}_{c}_{problem}_{c}.jpg")
+                            link[c] = f"{number}_{c}_{problem}_{c}.jpg"
+                        except:
+                            raise Exception(url)
+
                     
                     # get remove first link from problem
                     problem_dict[problem] = '\n'.join(filterfalse(lambda L, c=count(): 'https' in L and next(c) < len(link), problem_dict[problem].split('\n'))) if "https" in problem_dict[problem] else problem_dict[problem]
 
+                    # get remove answers
+                    problem_choices = re.split(r'\nA. +|\nB. +|\nC. +|\nD. ', problem_dict[problem])[-4:]
+                    problem_dict[problem] = re.split(r'\nA. +|\nB. +|\nC. +|\nD. ', problem_dict[problem])[0]
+
+
+                    if "passage.\n" in problem_dict[problem]:
+                        problem_dict[problem] = problem_dict[problem].split("passage.\n")[1].strip()
+
                     # add row to dataframe
-                    new_row = {"Problem Number" : f"{number}_{c}_{problem}", "Problem Statement" : problem_dict[problem], "Image" : link, "Topic": topic, "Book" : f"MCAT_{number}", "Solution" : "", "Final Answer" : ""}
+                    new_row = {"Problem Number" : f"{number}_{c}_{problem}", "Problem Statement" : problem_dict[problem], "Problem Choices" : problem_choices,  "Image" : link, "Topic": topic, "Book" : f"MCAT_{number}", "Solution" : "", "Final Answer" : ""}
                     output = output.append(new_row, ignore_index = True)
 
                     questions[f"{number}_{c}_{problem}"] = problem_dict[problem]
