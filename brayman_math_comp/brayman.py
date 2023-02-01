@@ -26,8 +26,8 @@ solutions = open(solution_path, "r")
 solutions = solutions.read()
 
 sections_probs = [1995, 1996, 1997, 1998, 1999, 2000, 2000, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009,
-                  2010, 2011, 2012, 2012, 2013, 2014, 2015, 2016, 2016]
-sections_sols = [1995, 1996, 1997, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011,
+                  2010, 2011, 2012, 2013, 2014, 2015, 2016, 2016]
+sections_sols = [1995, 1996, 1997, 1998, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2009, 2010, 2011,
                  2012, 2013, 2014, 2015, 2016]
 
 # Get rid of newline characters / fix formatting
@@ -57,7 +57,7 @@ for match in probs_lst:
     currentIndex = int(match.group(1))
     if (currentIndex > maxIndex):
         maxIndex = currentIndex
-    elif (currentIndex <= maxIndex):
+    elif (currentIndex <= maxIndex and not str(match.group(4)).strip().__contains__("Prove that all its members are positive integers")):
         sectionIndex = sectionIndex + 1
         currentIndex = 0
         maxIndex = 0
@@ -76,17 +76,22 @@ maxIndex = 0
 sectionIndex = 0
 count = 0
 # Solutions
+sectionIndex = 0
 for match in sols_lst:
     currentIndex = int(match.group(1))
-    if (currentIndex > maxIndex):
+    if (currentIndex > maxIndex
+          and not str(match.group(2)).strip().__contains__("The set of points")):
         maxIndex = currentIndex
-    elif (currentIndex <= maxIndex):
+    elif (currentIndex <= maxIndex
+          and not str(match.group(2)).strip().__contains__("Touching ellipses  ![]")
+          and not str(match.group(2)).strip().__contains__("The set of points")
+          and not str(match.group(2)).strip().__contains__("One can give other examples of a required norm")):
         sectionIndex = sectionIndex + 1
         currentIndex = 0
         maxIndex = 0
 
-    key = str(sections_probs[sectionIndex]) + "-" + match.group(1)
-    if dictionary.get(key) is not None:
+    key = str(sections_sols[sectionIndex]) + "-" + match.group(1)
+    if (dictionary.get(key) is not None):
         value = dictionary.get(key)
     else:
         value = np.array(["", ""], dtype=object)
@@ -96,6 +101,11 @@ for match in sols_lst:
 
 # Removes all key-value pairs where we don't have both the problem statement and the solution
 dictionary = {key: value for key, value in dictionary.items() if (value[0] != "" and value[1] != "")}
+
+for key in dictionary:
+    print(key)
+    print(dictionary.get(key))
+    print()
 
 output = pd.DataFrame()
 
@@ -109,7 +119,7 @@ for key in dictionary:
     output.at[key_counter, 3] = section
     key_counter = key_counter + 1
 
-output.columns = ["Problem Number", "Problem Statement", "Solution", "Year"]
+output.columns = ["Problem Number", "Problem Statement", "Solution", "Topic"]
 output["Book"] = ["Brayman Kukush Undergraduate Mathematics Competitions (1995–2016)"] * len(output.index)
 output["Final Answer"] = [""] * len(output.index)
 
