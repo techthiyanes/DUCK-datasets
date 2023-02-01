@@ -66,7 +66,7 @@ for match in probs_lst:
     if dictionary.get(key) is not None:
         value = dictionary.get(key)
     else:
-        value = np.array(["", ""], dtype=object)
+        value = np.array(["", "", ""], dtype=object)
     value[0] = str(match.group(4)).strip()
 
     dictionary.update({key: value})
@@ -94,8 +94,9 @@ for match in sols_lst:
     if (dictionary.get(key) is not None):
         value = dictionary.get(key)
     else:
-        value = np.array(["", ""], dtype=object)
+        value = np.array(["", "", ""], dtype=object)
     value[1] = str(match.group(2)).strip()
+    value[2] = str(match.group(3)).strip()
 
     dictionary.update({key: value})
 
@@ -116,12 +117,12 @@ for key in dictionary:
     output.at[key_counter, 0] = problemNumber
     output.at[key_counter, 1] = dictionary.get(key)[0]
     output.at[key_counter, 2] = dictionary.get(key)[1]
-    output.at[key_counter, 3] = section
+    output.at[key_counter, 3] = dictionary.get(key)[2]
+    output.at[key_counter, 4] = section
     key_counter = key_counter + 1
 
-output.columns = ["Problem Number", "Problem Statement", "Solution", "Topic"]
+output.columns = ["Problem Number", "Problem Statement", "Solution", "Final Answer", "Topic"]
 output["Book"] = ["Brayman Kukush Undergraduate Mathematics Competitions (1995–2016)"] * len(output.index)
-output["Final Answer"] = [""] * len(output.index)
 
 js = output.to_json(orient="index")
 
