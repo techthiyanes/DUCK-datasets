@@ -1,6 +1,7 @@
 import os
 import json
 import glob
+import re
 from tqdm import tqdm
 
 ROOT_DIR = ""  # Directory where arxiv_pairs is located.
@@ -49,13 +50,19 @@ for i, arxiv_id in enumerate(tqdm(arxiv_ids)):
             last_is_empty = True
             continue
         if last_is_empty:
-            # Sometimes it happens that few consecutive pages' labels are empty
+            # Sometimes it happens that labels of few consecutive pages are empty
             # (but the pages aren't actually empty), and all that text gets
             # assigned to the next page. We skip those pages because the label
             # isn't correct.
             last_is_empty = False
             continue
         last_is_empty = False
+
+        tex_contents = re.sub(r'\\ref\{.*?\}', r'\\ref{}', tex_contents)
+        tex_contents = re.sub(r'\\eqref\{.*?\}', r'\\eqref{}', tex_contents)
+        tex_contents = re.sub(r'\\cite\{.*?\}', r'\\cite{}', tex_contents)
+        tex_contents = re.sub(r'\\cite\[(.*?)\]\{.*?\}', r'\\cite[\1]{}', tex_contents)
+        tex_contents = re.sub(r'\\label\{.*?\}', r'', tex_contents)
         
         new_file_name = "_".join([arxiv_id, png_file_name])
         line = json.dumps({
