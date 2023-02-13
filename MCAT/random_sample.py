@@ -8,6 +8,7 @@ with open('output.json') as file:
     data = json.load(file)
     for i in range(660):
         i = str(i)
+        data[i]["Problem Statement"] = data[i]["Problem Statement"].strip()
         if data[i]["Topic"] == "MCAT Reading":
             reading[data[i]["Problem Number"]] = data[i]
         else:

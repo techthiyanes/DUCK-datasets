@@ -37,20 +37,23 @@ def parse_section(text):
     if len(index_list) > 0:
         broken_text.append(text[index_list[-1]:])
 
-    questions = {int(e.split('.')[0]) : e for e in broken_text if "Questions " not in e and "STOP." not in e}
+    questions = {int(e.split('.')[0]) : '.'.join(e.split('.')[1:]).strip().replace("\n\n\n",'\n').replace("\n\n",'\n').strip('\n') for e in broken_text if "Questions " not in e and "STOP." not in e}
     passages = [e for e in broken_text if "Questions " in e]
 
     for passage in passages:
         if '-' in passage:
             question_numbers = list((lambda start, end: range(int(start), int(end)+1))(*next(e for e in passage.split(" ") if "-" in e).split('-')))
             for question in question_numbers:
-                questions[question] = passage.strip() + "\n" + questions[question].strip()
+                if len(questions[question])>5:
+                    questions[question] = passage.strip().replace("\n\n\n",'\n').replace("\n\n",'\n').strip('\n') + "\n" + questions[question]
+                else:
+                    del questions[question]
     
     return questions
 
 
 def clean(text):
-    return text.replace("Practice Test 1 ", "").replace("Practice Test 2 ", "").replace("Practice Test 3 ", "")    
+    return text.replace("Practice Test 1 ", "").replace("Practice Test 2 ", "").replace("Practice Test 3 ", "").replace("SECTION 3:\nPsychological,\nSocial, and\nBiological\nFoundations\nof Behavior MCAT"," ").replace("SECTION 3:\nPsychological,\nSocial, and\nBiological\nFoundations of Behavior", " ")
 
 def parse_solution(text):
     index_list = []
@@ -86,7 +89,10 @@ questions = {}
 
 for number in ["1", "2", "3"]:
     with open("test_{}.txt".format(number), 'r') as problems:
-        problems, solutions = problems.read().split("\section{ANSWERS AND EXPLANATIONS}")
+        problems = problems.read()
+        problems = problems.strip().replace("\n\n\n",'\n').replace("\n\n",'\n').strip('\n')
+        problems = clean(problems)
+        problems, solutions = problems.split("\section{ANSWERS AND EXPLANATIONS}")
         sections = [clean(e) for e in problems.split("This is the end")]
         answer_sections = [clean(e) for e in solutions.split("\section{Section") if not len(e) < 20]
 
@@ -103,6 +109,7 @@ for number in ["1", "2", "3"]:
                 #print(section[0:1000])
                 problem_dict = parse_section(section)
                 for problem in problem_dict:
+                    continue_flag = False
                     if filter_answer_links(problem_dict[problem]):
                         continue
 
@@ -114,7 +121,10 @@ for number in ["1", "2", "3"]:
                             urllib.request.urlretrieve(url, f"{number}_{c}_{problem}_{c}.jpg")
                             link[c] = f"{number}_{c}_{problem}_{c}.jpg"
                         except:
-                            raise Exception(url)
+                            print("ERROR URL")
+                            continue_flag = True
+                    if continue_flag:
+                        continue
 
                     
                     # get remove first link from problem
