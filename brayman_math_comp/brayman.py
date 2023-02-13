@@ -124,7 +124,7 @@ for key in dictionary:
 output.columns = ["Problem Number", "Problem Statement", "Solution", "Final Answer", "Topic"]
 output["Book"] = ["Brayman Kukush Undergraduate Mathematics Competitions (1995–2016)"] * len(output.index)
 
-js = output.to_json(orient="index")
+js = output.to_json(orient="index", indent=1)
 
 with open('output.json', 'w') as f:
     f.write(js)
