@@ -5,7 +5,7 @@ reading = {}
 science = {}
 with open('output.json') as file:
     data = json.load(file)
-    for i in range(672):
+    for i in range(660):
         i = str(i)
         if data[i]["Topic"] == "MCAT Reading":
             reading[data[i]["Problem Number"]] = data[i]

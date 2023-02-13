@@ -129,7 +129,10 @@ for number in ["1", "2", "3"]:
                         problem_dict[problem] = problem_dict[problem].split("passage.\n")[1].strip()
 
                     # add row to dataframe
-                    new_row = {"Problem Number" : f"{number}_{c}_{problem}", "Problem Statement" : problem_dict[problem], "Problem Choices" : problem_choices,  "Image" : link, "Topic": topic, "Book" : f"MCAT_{number}", "Solution" : "", "Final Answer" : ""}
+
+                    if "\begin{tabular}" in problem_dict[problem] or "mathpix" in problem_dict[problem] or len(problem_dict[problem]) < 20:
+                        continue
+                    new_row = {"Problem Number" : f"{number}_{c}_{problem}", "Problem Statement" : problem_dict[problem], "Answer Candidates" : problem_choices,  "Images" : link, "Topic": topic, "Source" : f"MCAT_{number}", "Solution" : "", "Final Answer" : ""}
                     output = output.append(new_row, ignore_index = True)
 
                     questions[f"{number}_{c}_{problem}"] = problem_dict[problem]
