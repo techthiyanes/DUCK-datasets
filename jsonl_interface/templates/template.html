@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.3/dist/katex.min.css" integrity="sha384-Juol1FqnotbkyZUT5Z7gUPjQ9gzlwCENvUZTpQBAPxtusdwFLRy382PSDx5UUJ4/" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.3/dist/katex.min.js" integrity="sha384-97gW6UIJxnlKemYavrqDHSX3SiygeOwIZhwyOKRfSaf0JWKRVj9hLASHgFTzT+0O" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.3/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"></script>
+
+<p>
+    Remaining: {{remaining_problems_cnt}}
+</p>
+
+<form>
+    <div>
+        <p><b>ID:</b> <input type="text" size="50" name="id" id="id" value="{{id}}" readonly></p>
+    </div>
+
+    <div>
+        <p><b>Book:</b> <input type="text" size="50" name="book" id="book" value="{{book}}"></p>
+    </div>
+
+    <div>
+        <p><b>Topic:</b> <input type="text" size="50" name="topic" id="topic" value="{{topic}}"></p>
+    </div>
+
+    <div>
+        <p><b>Problem Statement:</b></p>
+        <textarea rows="10" cols="100" name="problem_statement" id="problem_statement">{{problem_statement}}</textarea>
+        <p id="problem_statement_display" class="display"></p>
+    </div>
+
+    <div{% if not show_choices %} style="display:none"{% endif %}>
+        <p><b>Problem Choices:</b></p>
+        <textarea rows="7" cols="100" name="problem_choices" id="problem_choices">{{problem_choices}}</textarea>
+        <p id="problem_choices_display" class="display"></p>
+    </div>
+
+    <div{% if not show_images %} style="display:none"{% endif %}>
+        <p><b>Images:</b></p>
+        <textarea rows="3" cols="100" name="images" id="images">{{images}}</textarea>
+        <p id="images_display" class="display"></p>
+    </div>
+
+    <div>
+        <p><b>Solution:</b></p>
+        <textarea rows="10" cols="100" name="solution" id="solution">{{solution}}</textarea>
+        <p id="solution_display" class="display"></p>
+    </div>
+
+    <div>
+        <p><b>Final Answer:</b></p>
+        <textarea rows="2" cols="100" name="final_answer" id="final_answer">{{final_answer}}</textarea>
+        <p id="final_answer_display" class="display"></p>
+    </div>
+
+    <div>
+        <input type="submit" name="skip" value="Skip">
+    </div>
+</form>
+
+<style>
+    input[type=submit] {
+        width: 80px;
+        height: 30px;
+    }
+
+    p.display {
+        white-space: pre-wrap;
+    }
+</style>
+
+<script>
+    function escapeHTML(str) {
+        return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;');
+    }
+
+    var fields = ["problem_statement", "problem_choices", "images", "solution", "final_answer"];
+
+    function updateDisplay() {
+        for (var i = 0; i < fields.length; i++) {
+            var field = fields[i];
+            var field_display = field + "_display";
+            
+            var field_value = document.getElementById(field).value;
+            document.getElementById(field_display).innerHTML = escapeHTML(field_value);
+        }
+
+        var problem_choices_display = document.getElementById("problem_choices_display");
+        problem_choices_display.innerHTML = problem_choices_display.innerHTML.replace(/^(.+)$/gm, "<li>$1</li>");
+        problem_choices_display.innerHTML = "<ol type='A'>" + problem_choices_display.innerHTML + "</ol>";
+
+        var images_display = document.getElementById("images_display");
+        images_display.innerHTML = images_display.innerHTML.replace(/^https:\/\/cdn\.mathpix\.com\/[^\n]+$/gm, "<img src='$&'>");
+
+        renderMathInElement(document.body, {
+            delimiters: [
+                {left: "$$", right: "$$", display: true},
+                {left: "\\[", right: "\\]", display: true},
+                {left: "$", right: "$", display: false},
+                {left: "\\(", right: "\\)", display: false}
+            ],
+            throwOnError: false,
+            errorColor: "#cc0000"
+        });
+    }
+
+    document.addEventListener("DOMContentLoaded", updateDisplay);
+    for (var i = 0; i < fields.length; i++) {
+        document.getElementById(fields[i]).addEventListener("input", updateDisplay);
+    }
+</script>
