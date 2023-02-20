@@ -4,21 +4,19 @@
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.3/dist/katex.min.js" integrity="sha384-97gW6UIJxnlKemYavrqDHSX3SiygeOwIZhwyOKRfSaf0JWKRVj9hLASHgFTzT+0O" crossorigin="anonymous"></script>
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.3/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"></script>
 
-<p>
-    Remaining: {{remaining_problems_cnt}}
-</p>
+
 
 <form>
     <div>
-        <p><b>ID:</b> <input type="text" size="50" name="id" id="id" value="{{id}}" readonly></p>
+        <p><b>ID:</b> <input type="text" size="50" name="id" id="id" value="{{id}}"></p>
     </div>
 
     <div>
-        <p><b>Book:</b> <input type="text" size="50" name="book" id="book" value="{{book}}"></p>
+        <p><b>Book:</b> <input type="text" size="50" name="book" id="book" value="{{book}}" readonly></p>
     </div>
 
     <div>
-        <p><b>Topic:</b> <input type="text" size="50" name="topic" id="topic" value="{{topic}}"></p>
+        <p><b>Topic:</b> <input type="text" size="50" name="topic" id="topic" value="{{topic}}" readonly></p>
     </div>
 
     <div>
@@ -27,13 +25,13 @@
         <p id="problem_statement_display" class="display"></p>
     </div>
 
-    <div{% if not show_choices %} style="display:none"{% endif %}>
-        <p><b>Problem Choices:</b></p>
-        <textarea rows="7" cols="100" name="problem_choices" id="problem_choices">{{problem_choices}}</textarea>
-        <p id="problem_choices_display" class="display"></p>
+    <div>
+        <p><b>Answer Candidates:</b></p>
+        <textarea rows="7" cols="100" name="answer_candidates" id="answer_candidates">{{answer_candidates}}</textarea>
+        <p id="answer_candidates_display" class="display"></p>
     </div>
 
-    <div{% if not show_images %} style="display:none"{% endif %}>
+    <div>
         <p><b>Images:</b></p>
         <textarea rows="3" cols="100" name="images" id="images">{{images}}</textarea>
         <p id="images_display" class="display"></p>
@@ -44,6 +42,7 @@
         <textarea rows="10" cols="100" name="solution" id="solution">{{solution}}</textarea>
         <p id="solution_display" class="display"></p>
     </div>
+    
 
     <div>
         <p><b>Final Answer:</b></p>
@@ -52,7 +51,8 @@
     </div>
 
     <div>
-        <input type="submit" name="skip" value="Skip">
+        <input type="submit" name="previous" value="Previous">
+        <input type="submit" name="next" value="Next">
     </div>
 </form>
 
@@ -72,7 +72,7 @@
         return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;');
     }
 
-    var fields = ["problem_statement", "problem_choices", "images", "solution", "final_answer"];
+    var fields = ["problem_statement", "answer_candidates", "images", "solution", "final_answer"];
 
     function updateDisplay() {
         for (var i = 0; i < fields.length; i++) {
@@ -83,9 +83,9 @@
             document.getElementById(field_display).innerHTML = escapeHTML(field_value);
         }
 
-        var problem_choices_display = document.getElementById("problem_choices_display");
-        problem_choices_display.innerHTML = problem_choices_display.innerHTML.replace(/^(.+)$/gm, "<li>$1</li>");
-        problem_choices_display.innerHTML = "<ol type='A'>" + problem_choices_display.innerHTML + "</ol>";
+        var answer_candidates_display = document.getElementById("answer_candidates_display");
+        answer_candidates_display.innerHTML = answer_candidates_display.innerHTML.replace(/^(.+)$/gm, "<li>$1</li>");
+        answer_candidates_display.innerHTML = "<ol type='A'>" + answer_candidates_display.innerHTML + "</ol>";
 
         var images_display = document.getElementById("images_display");
         images_display.innerHTML = images_display.innerHTML.replace(/^https:\/\/cdn\.mathpix\.com\/[^\n]+$/gm, "<img src='$&'>");
