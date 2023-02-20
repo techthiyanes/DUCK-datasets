@@ -23,3 +23,7 @@ You should see a message like
  * Running on http://127.0.0.1:5000
 ```
 You can then open the link in your browser.
+
+## Note. 
+
+The script assumes that the values for "Image" in the jsonl file are mathpix urls. 
