@@ -2,7 +2,7 @@
 
 The script expects a path to ArXiv data downloaded directly from the ArXiv S3 dump. Four step of processing are then run:
 
-1. Untarring of each tar file containing 500 ArXiv papers. Files are extract to `output_dir`.
+1. Untarring of each tar file containing 500 ArXiv papers. Files are extracted to `output_dir`.
 2. gzip extraction of each untarred paper. Each gzipped file is deleted once it has been unzipped.
 3. Alignment of each paper's tex file to the corresponding pdf page
 4. Postprocessing to remove unsuccessfully compiled files.
