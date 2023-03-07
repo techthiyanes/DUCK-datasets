@@ -69,8 +69,9 @@ def index():
 
         return redirect("/")
 
-    
-
+    with open('counter.txt', 'w') as f:
+        f.write('0')
+        f.close()
     with open('counter.txt', 'r') as f:
         current_index=int(f.read())
     key = list(problem_dict.keys())[current_index]
