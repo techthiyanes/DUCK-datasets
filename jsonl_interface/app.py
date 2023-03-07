@@ -3,6 +3,7 @@ import itertools
 import json
 import random
 import pandas as pd
+import os
 
 from flask import Flask, render_template, request, redirect
 
@@ -16,6 +17,9 @@ PROBLEM_FIELDS = [
     "Solution",
     "Final Answer",
 ]
+
+counter_file = "counter.txt"
+current_file = "current_file.txt"
 
 def list_to_str(l):
     return "\n".join(l)
@@ -32,7 +36,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def index(): 
-    with open('counter.txt', 'r') as f:
+    with open(counter_file, 'r') as f:
         current_index=int(f.read())
     if request.args:
         if int(request.args.get("id")) != current_index:
@@ -53,7 +57,7 @@ def index():
         else:
             raise ValueError("Unknown action")
 
-        with open('counter.txt', 'w') as f:
+        with open(counter_file, 'w') as f:
                 f.write(str(current_index))
 
         problem = {
@@ -69,10 +73,7 @@ def index():
 
         return redirect("/")
 
-    with open('counter.txt', 'w') as f:
-        f.write('0')
-        f.close()
-    with open('counter.txt', 'r') as f:
+    with open(counter_file, 'r') as f:
         current_index=int(f.read())
     key = list(problem_dict.keys())[current_index]
     problem = problem_dict[key]
@@ -113,6 +114,22 @@ args = parser.parse_args()
 
 if args.problems_file.endswith(".jsonl"):
     problems_file = args.problems_file
+    if not os.path.exists(problems_file): 
+        raise Exception('problems_file path does not exist!')
+
+    with open(current_file, 'r') as c:
+        if c != problems_file: 
+            c = problems_file
+            with open(counter_file, 'w') as f:
+                f.write('0')
+                f.close()
+
+    with open(current_file, 'w') as f:
+        f.write(c)
+        f.close()
+
+
+
 
     with open(problems_file, 'r') as json_file:
         json_list = list(json_file)
