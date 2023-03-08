@@ -1,12 +1,10 @@
-Interface for viewing JSONL files from dataset.
+Interface for sorting jsonl files containing math and physics problems. 
 
-This script is based off of the [annotation tool script](https://github.com/TheDuckAI/DUCK-datasets/tree/main/annotation_tool) by pvidas. 
+This script is based off of [jsonl_interface](https://github.com/TheDuckAI/DUCK-datasets/tree/main/jsonl_interface) and [annotation tool script](https://github.com/TheDuckAI/DUCK-datasets/tree/main/annotation_tool). 
 
 ## Requirements
-You need to install `flask`.
-```bash
-pip install flask
-```
+
+See requirements.txt. 
 
 ## Usage
 The script accepts the following arguments:
