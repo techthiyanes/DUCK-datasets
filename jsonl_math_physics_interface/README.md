@@ -1,4 +1,4 @@
-Interface for viewing JSONL files from dataset.
+Interface for sorting numerical/symbolic problems in math/physics jsonl files.
 
 This script is based off of [jsonl interface](https://github.com/TheDuckAI/DUCK-datasets/blob/main/jsonl_interface/README.md) and [annotation tool script](https://github.com/TheDuckAI/DUCK-datasets/tree/main/annotation_tool). 
 
