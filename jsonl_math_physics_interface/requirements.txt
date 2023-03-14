@@ -1,0 +1,9 @@
+flask
+argparse
+# itertools
+# json
+# random
+pandas
+numpy 
+pytz
+dateutil
