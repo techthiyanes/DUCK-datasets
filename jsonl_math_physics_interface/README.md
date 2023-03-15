@@ -9,6 +9,8 @@ The script accepts the following arguments:
 - `--numerical_images_file`: The path to the `.jsonl` file where the numerical problems with images will be stored. 
 - `--symbolic_file`: The path to the `.jsonl` file where the symbolic problems without images will be stored. 
 - `--symbolic_images_file`: The path to the `.jsonl` file where the symbolic problems with images will be stored. 
+- `--proof_based_file`: (Optional) The path to the `.jsonl` file where the proof-based problems without images will be stored. 
+- `--proof_based_images_file`: (Optional) The path to the `.jsonl` file where the proof-based problems with images will be stored. 
 
 
 To run the script, use the following command:
