@@ -139,6 +139,22 @@ def index():
                 # add problem to symbolic_file
                 append_jsonl(args.symbolic_file, problem)
                 update_index()
+        elif request.args.get("proof-based"):
+            if problem["Images"]: 
+                # add problem to proof_based_images_file
+                if args.proof_based_images_file: 
+                    append_jsonl(args.proof_based_images_file, problem)
+                    update_index()
+                else: 
+                    return "<p>No proof-based problems with images file specified!</p>"
+            else: 
+                # add problem to proof_based_file
+                if args.proof_based_file:
+                    append_jsonl(args.proof_based_file, problem)
+                    update_index()
+                else: 
+                    return "<p>No proof-based problems file specified!</p>"
+
         else:
             raise ValueError("Unknown action")
 
@@ -154,6 +170,15 @@ def index():
         if field not in problem:
             problem[field] = ""
 
+    if args.proof_based_file: 
+        proof_based_problems_cnt = jsonl_length(args.proof_based_file)
+    else: 
+        proof_based_problems_cnt = 0
+    if args.proof_based_images_file:
+        proof_based_problems_with_images_cnt = jsonl_length(args.proof_based_images_file)
+    else:
+        proof_based_problems_with_images_cnt = 0
+
     return render_template(
         "template.html",
         id=ind,
@@ -168,6 +193,8 @@ def index():
         numerical_problems_with_images_cnt = jsonl_length(args.numerical_images_file),
         symbolic_problems_cnt = jsonl_length(args.symbolic_file),
         symbolic_problems_with_images_cnt = jsonl_length(args.symbolic_images_file),
+        proof_based_problems_cnt = proof_based_problems_cnt,
+        proof_based_problems_with_images_cnt = proof_based_problems_with_images_cnt,
         remaining_problems_cnt = len(input_file) - ind - 1,
     )
 
@@ -184,6 +211,8 @@ parser.add_argument('--numerical_file', type=str, required=True)
 parser.add_argument('--numerical_images_file', type=str, required=True)
 parser.add_argument('--symbolic_file', type=str, required=True)
 parser.add_argument('--symbolic_images_file', type=str, required=True)
+parser.add_argument('--proof_based_file', type=str, required=False)
+parser.add_argument('--proof_based_images_file', type=str, required=False)
 # parser.add_argument('--show_images', action="store_true")
 # parser.add_argument('--show_choices', action="store_true")
 args = parser.parse_args()
@@ -197,6 +226,10 @@ if args.input_file.endswith(".jsonl"):
     numerical_images = read_jsonl(args.numerical_images_file)
     symbolic = read_jsonl(args.symbolic_file)
     symbolic_images = read_jsonl(args.symbolic_images_file)
+    if args.proof_based_file: 
+        proof_based = read_jsonl(args.proof_based_file)
+    if args.proof_based_images_file:
+        proof_based_images = read_jsonl(args.proof_based_images_file)
 
     with open(input_file_name, 'r') as json_file:
         json_list = list(json_file)
@@ -221,4 +254,3 @@ print("Write symbolic images to: {}".format(args.symbolic_images_file))
 
 if __name__ == "__main__":
     app.run()
-
