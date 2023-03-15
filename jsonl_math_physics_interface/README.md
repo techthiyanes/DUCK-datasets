@@ -2,12 +2,6 @@ Interface for sorting numerical/symbolic problems in math/physics jsonl files.
 
 This script is based off of [jsonl interface](https://github.com/TheDuckAI/DUCK-datasets/blob/main/jsonl_interface/README.md) and [annotation tool script](https://github.com/TheDuckAI/DUCK-datasets/tree/main/annotation_tool). 
 
-## Requirements
-You need to install `flask`.
-```bash
-pip install flask
-```
-
 ## Usage
 The script accepts the following arguments:
 - `--input_file`: The path to the `.jsonl` file that contains the problems, e.g. `physics_books/data/em_quals_output.jsonl`
