@@ -29,4 +29,5 @@ The file counter.txt keeps track of the line number of your current location in 
 
 ## Note. 
 
-The script assumes that the values for "Image" in the jsonl file are mathpix urls. 
+- The script assumes that the values for "Image" in the jsonl file are mathpix urls. 
+- When working on a new jsonl file, change counter.txt to "0"
