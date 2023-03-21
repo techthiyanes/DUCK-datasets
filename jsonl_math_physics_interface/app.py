@@ -253,4 +253,4 @@ print("Write symbolic problems to: {}".format(args.symbolic_file))
 print("Write symbolic images to: {}".format(args.symbolic_images_file))
 
 if __name__ == "__main__":
-    app.run()
+    app.run(port=4000)
