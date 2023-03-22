@@ -63,10 +63,6 @@ def append_jsonl(inp, json_obj, output_file=None):
     # if output_file is not specified, overwrite input_file
     if output_file: out = output_file
     else: out = inp
-
-    print(f"inp = {inp}")
-    print(f"json_obj = {json_obj}")
-    print(f"out = {out}")
     with open(out, 'a') as f:
         json.dump(json_obj, f)
         f.write('\n')
