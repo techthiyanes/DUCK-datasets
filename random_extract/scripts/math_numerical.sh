@@ -1,0 +1,1 @@
+python3 random_extract.py /Users/tomohirosawada/Desktop/DUCK-datasets/jsonl/math_physics_jsonl/berkeley_math/berkeley_numerical.jsonl /Users/tomohirosawada/Desktop/DUCK-datasets/jsonl/math_physics_jsonl/brayman_math/numerical.jsonl /Users/tomohirosawada/Desktop/DUCK-datasets/jsonl/math_physics_jsonl/putnam/automatic.jsonl 90
