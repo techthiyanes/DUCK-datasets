@@ -44,7 +44,7 @@ def main():
                 else:
                     directories[os.path.basename(root)].append(filepath)
 
-    with open('output.txt', 'w') as output_file:
+    with open('number_of_questions.txt', 'w') as output_file:
         output_file.write(f'Number of Questions:\n\n')
         for subdir, filepaths in directories.items():
             output_file.write(f'{os.path.join(args.data, subdir)}\n')
