@@ -1,0 +1,1 @@
+python3 app.py --input_file  '/Users/tomohirosawada/Desktop/DUCK-datasets/final/data/valid/physics/physics_numerical_images.jsonl' --out_file '/Users/tomohirosawada/Desktop/DUCK-datasets/final/data/valid/physics/physics_numerical_images_final.jsonl'
