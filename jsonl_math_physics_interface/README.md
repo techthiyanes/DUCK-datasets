@@ -15,7 +15,7 @@ The script accepts the following arguments:
 
 To run the script, use the following command:
 ```bash
-python app.py --problems_file PATH --numerical_file PATH --numerical_images_file PATH --symbolic_file PATH --symbolic_images_file PATH 
+python app.py --input_file PATH --numerical_file PATH --numerical_images_file PATH --symbolic_file PATH --symbolic_images_file PATH 
 ```
 
 You should see a message like

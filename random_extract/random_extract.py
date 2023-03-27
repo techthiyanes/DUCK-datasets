@@ -1,3 +1,5 @@
+# Description: Create a new JSONL file with random entries from input files. The number of entries in the output file is specified by the user. The user can also specify the ratio of entries from each input file. For example, if the user specifies 1000 entries and a ratio of 0.5 for each input file, then the output file will contain 500 entries from each input file. If the user does not specify a ratio, then the ratio will be equal for each input file.
+
 import argparse
 import json
 import random

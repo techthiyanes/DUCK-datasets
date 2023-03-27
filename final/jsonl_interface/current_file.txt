@@ -1,1 +1,1 @@
-../jsonl/putnam.jsonl
+/Users/tomohirosawada/Desktop/DUCK-datasets/final/data/valid/math/numerical.jsonl

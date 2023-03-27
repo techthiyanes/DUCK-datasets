@@ -1,0 +1,2 @@
+# generate test and val splits for mcat reading
+python3 mcat_splits.py --input_file '/Users/tomohirosawada/Desktop/DUCK-datasets/mcat_reading_sorted.jsonl' --val_file /Users/tomohirosawada/Desktop/DUCK-datasets/final/data/valid/mcat_reading/mcat_reading_val.jsonl --test_file /Users/tomohirosawada/Desktop/DUCK-datasets/final/data/test/mcat_reading/mcat_reading_test.jsonl

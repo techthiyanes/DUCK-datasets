@@ -1,0 +1,1 @@
+python3 mcat_order.py '/Users/tomohirosawada/Desktop/DUCK-datasets/jsonl/mcat.jsonl' mcat_sorted.jsonl 

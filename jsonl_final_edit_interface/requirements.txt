@@ -1,0 +1,12 @@
+flask
+argparse
+pandas
+numpy 
+pytz
+python-dateutil
+six
+markupsafe
+jinja2
+werkzeug
+click
+itsdangerous

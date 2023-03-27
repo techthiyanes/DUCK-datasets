@@ -1,0 +1,2 @@
+# generate test and val splits for mcat science
+python3 mcat_splits_images.py --input_file '/Users/tomohirosawada/Desktop/DUCK-datasets/mcat_science_sorted.jsonl' --val_file /Users/tomohirosawada/Desktop/DUCK-datasets/final/data/valid/mcat_science/mcat_science_val.jsonl --test_file /Users/tomohirosawada/Desktop/DUCK-datasets/final/data/test/mcat_science/mcat_science_test.jsonl 

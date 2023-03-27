@@ -1,0 +1,1 @@
+python mcat_sci_read.py --input_file mcat_sorted.jsonl --science mcat_science_sorted.jsonl --reading mcat_reading_sorted.jsonl

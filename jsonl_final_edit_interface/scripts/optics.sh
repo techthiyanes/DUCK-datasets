@@ -1,0 +1,1 @@
+python app.py --problems_file jsonl/optics.jsonl --numerical_file jsonl/math_physics_jsonl/optics/numerical.jsonl --numerical_images_file jsonl/math_physics_jsonl/optics/numerical_images.jsonl --symbolic_file jsonl/math_physics_jsonl/optics/symbolic.jsonl --symbolic_images_file jsonl/math_physics_jsonl/optics/symbolic_images.jsonl

@@ -7,8 +7,16 @@
 
 
 <form>
+    <p>
+        Remaining: {{remaining_problems_cnt}}
+    </p>
+
     <div>
-        <p><b>ID:</b> <input type="text" size="50" name="id" id="id" value="{{id}}"></p>
+        <p><b>ID:</b> <input type="text" size="50" name="id" id="id" value="{{id}}" readonly></p>
+    </div>
+
+    <div>
+        <p><b>Problem Number:</b> <input type="text" size="50" name="problem_number" id="problem_number" value="{{problem_number}}" readonly></p>
     </div>
 
     <div>
@@ -43,12 +51,12 @@
         <p id="solution_display" class="display"></p>
     </div>
     
+
     <div>
         <p><b><a href="https://docs.google.com/document/d/1cVefmD5qNfjVAaCyK9iRmHcty7aK8nLhE74v-7Bj4ic/edit#bookmark=id.twumyxfv04p0">Output Format Instructions:</a></b></p>
         <textarea rows="2" cols="100" name="output_format_instructions" id="output_format_instructions">{{output_format_instructions}}</textarea>
         <p id="output_format_instructions_display" class="display"></p>
     </div>
-
 
     <div>
         <p><b>Final Answer:</b></p>
@@ -56,9 +64,11 @@
         <p id="final_answer_display" class="display"></p>
     </div>
 
+
     <div>
         <input type="submit" name="previous" value="Previous">
-        <input type="submit" name="next" value="Next">
+        <input type="submit" name="next" value="Next"> 
+        <input type="submit" name="save" value="Save"> 
     </div>
 </form>
 
@@ -79,7 +89,6 @@
     }
 
     var fields = ["problem_statement", "answer_candidates", "images", "solution", "final_answer", "output_format_instructions"];
-
 
     function updateDisplay() {
         for (var i = 0; i < fields.length; i++) {
