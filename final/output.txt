@@ -1,0 +1,24 @@
+Number of Questions:
+
+data/mcat_reading
+	data/valid/mcat_reading/mcat_reading_val.jsonl: 80 questions
+	data/valid/mcat_science/mcat_science_images_val.jsonl: 73 questions
+	data/valid/mcat_science/mcat_science_val.jsonl: 28 questions
+	data/test/mcat_reading/mcat_reading_test.jsonl: 78 questions
+	data/test/mcat_science/mcat_science_images_test.jsonl: 70 questions
+	data/test/mcat_science/mcat_science_test.jsonl: 29 questions
+
+data/law
+	data/valid/law/mcq.jsonl: 358 questions
+
+data/math
+	data/valid/math/numerical.jsonl: 54 questions
+	data/test/math/symbolic.jsonl: 34 questions
+	data/test/math/proof_like.jsonl: 20 questions
+
+data/physics
+	data/valid/physics/physics_numerical.jsonl: 80 questions
+	data/valid/physics/physics_numerical_images.jsonl: 18 questions
+	data/test/physics/physics_symbolic_images.jsonl: 12 questions
+	data/test/physics/physics_symbolic.jsonl: 18 questions
+
