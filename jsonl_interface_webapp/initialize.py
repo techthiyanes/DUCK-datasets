@@ -16,14 +16,27 @@ app_path = "http://127.0.0.1:5001/"
 github_root = "https://raw.githubusercontent.com/TheDuckAI/DUCK-datasets/main/final/data/"
 problems_path = cache_directory + "/numerical.jsonl"
 
+# links to the datasets
 req_to_link = {
     "math_numerical": github_root + "valid/math/numerical.jsonl",
     "math_symbolic":  github_root + "test/math/symbolic.jsonl",
+    "proof_like":  github_root + "test/math/proof_like.jsonl",
+    #
     "physics_numerical": github_root + "valid/physics/physics_numerical.jsonl",
     "physics_numerical_images":  github_root + "valid/physics/physics_numerical_images.jsonl",
     "physics_symbolic": github_root + "test/physics/physics_symbolic.jsonl",
-    "physics_symbolic_images":  github_root + "test/physics/physics_symbolic_images.jsonl"
+    "physics_symbolic_images":  github_root + "test/physics/physics_symbolic_images.jsonl",
+    # 
+    "mcat_reading_test": github_root + "test/mcat/mcat_reading_test.jsonl",
+    "mcat_reading_val": github_root + "valid/mcat/mcat_reading_val.jsonl",
+    "mcat_science":  github_root + "test/mcat/mcat_science_test.jsonl",
+    "mcat_science":  github_root + "valid/mcat/mcat_science_val.jsonl",
+    "mcat_science_images": github_root + "test/mcat/mcat_science_images_test.jsonl",
+    "mcat_science_images": github_root + "valid/mcat/mcat_science_images_val.jsonl",
+    #
+    "law": github_root + "valid/law/mcq.jsonl"
 }
+
 
 
 def files_in_cache(req): 

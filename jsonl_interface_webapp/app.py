@@ -39,53 +39,13 @@ app.config['SESSION_TYPE'] = 'filesystem'
 
 Session(app)
 
-
 @app.route("/")
-def index(): 
-    if 'problems_path' in session: 
-        global problems_path
-        problems_path = session['problems_path']    
-    
-    showimages = False
-    showchoices = False
-
-    if problems_path.endswith(".jsonl"):
-        if not os.path.exists(problems_path): 
-            raise Exception('problems_path path does not exist!')
-
-        with open(current_file, 'r') as c:
-            if c != problems_path: 
-                c = problems_path
-                with open(counter_file, 'w') as f:
-                    f.write('0')
-                    f.close()
-
-        with open(current_file, 'w') as f:
-            f.write(c)
-            f.close()
-
-
-        with open(problems_path, 'r') as json_file:
-            json_list = list(json_file)
-
-        problem_dict = dict()
-
-        for i in range(len(json_list)):
-            json_str = json_list[i]
-            result = json.loads(json_str)
-            problem_dict.update({i: result})
-    else: 
-        raise ValueError("Problems file must be JSONL file")
-
-    problem_keys = list(problem_dict.keys())
-
-    
+def index():     
     with open(counter_file, 'r') as f:
         current_index=int(f.read())
-    if request.args:
-        print(f"request.args: {request.args}")
+    if request.args:  
         if request.args.get("id") and int(request.args.get("id")) != current_index:
-            if  int(request.args.get("id")) >= 0 and int(request.args.get("id")) <= len(problem_dict):
+            if int(request.args.get("id")) >= 0 and int(request.args.get("id")) <= len(problem_dict):
                 current_index = int(request.args.get("id"))
             else: 
                 return "<p>There are no more problems!</p>"
@@ -103,9 +63,9 @@ def index():
             raise ValueError("Unknown action")
 
         with open(counter_file, 'w') as f:
-                f.write(str(current_index))
+            f.write(str(current_index))
 
-        print(f"problem_dict: {problem_dict}")
+
         problem = {
             "Key": current_index, 
             "Topic": problem_dict[current_index]["Topic"],
@@ -118,6 +78,7 @@ def index():
         }
 
         return redirect("/")
+
 
     with open(counter_file, 'r') as f:
         current_index=int(f.read())
@@ -149,6 +110,61 @@ def add_header(response):
     response.cache_control.no_store = True
     return response
 
+showimages = True
+showchoices = True
 
+@app.before_request
+def before_request():
+    # retrieve problems path from session
+    if session and 'problems_path' in session: 
+        problems_path = session['problems_path']
+        print(f"Loading problems from {problems_path}")
+
+    # load problems from file
+    if problems_path.endswith(".jsonl"):
+        if not os.path.exists(problems_path): 
+            raise Exception('problems_path path does not exist!')
+
+        with open(current_file, 'r') as c:
+                cf = c.read()
+                if cf != problems_path: 
+                    cf = problems_path
+                    with open(counter_file, 'w') as f:
+                        f.write('0')
+                        f.close()
+                    with open(current_file, 'w') as c:
+                        c.write(cf)
+                        c.close()
+                c.close()
+
+        
+
+        # generate list of json objects containing problems
+        json_list = []
+        line_count = 0
+        print(f"Loading problems... {problems_path}")
+        with open(problems_path, 'r') as file:
+            for line in file:
+                try:
+                    json.loads(line)
+                    json_list.append(line)
+                    line_count += 1
+                except json.JSONDecodeError:
+                    print(f"Invalid JSON object at line {line_count + 1}")
+                    continue
+
+        global problem_dict
+        problem_dict = dict()
+
+        for i in range(len(json_list)):
+            json_str = json_list[i]
+            result = json.loads(json_str)
+            problem_dict.update({i: result})
+
+    else: 
+        raise ValueError("Problems file must be JSONL file")
+
+    global problem_keys
+    problem_keys = list(problem_dict.keys())    
 
 app.run(port=5001, debug=True)
