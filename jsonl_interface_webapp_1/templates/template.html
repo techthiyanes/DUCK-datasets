@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.3/dist/katex.min.css" integrity="sha384-Juol1FqnotbkyZUT5Z7gUPjQ9gzlwCENvUZTpQBAPxtusdwFLRy382PSDx5UUJ4/" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.3/dist/katex.min.js" integrity="sha384-97gW6UIJxnlKemYavrqDHSX3SiygeOwIZhwyOKRfSaf0JWKRVj9hLASHgFTzT+0O" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.3/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"></script>
+
+<html>
+<head>
+    <title>DuckAI Advanced Academic Benchmark</title>
+    <link rel="icon" href="../image/duckai_logo.ico">
+</head>
+</html>
+
+
+
+<form>
+    <h1><b>DuckAI Advanced Academic Benchmark.</b></h1>
+    <div><b>Choose jsonl file to view:</b></div>
+    <div>
+        <p>Math</p>
+        <input type="submit" name="math_numerical" value="Math (Numerical)" style="height:40px; width:200px">
+        <input type="submit" name="math_symbolic" value="Math (Symbolic)" style="height:40px; width:200px">
+        <input type="submit" name="proof_like" value="Proof-like" style="height:40px; width:200px">
+    </div>
+
+    <div>
+        <p>Physics</p>
+        <input type="submit" name="physics_numerical" value="Physics (Numerical)" style="height:40px; width:200px">
+        <input type="submit" name="physics_numerical_images" value="Physics (Numerical; Images)" style="height:40px; width:200px">
+        <input type="submit" name="physics_symbolic" value="Physics (Symbolic)" style="height:40px; width:200px">
+        <input type="submit" name="physics_symbolic_images" value="Physics (Symbolic; Images)" style="height:40px; width:200px">
+    </div>
+
+    <div>
+        <p>MCAT</p>
+        <input type="submit" name="mcat_reading_val" value="MCAT Reading (val)" style="height:40px; width:200px">
+        <input type="submit" name="mcat_reading_test" value="MCAT Reading (test)" style="height:40px; width:200px">
+        <input type="submit" name="mcat_science_val" value="MCAT Science (val)" style="height:40px; width:200px">
+        <input type="submit" name="mcat_science_test" value="MCAT Science (test)" style="height:40px; width:200px">
+        <input type="submit" name="mcat_science_images_val" value="MCAT Science (Images; val)" style="height:40px; width:200px">
+        <input type="submit" name="mcat_science_images_test" value="MCAT Science (Images; test)" style="height:40px; width:200px">
+    </div>
+
+    <div>
+        <p>Law</p>
+        <input type="submit" name="law" value="Law" style="height:40px; width:200px">
+    </div>
+
+<h2><b>Problem.</b></h2>
+    <div>
+        <p><b>File:</b> <input type="text" size="50" name="file" id="file" value="{{id}}" readonly></p>
+    </div>
+    <div>
+        <p><b>ID:</b> <input type="text" size="50" name="id" id="id" value="{{id}}"></p>
+    </div>
+
+    <div>
+        <p><b>Source:</b> <input type="text" size="50" name="source" id="source" value="{{source}}" readonly></p>
+    </div>
+
+    <div>
+        <p><b>Topic:</b> <input type="text" size="50" name="topic" id="topic" value="{{topic}}" readonly></p>
+    </div>
+
+    <div>
+        <p><b>Problem Statement:</b></p>
+        <textarea rows="10" cols="100" name="problem_statement" id="problem_statement">{{problem_statement}}</textarea>
+        <p id="problem_statement_display" class="display"></p>
+    </div>
+
+    <div>
+        <p><b>Answer Candidates:</b></p>
+        <textarea rows="7" cols="100" name="answer_candidates" id="answer_candidates">{{answer_candidates}}</textarea>
+        <p id="answer_candidates_display" class="display"></p>
+    </div>
+
+    <div>
+        <p><b>Images:</b></p>
+        <textarea rows="3" cols="100" name="images" id="images">{{images}}</textarea>
+        <p id="images_display" class="display"></p>
+    </div>
+
+    <div>
+        <p><b>Solution:</b></p>
+        <textarea rows="10" cols="100" name="solution" id="solution">{{solution}}</textarea>
+        <p id="solution_display" class="display"></p>
+    </div>
+    
+    <div>
+        <p><b><a href="https://docs.google.com/document/d/1cVefmD5qNfjVAaCyK9iRmHcty7aK8nLhE74v-7Bj4ic/edit#bookmark=id.twumyxfv04p0">Output Format Instructions:</a></b></p>
+        <textarea rows="2" cols="100" name="output_format_instructions" id="output_format_instructions">{{output_format_instructions}}</textarea>
+        <p id="output_format_instructions_display" class="display"></p>
+    </div>
+
+
+    <div>
+        <p><b>Final Answer:</b></p>
+        <textarea rows="2" cols="100" name="final_answer" id="final_answer">{{final_answer}}</textarea>
+        <p id="final_answer_display" class="display"></p>
+    </div>
+
+    <div>
+        <input type="submit" name="previous" value="Previous">
+        <input type="submit" name="next" value="Next">
+    </div>
+</form>
+
+<style>
+    input[type=submit] {
+        width: 80px;
+        height: 30px;
+    }
+
+    p.display {
+        white-space: pre-wrap;
+    }
+</style>
+
+<script>
+    function escapeHTML(str) {
+        return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;');
+    }
+
+    var fields = ["problem_statement", "answer_candidates", "images", "solution", "final_answer", "output_format_instructions"];
+
+
+    function updateDisplay() {
+        for (var i = 0; i < fields.length; i++) {
+            var field = fields[i];
+            var field_display = field + "_display";
+            
+            var field_value = document.getElementById(field).value;
+            document.getElementById(field_display).innerHTML = escapeHTML(field_value);
+        }
+
+        var answer_candidates_display = document.getElementById("answer_candidates_display");
+        answer_candidates_display.innerHTML = answer_candidates_display.innerHTML.replace(/^(.+)$/gm, "<li>$1</li>");
+        answer_candidates_display.innerHTML = "<ol type='A'>" + answer_candidates_display.innerHTML + "</ol>";
+
+        var images_display = document.getElementById("images_display");
+        images_display.innerHTML = images_display.innerHTML.replace(/^https:\/\/cdn\.mathpix\.com\/[^\n]+$/gm, "<img src='$&'>");
+
+        renderMathInElement(document.body, {
+            delimiters: [
+                {left: "$$", right: "$$", display: true},
+                {left: "\\[", right: "\\]", display: true},
+                {left: "$", right: "$", display: false},
+                {left: "\\(", right: "\\)", display: false}
+            ],
+            throwOnError: false,
+            errorColor: "#cc0000"
+        });
+    }
+
+    document.addEventListener("DOMContentLoaded", updateDisplay);
+    for (var i = 0; i < fields.length; i++) {
+        document.getElementById(fields[i]).addEventListener("input", updateDisplay);
+    }
+</script>
