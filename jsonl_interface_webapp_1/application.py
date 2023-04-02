@@ -161,8 +161,11 @@ def index():
                     show_choices=showchoices,
                 )
         if request.args.get("id") and int(request.args.get("id")) != current_index:
-            if int(request.args.get("id")) >= 0 and int(request.args.get("id")) <= len(problem_dict):
+            if request.args.get("id") and int(request.args.get("id")) >= 0 and int(request.args.get("id")) <= len(problem_dict):
                 current_index = int(request.args.get("id"))
+                with open(counter_file, 'w') as f:
+                    f.write(str(current_index))
+                print(current_index)
             else:
                 return "<p>There are no more problems!</p>"
         elif request.args.get("previous"):
@@ -199,6 +202,7 @@ def index():
 
     return render_template(
         "template.html",
+        file=problems_path,
         id=current_index,
         topic=problem["Topic"],
         Source=problem["Source"],
