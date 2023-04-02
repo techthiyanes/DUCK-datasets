@@ -10,7 +10,6 @@ current_file = root + "/current_file.txt"
 cache_directory = "cache"
 app_path = "http://127.0.0.1:5001/"
 github_root = "https://raw.githubusercontent.com/TheDuckAI/DUCK-datasets/main/final/data/"
-problems_path = cache_directory + "/physics_numerical_images.jsonl"
 
 
 # links to the datasets
@@ -45,6 +44,12 @@ def files_in_cache(req):
         pass
         # download_file(req_to_link[req], problems_path)
 
+def read_current_file(current_file=current_file):
+    # get the current file
+    with open(current_file, 'r') as f:
+        problems_path=f.read()
+    return problems_path
+
 def update_current_file(path,counter_file=counter_file,current_file=current_file):
     # check if the current file is the same as the one in the cache
     with open(current_file, 'r') as c:
@@ -58,6 +63,20 @@ def update_current_file(path,counter_file=counter_file,current_file=current_file
                 c.write(cf)
                 c.close()
         c.close()
+
+def read_current_counter(counter_file=counter_file):
+    # get the current counter
+    with open(counter_file, 'r') as f:
+        current_index=int(f.read())
+    return current_index
+
+def update_counter(n,counter_file=counter_file):
+    # update the counter
+    with open(counter_file, 'r') as f:
+        current_index=int(f.read())
+    with open(counter_file, 'w') as f:
+        f.write(str(n))
+        f.close()
 
 def check_valid_path(path): 
     return path.endswith(".jsonl") and os.path.exists(path)
@@ -100,7 +119,6 @@ def load_from_path(path,counter_file=counter_file,current_file=current_file):
 
 
 
-
 PROBLEM_FIELDS = [
     "Topic",
     "Source",
@@ -125,19 +143,19 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-    with open(counter_file, 'r') as f:
-        current_index=int(f.read())
-    with open(current_file, 'r') as f:
-        problems_path=f.read()
+    current_index = read_current_counter()
+    problems_path = read_current_file()
     problem_dict = load_from_path(problems_path)
 
     if request.args:
+        print(f"BEFORE request.args.get('id') = {request.args.get('id')}")
         for req in req_to_link:
             if request.args.get(req):
                 problems_path = cache_directory + "/" + req_to_link[req].split("/")[-1]
                 problem_dict = load_from_path(problems_path)
+                update_current_file(problems_path)
                 problem = {
-                    "Key": current_index,
+                    "Key": read_current_counter(),
                     "Topic": problem_dict[current_index]["Topic"] if "Topic" in problem_dict[current_index].keys() else None,
                     "Source": problem_dict[current_index]["Source"],
                     "Problem Statement": problem_dict[current_index]["Problem Statement"],
@@ -146,9 +164,32 @@ def index():
                     "Solution": problem_dict[current_index]["Solution"],
                     "Final Answer": problem_dict[current_index]["Final Answer"],
                 }
-                return render_template(
+                break
+        else: 
+            if request.args.get("id") and int(request.args.get("id")) != current_index:
+                update_counter(request.args.get("id"))
+                if int(request.args.get("id")) >= 0 and int(request.args.get("id")) <= len(problem_dict):
+                    current_index = int(request.args.get("id"))
+                else:
+                    return "<p>There are no more problems!</p>"
+            elif request.args.get("previous"):
+                if current_index > 0:
+                    current_index -= 1
+                else:
+                    return "<p>There are no more problems!</p>"
+            elif request.args.get("next"):
+                if current_index < len(problem_dict)-1:
+                    current_index += 1
+                else:
+                    return "<p>There are no more problems!</p>
+            else: 
+                raise ValueError("Invalid request")
+                
+        update_counter(current_index)
+        return render_template(
                     "template.html",
-                    id=current_index,
+                    file=read_current_file(),
+                    id=read_current_counter(),
                     topic= problem["Topic"],
                     source=problem["Source"],
                     problem_statement=problem["Problem Statement"],
@@ -160,35 +201,12 @@ def index():
                     show_images=showimages,
                     show_choices=showchoices,
                 )
-        if request.args.get("id") and int(request.args.get("id")) != current_index:
-            if request.args.get("id") and int(request.args.get("id")) >= 0 and int(request.args.get("id")) <= len(problem_dict):
-                current_index = int(request.args.get("id"))
-                with open(counter_file, 'w') as f:
-                    f.write(str(current_index))
-                print(current_index)
-            else:
-                return "<p>There are no more problems!</p>"
-        elif request.args.get("previous"):
-            if current_index > 0:
-                current_index -= 1
-            else:
-                return "<p>There are no more problems!</p>"
-        elif request.args.get("next"):
-            if current_index < len(problem_dict)-1:
-                current_index += 1
-            else:
-                return "<p>There are no more problems!</p>"
-        else:
-            raise ValueError("Unknown action")
 
-        with open(counter_file, 'w') as f:
-            f.write(str(current_index))
+        # update_counter(current_index)
+        
+        # return redirect("/")
 
-        return redirect("/")
-
-
-    with open(counter_file, 'r') as f:
-        current_index=int(f.read())
+    current_index = read_current_counter()
     if current_index < len(problem_dict):
         key = list(problem_dict.keys())[current_index]
     else:
@@ -202,8 +220,8 @@ def index():
 
     return render_template(
         "template.html",
-        file=problems_path,
-        id=current_index,
+        file=read_current_file(),
+        id=read_current_counter(),
         topic=problem["Topic"],
         Source=problem["Source"],
         problem_statement=problem["Problem Statement"],
@@ -245,8 +263,8 @@ showchoices = True
 
 @app.before_request
 def before_request():
+    problems_path = read_current_file()
     problem_dict = load_from_path(problems_path)
-
     problem_keys = list(problem_dict.keys())
 
 
