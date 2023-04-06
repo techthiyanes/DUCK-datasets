@@ -1,0 +1,475 @@
+\title{
+3. Solutions to the Problems
+}
+
+\subsection{ALGEBRA}
+
+Problem A.1. Determine the roots of unity in the field of $p$-adic numbers.
+
+Solution. The $p$-adic number $a_{-m} p^{-m}+\cdots+a_{-1} p^{-1}+a_{0}+a_{1} p+\cdots+$ $a_{n} p^{n}+\cdots \quad\left(0 \leqslant a_{i}<p\right)$ is a $p$-adic integer iff all the coefficients with negative index are equal to 0 , and it is a unit in the ring of $p$-adic integers iff furthermore $a_{0} \neq 0$. It is clear that every $p$-adic number $\alpha$ can be written in the form $\alpha=\beta p^{r}$, where $\beta$ is a $p$-adic unit and $r$ an integer. Since the product of $p$-adic units is again a $p$-adic unit, we deduce that a $p$-adic number can be a root of unity only in the case when it is a $p$-adic unit.
+
+Every root of unity can be written in the form $\varepsilon=a+\alpha p^{r}$, where $r$ is a positive integer, $\alpha$ is a $p$-adic unit, and $0<a<p$. Now if $\varepsilon^{n}=1$, then $a^{n} \equiv 1(\bmod p)$ holds true. So the exponent of $a$ is a divisor of $n$.
+
+Consider the case $p \neq 2$. Let $\exp (a)=k$; we are going to show $k=n$. Let $\beta=\varepsilon^{k}$, and suppose $\beta \neq 1$. Then $\beta$ is of the form $\beta=1+\gamma p^{s}$, where $\gamma$ is a $p$-adic unit. If $k \neq n$ were the case, then some power of $\beta$ would be 1. To show the impossibility of this, it is enough to show that a power with prime exponent of a number of the form $\beta=1+\gamma p^{s}$ ( $\gamma$ a $p$-adic unit) cannot be 1. Let $q$ be a prime number; using the binomial theorem, we get
+
+$$
+\beta^{q}=1+q \gamma p^{s}+\delta p^{2 s}=1+\varphi p^{s} \quad \text { if } q \neq p
+$$
+
+while in the case $q=p$, using $p>2$ we get
+
+$$
+\beta^{p}=1+\gamma p^{s+1}+\delta p^{2 s+1}=1+\varphi p^{s+1},
+$$
+
+where $\gamma$ is a $p$-adic integer, whereas $\varphi$, as we can easily see, is a $p$-adic unit. This guarantees that $\beta^{q}$ is different from 1 . We have proved that in the field of $p$-adic numbers every root of unity is necessarily a $(p-1)$ th root of unity. Now we show that such roots of unity indeed exist.
+
+Let $g_{0}$ be a primitive root of unity $\bmod p$. We are going to prove that it is possible to determine numbers $0 \leqslant a_{i}<p$ in such a way that the $p$-adic number
+
+$$
+\varepsilon=g_{0}+a_{1} p+\cdots+a_{n} p^{n}+\cdots
+$$
+
+should be a $(p-1)$ th primitive root of unity. It is clear that any power of $\varepsilon$ with exponent less than $p-1$ is different from 1. So it is enough to show that for a suitable choice of the numbers $a_{j}$, the natural numbers $g_{j}=g_{0}+a_{1} p+\cdots+a_{j} p^{j}$ satisfy $g_{j}^{p-1} \equiv 1\left(\bmod p^{j+1}\right)$. This will be proved by induction. For $j=0$ the statement is true, as $g_{0}$ is a primitive root. Suppose that the statement holds for some $j$, that is,
+
+$$
+g_{j}^{p-1}=1+c_{j} p^{j+1}
+$$
+
+Let $a_{j+1}$ be the solution of the congruence $g_{0} x \equiv c_{j}(\bmod p)$. Then
+
+$$
+\begin{aligned}
+g_{j+1}^{p-1} & \equiv\left(g_{j}+a_{j+1} p^{j+1}\right)^{p-1} \equiv 1+c_{j} p^{j+1}-g_{j} a_{j+1} p^{j+1} \\
+& \equiv 1+\left(c_{j}-g_{j} a_{j+1}\right) p^{j+1} \equiv 1\left(\bmod p^{j+2}\right) .
+\end{aligned}
+$$
+
+Therefore $\varepsilon$ and its powers are different $(p-1)$ th roots of unity; their number is $p-1$. There can be no other roots of unity since the polynomial $x^{p-1}-1$ can have at most $p-1$ roots in a commutative field.
+
+Let us now deal with the case $p=2$. Similarly to the case of odd prime numbers, we can prove that a power with an odd exponent of a dyadic number of the form $1+\cdots$ can be 1 only in case the number itself is 1 . So if a dyadic number is a primitive $n$-th root of unity then $n$ can have no odd prime divisors. There are two second roots of unity, 1 and the number $-1=1+2+2^{2}+\cdots 2^{r}+\cdots$ as well. There can be no more second roots of unity, because the polynomial $x^{2}-1$ can have at most two roots in a commutative field.
+
+We show that there are no other roots of unity in the field of dyadic numbers. Suppose there were another root of unity; then this would be necessarily a primitive root of unity belonging to some power of 2 , so there would surely exist a primitive further root of unity, that is, a dyadic number $\eta$ with $\eta^{2}=-1$. Clearly, $\eta$ must have the form $\eta=1+2^{r}+\cdots$, where $r \geqslant 1$. This gives
+
+$$
+-1 \equiv\left(1+2^{r}\right)^{2} \equiv 1+2^{r+1}+2^{2 r} \quad\left(\bmod 2^{r+2}\right) .
+$$
+
+Therefore,
+
+$$
+-2 \equiv 2^{r+1}+2^{2 r} \quad(\bmod 4), \quad \text { that is, } 2^{r}+2^{2 r-1} \equiv 1 \quad(\bmod 2),
+$$
+
+which is clearly impossible. This concludes the proof.
+
+Problem A.2. Let $A$ and $B$ be two Abelian groups, and define the sum of two homomorphisms $\eta$ and $\chi$ from $A$ to $B$ by
+
+$$
+a(\eta+\chi)=a \eta+a \chi \quad \text { for all } a \in A .
+$$
+
+With this addition, the set of homomorphisms from $A$ to $B$ forms an Abelian group $H$. Suppose now that $A$ is a $p$-group ( $p$ a prime number). Prove that in this case $H$ becomes a topological group under the topology defined by taking the subgroups $p^{k} H(k=1,2, \ldots)$ as a neighborhood base of 0 . Prove that $H$ is complete in this topology and that every connected component of $H$ consists of a single element. When is $H$ compact in this topology?
+
+Solution. $H$ is clearly a commutative group whose 0 element is the homomorphism mapping every element of $A$ to $0 \in B$, and for $\eta \in H,-\eta$ is the mapping defined by $a(-\eta)=-a \eta$.
+
+To prove that $H$ is a topological group, we have to check the following:
+
+(i) The intersection of the neighborhoods of 0 is 0 alone. Suppose namely that $\eta \in p^{k} H(k=1,2, \ldots)$. As $A$ is a $p$-group, the order of any $a \in A$ is of the form $p^{n}$ for some $n$ depending on $a$. Because $\eta \in p^{n} H$, we have $\eta=p^{n} \chi$ for some $\chi \in H$, and so
+
+$$
+a \eta=a\left(p^{n} \chi\right)=\left(p^{n} a\right) \chi=0 \chi=0
+$$
+
+proving $\eta=0$.
+
+(ii) To any neighborhood $U$ of 0 there is a neighborhood $V$ of 0 such that $V+(-V) \subseteq U$, a suitable choice being $V=U$.
+
+(iii) If $a$ is contained in some neighborhood $U$ of 0 , then there exists a neighborhood $V$ of 0 such that $a+V \subseteq U$. Again the choice $V=U$ will do.
+
+(iv) The intersection of any two neighborhoods of 0 contains a neighborhood of 0 , because for any two neighborhoods, one of them contains the other.
+
+We now come to the proof of completeness. We have to prove that if $\eta_{1}, \eta_{2}, \ldots, \eta_{n}, \ldots$ is a Cauchy sequence, then it converges to some element of $H$. By repeating members of the sequence, if necessary, we can assume that $\eta_{i+1}-\eta_{i} \in p^{i} H$, that is, $\eta_{i+1}=\eta_{i}+p^{i} \vartheta_{i}$. Furthermore, define $\eta_{0}$ as 0.
+
+Now define mappings $\chi_{i}(i=0,1,2, \ldots)$ in the following way:
+
+If the order of $a \in A$ is $p^{k}$ then let
+
+$$
+a \chi_{i}=a\left(\vartheta_{i}+p \vartheta_{i+1}+\cdots+p^{k-1} \vartheta_{i+k-1}\right)
+$$
+
+It is easy to check that $\chi_{i}$ is indeed a homomorphism from $A$ to $B$ and
+
+$$
+\chi_{i}=\vartheta_{i}+p \chi_{i+1} .
+$$
+
+We will show that the limit of the sequence $\eta_{0}, \eta_{1}, \ldots, \eta_{n}, \ldots$ is $\chi_{0}$. For this it is enough to show $\chi_{0}-\eta_{i} \in p^{i} H$, actually $\chi_{0}-\eta_{i}=p^{i} \chi_{i}$, which we prove by induction. For $i=0$, we have $\chi_{0}-\eta_{0}=\chi_{0}-0=p^{0} \chi_{0}$. Using our previous observations and the induction hypothesis, we have
+
+$$
+\chi_{0}-\eta_{i+1}=\chi_{0}-\eta_{i}-p^{i} \vartheta_{i}=p^{i} \chi_{i}-p^{i} \vartheta_{i}=p^{i}\left(\chi_{i}-\vartheta_{i}\right)=p^{i+1} \chi_{i+1},
+$$
+
+proving the completeness of $H$. We now prove that the connected component of 0 consists of 0 alone; to prove this, it is enough to show that the intersection of all open-closed sets containing 0 is 0 . As $p^{k} H$ is an open subgroup, it is closed as well, and as the intersection of all of them (for $k=1,2, \ldots$ ) is already 0 alone, we get the desired result.
+
+For compactness we are going to prove the following result: $H$ is compact if and only if the index of $p^{k} H$ in $H$ is finite for every $k$.
+
+Necessity of this condition is easy to establish: the cosets $\chi+p^{k} H(\chi \in$ $H$ ) cover $H$. If $H$ is compact, then already a finite number of them have to cover $H$, which is precisely what the condition says.
+
+Suppose now that all the subgroups $p^{k} H$ have finite index. We are going to show that if a family of closed subsets of $H$ has the property that any finite number of them have a nonempty intersection, then the whole family has a nonempty intersection.
+
+First, we show the following: let $U_{\lambda}(\lambda \in \Lambda)$ be subsets of the set $H$ such that the intersection of any finite number of them is nonempty. Suppose that $H$ is the disjoint union of two subsets $S$ and $T$. Then at least one of the families $S \cap U_{\lambda}(\lambda \in \Lambda)$ and $T \cap U_{\lambda}(\lambda \in \Lambda)$ inherits the same intersection property. (In particular, either $S$ or $T$ meets all the $\left.U_{\lambda}.\right)$ Suppose that neither family inherited the property. Then we would have values $\lambda_{1}, \lambda_{2}, \ldots, \lambda_{r}$ and $\lambda_{r+1}, \lambda_{r+2}, \ldots, \lambda_{r+s}$ such that the intersection of the $S \cap U_{\lambda_{i}}$ and also of the $T \cap U_{\lambda_{r+j}}$ would be empty $(i=1,2, \ldots, r, j=1,2, \ldots, s)$. In other words, the sets
+
+$$
+\left(\bigcap_{i=1}^{r} U_{\lambda_{i}}\right) \cap S \quad \text { and } \quad\left(\bigcap_{j=1}^{s} U_{\lambda_{r+j}}\right) \cap T
+$$
+
+are empty, or equivalently
+
+$$
+\left(\bigcap_{i=1}^{r} U_{\lambda_{i}}\right) \subseteq T \quad \text { and } \quad\left(\bigcap_{j=1}^{s} U_{\lambda_{r+j}}\right) \subseteq S .
+$$
+
+Consequently
+
+$$
+\left(\bigcap_{i=1}^{r+s} U_{\lambda_{i}}\right) \subseteq T \cap S=\emptyset
+$$
+
+a contradiction. We then get the same type of statement for any decomposition of $H$ into a finite number of pairwise disjoint subsets.
+
+Let us now consider closed subsets $U_{\lambda}(\lambda \in \Lambda)$ of our topological group $H$ satisfying the finite intersection condition. Repeatedly applying the above procedure, we see that there exists a sequence $\eta_{1}, \eta_{2}, \ldots, \eta_{k}, \ldots$ of elements of $H$ for which
+
+$$
+\eta_{1}+p H \supseteq \eta_{2}+p^{2} H \supseteq \cdots \supseteq \eta_{k}+p^{k} H \supseteq \cdots
+$$
+
+and such that for any $k$ the intersection of the $U_{\lambda}(\lambda \in \Lambda)$ with $\eta_{k}+p^{k} H$ also satisfies the finite intersection condition; in particular, any $U_{\lambda}$ and $\eta_{k}+p^{k} H$ have a common element $\chi_{k, \lambda}$. In view of (1) and the completeness of $H$, the sequence $\eta_{1}, \eta_{2}, \ldots, \eta_{k}, \ldots$ has a limit $\eta$ for which $\eta_{k}+p^{k} H=\eta+p^{k} H$. For any $\lambda$ we have $\chi_{k, \lambda} \in$ $\eta+p^{k} H$; thus the limit of the sequence $\chi_{1, \lambda}, \chi_{2, \lambda}, \ldots, \chi_{k, \lambda}, \ldots$ is $\eta$. Since $U_{\lambda}$ is closed and $\chi_{k, \lambda} \in U_{\lambda}$, we get that $\eta$ is contained in every $U_{\lambda}$, which completes the proof of the compactness of $H$.
+
+Problem A.3. Let $R=R_{1} \oplus R_{2}$ be the direct sum of the rings $R_{1}$ and $R_{2}$, and let $N_{2}$ be the annihilator ideal of $R_{2}$ (in $R_{2}$ ). Prove that $R_{1}$ will be an ideal in every ring $\bar{R}$ containing $R$ as an ideal if and only if the only homomorphism from $R_{1}$ to $N_{2}$ is the zero homomorphism.
+
+Solution. First suppose there is a ring $\bar{R}$ containing $R$ as an ideal and such that $R_{1}$ is not an ideal of $\bar{R}$. Since $R$ is an ideal in $\bar{R}$, we have $R_{1} \bar{r} \subseteq R$ and $\bar{r} R_{1} \subseteq R$ for every $\bar{r} \in \bar{R}$. Suppose for example, that $\bar{r} R_{1} \subsetneq R_{1}$ for some $\bar{r} \in \bar{R}$. (The case $R_{1} \bar{r} \subsetneq R_{1}$ can be treated similarly.) Using the element $\bar{r}$ we will define a nonzero homomorphism from $R_{1}$ to $N_{2}$. The direct sum property implies that for every $r_{1} \in R_{1}$ the element $\bar{r} r_{1} \in R$ can be uniquely decomposed in the form $\bar{r} r_{1}=g\left(r_{1}\right)+h\left(r_{1}\right)$, where $g\left(r_{1}\right) \in R_{1}$ and $h\left(r_{1}\right) \in R_{2}$. $h$ will be the desired homomorphism. It is clearly defined for all elements of $R_{1}$. Furthermore,
+
+(i) $h\left(r_{1}\right) \in N_{2}$ for every $r_{1} \in R_{1}$.
+
+Namely, for every $r_{2} \in R_{2}$ we have
+
+$$
+h\left(r_{1}\right) r_{2}=g\left(r_{1}\right) r_{2}+h\left(r_{1}\right) r_{2}=\left(g\left(r_{1}\right)+h\left(r_{1}\right)\right) r_{2}=\left(\bar{r} r_{1}\right) r_{2}=\bar{r}\left(r_{1} r_{2}\right)=0
+$$
+
+and
+
+$$
+r_{2} h\left(r_{1}\right)=r_{2}\left(\bar{r} r_{1}\right)=\left(r_{2} \bar{r}\right) r_{1} \in R R_{1} \subseteq R_{1},
+$$
+
+but on the other hand, $r_{2} h\left(r_{1}\right) \in R_{2}$, proving $r_{2} h\left(r_{1}\right)=0$, which gives (i).
+
+(ii) $h\left(r_{1}+r_{1}^{\prime}\right)=h\left(r_{1}\right)+h\left(r_{1}^{\prime}\right)$ for every $r_{1}, r_{1}^{\prime} \in R_{1}$.
+
+Since
+
+$$
+\begin{aligned}
+\bar{r}\left(r_{1}+r_{1}^{\prime}\right) & =g\left(r_{1}+r_{1}^{\prime}\right)+h\left(r_{1}+r_{1}^{\prime}\right)=\bar{r} r_{1}+\bar{r} r_{1}^{\prime} \\
+& =g\left(r_{1}\right)+h\left(r_{1}\right)+g\left(r_{1}^{\prime}\right)+h\left(r_{1}^{\prime}\right)=g\left(r_{1}\right)+g\left(r_{1}^{\prime}\right)+h\left(r_{1}\right)+h\left(r_{1}^{\prime}\right),
+\end{aligned}
+$$
+
+where $g\left(r_{1}\right)+g\left(r_{1}^{\prime}\right) \in R_{1}$ and $h\left(r_{1}\right)+h\left(r_{1}^{\prime}\right) \in R_{2}$, we get the validity of (ii).
+
+(iii) $h\left(r_{1} r_{1}^{\prime}\right)=h\left(r_{1}\right) h\left(r_{1}^{\prime}\right)$ for every $r_{1}, r_{1}^{\prime} \in R_{1}$.
+
+We will show that both sides of the equality are equal to zero. For the right-hand side, this is clear because $h\left(r_{1}\right)$ is an annihilator of $R_{2}$ and $h\left(r_{1}^{\prime}\right) \in R_{2}$. For the left-hand side, we have to consider the product $\bar{r}\left(r_{1} r_{1}^{\prime}\right)$ :
+
+$$
+\bar{r}\left(r_{1} r_{1}^{\prime}\right)=\left(\bar{r} r_{1}\right) r_{1}^{\prime}=\left(g\left(r_{1}\right)+h\left(r_{1}\right)\right) r_{1}^{\prime}=g\left(r_{1}\right) r_{1}^{\prime} \in R_{1},
+$$
+
+so $h\left(r_{1} r_{1}^{\prime}\right)=0$.
+
+This establishes the first part of the statement.
+
+For the reverse statement, we use the same idea. We assume that there is a nonzero homomorphism $h$ from $R_{1}$ to $N_{2}$, and we construct the element $\bar{r}$ in such a way that it should produce $h$. We denote by $R_{0}$ the zero ring over the additive group of the integers. The element of $R_{0}$ corresponding to $n \in \mathbb{Z}$ will be denoted by $\bar{n}$. The additive group of the ring $\bar{R}$ is defined by $\bar{R}^{+}=R_{0}^{+} \oplus R_{1}^{+} \oplus R_{2}^{+}$, and for the elements of $\bar{R}$
+
+$$
+r=\bar{n}+r_{1}+r_{2}, \quad r^{\prime}=\overline{n^{\prime}}+r_{1}^{\prime}+r_{2}^{\prime},
+$$
+
+we define the multiplication by
+
+$$
+r r^{\prime}=r_{1} r_{1}^{\prime}+r_{2} r_{2}^{\prime}+n h\left(r_{1}^{\prime}\right)+n^{\prime} h\left(r_{1}\right) .
+$$
+
+It is routine to check that $\bar{R}$ is a ring and $R$ is a subring of it. In fact, $R$ is even an ideal of $\bar{R}$ in view of $\bar{R} \bar{R} \subseteq R$.
+
+To verify that $R_{1}$ is not an ideal of $\overline{\bar{R}}$, take an $r_{1} \in R_{1}$ with $h\left(r_{1}\right) \neq 0$. Then $\overline{1} r_{1}=h\left(r_{1}\right) \notin R_{1}$ as $h\left(r_{1}\right) \in R_{2}$, and this shows that $R_{1}$ is not an ideal of $\bar{R}$.
+
+Problem A.4. Call a polynomial positive reducible if it can be written as a product of two nonconstant polynomials with positive real coefficients. Let $f(x)$ be a polynomial with $f(0) \neq 0$ such that $f\left(x^{n}\right)$ is positive reducible for some natural number $n$. Prove that $f(x)$ itself is positive reducible.
+
+Solution. Consider the product representation of $f\left(x^{n}\right)$ :
+
+$$
+f\left(x^{n}\right)=\prod_{j=1}^{s} g_{j}(x)
+$$
+
+where the $g_{j}(x)$ are polynomials with positive coefficients. Suppose that some of the polynomials $g_{j}(x)$ contain a term $c_{j k} x^{k}$ with nonvanishing $c_{j k}$ such that $n \nmid k$. Then the product on the right-hand side of (1) contains the term $c_{j k} \prod_{i \neq j} g_{i}(0) x^{k}$. The coefficient of this term does not vanish, since $\prod_{i=1}^{s} g_{i}(0)=f(0) \neq 0$. Since the polynomials $g_{j}(x)$ all have positive coefficients, the right-hand side of (1) will contain the term $x^{k}$ with a nonvanishing coefficient, which is a contradiction in view of $n \nmid k$.
+
+This means that all the polynomials $g_{j}(x)$ have the form
+
+$$
+g_{j}(x)=\sum_{i=0}^{l_{j}} b_{j l} x^{l n} \quad\left(b_{j l} \geqslant 0, l=0,1, \ldots, l_{j}\right),
+$$
+
+that is, $g_{j}(x)$ is actually a polynomial of $x^{n}: g_{j}(x)=\bar{g}_{j}\left(x^{n}\right)$. So upon substituting $x^{n}=y$, we get
+
+$$
+f(y)=\prod_{j=1}^{s} \bar{g}_{j}(y)
+$$
+
+proving the statement of the problem. Problem A.5. Prove that the intersection of all maximal left ideals of a ring is a (two-sided) ideal.
+
+Solution. Let us denote by $B$ the intersection of all maximal left ideals of the ring $R$ (if there are no maximal left ideals, the statement is void). $B$ is clearly a left ideal, so we only have to prove that $b \in B$ and $r \in R$ imply $b r \in B$, or equivalently $b r \notin B$ implies $b \notin B$. Since an element is not in $B$ if and only if there is a maximal left ideal not containing it, we actually have to prove the following statement:
+
+If for some elements $b \in B, r \in R$ there is a maximal left ideal $M$ with $b r \notin M$, then there exists a maximal left ideal $N$ with $b \notin N$. Let
+
+$$
+N=\{x \in R \mid x r \in M\} .
+$$
+
+We are going to prove that $N$ has the desired properties.
+
+1. $N$ is a left ideal: if $s \in R$ and $x \in N$, then $x r \in M$ implies $s x r \in M(M$ being a left ideal), which in turn implies $s x \in N$. Also $x \in N, y \in N$ clearly imply $x-y \in N$.
+
+2. $b \notin N$ as $b r \notin M$.
+
+3. $N$ is maximal. To prove this, we have to show that for any element $a$ of $R$ with $a \notin N$ the only left ideal of $R$ containing both $a$ and $N$ is $R$ itself. We have ar $\notin M$ since $a \notin N$. As $M$ was maximal, every element of $R$ is contained in the left ideal generated by $a r$ and $M$; in particular, for every $c \in R, c r$ can be written in the form
+
+$$
+c r=y a r+n a r+m
+$$
+
+where $y \in R, m \in M$, and $n$ is an integer. This implies
+
+$$
+(c-y a-n a) r=m \in M,
+$$
+
+so
+
+$$
+d=c-y a-n a \in N,
+$$
+
+but this shows that $c=y a+n a+d$ is contained in the left ideal generated by $a$ and $N$, which was to be proved.
+
+Remark. If $R$ has an identity element, then $B$ is of course the Jacobson radical.
+
+Problem A.6. Let $R$ be a finite commutative ring. Prove that $R$ has a multiplicative identity element (1) if and only if the annihilator of $R$ is 0 (that is, $a R=0, a \in R$ imply $a=0$ ).
+
+Solution 1. If $R$ has an identity element $e$, then $a R=0(a \in R)$ implies $0=a e=a$, so the annihilator of $R$ is indeed 0 . Conversely, suppose $R$ is a finite commutative ring whose annihilator is 0 . This implies that to any element $a$ of $R$ different from 0 there is an element $b$ of $R$ such that $a b \neq 0$. If $R=(0)$, then $R$ surely has an identity element. So suppose $R \neq(0)$ and $a_{0}$ is an arbitrary element of $R$ different from 0. Then the remark made above shows that for any natural number $n$ we can find an element $a_{n} \in R$ such that the relations
+
+$$
+a_{0} a_{1} \neq 0, a_{0} a_{1} a_{2} \neq 0, \ldots, a_{0} a_{1} \ldots a_{n} \neq 0, \ldots
+$$
+
+hold true. Since $R$ is finite, we have numbers $m$ and $n(0 \leqslant m<n)$ such that
+
+$$
+a_{0} a_{1} \ldots a_{m}=\left(a_{0} a_{1} \ldots a_{m}\right)\left(a_{m+1} \ldots a_{n}\right)
+$$
+
+This means that the set $E$ of elements $e \neq 0$ of the ring $R$ for which there exists a $0 \neq d \in R$ such that
+
+$$
+d e=d
+$$
+
+is nonempty. Choose an element $e$ from $E$ so that the number of elements $0 \neq d \in R$ corresponding to $e$ that satisfy (2) should be maximal. (Such an $e$ exists because $R$ is finite.) We will show that $e$ is an identity element of $R$.
+
+Suppose, on the contrary, that for some $a \in R$ we have $a e-a \neq 0$. Then in view of (1) there are elements $r, s \in R$ such that
+
+$$
+0 \neq(a e-a) r=(a e-a) r s
+$$
+
+holds. (We allow $r$ to be an empty product.)
+
+Equation (3) implies
+
+$$
+\operatorname{ar}(e-e s+s)=a r \neq 0
+$$
+
+consequently, $0 \neq e-e s+s \in E$. If $d e=d$, then
+
+$$
+d(e-e s+s)=d e-d e s+d s=d-d s+d s=d
+$$
+
+furthermore,
+
+$$
+a r e-a r=(a e-a) r \neq 0 \text {. }
+$$
+
+Equations (4), (5) and (6) together show that the element $e-e s+s \in E$ satisfies condition (2) for more $d \in R$ than $e$. This contradiction shows the existence of an identity element in $R$.
+
+Solution 2. Suppose the commutative ring $R$ with $n(\geqslant 2)$ elements has annihilator 0 . Then $R$ cannot be nilpotent. If $R$ were nilpotent, there would exist an integer $k \geqslant 2$ such that $R^{k}=0, R^{k-1} \neq 0$ would be satisfied, but this would imply that $R^{k-1}$ is some nonzero annihilator of $R$, a contradiction. Next, we show that there is an element $a$ of $R$ such that no power of $a$ is equal to 0 . Suppose that to every element $a_{i}(i=1,2, \ldots, n)$ of $R$ there exists a natural number $l_{i}$ with $a_{i}^{l_{i}}=0$. Let $l$ be the maximum of the $l_{i}(i=1,2, \ldots, n)$. If a product in $R$ does not vanish, then every $a_{i}$ can occur in it at most $(l-1)$ times. So every product with $n(l-1)+1$ factors vanishes; in other words, $R^{n(l-1)+1}=0$, contrary to the nonnilpotency of $R$.
+
+So suppose $a \in R$ is such that all the elements $a^{j}(j=1,2, \ldots)$ are nonzero. Since $R$ is finite, these powers cannot be all different, say $a^{k}=$ $a^{k+l}(l>0)$. This implies $a^{k}=a^{k+l}=a^{k+2 l}=a^{k+3 l}=\ldots$. Choosing $m$ big enough to satisfy $m l>k$, we have
+
+$$
+\left(a^{m l}\right)^{2}=a^{m l} \cdot a^{m l}=a^{k+m l} \cdot a^{m l-k}=a^{k} \cdot a^{m l-k}=a^{m l},
+$$
+
+so $a^{m l}$ is a nonzero idempotent of $R$.
+
+Let us write $a^{m l}=e$ for simplicity. We can write $R$ as a direct sum of the ideals $A$ and $B$ :
+
+$$
+R=A \oplus B
+$$
+
+where $A$ is the set of all elements of the form $r e(r \in R)$ and $B$ is the set of all elements of the form $r-r e(r \in R)$. Clearly, $A$ and $B$ are ideals of $R$. Any element $r$ of $R$ can be written in the form $r=r e+(r-r e)$, thus $R=A+B$. Furthermore, $e a=a$ for all $a$ in $A$, whereas $e b=0$ for all $b$ in $B$. This implies $A \cap B=0$, so (7) holds indeed. If $B=0$ then $R=A$, so $e$ is the desired identity element of $R$. If $B \neq 0$, then in view of $0 \neq e \in A, R$ is a direct sum of two rings, each of which contains fewer than $n$ elements.
+
+Consider this case and suppose by induction that all commutative rings with fewer than $n$ elements and with annihilator 0 have an identity element. (The one-element ring clearly has an identity element.) If $z \in A$ is such that $z A=0$, then in view of $A B=0$ we have $z R=z(A+B)=z A+z B=0$, implying $z=0$. Similarly, from $w \in B, w B=0$ we get $w=0$. This means that the annihilators of both $A$ and $B$ are 0 , so by induction $A$ has an identity element $e_{1}$ and $B$ has an identity element $e_{2}$. But then $e_{1}+e_{2}$ is an identity element of the ring $R=A \oplus B$.
+
+Remark. The statement of the problem is true for commutative Artinian rings, too (see R. Baer, Inverses and zerodivisors, Bull. Amer. Math. Soc., 48 (1942), 630-638).
+
+Problem A.7. Let I be an ideal of the ring of all polynomials with integer coefficients such that
+
+(a) the elements of I do not have a common divisor of degree greater than 0 , and
+
+(b) I contains a polynomial with constant term 1.
+
+Prove that $I$ contains the polynomial $1+x+x^{2}+\cdots+x^{r-1}$ for some natural number $r$.
+
+Solution. According to assumption (b), for a suitable $f \in \mathbb{Z}[x]$ we have
+
+$$
+1+x f \in I \text {. }
+$$
+
+Because of
+
+$$
+(1+x f) x^{r}+x^{r+1}(-f)=x^{r}
+$$
+
+for any $r \geqslant 0$, we have
+
+$$
+x^{r} \in\left(1+x f, x^{r+1}\right) \text {. }
+$$
+
+Repeatedly applying this observation, we get
+
+$$
+\left(1+x f, x^{r+1}\right) \supseteq\left(1+x f, x^{r}\right) \supseteq \cdots \supseteq(1+x f, x) \ni 1,
+$$
+
+consequently,
+
+$$
+1, x, \ldots, x^{r} \in\left(1+x f, x^{r+1}\right)
+$$
+
+which in turn means that we can find $g_{r}, h_{r} \in \mathbb{Z}[x]$ for which
+
+$$
+1+x+\cdots+x^{r}=(1+x f) g_{r}+x^{r+1} h_{r}
+$$
+
+holds true.
+
+We claim that $g_{r}$ and $h_{r}$ can be chosen in such a way that
+
+$$
+\operatorname{deg} h_{r} \leqslant \operatorname{deg} f
+$$
+
+holds. To prove this, observe that the polynomial $g_{r}$ figuring in (1) can be written as
+
+$$
+g_{r}=x^{r+1} q+p
+$$
+
+where $p, q \in \mathbb{Z}[x]$ and $\operatorname{deg} p \leqslant r$. From (1) we get
+
+$$
+1+x+\cdots+x^{r}=(1+x f) p+x^{r+1}\left[(1+x f) q+h_{r}\right]
+$$
+
+and choosing $p$ (resp., $\left.(1+x f) q+h_{r}\right)$ as the new $g_{r}$ (resp., $\left.h_{r}\right)$ we clearly get an $h_{r}$ satisfying (2) because of $\operatorname{deg} p \leqslant r$.
+
+Suppose $s>r$ and
+
+$$
+1+x+\cdots+x^{s}=(1+x f) g_{s}+x^{s+1} h_{s}
+$$
+
+where $\operatorname{deg} h_{s} \leqslant \operatorname{deg} f$. Subtracting from (3) $x^{s-r}$ times (1), we get
+
+$$
+1+x+\cdots+x^{s-r-1}=(1+x f)\left(g_{s}-g_{r} x^{s-r}\right)+x^{s+1}\left(h_{s}-h_{r}\right) .
+$$
+
+This means that if there are indices $s>r$ such that
+
+$$
+h_{s}-h_{r} \in I
+$$
+
+holds, then
+
+$$
+1+x+\cdots+x^{s-r-1} \in I
+$$
+
+is also true. We prove that the ideal contains a nonzero constant polynomial. Take a $p \in I$ such that $p \neq 0$ and $\operatorname{deg} p$ is minimal. (Such a $p$ exists in view of $1+x f \neq 0$.) For any $q \in I$ let
+
+$$
+q=p u+v
+$$
+
+where $u, v \in \mathbb{Q}[x]$ and $\operatorname{deg} v<\operatorname{deg} p$. Multiplying by a suitable nonzero integer $\alpha$, we get
+
+$$
+\alpha q=p u_{1}+v_{1}
+$$
+
+where $u_{1}, v_{1} \in \mathbb{Z}[x]$ and of course $\operatorname{deg} v_{1}<\operatorname{deg} p$ still. This gives
+
+$$
+v_{1}=\alpha q-p u_{1} \in I
+$$
+
+so by the choice of $p$ and in view of $\operatorname{deg} v_{1}<\operatorname{deg} p$, we have $v_{1}=0$. This means that to an arbitrary $q \in I$ we can find a $u \in \mathbb{Q}[x]$ for which $q=p u$. Let $p=\varphi p_{1}$, where $p_{1}$ is a primitive polynomial and $\varphi \in \mathbb{Z}$. Then $q=p_{1}(\varphi u)$, which in view of Gauss's lemma implies $\varphi u \in \mathbb{Z}[x]$. This in turn implies that for any $q \in I$ we have $p_{1} \mid q$. In view of condition (a), this is only possible if $p_{1}=1$; consequently $\varphi \in I$, thus $(\varphi) \subseteq I$.
+
+Finally, we show that there are values $s>r$ such that
+
+$$
+h_{s}-h_{r} \in(\varphi) \text {. }
+$$
+
+Indeed, any coefficient of a polynomial can take on at most $\varphi$ values $\bmod \varphi$; furthermore, $\operatorname{deg} h_{r} \leqslant \operatorname{deg} f(r=1,2, \ldots)$, so there exist values $r<s\left(\leqslant \varphi^{\operatorname{deg} f+1}+1\right)$ for which all coefficients of $h_{s}-h_{r}$ are divisible by $\varphi$. This proves the statement.
+
+Remark. The following, more general, statement can be proved:
+
+Let $R$ be a unique factorization domain whose proper factor rings are all finite. Let $I$ be an ideal of the polynomial ring $R[x]$ satisfying the following two conditions:
+
+(a) The elements of $I$ do not have a common divisor of degree greater than 0.
+
+(b) $I$ contains a polynomial with constant term 1 .
+
+Then to every natural number $N$ there exists a natural number $r \geqslant N$ for which $N \mid r+1$ and
+
+$$
+1+x+\cdots+x^{r} \in I
+$$
+
+Problem A.8. Prove that in a Euclidean ring $R$ the quotient and remainder are always uniquely determined if and only if $R$ is a polynomial ring over some field and the value of the norm is a strictly monotone function of the degree of the polynomial. (To be precise, there are two more trivial cases: $R$ can also be a field or the null ring.)

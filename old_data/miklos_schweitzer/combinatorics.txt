@@ -1,0 +1,398 @@
+\title{
+3.2 COMBINATORICS
+}
+
+Problem C.1. Among all possible representations of the positive integer $n$ as $n=\sum_{i=1}^{k} a_{i}$ with positive integers $k, a_{1}<a_{2}<\cdots<a_{k}$, when will the product $\prod_{i=1}^{k} a_{i}$ be maximum?
+
+Solution. First, we are going to investigate the properties of the extremal integer sets. Suppose that $A_{n}=\left\{a_{1}, a_{2}, \ldots, a_{k}\right\}$ is extremal.
+
+Claim 1. There are no integers $i$ and $j$ such that $a_{1}<i<j<a_{k}$ and $i \notin A_{n}, j \notin A_{n}$.
+
+If it is not the case, then there are some elements $a_{r}, a_{s} \in A_{n}$ such that $a_{r}+1 \notin A_{n}, a_{s}-1 \notin A_{n}$, and $a_{r}+3 \leq a_{s}$. Then
+
+$$
+\left(a_{r}+1\right)\left(a_{s}-1\right)=a_{r} a_{s}+\left(a_{s}-a_{r}\right)-1 \geq a_{r} a_{s}+2>a_{r} a_{s}
+$$
+
+so replacing the elements $a_{r}, a_{s}$ of $A_{n}$ by $a_{r}+1$ and $a_{s}-1$, the sum of the elements of $A_{n}$ does not change, but their product increases, a contradiction to the extremality of $A_{n}$.
+
+Claim 2. $2 \leq a_{1}$ if $k>1$.
+
+If $a_{1}=1$, then replacing the elements $a_{1}, a_{k}$ of $A_{n}$ by $a_{k}+1$ gives us a "better" system, a contradiction to the choice of $A_{n}$.
+
+Claim 3. $a_{1}=2$ or $a_{1}=3$ if $n \geq 5$.
+
+If $a_{1}>4$, then replacing the element $a_{1}$ of $A_{n}$ by 2 and $a_{1}-2$, the sum of the elements of $A_{n}$ does not change, but their product increases since
+
+$$
+2\left(a_{1}-2\right)=2 a_{1}-4=a_{1}+\left(a_{1}-4\right)>a_{1}
+$$
+
+a contradiction to the extremality of $A_{n}$.
+
+If $a_{1}=4$, then $k>1$ by $n \geq 5$, and replacing the elements $a_{1}, a_{2}$ of $A_{n}$ by $2, a_{1}-1$, and $a_{2}-1$, the sum of the elements of $A_{n}$ does not change, but their product increases, since
+
+$$
+\begin{aligned}
+2\left(a_{1}-1\right)\left(a_{2}-1\right) & =2 a_{1} a_{2}-2\left(a_{1}+a_{2}\right)+2=a_{1} a_{2}+\left(a_{1}-2\right)\left(a_{2}-2\right)-2 \\
+& \geq a_{1} a_{2}+6-2=a_{1} a_{2}+4>a_{1} a_{2},
+\end{aligned}
+$$
+
+a contradiction to the extremality of $A_{n}$.
+
+Claim 4. If $a_{1}=3$ and $i$ is an integer such that $a_{1}<i<a_{k}, i \notin A_{n}$ then $i=a_{k}-1$.
+
+If not, then $i+2 \in A_{n}$ by claim 1 , and replacing $i+2$ by 2 and $i$, the sum of the elements of $A_{n}$ does not change, but their product increases, since
+
+$$
+2 i \geq i+a_{1}+1=i+4>i+2
+$$
+
+a contradiction to the extremality of $A_{n}$. Now, we are ready to determine the extremal sets $A_{n}$. Let $A(i, j, l)$ denote the set $\{i, i+1, \ldots, l-1, l+1, \ldots, i+j-1, i+j\}$, and let $s(i, j, l)$ denote the sum of the elements of $A(i, j, l)$. For $k=2,3, \ldots$, let $s(2, k+$ $2, k+2)=2+3+\cdots+k+(k+1)=\left(\begin{array}{c}k+2 \\ 2\end{array}\right)-1=L_{k}$. By claims $1-4, A_{n}$ has at least two elements if $n \geq 5$, and if $k \geq 2$ then the possible extremal sets are as follows: $A(2, k+2, k+2), A(2, k+2, k+1), \ldots, A(2, k+2,3), A(2, k+$ $2,2), A(3, k+3, k+1)$. Obviously, $s(2, k+2, k+2)=L_{k}, s(2, k+2, k+$ 1) $=L_{k}+1, \ldots, s(2, k+2,3)=L_{k}+(k-1), s(2, k+2,2)=L_{k}+k$ and $s(3, k+3, k+1)=L_{k}+(k+1)=L_{k+1}-1$, so the sums of the elements of the above sets are the integers in the interval $\left[L_{k}, L_{k+1}\right)$, and each integer appears exactly once. Thus, for any $n \geq 5$, we have exactly one set of type above and this is the extremal set $A_{n}$ for this $n$. If $1 \leq n \leq 4$, then obviously $A_{n}=\{n\}$ is the only extremal set.
+
+Remark. Consider the following generalization of the problem: Let $f(x)$ be an arbitrary function that is strictly concave from below in the interval $(0,+\infty)\left(f(x)=\log x\right.$ in the problem above). Let $n=\sum_{i=1}^{k} a_{i}$, where $a_{1}<a_{2}<\cdots<a_{k}$ are positive integers, $k$ is not fixed. When will the sum $\sum_{i=1}^{k} f\left(a_{k}\right)$ be maximum for a given $n$ ? It can be proved that also in this case every extremal set can be obtained from a sequence of consecutive natural numbers deleting at most one element.
+
+Problem C.2. For every natural number $r$, the set of $r$-tuples of natural numbers is partitioned into finitely many classes. Show that if $f(r)$ is a function such that $f(r) \geq 1$ and $\lim _{r \rightarrow \infty} f(r)=+\infty$, then there exists an infinite set of natural numbers that, for all $r$, contains $r$-tuples from at most $f(r)$ classes. Show that if $f(r) \nrightarrow+\infty$, then there is a family of partitions such that no such infinite set exists.
+
+Solution. Let $\mathbb{N}$ denote the set of natural numbers. We will use the following well-known theorem of Ramsey. If the $r$-tuples of natural numbers are divided into finitely many classes, then there is an infinite subset $\mathbb{N}^{\prime}$ of $\mathbb{N}$ such that every $r$-tuple in $\mathbb{N}^{\prime}$ is contained in the very same class.
+
+To prove the first statement, we define a sequence $\mathbb{N}_{0} \supseteq \cdots \supseteq \mathbb{N}_{r} \supseteq \ldots$ of subsets and a sequence $x_{1}, \ldots, x_{r}, \ldots$ of natural numbers by induction on $r$. Let $\mathbb{N}_{0}=\mathbb{N}$. Suppose that $r \geq 0$ and that $\mathbb{N}_{r}$ and $x_{i} \quad(i<r)$ are defined, $\mathbb{N}_{r}$ is infinite. Let $x_{r}$ be an arbitrary element of $\mathbb{N}_{r}$ and let $\mathbb{N}_{r}^{\prime}=\mathbb{N}_{r}-\left\{x_{1}, \ldots, x_{r}\right\}$. For any set $A^{\prime} \subseteq\left\{x_{1}, \ldots, x_{r}\right\}$, divide the $(r-s)$ tuples of $\mathbb{N}_{r}^{\prime}$ into finitely many classes where $s=\left|A^{\prime}\right|$. Put two $(r-s)$-tuples into the same class if and only if adding the elements of $A^{\prime}$ to them the resulting $r$-tuples are in the same class of the original partition. Applying Ramsey's theorem $2^{r}$ times, we get that there is a subset $\mathbb{N}_{r+1}$ of the set $\mathbb{N}_{r}^{\prime}$ such that
+
+$$
+\begin{gathered}
+|A|=|B|=r, \\
+A, B \subseteq\left\{x_{1}, \ldots, x_{r}\right\} \cup \mathbb{N}_{r+1}, \quad A \cap\left\{x_{1}, \ldots, x_{r}\right\}=B \cap\left\{x_{1}, \ldots, x_{r}\right\}
+\end{gathered}
+$$
+
+imply that $A$ and $B$ are in the very same class. So, we defined the sequences $\mathbb{N}_{0} \supseteq \cdots \supseteq \mathbb{N}_{r} \supseteq \ldots ; x_{1}, \ldots, x_{r}, \ldots$ Let $X=\left\{x_{1}, \ldots, x_{r}, \ldots\right\}$. Now, (1) and (2) imply that $X$ has the following properties.
+
+(*) Suppose that $|A|=|B|=r, \quad A, B \subseteq X, \quad A \cap\left\{x_{1}, \ldots, x_{r}\right\}=B \cap$ $\left\{x_{1}, \ldots, x_{r}\right\}$ for any $r$. Then $A$ and $B$ are in the very same class. Since $f(r) \geq 1$ and $f(r) \rightarrow+\infty$ as $r \rightarrow+\infty$, thus there exists a monotone subsequence $x_{r_{k}}$ such that
+
+$$
+\left|\left\{x_{r_{k}}: r_{k} \leq r\right\}\right| \leq \log _{2} f(r) .
+$$
+
+Let $X^{\prime}=\left\{x_{r_{1}}, x_{r_{2}}, \ldots\right\}$. This set $X^{\prime}$ is obviously infinite and meets the requirements of the problem by $(*)$.
+
+Now, we are to prove a statement that is stronger than the second part of the problem. We show that a set of cardinality continuum has the desired partition, as well. Let $S=[0,1]$. We divide the set of $r$-element subsets of $S$ into $r$ classes for any $r$. Let $X=\left\{x_{0}, \ldots, x_{r-1}\right\}$ be an $r$ element subset of $S$ with $x_{0}<\cdots<x_{r-1}$. We put $X$ into the $i$ th class if exactly $i$ of the intervals $\left(x_{j}, x_{j+1}\right) \quad(j=0,1, \ldots, r-2)$ are longer than $1 / r$. If $S^{\prime}$ is an arbitrary infinite subset of $S$, then using the fact that $S^{\prime}$ has an accumulation point, it is easy to see that for any $i$ there is a number $r_{0}$ such that for $r>r_{0}$ the set $S^{\prime}$ contains a set out of the $i$ th class of the $r$-tuples, and so our proof is complete.
+
+Problem C.3. Let $n$ and $k$ be given natural numbers, and let $A$ be a set such that
+
+$$
+|A| \leq \frac{n(n+1)}{k+1}
+$$
+
+For $i=1,2, \ldots, n+1$, let $A_{i}$ be sets of size $n$ such that
+
+$$
+\begin{aligned}
+\left|A_{i} \cap A_{j}\right| & \leq k \quad(i \neq j), \\
+A & =\bigcup_{i=1}^{n+1} A_{i} .
+\end{aligned}
+$$
+
+Determine the cardinality of $A$.
+
+Solution 1. Let $\phi_{x}$ denote the number of sets $A_{i}$ containing the point $x$. Obviously,
+
+$$
+\sum_{x \in A_{j}} \phi_{x}=\sum_{i=1}^{n+1}\left|A_{i} \cap A_{j}\right|=n+\sum_{i \neq j}\left|A_{i} \cap A_{j}\right|
+$$
+
+and so
+
+$$
+\sum_{x \in A_{j}} \phi_{x} \leq n+n k=n(k+1)
+$$
+
+Add these up for all $j$. On the left-hand side, we get
+
+$$
+\sum_{j=1}^{n+1} \sum_{x \in A_{j}} \phi_{x}=\sum_{x \in A} \sum_{x \in A_{j}} 1=\sum_{x \in A} \phi_{x}^{2}
+$$
+
+Estimating it by the inequality between arithmetic and quadratic means, we get
+
+$$
+\sum_{x \in A} \phi_{x}^{2} \geq|A|\left(\frac{\sum_{x \in A} \phi_{x}}{|A|}\right)^{2}=\frac{1}{|A|}\left(\sum_{i=1}^{n+1}\left|A_{j}\right|\right)^{2}=\frac{n^{2}(n+1)^{2}}{|A|}
+$$
+
+Adding up the right-hand sides of $(1)$ for all $j$, we get $n(n+1)(k+1)$. Thus,
+
+$$
+\frac{n^{2}(n+1)^{2}}{|A|} \leq n(n+1)(k+1)
+$$
+
+that is,
+
+$$
+|A| \geq \frac{n(n+1)}{k+1}
+$$
+
+Since the opposite inequality was supposed, it implies the equality above. Naturally, $k+1 \mid n(n+1)$ is needed for the existence of such a family of sets.
+
+Solution 2. We will use the following theorem: Let $F_{1}, \ldots, F_{N}$ be arbitrary polynomials of some events $A_{1}, \ldots, A_{n}$, and let $c_{1}, \ldots, c_{N}$ be arbitrary real numbers. Then, the inequality
+
+$$
+\sum_{k=1}^{N} c_{k} p\left(F_{k}\right) \geq 0
+$$
+
+holds in any probability space and for any events $A_{1}, \ldots, A_{n}$ provided that it holds in the trivial probability space.
+
+Thus, it is sufficient to verify that the inequality
+
+$$
+p\left(A_{1} \cup \cdots \cup A_{n+1}\right) \geq \frac{2 k+1}{(k+1)^{2}} \sum_{i=1}^{n+1} p\left(A_{i}\right)-\frac{2}{(k+1)^{2}} \sum_{1 \leq i<j \leq n+1} p\left(A_{i} \cap A_{j}\right)
+$$
+
+holds when $A_{i}=\emptyset$ or $\Omega$. If $A_{i}=\emptyset$ for all $i$, then we get $0 \geq 0$, which holds. If exactly $l$ of the $A_{i}$ 's are $\Omega(l \geq 1)$, then we have to prove that
+
+$$
+1 \geq \frac{2 k+1}{(k+1)^{2}} l-\frac{2}{(k+1)^{2}}\left(\begin{array}{l}
+l \\
+2
+\end{array}\right)
+$$
+
+that is,
+
+$$
+\frac{l^{2}-l}{(k+1)^{2}}-\frac{2 k+1}{(k+1)^{2}} l+1=\left(\frac{l}{k+1}-1\right)^{2} \geq 0
+$$
+
+which holds as well. Now, let $A_{i} \quad(i=1, \ldots, n+1)$ be the sets given in the problem, and consider the probability space such that $\Omega=A=\cup_{i=1}^{n+1} A_{i}$ and the probability of each point is $1 /|A|$. So, even in this space,
+
+$$
+\begin{aligned}
+p(A) & =1 \geq \frac{2 k+1}{(k+1)^{2}} \sum_{i=1}^{n+1} \frac{\left|A_{i}\right|}{|A|}-\frac{2}{(k+1)^{2}} \sum_{1 \leq i<j \leq n+1} \frac{\left|A_{i} \cap A_{j}\right|}{|A|} \\
+& \geq \frac{2 k+1}{(k+1)^{2}} \frac{(n+1) n}{|A|}-\frac{2}{(k+1)^{2}}\left(\begin{array}{c}
+n+1 \\
+2
+\end{array}\right) \frac{k}{|A|}
+\end{aligned}
+$$
+
+Reducing this, we obtain that $|A| \geq n(n+1) /(k+1)$. We supposed that $|A| \leq n(n+1) /(k+1)$, so $|A|=n(n+1) /(k+1)$
+
+Problem C.4. Let $A_{1}, A_{2}, \ldots$ be a sequence of infinite sets such that $\left|A_{i} \cap A_{j}\right| \leq 2$ for $i \neq j$. Show that the sequence of indices can be divided into two disjoint sequences $i_{1}<i_{2}<\ldots$ and $j_{1}<j_{2}<\ldots$ in such a way that, for some sets $E$ and $F,\left|A_{i_{n}} \cap E\right|=1$ and $\left|A_{j_{n}} \cap F\right|=1$ for $n=1,2, \ldots$
+
+Solution. Suppose that for $k \geq 3$, there are some finite disjoint sets $E_{k}$ and $F_{k}$ such that
+
+$$
+\begin{aligned}
+& \text { either }\left|A_{i} \cap E_{k}\right|=1 \text { or }\left|A_{i} \cap F_{k}\right|=1 \\
+& \text { if } i>k \text { then }\left|A_{i} \cap E_{k}\right| \leq 1 \text { or }\left|A_{i} \cap F_{k}\right| \leq 1
+\end{aligned}
+$$
+
+For $k=3$, it is easy to construct such sets $E_{3}$ and $F_{3}$. If we show that there are some finite disjoint sets $E_{k+1} \supseteq E_{k}$ and $F_{k+1} \supseteq F_{k}$ satisfying (1) and (2) for $A_{k+1}$, then the sets $E=\cup_{k=1}^{\infty} E_{k} F=\cup_{k=1}^{\infty} F_{k}$ have the desired properties.
+
+First, suppose that $A_{k+1}$ meets both $E_{k}$ and $F_{k}$. According to (2), it is possible only if, say, $\left|A_{k+1} \cap E_{k}\right|=1$, and then $E_{k+1}=E_{k}$ and $F_{k+1}=F_{k}$ satisfy the conditions (1) and (2).
+
+Now, suppose that $A_{k+1}$ does not meet at least one of the sets $E_{k}$ and $F_{k}$, say, $E_{k}$. Consider all the sets $A_{i}$ that meet $E_{k} \cup F_{k}$ in at least three elements. Since the given three elements can be contained in finitely many sets $A_{i}$ only, the number of these sets is finite. Let us denote them by $A_{i_{1}}, \ldots, A_{i_{m}}$. Let $e_{k+1}$ denote an arbitrary element of the infinite set
+
+$$
+A_{k+1}-\left(\bigcup_{r=1}^{m} A_{i_{r}}\right) \bigcup\left(\bigcup_{i=1}^{k} A_{i}\right) \bigcup F_{k}
+$$
+
+and let $E_{k+1}=E_{k} \cup\left\{e_{k+1}\right\}, F_{k+1}=F_{k}$. These sets satisfy (1) obviously. Furthermore, if $i>k+1$ and $e_{k+1} \notin A_{i}$, then (2) holds as well, and if $e_{k+1} \in A_{i}$ then $A_{i}$ differs from the sets $A_{i_{1}}, \ldots, A_{i_{m}}$ by the choice of $e_{k+1}$ and so $\left|A_{i} \cap\left(E_{k} \cup F_{k}\right)\right| \leq 2$, which yields $(2)$. 
+
+\section{SOLUTIONS TO THE PROBLEMS}
+
+Problem C.5. Let $n \geq 2$ be an integer, let $S$ be a set of $n$ elements, and let $A_{i}, 1 \leq i \leq m$, be distinct subsets of $S$ of size at least 2 such that
+
+$$
+A_{i} \cap A_{j} \neq \emptyset, A_{i} \cap A_{k} \neq \emptyset, A_{j} \cap A_{k} \neq \emptyset \quad \text { imply } \quad A_{i} \cap A_{j} \cap A_{k} \neq \emptyset
+$$
+
+Show that $m \leq 2^{n-1}-1$
+
+Solution 1. We will prove the statement by induction on $n$. It obviously holds for $n=2$. Assume that $n>2$, and let $A_{1} \neq S$ be a maximal element of the set
+
+$$
+K=\left\{A_{i}: 1 \leq i \leq k\right\}
+$$
+
+that is, if $A_{1} \subseteq A_{i}$, then either $i=1$ or $A_{i}=S$. Choose an arbitrary element $x$ of the set $S-A_{1}$, and let
+
+$$
+\begin{aligned}
+& K_{1}=\left\{A_{i} \in K: x \notin A_{i}\right\}, \\
+& K_{2}=\left\{A_{i} \in K: x \in A_{i}, A_{1} \cap A_{i}=\emptyset\right\}, \\
+& K_{3}=\left\{A_{i} \in K: x \in A_{i}, A_{1} \subseteq A_{i}\right\}, \\
+& K_{4}=\left\{A_{i} \in K: x \in A_{i}, A_{1} \cap A_{i} \neq \emptyset, A_{1} \notin A_{i}\right\} .
+\end{aligned}
+$$
+
+Obviously
+
+$$
+K=K_{1} \cup K_{2} \cup K_{3} \cup K_{4}
+$$
+
+We will estimate the cardinality of the set $K$. The inductional hypothesis implies that
+
+$$
+\left|K_{1}\right| \leq 2^{n-2}-1
+$$
+
+Let $l=\left|A_{1}\right|$. Then
+
+$$
+\left|K_{2}\right| \leq 2^{n-l-1}-1
+$$
+
+since every element of $K$ is a set of at least two elements. By the maximality of $A_{1}$, the only element that may be contained in $K_{2}$ is $S$, that is,
+
+$$
+\left|K_{3}\right| \leq 1
+$$
+
+Finally, the elements of the set $K_{4}$ can meet the sets $S-A_{1}$ and $A_{1}$ in at most $2^{n-l-1}$ and $2^{l}-2$ distinct sets, respectively (they cannot meet $A_{1}$ in $A_{1}$ or $\left.\emptyset\right)$. Pairing these intersections in all possible ways, we get
+
+$$
+\left|K_{4}\right| \leq 2^{n-l-1}\left(2^{l}-2\right)=2^{n-1}-2^{n-l}
+$$
+
+Actually, this estimate can be sharpened. If $X \in K_{4}$, then
+
+$$
+Y=\left(X-A_{1}\right) \cup\left(A_{1}-X\right) \notin K_{4}
+$$
+
+since the sets $A_{1}, X, Y$ do not satisfy the intersection conditions for the sets $A_{i}$ (the sets $A_{1} \cap X, A_{1} \cap Y, X \cap Y$ are not empty, but the set $A_{1} \cap X \cap Y$ is empty). Since the mapping
+
+$$
+X \rightarrow Y=\left(X-A_{1}\right) \cup\left(A_{1}-X\right)
+$$
+
+is one-to-one for a fixed set $A_{1}$ - and if $x \in X, A_{1} \cap X \neq \emptyset$, and $A_{1} \subseteq X$, then the same holds for the set $Y$ so the cardinality of $K_{4}$ is at most half of the estimate above, that is,
+
+$$
+\left|K_{4}\right| \leq 2^{n-2}-2^{n-l-1} .
+$$
+
+Summarizing (1) to (5), we get the desired inequality, $|K| \leq 2^{n-1}-1$.
+
+Solution 2. We will prove the statement by induction on $n$. It obviously holds for $n=2$. Assume that $n>2$. We distinguish two cases.
+
+Case 1. There are no $i$ and $j$ such that $A_{i} \cup A_{j}=S$ and $A_{i} \cap A_{j}$ is of one element.
+
+In this case, it is not difficult to show the statement. Considering an arbitrary element of the set $S$, the number of sets $A_{i}$ not containing $x$ is at most $2^{n-2}-1$ by the inductional hypothesis. The number of sets $X \subseteq S$ containing $x$ is $2^{n-1}$. At most half of them, that is, at most $2^{n-2}$, appear as a set $A_{i}$, since if $X=A_{i}$, then according to the assumption above, there is no $j$ such that $A_{j}=(S-X) \cup\{x\}$. Thus, the number of sets $A_{i}$ is at most $2^{n-1}-1$.
+
+Case 2. There is an element $x \in S$ such that $A_{1} \cup A_{2}=S$ and $A_{1} \cap A_{2}=$ $\{x\}$
+
+Let $r$ and $s$ denote the cardinality of the sets $A_{1}$ and $A_{2}$, respectively. Clearly, $r+s=n+1$. The number of the sets $A_{i}$ such that $A_{i} \subseteq A_{1}$ is at most $2^{r-1}-1$ by the inductional hypothesis. Similarly, the number of the sets $A_{i}$ such that $A_{i} \subseteq A_{2}$ is at most $2^{s-1}-1$. If $A_{i}$ is not a subset of $A_{1}$ or $A_{2}$, then $A_{1} \cap A_{i} \neq \emptyset, A_{2} \cap A_{i} \neq \emptyset$, and, of course, $A_{1} \cap A_{2} \neq \emptyset$. Thus $A_{1} \cap A_{2} \cap A_{i} \neq \emptyset$ by the conditions of the problem, that is, $x \in A_{i}$. Now, $A_{i}=\{x\} \cup\left(A_{i}-A_{1}\right) \cup\left(A_{i}-A_{2}\right)$, and since the nonempty sets $A_{i}-A_{1}$ and $A_{i}-A_{2}$ can be chosen in $2^{s-1}-1$ and $2^{r-1}-1$ ways, respectively, the number of these sets $A_{i}$ is at most $\left(2^{s-1}-1\right)\left(2^{r-1}-1\right)$. Adding up the partial results obtained, we get that the number of all sets $A_{i}$ is at most $2^{n-1}-1$
+
+Remark. It can be shown that if $k=2^{n-1}-1$, then, necessarily, the sets $A_{i}$ are exactly the sets of at least two elements containing a given element $x \in S$. It can be shown by induction, say, like we proceeded in the first solution.
+
+Problem C.6. Show that the edges of a strongly connected bipolar graph can be oriented in such a way that for any edge $e$ there is a simple directed path from pole $p$ to pole $q$ containing $e$. (A strongly connected bipolar graph is a finite connected graph with two special vertices $p$ and $q$ having the property that there are no points $x, y, x \neq y$, such that all paths from $x$ to $p$ as well as all paths from $x$ to $q$ contain $y$.)
+
+Solution. First, we prove that there is a real-valued function $f$ defined on the vertices such that (i) $f(p)=1, f(q)=0$,
+
+(ii) if $f(x)=f(y)$, then $x=y$,
+
+(iii) if $x \neq p$, then there is an edge $x y$ such that $f(y)>f(x)$,
+
+(iv) if $x \neq q$, then there is an edge $x y$ such that $f(y)<f(x)$.
+
+The graph $G$ is connected so there is a path $p=x_{0}, \ldots, x_{m}=q$ from $p$ to $q$. In this subset, $f\left(x_{k}\right)=1-k / m$ is a desired function.
+
+Now, suppose that $f$ is a desired function on a proper subset $V_{1} \subset V(G)$. We show that $f$ can be extended for some bigger set. Let $z \in V_{2}=$ $V(G)-V_{1}$. The graph $G$ is connected so there is a path from $z$ to $p$. Let $x_{1}$ be the last point of this path belonging to $V_{2}$, and let $x_{0}$ be the next point of this path. The graph $G$ is strongly connected so there is an $x_{1}-p$ or $x_{1}-q$ path not containing $x_{0}$. Let $x_{1}, x_{2}, \ldots$ be such a path, and let $n>1$ be the smallest index $i$ such that $x_{i} \in V_{1}$ (there is such a point since $p, q$ are in $\left.V_{1}\right)$. The points $x_{n}, x_{0}$ are distinct elements of $V_{1}$ so the open interval $f\left(x_{0}\right), f\left(x_{n}\right)$ is nonempty by (ii) and it contains infinitely many elements even if we delete the values of $f$ in $V_{1}$. Thus, we can assign a strictly monotone subsequence of $n-1$ members to the points $x_{1}, \ldots, x_{n-1}$ so that the sequence $f\left(x_{0}\right), f\left(x_{1}\right), \ldots, f\left(x_{n}\right)$ is strictly monotone. Now, (i)-(iv) hold in the extended domain as well: (i) and (ii) hold obviously, as well, as (iii) and (iv) for $x \in V_{1}$. Finally, if $x=x_{i}(1 \leq i \leq n-1)$, then $x_{i-1}$ and $x_{i+1}$ is an appropriate choice for $y$, respectively.
+
+Since $G$ is finite, it implies that there is a function $f$ satisfying (i)-(iv).
+
+Now, let us orient the edges of $G$ as follows. An edge joining $x$ and $y$ should be oriented from $x$ to $y$ if and only if $f(x)>f(y)$. We show that this orientation has the desired properties. Let $e$ be an edge from some $x_{1}$ to some $y_{1}$. For $n \geq 1$, let $x_{n+1}$ be a neighbor of $x_{n}$ such that $f\left(x_{n+1}\right)>f\left(x_{n}\right)$ if $x_{n} \neq p$. (Such a point exists by (iii).) Similarly, let $y_{n+1}$ be a neighbor of $y_{n}$ such that $f\left(y_{n+1}\right)<f\left(y_{n}\right)$ if $y_{n} \neq q$. (Such a point exists by (iv).) Since $G$ is finite, after a while we get that $x_{r}=p$, $y_{s}=q$ for some $r, s \geq 1$. Then $x_{r}, x_{r-1}, \ldots, x_{2}, x_{1}, y_{1}, y_{2}, \ldots, y_{s-1}, y_{s}$ is a desired path through $e$.
+
+Problem C.7. Let $\mathcal{F}$ be a nonempty family of sets with the following properties:
+
+(a) If $X \in \mathcal{F}$, then there are some $Y \in \mathcal{F}$ and $Z \in \mathcal{F}$ such that $Y \cap Z=\emptyset$ and $Y \cup Z=X$.
+
+(b) If $X \in \mathcal{F}$, and $Y \cup Z=X, Y \cap Z=\emptyset$, then either $Y \in \mathcal{F}$ or $Z \in \mathcal{F}$.
+
+Show that there is a decreasing sequence $X_{0} \supseteq X_{1} \supseteq X_{2} \supseteq \ldots$ of sets $X_{n} \in \mathcal{F}$ such that
+
+$$
+\bigcap_{n=0}^{\infty} X_{n}=\emptyset .
+$$
+
+Solution. We will show that the statement of the problem holds even if the condition (a) is replaced by the following weaker condition:
+
+(a') If $X \in \mathcal{F}$, then there are some $Y \in \mathcal{F}$ and $Z \in \mathcal{F}$ such that $Y \cap Z=\emptyset$, $Y \cup Z \subseteq X$. We will prove it by contradiction. Suppose that the statement does not hold, that is, if $X_{0} \supseteq X_{1} \supseteq X_{2} \supseteq \ldots$ for some sets $X_{n} \in \mathcal{F}$, then $\cap_{n=0}^{\infty} X_{n} \neq \emptyset$.
+
+1. For any set $A \in \mathcal{F}$, there is a set $A^{\prime} \in \mathcal{F}$ such that $A^{\prime} \subseteq A$ and $A^{\prime}=\cup_{i=1}^{\infty} A_{i}$ where the sets $A_{i}$ are pairwise disjoint elements of $\mathcal{F}$. By condition (a'), there exist sets $A_{1}, A_{1}^{\prime} \in \mathcal{F}$ such that $A_{1} \cup A_{1}^{\prime} \subseteq$ $A, A_{1} \cap A_{1}^{\prime}=\emptyset$. Similarly, there exist sets $A_{2}, A_{2}^{\prime} \in \mathcal{F}$ such that $A_{2} \cup A_{2}^{\prime} \subseteq$ $A_{1}, A_{2} \cap A_{2}^{\prime}=\emptyset$, and so on. We are done if $\cup_{i=1}^{\infty} A_{i} \in \mathcal{F}$. If it is not the case then by condition b), the sets $A_{0}=A-\cup_{i=1}^{\infty} A_{i} \in \mathcal{F}$ and $A^{\prime}=A=\cup_{i=0}^{\infty} A_{i}$ have the desired properties.
+
+2. For any set $A \in \mathcal{F}$ there are some sets $B, C \in \mathcal{F}$ such that $B \cap C=\emptyset$, $B \cup C \subseteq A$ and if $B \subseteq P \subseteq B \cup C$ then $P \in \mathcal{F}$.
+
+Consider the sets $A_{i}$ existing by 1 . We try to define a sequence of sets $N_{i}$ as follows. Let $N_{1}=A^{\prime}$, and if $N_{i-1}$ is defined, then let $N_{i}$ be an arbitrary set satisfying the following four conditions:
+
+$$
+\begin{aligned}
+& N_{i} \in \mathcal{F} \\
+& N_{i} \subseteq N_{i-1}, \\
+& N_{i} \subseteq \bigcup_{j=i}^{\infty} A_{j}, \\
+& N_{i} \cap A_{j} \in \mathcal{F} \quad \text { for infinitely many } j .
+\end{aligned}
+$$
+
+According to the third condition, $\cap_{i=1}^{\infty} N_{i}=\emptyset$ if the sequence is infinite, so there is an $n$ such that $N_{n}$ is defined but $N_{n+1}$ cannot be defined. Let $B=N_{n} \cap A_{n}$ and $C=N_{n} \cap A_{k}$ for some index $k>n$ such that $N_{n} \cap A_{k} \in \mathcal{F}$. Suppose that there is a set $P$ such that $B \subseteq P \subseteq B \cup C$ but $P \notin \mathcal{F}$. Then $N_{n}-P \in \mathcal{F}$, and it is easy to see that $N_{n+1}=N_{n}-P$ would be an appropriate choice. $(B \in \mathcal{F}$ by the choice $P=B$.)
+
+Thus, for $A \in \mathcal{F}$, there are some sets $B_{1}, C_{1} \in \mathcal{F}$ such that $B_{1} \cup C_{1} \subseteq A$, $B_{1} \cap C_{1}=\emptyset$. Similarly, for $C_{1} \in \mathcal{F}$, there are some sets $B_{2}, C_{2} \in \mathcal{F}$ such that $B_{2} \cup C_{2} \subseteq C_{1}, B_{2} \cap C_{2}=\emptyset$, and so forth. Let $P_{i}=\cup_{j=i}^{\infty} B_{j}$ for $i=1,2, \ldots$. Then $P_{i} \supseteq P_{i+1}, \cap_{i=1}^{\infty} P_{i}=\emptyset$, and $P_{i} \in \mathcal{F}$ because $B_{i} \subseteq P_{i} \subseteq B_{i} \cup C_{i}$, a contradiction.
+
+Remark. The problem was motivated by the following set theoretical game. There are two players: Black and White. Let $X_{1}$ be a given set. White partitions it into two sets, $Y_{1}$ and $Z_{1}$. Then Black chooses one of the sets $Y_{1}, Z_{1}$, let us denote this set by $X_{2}$, and partitions it into some sets $Y_{2}$ and $Z_{2}$. Then White chooses one of these sets $Y_{2}$ and $Z_{2}$ (let us denote it by $\left.X_{3}\right)$ and partitions it into some sets $Y_{3}$ and $Z_{3}$, and so on. Thus, the players construct a countably infinite sequence $X_{1}, X_{2}, X_{3}, \ldots$ of sets. White wins if $\cap_{i=1}^{\infty} X_{i} \neq \emptyset$ and Black wins if $\cap_{i=1}^{\infty} X_{i}=\emptyset$. If the statement of the problem were false, that is, if there were a family $\mathcal{F}$ of sets satisfying (a) and (b) such that $\cap_{i=1}^{\infty} X_{i} \neq \emptyset$ for any decreasing sequence of sets $X_{i}$, then White would have a winning strategy for any set $X_{1} \in \mathcal{F}$ : White would partition $X_{2 k+1}$ so that $Y_{2 k+1}, Z_{2 k+1} \in \mathcal{F}$ and, from among $Y_{2 k}$ and $Z_{2 k}$, would choose a set contained in $\mathcal{F}$. Finding this kind of set families is motivated by the fact that we do not know who has a winning strategy in sets $X_{1}$ of different cardinalities.
+
+Problem C.8. Let $G$ be a 2-connected nonbipartite graph on $2 n$ vertices. Show that the vertex set of $G$ can be split into two classes of $n$ elements each such that the edges joining the two classes form a connected, spanning subgraph.
+
+Solution. Let $F$ be a spanning tree of the graph $G$. The vertices of $F$ can be colored with red and blue so that if two vertices are of the same color then they are not adjacent. Actually, $F$ has exactly two colorings like this, which can be obtained from each other by interchanging the colors red and blue. Notice that the statement of the problem is equivalent to the following one: There exists a spanning tree $F$ in $G$ such that the numbers of the red and blue vertices are the same.
+
+Let $F_{1}$ and $F_{2}$ be two spanning trees in $G$, and let $x$ be a vertex that is a leaf (a vertex of degree one) in both spanning trees. We say that the spanning trees $F_{1}$ and $F_{2}$ are neighboring at $x$ if $F_{1}-x=F_{2}-x$. We will prove the following lemma, which implies the statement above, as we will see.
+
+Lemma. Let $F$ and $F^{\prime}$ be two spanning trees of $G$, and let $T$ be a common subtree of them. Then there is a sequence $F_{0}=F, F_{1}, \ldots, F_{k}=F^{\prime}$ of spanning trees such that $T \subseteq F_{i}$ and $F_{i}$ and $F_{i+1}$ are neighboring at some vertex not in $T$.
+
+Proof. We prove the lemma by "backward" induction on the number of vertices in $T$. If $T$ has $2 n-1$ vertices, then $F$ and $F^{\prime}$ are neighboring. Suppose now that $T$ has $2 n-l$ vertices $(l \geq 2)$. Let $x y$ and $u v$ be an edge of $F$ and $F^{\prime}$ leaving $T$, respectively, such that $x, u \in T$. If $x y=u v$ then $T^{\prime}=T+x y$ is a common subtree and there is a desired sequence of spanning trees by the inductional hypothesis. If $y \neq v$, then let $F^{\prime \prime}$ be a spanning tree containing the tree $T+x y+u v$ as a subgraph. Then $T+x y \subseteq F \cap F^{\prime \prime}$, and so by the inductional hypothesis, there is a sequence $F=F_{0}, F_{1}, \ldots, F_{m}=F^{\prime \prime}$ of spanning trees such that $F_{i}$ and $F_{i+1}$ are neighboring $(i=0,1, \ldots, m-1)$ and $T \subseteq T+x y \subseteq F_{i}$. Similarly, $T+u v \subseteq F^{\prime} \cap F^{\prime \prime}$ and so by the inductional hypothesis, there is a sequence $F^{\prime \prime}=F_{m}, F_{m+1}, \ldots, F_{k}=F^{\prime}$ of spanning trees such that $F_{i}$ and $F_{i+1}$ are neighboring $(i=m, m+1, \ldots, k-1)$ and $T \subseteq T+u v \subseteq F_{i}$, and $F=F_{0}, F_{1}, \ldots, F_{k}=F^{\prime}$ is the desired sequence of spanning trees.
+
+Finally, suppose that $x y \neq u v$ but $y=v$. Since $G-y$ is connected, it has a vertex $z \notin T$ joined to a vertex $w \in T$. Now, let $F^{\prime \prime}$ and $F^{\prime \prime \prime}$ each be a spanning tree containing $T+x y+w z$ and $T+u v+w z$, respectively. Then, as above, there is a desired sequence of spanning trees from $F$ to $F^{\prime \prime}$, from $F^{\prime \prime}$ to $F^{\prime \prime \prime}$, and from $F^{\prime \prime \prime}$ to $F^{\prime}$, and the union of these sequences is a desired sequence from $F$ to $F^{\prime}$. Since $G$ is nonbipartite, it contains a cycle $C$ of odd length. Let $x$ be a vertex of $C$, and let $y$ and $z$ be its neighbors in $C$. Let $T_{0}$ be a spanning tree of $G-x$ containing $C-x$. Let $F=T_{0}+x y$ and $F^{\prime}=T_{0}+x z$. Color $F$ so that $x$ is red.
+
+According to the lemma, there is a sequence $F=F_{0}, F_{1}, \ldots, F_{k}=F^{\prime}$ of spanning trees such that $F_{i}$ and $F_{i+1}$ are neighboring at some vertex $x_{i} \neq x$. Color $F_{i}$ with colors red and blue so that the colorings of $F_{i}$ and $F_{i+1}$ differ from each other at most in the color of $x_{i}$. It defines some colorings of the spanning trees $F_{1}, \ldots, F_{k}=F^{\prime}$ starting with the coloring of $F_{0}=F$ such that $x$ is red in every coloring. Clearly, every vertex got different colors in the colorings of $F$ and $F^{\prime}$, except $x$. Let $a_{i}$ denote the number of red vertices in the coloring of $F_{i}$. Then
+
+$$
+\begin{aligned}
+\left|a_{i+1}-a_{i}\right| & \leq 1, \\
+a_{0}+a_{k} & =2 n+1 .
+\end{aligned}
+$$
+
+Thus,
+
+$$
+\text { either } \quad a_{0} \leq n<a_{k} \quad \text { or } \quad a_{k} \leq n<a_{0} \text {, }
+$$
+
+so there is an index $0 \leq i \leq k$ such that $a_{i}=n$, and this is what we wanted to prove.
+
+Problem C.9. Let $\mathcal{A}_{n}$ denote the set of all mappings $f:\{1,2, \ldots, n\} \rightarrow$ $\{1,2, \ldots, n\}$ such that $f^{-1}(i):=\{k: f(k)=i\} \neq \emptyset$ implies $f^{-1}(j) \neq \emptyset, j \in$ $\{1,2, \ldots, i\}$. Prove
+
+$$
+\left|\mathcal{A}_{n}\right|=\sum_{k=0}^{\infty} \frac{k^{n}}{2^{k+1}}
+$$
+
+Solution 1. Let $a_{n}$ denote the cardinality of the set $\mathcal{A}_{n}$. Then the number of mappings $f \in \mathcal{A}_{n}$ such that $f(i)=1$ holds for exactly $l$ integers $i$ is equal to $\left(\begin{array}{l}n \\ l\end{array}\right) a_{n-l}$. Since $l$ is positive for any function $f$, we have
+
+$$
+a_{n}=\sum_{l=1}^{n}\left(\begin{array}{l}
+n \\
+l
+\end{array}\right) a_{n-l}=\sum_{l=0}^{n-1} a_{l}
+$$
+
+for $n \geq 1$.
+
+Using the notation $b_{n}=a_{n} / n$ !, we have $b_{0}=1$ and
+
+$$
+b_{n}=\sum_{l=0}^{n-1} \frac{1}{(n-l) !} b_{l}
+$$
+
+Clearly, $b_{n}<2^{n}$, so if $|z|<1 / 2$, then the series $\sum_{n=0}^{\infty} b_{n} z^{n}$ is absolutely

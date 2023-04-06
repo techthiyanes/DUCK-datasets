@@ -1,0 +1,322 @@
+\title{
+3.5 MEASURE THEORY
+}
+
+Problem M.1. Let $f$ be a finite real function of one variable. Let $\bar{D} f$ and $\underline{D} f$ be its upper and lower derivatives, respectively, that is,
+
+$$
+\bar{D} f(x)=\limsup _{\substack{h, k \rightarrow 0 \\ h, k \geq 0 \\ h+k>0}} \frac{f(x+h)-f(x-k)}{h+k}, \underline{D} f(x)=\liminf _{\substack{h, k \rightarrow 0 \\ h, k \geq 0 \\ h+k>0}} \frac{f(x+h)-f(x-k)}{h+k} .
+$$
+
+Show that $\bar{D} f$ and $\underline{D} f$ are Borel-measurable functions.
+
+Solution. It is obviously sufficient to prove the assertion for $\bar{D} f$. It is also clear that
+
+$$
+\{x: \bar{D} f(x)>c\}=\bigcup_{i=1}^{\infty} \bigcap_{k=1}^{\infty} A_{i k}
+$$
+
+for all real values $c$, where $A_{i k}$ denotes the union of intervals $[a, b]$ shorter than $1 / k$ satisfying $(f(b)-f(a)) /(b-a)>c+1 / i$. We show that $A_{i k}$ is a set of type $F_{\sigma}$ which implies the assertion.
+
+More generally let $\left\{I_{\gamma}\right\} \quad(\gamma \in \Gamma)$ be a system of open intervals, and let $A=\cup_{\gamma \in \Gamma} \bar{I}_{\gamma}$ (where $\bar{I}_{\gamma}$ stands for the closure of $I_{\gamma}$ ). Obviously,
+
+$$
+A=B \cup C \cup D
+$$
+
+where $B=\cup_{\gamma \in \Gamma} I_{\gamma}, C$ is the set of all points that are left-hand endpoints of at least one $I_{\gamma}$ but are not interior points of any of them, and $D$ is the set of those points that are right-hand endpoints of at least one $I_{\gamma}$ but do not lie in the interior of any $I_{\gamma}$. Clearly, $B$ is an open set. If $x \in C$, let $r_{x}$ be a rational point in the interior of the interval $I_{\gamma}$ that has the left-hand endpoint $x$. Points $r_{x}$ corresponding to distinct points $x$ are distinct since in the case $x<y, r_{x}=r_{y}$, the point $y$ would lie in the interior of the interval $I_{\gamma}$ starting at $x$. Consequently, $C$, and similarly $D$, is countable. So each of the sets $B, C, D$, and therefore $A$ as well is of type $F_{\sigma}$.
+
+Remark. It is interesting that for the left-hand and right-hand derivatives a similar theorem does not hold. For instance, if $E$ is a nonmeasurable set that along with its complementary set is dense, and $f(x)$ is the characteristic function of $E$, then $\bar{D}^{+} f(x)=0$ or $+\infty$ if $x \in E$ or $x \notin E$, respectively, and so $\bar{D}^{+} f(x)$ is nonmeasurable in this case.
+
+It should be noted that in the book by S. Saks (Theory of the Integral, Hafner, New York, 1937, Vitali's covering theorem, pp. 112-113), the author proves only Lebesgue measurability of $\bar{D} f$ and $\underline{D} f$ with much more powerful tools, although generalized to arbitrary dimension. Problem M.2. Let $E$ be a bounded subset of the real line, and let $\Omega$ be a system of (nondegenerate) closed intervals such that for each $x \in E$ there exists an $I \in \Omega$ with left endpoint $x$. Show that for every $\varepsilon>0$ there exist a finite number of pairwise nonoverlapping intervals belonging to $\Omega$ that cover $E$ with the exception of a subset of outer measure less than $\varepsilon$.
+
+Solution. Let $\Delta$ be a bounded open interval containing $E$. Denote by $S_{n}$ the set of all points of $\Delta$ having neighborhoods not containing points of $E$ that are starting points of intervals belonging to $\Omega$ and longer than $1 / n$. Obviously $S_{n}$ is an open set, $S_{n+1} \subset S_{n}$ and, furthermore, $\left(\cap_{n=1}^{\infty} S_{n}\right) \cap E=0$ since at each point of $E$ there begins at least one nondegenerate interval belonging to $\Omega$ and if $\frac{1}{n}$ is already less than the length of the latter, then the point cannot belong to $S_{n}$. It is a well-known property of the outer measure that for any set $A$ the outer measure $\lambda^{*}(X \cap A)$ as a function of $X$ is a measure on the Lebesgue-measurable sets. Thus, taking $A=E$ and using the relation $S_{n+1} \subset S_{n}$ as well as the finiteness of the outer measure of $E$, we obtain
+
+$$
+\lim _{n \rightarrow+\infty} \lambda^{*}\left(S_{n} \cap E\right)=\lambda^{*}\left(\left(\bigcap_{n=1}^{\infty} S_{n}\right) \cap E\right)=\lambda^{*}(0)=0 .
+$$
+
+Fix $n_{0}$ so that $\lambda^{*}\left(S_{n_{0}} \cap E\right)<\varepsilon / 2$. If the set $E_{1}=E-\left(S_{n_{0}} \cap E\right)$ is nonempty, which we may assume, then in each neighborhoood of any of its points there is a point of $E$ that is also a point of $E_{1}$ and at which an interval longer than $1 / n_{0}$ begins. There is a point $a_{1} \in E_{1}$ such that
+
+$$
+\lambda^{*}\left(\left(-\infty, a_{1}\right) \cap E_{1}\right)<\frac{\varepsilon}{2\left(n_{0} \lambda(\Delta)+1\right)}
+$$
+
+and by the former arguments we may assume at once that some interval $\left[a_{1}, b_{1}\right]$ starting from $a_{1}$ and belonging to $\Omega$ is longer than $1 / n_{0}$. Then we choose (if still possible) a point $a_{2} \in E_{1}$ such that $a_{2}>b_{1}$,
+
+$$
+\lambda^{*}\left(\left(b_{1}, a_{2}\right) \cap E_{1}\right)<\frac{\varepsilon}{2\left(n_{0} \lambda(\Delta)+1\right)}
+$$
+
+and
+
+$$
+\left[a_{2}, b_{2}\right] \in \Omega, \quad b_{2}-a_{2}>\frac{1}{n_{0}}
+$$
+
+and so on. The procedure ends after a finite number of steps, namely we can construct at most $n_{0} \lambda(\Delta)+1$ intervals $\left[a_{k}, b_{k}\right]$ in this way (since $\left.b_{k}-a_{k}>1 / n_{0}\right)$. What is left out from $E$ by these intervals is covered by $S_{n_{0}} \cap E$ and the not more than $n_{0} \lambda(\Delta)+1$ sets $\left(b_{k-1}, a_{k}\right) \cap E_{1}\left(b_{0}=-\infty\right)$ of outer measure not exceeding $\varepsilon /\left(2\left(n_{0} \lambda(\Delta)+1\right)\right)$. Their total outer measure is less than $\varepsilon$, which completes the proof. 
+
+\section{Remarks.}
+
+1. In addition to being nonoverlapping, the intervals we have chosen are disjoint.
+
+2. The assertion cannot be replaced by the stronger statement that it is possible to choose an at most countable number of nonoverlapping intervals such that the part not covered by them has measure 0 . This is shown by the following simple example: $E=(0,1), \quad \Omega=\{[x, 1]: x \in(0,1)\}$.
+
+Problem M.3. Let $f(t)$ be a continuous function on the interval $0 \leq$ $t \leq 1$, and define the two sets of points
+
+$$
+A_{t}=\{(t, 0): t \in[0,1]\}, \quad B_{t}=\{(f(t), 1): t \in[0,1]\}
+$$
+
+Show that the union of all segments $\overline{A_{t} B_{t}}$ is Lebesgue-measurable, and find the minimum of its measure with respect to all functions $f$.
+
+Solution. We first show that the set $A=\cup_{0 \leq t \leq 1} \overline{A_{t} B_{t}}$ is closed, hence Lebesgue-measurable. Let $P_{n}$ be a convergent sequence of points in $A$, $P_{n} \rightarrow P_{0}$. By the definition of $A$, to every $n$ there is a $t_{n}$ such that $P_{n} \in$ $\overline{A_{t_{n}} B_{t_{n}}}$. According to the Bolzano-Weierstrass theorem, the sequence $t_{n}$ contains a convergent subsequence: $t_{n_{k}} \rightarrow t_{0}$. The distance from the point $P_{n_{k}}$ to the segment $\overline{A_{t_{0}} B_{t_{0}}}$ is not greater than $\max \left\{\left|f\left(t_{n_{k}}\right)-f\left(t_{0}\right)\right|, \mid t_{n_{k}}-\right.$ $\left.t_{0} \mid\right\}$, which tends to 0 by the continuity of $f(t)$. It follows that $P_{0} \in$ $\overline{A_{t_{0}} B_{t_{0}}} \subseteq A$. Since $A$ contains the limit point of any convergent sequence of its points, $A$ is closed.
+
+A simple calculation shows that the point of the segment $\overline{A_{t} B_{t}}$ that lies on the straight line $y=c$ has abscissa $(1-c) t+c f(t)$, which, by the continuity of $f(t)$, is a continuous function of $t$. Consequently, if two points of the set $A$ lie on the line $y=c$, then $A$ contains the segment that joins these points.
+
+Now we can determine the minimum of the measure of $A$. If $f(t)$ is constant, then $A$ is a triangle of unit base and unit altitude, so it has measure $1 / 2$. If the segments $\overline{A_{0} B_{0}}$ and $\overline{A_{1} B_{1}}$ do not intersect, then the trapezoid with vertices $A_{0}, B_{0}, A_{1}$, and $B_{1}$ is a subset of $A$, so the measure of $A$ is not less than $1 / 2$. If the segments $\overline{A_{0} B_{0}}$ and $\overline{A_{1} B_{1}}$ intersect at some point $C$, then the triangles $A_{0} C A_{1}$ and $B_{0} C B_{1}$ are subsets of $A$, so the measure of $A$ is not smaller than
+
+$$
+t(d)=\frac{1}{2}\left(\frac{1}{1+d}+\frac{d}{1+d} d\right)=\frac{1}{2} \frac{1+d^{2}}{1+d}
+$$
+
+where $d$ denotes the distance from $B_{0}$ to $B_{1}$. By a simple calculation, we obtain that the minimum of $t(d)$ on the positive half-axis is $\sqrt{2}-1$. Thus, the measure of $A$ cannot be less than $\sqrt{2}-1$. On the other hand, for $f(t)=(\sqrt{2}-1)(1-t)$, the measure of $A$ is exactly $\sqrt{2}-1$.
+
+Remark. I. N. Berstein (Doklady Acad. Nauk. SSSR 146 (1962), 1113) refers to the result of the problem but he states erroneously that the minimum is $\frac{1}{2}$. Problem M.4. $A$ "letter $T$ " erected at point $A$ of the $x$-axis in the $x y$ plane is the union of a segment $A B$ in the upper half-plane perpendicular to the $x$-axis and a segment $C D$ containing $B$ in its interior and parallel to the $x$-axis. Show that it is impossible to erect a letter $T$ at every point of the $x$-axis so that the union of those erected at rational points is disjoint from the union of those erected at irrational points.
+
+Solution 1. We call width of the letter $T$ erected at $A$ the minimum of the lengths $C B$ and $B D$. We devide the irrational points into countably many classes $H_{1}, \ldots, H_{k}, \ldots$. The class $H_{k}$ consists of all irrational points for which the widths of the letters $T$ erected at them are greater than $1 / k$. Baire's theorem implies that the set of all irrational points cannot be represented as the countable union of nowhere-dense sets, so some $H_{k}$ is dense in a suitable interval $I$. Selecting an arbitrary rational point $A$ of the interval $I$, denote by $\delta$ the width of the letter $T$ erected at it. The class $H_{k}$ contains an element $A_{1}$ whose distance from $A$ is less than $\min \{\delta, 1 / k\}$. The letters $T$ erected at $A$ and $A_{1}$ obviously intersect each other since they both have widths greater than the distance from $A$ to $A_{1}$. The proof is complete.
+
+Solution 2. Project on the $x$-axis the segment $C D$ parallel to the $x$-axis of each letter $T$, and denote the projection by $I_{x}$. The projection $I_{x}$ is an interval containing $x$ in its interior. We prove the existence of an irrational $\alpha$ and a rational $r$ such that $I_{\alpha}$ and $I_{r}$ contain $r$ and $\alpha$, respectively, in their interior. This already implies that the letters $T$ erected at $\alpha$ and $r$ intersect.
+
+For each rational number $r=p / q$ (we shall write all rational numbers in irreducible form), we choose a closed subinterval $J_{r}$ of $I_{r}$ containing $r$ in its interior and having length not greater than $1 / q^{2}$. Consider a sequence of rational numbers where the denominators are strictly monotone increasing and each number lies in the intervals $J_{r}$ corresponding to the previous terms:
+
+$$
+\begin{aligned}
+& r_{1}=\frac{p_{1}}{q_{1}}, r_{2}=\frac{p_{2}}{q_{2}}, \ldots, r_{n}=\frac{p_{n}}{q_{n}}, \ldots ; \\
+& q_{1}<q_{2}<\cdots<q_{n}<\ldots ; \\
+& r_{n} \in J_{r_{1}} \cap J_{r_{2}} \cap \cdots \cap J_{r_{n-1}} .
+\end{aligned}
+$$
+
+Such a sequence obviously exists and, moreover, it is a Cauchy sequence, so it has a limit $\lim _{n \rightarrow \infty} r_{n}=\alpha$. Since $J_{r_{n}}$ contains the points $r_{n+1}, r_{n+2}, \ldots$ and is closed, it follows that $\alpha \in J_{r_{n}}$ and, in particular,
+
+$$
+\left|\alpha-r_{n}\right| \leq \frac{1}{q_{n}^{2}} .
+$$
+
+From the theory of numbers it is well known that in this case $\alpha$ can only be irrational. $I_{\alpha}$ contains $\alpha$ in its interior, so for sufficiently large $n$ we have $r_{n} \in I_{\alpha}$. On the other hand, $\alpha \in J_{r_{n}} \subset I_{r_{n}}$. Thus, for sufficiently large $n$, the letters $T$ erected at the points $\alpha$ and $r_{n}$ intersect each other.
+
+Solution 3. Assume that the assertion is false, that is, we have succeeded in erecting a letter $T$ at each point of the real line so that none of the letters $T$ erected at rational points intersects a $T$ erected at an irrational point. We may assume that the letters $T$ are symmetric, that is, $B$ is the midpoint of the segment $C D$ (let $C$ always have the smaller abscissa among $C$ and $D)$.
+
+We define a monotonically increasing sequence of numbers $\alpha_{1}, \alpha_{2}, \ldots$, $\alpha_{n}, \ldots$ by recursion. Let $\alpha_{1}$ be any real number. If $\alpha_{n}$ is already defined as a rational number, then let $\alpha_{n+1}$ be irrational, while if $\alpha_{n}$ is irrational, then let $\alpha_{n+1}$ be rational, and choose $\alpha_{n+1}\left(>\alpha_{n}\right)$ so that $\alpha_{n+1}-\alpha_{n}$ is smaller than one-quarter of the length of $B_{n} D_{n}$. Denote the abscissa of $D_{n}$ by $\delta_{n}$. Making use of the fact that the letters $T$ erected at $\alpha_{n}$ and $\alpha_{n+1}$ do not intersect, we obtain the following sequence of inequalities:
+
+$$
+\alpha_{n+1}<\delta_{n+1}<\alpha_{n}+2\left(\alpha_{n+1}-\alpha_{n}\right)<\alpha_{n}+2 \frac{\delta_{n}-\alpha_{n}}{4}=\frac{\alpha_{n}+\delta_{n}}{2}<\delta_{n} .
+$$
+
+It follows that $\left\{\alpha_{n}\right\}$ is bounded, and so $\alpha=\lim \alpha_{n}$ exists, and also that $\alpha<\delta_{n}$ for every $n$. Then, however, for sufficiently large $n$, the letter $T$ erected at $\alpha_{n}$ intersects the $T$ erected at $\alpha$, which contradicts the initial assumption.
+
+Remarks.
+
+1. In addition to the assertion of the problem, a contestant has proved that in any interval there is a continuum of irrational numbers $\alpha$ such that the letter $T$ erected at $\alpha$ intersects a $T$ erected at a rational point. Really, from the reasoning of Solution 2 it turns out that if $r_{1}, r_{2}, \ldots$ is a sequence of rational numbers such that $J_{r_{1}} \supset J_{r_{2}} \supset \ldots$ and $q_{1}<$ $q_{2}<\ldots$, then $\left\{r_{n}\right\}$ is obviously convergent and its limit is a "suitable" irrational number. Let $r=p / q$ be a rational number belonging to the interval $(a, b)$ such that $J_{r} \subset(a, b)$. Let $r_{0}=p_{0} / q_{0}$ and $r_{1}=p_{1} / q_{1}$ be rational numbers satisfying $q_{0}>q, q_{1}>q, J_{r_{0}} \subset J_{r}, J_{r_{1}} \subset J_{r}$, and $J_{r_{0}} \cap J_{r_{1}}=\emptyset$. The existence of $r_{0}$ and $r_{1}$ of this kind is evident. Once we have defined the rational numbers $r_{i_{1}, \ldots, i_{k}} \quad\left(i_{1}=0,1 ; \ldots ; i_{k}=0,1\right)$, let $r_{i_{1}, \ldots, i_{k}, 0}$ and $r_{i_{1}, \ldots, i_{k}, 1}$ be two rational numbers such that
+
+$$
+\begin{aligned}
+& q_{i_{1}, \ldots, i_{k}, 0}>q_{i_{1}, \ldots, i_{k}}, \quad q_{i_{1}, \ldots, i_{k}, 1}>q_{i_{1}, \ldots, i_{k}}, \\
+& J_{r_{i_{1}, \ldots, i_{k}, 0}} \subset J_{r_{i_{1}, \ldots, i_{k}}}, \quad J_{r_{i_{1}, \ldots, i_{k}, 1}} \subset J_{r_{i_{1}}, \ldots, i_{k}}, \\
+& J_{r_{i_{1}, \ldots, i_{k}, 0}, 0} \cap J_{r_{i_{1}, \ldots, i_{k}, 1}}=\emptyset .
+\end{aligned}
+$$
+
+With each number $0<x<1$, we associate an irrational number $\alpha \in$ $(a, b)$ such that the letter $T$ erected at $\alpha$ surely intersects a $T$ erected at some rational point. If the infinite dyadic form of $x$ is
+
+$$
+x=0 . i_{1} i_{2} \ldots
+$$
+
+we associate with $x$ the limit of the sequence
+
+$$
+r_{i_{1}}, r_{i_{1}, i_{2}}, \ldots, r_{i_{1}, i_{2}, \ldots, i_{k}}, \ldots
+$$
+
+This will be a "suitable" irrational number, and the construction guarantees that $\alpha_{1}$ and $\alpha_{2}$ associated with distinct numbers $x_{1}$ and $x_{2}$ are distinct.
+
+2. The union of a segment $A B$ in the upper half-plane that is erected perpendicularly at point $A$ of the $x$-axis and a segment $B C$ that is parallel to the $x$-axis will be called a $\lceil$ or a $\rceil$ depending on whether the abscissa of $C$ is greater than or less than that of $B$. Two contestants proved that if we erect a $\lceil$ at each rational point and a $\rceil$ at each irrational point, then the union of the $\lceil$ intersects the union of the $\rceil$. This assertion is obviously sharper than that of the problem. Two other contestants showed by examples that it is possible to erect a $\Gamma$ at each point so that the $\Gamma$ are pairwise disjoint. Indeed, if the points $B$ of the $\Gamma$ lie on the graph of a strictly monotone decreasing positive function and the length of $B C$ is arbitrary, then clearly any two $\Gamma$ are disjoint.
+
+3. It is easy to see that the next theorem generalizes the statement of the problem: Let $X$ be a complete metric space of second category, and let $X=P \cup Q$, where $P$ and $Q$ are disjoint dense sets. Then it is impossible to define a real function $f$ on $X$ such that each point $p \in P$ has a neighborhood $V_{p}$ for which $x \in V_{p} \cap Q$ implies $f(x)<f(p)$ and such that each point $q \in Q$ has a neighborhood $V_{q}$ for which $x \in V_{q} \cap P$ implies $f(x)<f(q)$
+
+This was proved by some contestants for complete metric spaces and compact metric spaces, respectively. It was also shown that the hypothesis of completeness cannot be dropped.
+
+Problem M.5. Let $f$ and $g$ be continuous positive functions defined on the interval $[0, \infty)$, and let $E \subset[0, \infty)$ be a set of positive measure. Prove that the range of the function defined on $E \times E$ by the relation
+
+$$
+F(x, y)=\int_{0}^{x} f(t) d t+\int_{0}^{y} g(t) d t
+$$
+
+has a nonvoid interior.
+
+Solution. Put
+
+$$
+\phi(x)=\int_{0}^{x} f(t) d t, \quad \psi(x)=\int_{0}^{x} g(t) d t
+$$
+
+The function $\phi$ and its inverse $\phi^{-1}$ (which obviously exists) are absolutely continuous, so they map sets of measure 0 onto sets of measure 0 . Therefore, the image $\phi(E)=A$ of the set $E$ of positive measure is measurable and has positive measure. Similarly, the set $\psi(E)=B$ has positive measure. Since the range of the function $F(x, y)$ considered on $E \times E$ is exactly the set $A+B=\{a+b: a \in A, b \in B\}$, it is sufficient to prove that for sets $A$ and $B$ of positive measure, the sum $A+B$ contains some interval.
+
+Let $u$ and $v$ be points of density 1 of $A$ and $B$, respectively, and let $\varepsilon>0$ be chosen so that the relations $0 \leq \delta \leq 2 \varepsilon, 0 \leq \delta^{\prime} \leq 2 \varepsilon, \delta+\delta^{\prime}>0$ imply
+
+$$
+\mu\left(A \cap\left[u-\delta, u+\delta^{\prime}\right]\right)>\frac{1}{2}\left(\delta+\delta^{\prime}\right), \quad \mu\left(B \cap\left[v-\delta, v+\delta^{\prime}\right]\right)>\frac{1}{2}\left(\delta+\delta^{\prime}\right),
+$$
+
+where $\mu$ stands for Lebesgue measure. We show that $(u+v-\varepsilon, u+v+\varepsilon) \subset$ $A+B$. Let $t \in(u+v-\varepsilon, u+v+\varepsilon)$ and
+
+$$
+A^{*}=t-A=\{t-a: a \in A\} .
+$$
+
+Then $A^{*} \cap[t-u, v+\varepsilon]$ is congruent with $A \cap[t-v-\varepsilon, u]$, so
+
+$$
+\begin{gathered}
+\mu\left(A^{*} \cap[t-u, v+\varepsilon]\right)>\frac{1}{2}(u+v+\varepsilon-t) \quad \text { and } \\
+\mu(B \cap[t-u, v+\varepsilon])>\frac{1}{2}(u+v+\varepsilon-t),
+\end{gathered}
+$$
+
+from which it follows that $A^{*} \cap B \neq \emptyset$. Let $x \in A^{*} \cap B$; then $t-x \in A$, $x \in B$, and, consequently, $t=(t-x)+x \in A+B$.
+
+Remarks.
+
+1. Two contestants showed that it is sufficient to assume that $f$ and $g$ are positive functions integrable in every finite interval.
+
+2. A contestant remarked that if we know of $E$ only that it has positive outer measure, then the statement becomes false.
+
+3. Denote by $A_{1}$ and $B_{1}$ the set of all points of density 1 of $A$ and $B$, respectively. If $u \in A_{1}$ and $v \in B_{1}$, then by the density theorem of Lebesgue $u$ and $v$ have density 1 also in $A_{1}$ and $B_{1}$, respectively, so by the solution above, $A_{1}+B_{1}$ contains some neighborhood of $u+v$. This means exactly that $A_{1}+B_{1}$ is an open set (see $J$. $B$. H. Kemperman, $A$ general functional equation, Trans. Am. Math. Soc. 86 (1957), 28-56, Theorem 2.2).
+
+Problem M.6. In n-dimensional Euclidean space, the union of any set of closed balls (of positive radii) is measurable in the sense of Lebesgue.
+
+Solution. Let $\left\{G_{\alpha}\right\}(\alpha \in A)$ be an arbitrary set of closed balls of positive radii. Put $H=\cup_{\alpha \in A} G_{\alpha}$. Denote by $G$ the set of all closed balls (of positive radii) that are contained in some $G_{\alpha}$. Clearly, the elements of $G$ constitute a cover of $H$ in the sense of Vitali. Therefore, by Vitali's covering theorem (see for example S. Saks, Theory of the Integral, Hafner, New York, 1937, p. 109), we can choose an at most countable number of pairwise disjoint balls $S_{1}, S_{2}, \ldots$ belonging to $G$ such that $H \backslash \cup_{i} S_{i}$ has Lebesgue measure 0 . Since $S_{i} \subset H$, the relation
+
+$$
+H=\left(H \backslash \cup_{i} S_{i}\right) \cup\left(\cup_{i} S_{i}\right)
+$$
+
+implies that $H$ is Lebesgue-measurable. 
+
+\section{Remarks.}
+
+1. Most contestants solved the problem with the help of Vitali's covering theorem.
+
+2. Several contestants remarked that $H$ can be obtained as the union of at most countably many Jordan measurable sets.
+
+3. One contestant proved the following generalization of the problem: The union of any set of convex sets with nonvoid interiors is measurable in the sense of Lebesgue.
+
+Problem M.7. In n-dimensional Euclidean space, the square of the two-dimensional Lebesgue measure of a bounded, closed, (two-dimensional) planar set is equal to the sum of the squares of the measures of the orthogonal projections of the given set on the n-coordinate hyperplanes.
+
+Solution 1. We solve the problem in the generalized form where a bounded, closed subset of $H$ or an $r$-dimensional subspace $L$ is projected to the $r$-dimensional coordinate subspaces.
+
+$H$ is the difference of two bounded open sets $N_{2} \in N_{1}$. Each of them is the union of an at most countably infinite number of disjoint parallelepipeds $t_{1 i}$ and $t_{2 j}$. Their images under a linear transformation $T$ (the orthogonal projection) are parallelepipeds whose volume (Lebesgue measures, denoted by $\lambda$ ) satisfies
+
+$$
+\lambda\left(T t_{1 i}\right)=c \lambda\left(t_{1 i}\right) \text { and } \lambda\left(T t_{2 j}\right)=c \lambda\left(t_{2 j}\right)
+$$
+
+where $c$ is a constant depending on the position of the two subspaces and the direction of projecting only. Further, since a projection takes the union and the difference of sets into the union and the difference, respectively, of the image sets, from the additivity of the measure it follows that $T H$ is measurable and $\lambda(T H)=c \lambda(H)$.
+
+If $T_{i_{1} \ldots i_{r}}$ is the orthogonal projection to the coordinate subspace $\left[x_{i_{1}}, \ldots\right.$, $x_{i_{r}}$ ] and $c_{i_{1} \ldots i_{r}}$ denotes the corresponding constant, then the sum of the squared measures of the projections is
+
+$$
+\sum_{i_{1}, \ldots, i_{r}} \lambda^{2}\left(T_{i_{1} \ldots i_{r}} H\right)=\sum_{i_{1}, \ldots, i_{r}} c_{i_{1} \ldots i_{r}} \lambda^{2}(H)=\lambda^{2}(H) \sum_{i_{1}, \ldots, i_{r}} c_{i_{1} \ldots i_{r}}
+$$
+
+where the summation is extended to all combinations $i_{1}, \ldots, i_{r}$ of order $r$ of the numbers $1,2, \ldots, n$.
+
+If $e_{1}, \ldots, e_{n}$ are unit vectors of a Cartesian system of coordinates in the $n$-dimensional Euclidean space and $H$ is the $r$-dimensional cube spanned by the orthogonal unit vectors
+
+$$
+u_{k}=\sum_{i=1}^{n} \alpha_{i}^{(k)} e_{i} \quad(k=1, \ldots, r)
+$$
+
+belonging to $L$, then $\lambda(H)=1$, and the value $c_{i_{1} \ldots i_{r}}=\lambda\left(T_{i_{1} \ldots i_{r}} H\right)$ is equal to the determinant $\left|A_{i_{1} \ldots i_{r}}\right|$ formed of the columns $i_{1}, \ldots, i_{r}$ of the matrix $A=\left\{\alpha_{i}^{(k)}\right\}$. Then, however, by the Binet-Cauchy formula,
+
+$$
+\sum_{i_{1}, \ldots, i_{r}} c_{i_{1} \ldots i_{r}}^{2}=\sum_{i_{1}, \ldots, i_{r}}\left|A_{i_{1} \ldots i_{r}}\right|^{2}=\left|A A^{*}\right|=1
+$$
+
+which, owing to (1), verifies our assertion.
+
+Solution 2. We prove the assertion in the previous generalized form where a (not necessarily compact) Lebesgue-measurable set $H$ lying in the $r$-dimensional subspace $L$ is projected to the $r$-dimensional coordinate subspaces.
+
+Let $e_{1}, \ldots, e_{n}$ be the orthonormal basis vectors of a Cartesian system of coordinates in the $n$-dimensional Euclidean space $E_{n}$, and $u_{1}, \ldots, u_{r}$ be the orthonormal basis vectors of a system of coordinates in the subspace $L$. We may assume that $L$ contains the origin since this can be achieved by translation, and translation means translation of the projections, so the measure of $H$ and the measures of its projections remain unchanged. Consequently, we may choose
+
+$$
+u_{k}=\sum_{i=1}^{n} \alpha_{i}^{(k)} e_{i} \quad(k=1, \ldots, r)
+$$
+
+where the matrix $A=\left\{\alpha_{i}^{(k)}\right\}$ satisfies $\left|A A^{*}\right|=1$.
+
+Denote by $A_{i_{1} \ldots i_{r}}$ the operator of orthogonal projection from $L$ to the coordinate subspace $\left[x_{i_{1}}, \ldots, x_{i_{r}}\right]$ of $E_{n}$. The operator $A_{i_{1} \ldots i_{r}}$ sends the basis vectors $u_{k}$ to the vectors of the latter subspace with components $\alpha_{i_{1}}^{(k)}, \ldots, \alpha_{i_{r}}^{(k)}$. Let $\left(A_{i_{1} \ldots i_{r}}\right)$ be the matrix of this projection operator (that is, the square matrix formed of the columns $i_{1}, \ldots, i_{r}$ of $A$ ), and let $\left|A_{i_{1} \ldots i_{r}}\right|$ be the determinant of this matrix.
+
+The Lebesgue measure of $H$ is given by
+
+$$
+\mu=\int_{L} \chi_{H} d \lambda
+$$
+
+where $\chi_{H}$ denotes the characteristic function of $H$. By the formula for transformation of integrals, the measure of $A_{i_{1} \ldots i_{r}} H$ is
+
+$$
+\int_{\left[x_{i_{1}}, \ldots, x_{i_{r}}\right]} \chi_{A_{i_{1} \ldots i_{r}} H} d \lambda=\left|A_{i_{1} \ldots i_{r}}\right| \int_{L} \chi_{H} d \lambda=\left|A_{i_{1} \ldots i_{r}}\right| \mu .
+$$
+
+(This is valid also when $\left|A_{i_{1} \ldots i_{r}}\right|=0$, since in this case $A_{i_{1} \ldots i_{r}} H$ lies in an at most $(r-1)$-dimensional subspace, that is, a subspace of measure 0 with respect to $\lambda$.) Summing for all combinations $i_{1}, \ldots, i_{r}$ of order $r$, by the Binet-Cauchy formula we obtain
+
+$$
+\sum_{i_{1}, \ldots, i_{r}}\left\{\int \chi_{\left[x_{i_{1}}, \ldots, x_{i_{r}}\right]} \ldots i_{r} H d \lambda\right\}^{2}=\mu^{2} \sum_{i_{1}, \ldots, i_{r}}\left|A_{i_{1} \ldots i_{r}}\right|^{2}=\mu^{2}\left|A A^{*}\right|=\mu^{2}
+$$
+
+which proves the assertion. Problem M.8. Let us use the word $N$-measure for nonnegative, finitely additive set functions defined on all subsets of the positive integers, equal to 0 on finite sets, and equal to 1 on the whole set. We say that the system $\mathfrak{A}$ of sets determines the $N$-measure $\mu$ if any $N$-measure coinciding with $\mu$ on all elements of $\mathfrak{A}$ is necessarily identical with $\mu$. Prove the existence of an $N$-measure $\mu$ that cannot be determined by a system of cardinality less than continuum.
+
+Solution. We shall need a definition and a lemma.
+
+Definition. We say that the system $A$ consisting of certain subsets of a set is independent, if for any distinct members $X_{1}, \ldots, X_{j}, Y_{1}, \ldots, Y_{k}$ of $A$, the set
+
+$$
+X_{1} \cap \cdots \cap X_{j} \cap \overline{Y_{1}} \cap \cdots \cap \overline{Y_{k}}
+$$
+
+is infinite (here $\bar{U}$ denotes the complement of $U$ ).
+
+Lemma. Any countable set has an independent system of subsets that is of power continuum.
+
+Proof. Indeed, take the following set for the countable basic set. Let $M$ be the set of all sets of real numbers that can be obtained as finite unions of intervals belonging to any type of closedness but having rational endpoints. Clearly, there is only a countable number of such sets. Denote by $M_{a}$ the set of those sets of real numbers described above that contain the real number $a$. Then the system $\left\{M_{a}\right\}$ of subsets of $M$, for $a$ running through the set of all real numbers, has power continuum. It is easy to see that $\left\{M_{a}\right\}$ is independent. Really, for given real numbers $a_{1}, \ldots, a_{j}$, $b_{1}, \ldots, b_{k}$ of $A$, the set
+
+$$
+M_{a_{1}} \cap \cdots \cap M_{a_{j}} \cap M_{b_{1}} \cap \cdots \cap M_{b_{k}}
+$$
+
+consists of those elements of $M$, that is, those sets of real numbers described above, that contain $a_{1}, \ldots, a_{j}$ but do not contain $b_{1}, \ldots, b_{k}$. The set of these sets, however, is countably infinite.
+
+Next we construct an $N$-measure that takes the values 0 and 1 only. To this end, we shall need Zorn's lemma, so our proof is not purely constructive.
+
+A system of subsets of the set $N$ of all real numbers is called a filter if it is closed for taking finite intersections and if together with any set it contains all larger sets as well. To exclude the filter consisting of all subsets, we also require that a filter should not contain the empty set. Since the union of an increasing chain of filters is again a filter, to any filter with the help of Zorn's lemma we can find a maximal filter containing it. This is called an ultrafilter. If a filter contains neither the set $A$ nor $\bar{A}$, then it can be extended by $A$. If it contained both, then it would also contain their intersection, that is, the empty set. Therefore, an ultrafilter contains exactly one of the sets $A$ and $\bar{A}$. If we now associate with an ultrafilter $\mathcal{M}$ the $N$-measure $\mu$ that takes the value 1 on elements of $\mathcal{M}$ and 0 on their complements, then we obtain a set function with values 0 and 1 that is defined on all subsets of $N$ and is additive. Additiveness could fail only if neither of the sets has measure 0 , but this is impossible: as the empty set does not belong to our ultrafilter, two disjoint sets of measure 1 do not exist. We shall prove for a measure of this kind that it cannot be determined by less than a continuum number of sets.
+
+From the subsets of $N$, in the manner described in the lemma, we construct an independent system of power continuum, and denote its elements by $N_{a}$. If $c$ is an infinite sequence consisting of distinct real numbers, we denote by $S_{c}$ the union of the complements of the corresponding sets $N_{a}$. The filter generated by the $N_{a}$, the $S_{c}$, and the complements of finite sets consists of all sets containing finite intersections of these. To see that the latter is really a filter, we have to show that it does not contain the empty set. In the opposite case, we could find $a_{1}, \ldots, a_{m}$ and $c_{1}, \ldots, c_{n}$ so that the set
+
+$$
+X=N_{a_{1}} \cap \cdots \cap N_{a_{m}} \cap S_{c_{1}} \cap \cdots \cap S_{c_{n}}
+$$
+
+is finite. Here $c_{i}$ is an infinite sequence of distinct real numbers, and consequently we can choose real numbers $b_{1}, \ldots, b_{n}$ from the elements of $c_{1}, \ldots, c_{n}$ so that $a_{1}, \ldots, a_{m}$, and $b_{1}, \ldots, b_{n}$ are distinct. Independence implies that the set
+
+$$
+N_{a_{1}} \cap \cdots \cap N_{a_{m}} \cap \overline{N_{b_{1}}} \cap \cdots \cap \overline{N_{b_{n}}}=Y
+$$
+
+is infinite. On the other hand, the definition of the $S_{c}$ yields $Y \subseteq X$. This contradicts our assumption. It follows that the system of sets considered does not contain the empty set; hence it is a filter. We extend this filter to an ultrafilter $\mathcal{M}$ and define the $N$-measure $\mu$ with the help of the latter.
+
+We have to prove that $\mu$ cannot be determined by a system $\mathfrak{A}$ of power less than continuum. If $\mathfrak{A}$ is a determining system containing, among others, sets of measure 0 , then these can be replaced by their complements: it is sufficient to consider determining systems $\mathfrak{A}$ all of whose elements belong to $\mathcal{M}$. Taking a $\mathfrak{A}$ of this kind, we assume that it contains less than a continuum of sets.
+
+If we consider the finite intersections of the sets in $\mathfrak{A}$, their power is still less than continuum. Therefore, we may assume from the beginning that $\boldsymbol{A}$ is closed for taking finite intersections. If there were a $Z \in \mathcal{M}$ that contained no element of $\boldsymbol{A}$, then $\bar{Z}$ would not be disjoint from any set in $\boldsymbol{A}$ and, consequently, the sets containing sets of the form $\bar{Z} \cap A(A \in \mathfrak{A})$ would constitute a filter. This filter could be extended to an ultrafilter, and the latter would define an $N$-measure $\nu$. Then $\mu$ and $\nu$ would coincide on the elements of $\mathfrak{A}$, whereas $\mu(\bar{Z})=0$ and $\nu(\bar{Z})=1$. This is impossible since $\mathfrak{A}$ is a determining system. So each element of $\mathcal{M}$ contains a set from $\mathfrak{A}$. Then at least one element $W$ of $\mathfrak{A}$ is contained in infinitely many elements of $\left\{N_{a}\right\}$; let $c$ be a countable sequence of the corresponding subscripts. The set $N_{a}$ is disjoint from $W$ for each element of $c$, from which it follows that $S_{c}=\cup \bar{N}_{a}$ is also disjoint from $W$. But this means that $\mathcal{M}$ contains

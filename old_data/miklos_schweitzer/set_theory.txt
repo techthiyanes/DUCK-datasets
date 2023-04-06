@@ -1,0 +1,384 @@
+
+
+\subsection{SET THEORY}
+
+Problem N.1. Does there exist a function $f(x, y)$ of two real variables that takes natural numbers as its values and for which $f(x, y)=f(y, z)$ implies $x=y=z$ ?
+
+Solution 1. First, we show that it is sufficient to construct for each real number $c$, two sets $A_{c}$ and $B_{c}$ of natural numbers that satisfy the following conditions:
+
+(1) $1 \notin A_{c}, 1 \notin B_{c}$ for all $c$,
+
+(2) $A_{c} \cap B_{c}=\emptyset$ for all $c$
+
+(3) $A_{c} \cap B_{d} \neq \emptyset$ for $c \neq d$.
+
+Indeed, put $f(c, c)=1$, and for $c \neq d$, let $f(c, d)$ be an arbitrary element of the nonempty set $A_{c} \cap B_{d}$. Now, if
+
+$$
+f(x, y)=f(y, z)=m \neq 1
+$$
+
+then
+
+$$
+m \in A_{x} \cap B_{y} \quad \text { and } \quad m \in A_{y} \cap B_{z}
+$$
+
+that is,
+
+$$
+m \in A_{x} \cap B_{y} \cap A_{y} \cap B_{z} \subset A_{y} \cap B_{y}=\emptyset
+$$
+
+which is a contradiction. But $m=1$ is only possible when $x=y=z$.
+
+In order to construct $A_{c}$ and $B_{c}$, map the set $\mathbb{R}$ of rational numbers bijectively onto the set $N=\{2,3, \ldots\}$; let $n(r)$ denote the image of $r \in \mathbb{R}$. Assign to each real number $c$ a sequence $\left\{r_{k}(c)\right\}_{k=1}^{\infty}$ that converges to $c$ and consists of rational numbers different from $c$. Let
+
+$$
+\begin{aligned}
+& A_{c}=\left\{n\left(r_{k}(c)\right): k=1,2, \ldots\right\} \subset N \\
+& B_{c}=N-A_{c} .
+\end{aligned}
+$$
+
+It is easy to see that these sets $A_{c}$ and $B_{c}$ satisfy conditions (1), (2), and (3). Thus, we have constructed a function with the required property.
+
+Solution 2. Arrange the set of rational numbers into a sequence $r_{1}, r_{2}$, .... Define the function $f(x, y)$ the following way:
+
+If $x=y$, put $f(x, y)=1$
+
+If $x<y$, put $f(x, y)=2 i$, where $i$ is smallest possible with $x<r_{i}<y$ If $x>y$, put $f(x, y)=2 i+1$, where $i$ is smallest possible with $x>r_{i}>y$. We show that $f(x, y)$ is as required. It is obviously defined on the reals, and its range is the set of natural numbers.
+
+Suppose that
+
+$$
+f(x, y)=f(y, z)=m
+$$
+
+If $m=1$, then $x=y=z$ is the only possibility. If $m>1$ and $m=2 i$, then
+
+$$
+x<r_{i}<y \quad \text { and } \quad y<r_{i}<z
+$$
+
+which is a contradiction. Similarly, if $m>1$ and $m=2 i+1$, then
+
+$$
+x>r_{i}>y \quad \text { and } \quad y>r_{i}>z,
+$$
+
+which is again a contradiction. Therefore, $x=y=z$ follows.
+
+Solution 3. We will decompose the plane into a countable family of pairwise disjoint subsets with the following property: if one of the lines parallel to the coordinate axes through the point $(y, y)$ intersects one of the subsets, then the other does not, except when the subset is the line $x=y$, which will be one of the subsets. It suffices to construct such a partition of the open half-plane below the line $x=y$, because by reflecting in the line $x=y$ and adding the line $x=y$, we obtain the required partition of the whole plane.
+
+Put
+
+$$
+\begin{aligned}
+A_{0} & =\{(x, y): x>0, \quad y<0\}, \\
+A_{k}^{0} & =\{(x, y): x>k, \quad k-1<y \leq k\} \\
+A_{-k}^{0} & =\{(x, y):-k<x \leq-k+1, \quad y \leq-k\} \\
+A_{n}^{k} & =\left\{(x, y): \frac{2 k-1}{2^{n}}<x \leq \frac{2 k}{2^{n}}, \quad \frac{2 k-2}{2^{n}}<y \leq \frac{2 k-1}{2^{n}}\right\}, \\
+A_{-k}^{n} & =\left\{(x, y): \frac{-2 k+1}{2^{n}}<x \leq \frac{-2 k+2}{2^{n}}, \quad \frac{-2 k}{2^{n}}<y \leq \frac{-2 k+1}{2^{n}}\right\},
+\end{aligned}
+$$
+
+where $k, n=1,2, \ldots$. It is obvious that the union of these sets is the open half-plane below the line $x=y$.
+
+This defines a partition of the whole plane, as we said above. Label the sets of this partition by the natural numbers, and assign to the point $(x, y)$ the label of the set containing $(x, y)$ as the value of the function $f(x, y)$.
+
+If $x, y, z$ are real numbers with $f(x, y)=f(y, z)$, then the points $(x, y)$ and $(y, z)$ are in the same subsets, but then $(x, y)$ (and $(y, z))$ is on the line through the point $(y, y)$ parallel to the $x$-axis ( $y$-axis, respectively), and any of the subsets can only meet one of these, except for the subset $\{(x, y): x=y\}$, but then $x=y=z$.
+
+\section{Remarks.}
+
+1. Obviously, the existence of such a function is a question of cardinality. In general, it makes sense to ask whether there exists a function $f(x, y)$ defined on a set $A$ of cardinality $\mathfrak{m}$ that takes its values in a set $B$ of cardinality $\mathfrak{n}$ (both $\mathfrak{m}$ and $\mathfrak{n}$ are infinite) and for which $f(x, y)=f(y, z)$ implies $x=y=z$. J. Gerlits, L. Lovász, L. Pósa, and M. Simonovits proved that such a function exists if and only if $\mathfrak{m} \leq 2^{\mathfrak{n}}$. Here we present the proof by Pósa. Let $\mathfrak{m} \leq 2^{\mathfrak{n}}$. It suffices to give the construction for a set $A$ of cardinality $2^{\mathfrak{n}}$. Let $\alpha$ be the smallest ordinal of cardinality $\mathfrak{n}$. We may assume that $A$ is the set of sequences of the numbers 0 and 1 of order type $\alpha$. Define the function $f(x, y)$ as follows:
+
+If $x=y$, put $f(x, y)=0$
+
+If $x \neq y$, then let $\beta$ be the smallest ordinal where the elements in $x$ and $y$ are different, let $j$ be the $\beta$ th element of $x(j=0$ or 1$)$, and put $f(x, y)=(\beta, j)$. The range of $f$ is the set of the symbol 0 and the ordered pairs $(\beta, j)$, where $\beta<\alpha$ and $j=0$ or 1 . Therefore, it has cardinality $\mathfrak{n}$ and can be mapped bijectively onto $B$.
+
+$f(x, y)=f(y, z)=(\beta, j)$ means that all elements before $\beta$ agree both in $x$ and $y$, and in $y$ and $z$, and the $\beta$ th element is $j$ in $x$ and $y$. But then the $\beta$ th elements of $x$ and $y$ are equal, which is a contradiction. Therefore, $f(x, y)=f(y, z)=0$, which implies that $x=y=z$. (This part of the statement is also proved by Bollobás and Juhász.)
+
+Suppose that $\mathfrak{m}>2^{\mathfrak{n}}$, and there exists a function required in the problem. Consider the range of $f(x, y)$ when $x$ is kept fixed. This is a subset of $B$, and since the cardinality of all possible $x$ 's is greater than the cardinality of the set of all subsets of $B$, for some $x_{1} \neq x_{2}$ the range of $f\left(x_{1}, y\right)$ equals that of $f\left(x_{2}, y\right)$. So, the value $f\left(x_{1}, x_{2}\right)$ is contained in the range of $f\left(x_{2}, y\right)$, that is, for some $y_{0}, f\left(x_{1}, x_{2}\right)=f\left(x_{2}, y_{0}\right)$, which is a contradiction.
+
+2. Béla Bollobás and Miklós Simonovits notice that there exists a function $F\left(x_{1}, \ldots, x_{n}\right)$ defined on the real numbers that takes its values in the natural numbers, and for which
+
+$$
+F\left(a, x_{2}, \ldots, x_{n}\right)=F\left(y_{1}, a, y_{3}, \ldots, y_{n}\right)=\cdots=F\left(u_{1}, \ldots, u_{n-1}, a\right)
+$$
+
+implies $a=x_{i}=y_{i}=\cdots=u_{i}(i=1,2, \ldots, n)$. For example
+
+$$
+F\left(x_{1}, \ldots, x_{n}\right)=\prod_{i, j=1}^{n} p_{i j}^{f\left(x_{i}, x_{j}\right)}
+$$
+
+is such a function, where the $p_{i j}(i, j=1, \ldots, n)$ are different primes, and $f(x, y)$ is the function defined in either solution of the problem.
+
+Problem N.2. Prove that there exists an ordered set in which every uncountable subset contains an uncountable, well-ordered subset and that cannot be represented as a union of a countable family of well-ordered subsets.
+
+Solution. Let $R$ be the set of all limit ordinals less than $\omega_{1}$, and for $\alpha \in R$, let $f_{\alpha}(n)$ be a monotone increasing sequence (of order type $\omega$ ) of ordinals converging to $\alpha$. Order $R$ as follows: for $\alpha, \beta \in R, \alpha \prec \beta$ if $f_{\alpha}(n)<f_{\beta}(n)$ holds for the first $n$ with $f_{\alpha}(n) \neq f_{\beta}(n)$. Any uncountable subset $X$ of $R$ contains a well-ordered subset of order type $\omega_{1}$ with respect to the ordering $\prec$. Indeed, let
+
+$$
+\begin{aligned}
+X \mid n=\left\{\left(\alpha_{0}, \alpha_{1}, \ldots, \alpha_{n}\right):\right. & \text { there exists } \alpha \in X, \text { such that } f_{\alpha}(m)=\alpha(m) \\
+& \text { for all } m \leq n\} .
+\end{aligned}
+$$
+
+For $n$ sufficiently large, $X \mid n$ is uncountable, since for large enough $n$ the ordinal
+
+$$
+\gamma_{n}=\sup \left\{f_{\alpha}(n): \alpha \in X\right\}
+$$
+
+equals $\omega_{1}$, since, by $f_{\alpha}(n) \rightarrow \alpha$
+
+$$
+\sup \left\{\gamma_{n}: n<\omega\right\}=\sup \{\alpha: \alpha \in X\}=\omega_{1}
+$$
+
+Order $X \mid n$ lexicographically, that is,
+
+$$
+\left(\alpha_{0}, \ldots, \alpha_{n}\right) \prec^{\prime}\left(\beta_{0}, \ldots, \beta_{n}\right)
+$$
+
+if $\alpha_{m}<\beta_{m}$ for the smallest $m$ with $\alpha_{m} \neq \beta_{m}$. Then $X \mid n$ is well-ordered and, if $n$ is large enough for $X \mid n$ to be uncountable, it contains a wellordered subset of order type $\omega_{1}$. Let $X^{\prime}$ be a subset of $X$ such that for any
+
+$$
+\left(\alpha_{0}, \ldots, \alpha_{n}\right) \in X \mid n
+$$
+
+there exists a unique $\alpha \in X^{\prime}$ with
+
+$$
+f_{\alpha}(0)=\alpha_{0}, \ldots, f_{\alpha}(n)=\alpha_{n}
+$$
+
+Then the ordered set $\left(X^{\prime}, \prec\right)$ is isorr rrphic to $\left(X \mid n, \prec^{\prime}\right)$. Since we have seen that the latter contains a well-ordered subset of order type $\omega_{1}$, the same is true of the former. This is what we wanted to prove.
+
+Now we show that $R$ is not a union of a countable family of well-ordered subsets. First we make a digression.
+
+A function that maps a set of ordinals into the ordinals is called regressive if $f(\xi)<\xi$ holds for all ordinals $\xi \neq 0$ in the domain of $f$. If the domain of $f$ is a subset of $\omega_{1}$ and the set
+
+$$
+\{\xi: f(\xi)<\mu\}
+$$
+
+is not cofinal with $\omega_{1}$ for any $\mu<\omega_{1}$, then $f$ is called divergent. $X \subseteq \omega_{1}$ is called thin if there exists a regressive divergent function defined on $X$; otherwise, it is called stationary.
+
+The set $\omega_{1}$ is stationary. Indeed, assuming that $f$ is a regressive function on $\omega_{1}$, the sequence
+
+$$
+\xi, f(\xi), f(f(\xi)), \ldots
+$$
+
+being a descending sequence of ordinals, can contain only a finite number of elements different from zero. Therefore,
+
+$$
+\omega_{1}=\bigcup_{n<\omega} X_{n}
+$$
+
+where
+
+$$
+X_{0}=\{0\}
+$$
+
+and
+
+$$
+X_{n+1}=\left\{\xi: f(\xi) \in X_{n}\right\}
+$$
+
+Assuming further that $f$ is divergent, induction on $n$ shows that $\sup X_{n}<$ $\omega_{1}$ for all $n$, which obviously is a contradiction.
+
+From this it easily follows that the set $R$ of limit ordinals less than $\omega_{1}$ is also stationary.
+
+It quickly follows from the definition that the union of a countable family of thin sets is also thin. Further, if $X$ is stationary and $f$ is a regressive function on $X$, then for some $\mu<\omega_{1}$ the set
+
+$$
+X_{\mu}=\{\xi: f(\xi)=\mu\}
+$$
+
+is stationary (this is a special case of Fodor's theorem). Indeed, assume that all $X_{\mu}$ are thin, and let $f_{\mu}$ be a regressive divergent function defined on $X_{\mu}$. Then the function $g$ defined on $X$ by
+
+$$
+g(\xi)=\max \left(\mu, f_{\mu}(\xi)\right) \quad\left(\xi \in X_{\mu}, \mu<\omega_{1}\right)
+$$
+
+is regressive. It is divergent, too, because for all $\nu<\omega_{1}$ the set
+
+$$
+\{\xi: g(\xi)<\nu\} \subseteq \bigcup_{\mu<\nu}\left\{\xi: f_{\mu}(\xi)<\nu\right\}
+$$
+
+is not cofinal with $\omega_{1}$, since neither one of the summands in the righthand side is, because the functions $f_{\mu}$ are divergent. This contradicts the assumption that $X$ is stationary, which proves our statement.
+
+Let $X \subseteq R$ be stationary. We show that $X$ is not well ordered with respect to the ordering $\prec$. Put $Y_{-1}=X$ and
+
+$$
+Y_{n}=\left\{\alpha \in Y_{n-1}: f_{\alpha}(n)=\delta_{n}\right\}
+$$
+
+where $\delta_{n}$ is the smallest ordinal for which $Y_{n}$ is stationary (such $\delta_{n}$ exists by the Fodor theorem proved above).
+
+Put
+
+$$
+X^{\prime}=X-\bigcup_{n<\omega} Y_{n}^{\prime}
+$$
+
+where
+
+$$
+Y_{n}^{\prime}=\left\{\alpha \in Y_{n-1}: f_{\alpha}(n)<\delta_{n}\right\}
+$$
+
+By the choice of $\delta_{n}, Y_{n}^{\prime}$ is not stationary, and neither is $X-X^{\prime}$.
+
+Put
+
+$$
+\delta=\sup \left\{\delta_{n}: n<\omega\right\}
+$$
+
+It is obvious that $\delta<\omega_{1}$. Let $\alpha \in X^{\prime}$ be greater than $\delta$. ( $X^{\prime}$ is stationary and so it is cofinal with $\omega_{1}$.) Since $f_{\alpha}(n) \rightarrow \alpha$, for some $n<\omega$ we have
+
+$$
+f_{\alpha}(n)>\delta \geq \delta_{n}
+$$
+
+so $f_{\alpha}(m)=\delta_{m}$ cannot hold for all $m$. It follows from $\alpha \in X^{\prime}$ that $f_{\alpha}(m)>$ $\delta_{m}$ for the smallest $m$ with $f_{\alpha}(m) \neq \delta_{m}$. Thus, for this $m, \alpha$ is greater than all elements of $Y_{m}$ with respect to the ordering $\prec$.
+
+Put $X_{0}=X, \alpha_{0}=\alpha$, and $X_{1}=Y_{m}$. Since $Y_{m}$ is stationary, we can repeat the above argument with $X_{1}$ instead of $X_{0}$. We obtain $\alpha_{1}$ and $X_{2}$, then $\alpha_{2}$ and $X_{3}$, and so on. Since $\alpha_{0} \succ \alpha_{1} \succ \alpha_{2} \succ \ldots, X$ is not wellordered with respect to the ordering $\prec$, and this is what we wanted to prove.
+
+Now, if $R=\bigcup_{n<\omega} R_{n}$, then some $R_{n}$ is stationary, and this $R_{n}$ is not well-ordered with respect to $\prec$. This proves the second statement of the problem.
+
+Remark. László Babai showed that for each cardinal number $\kappa>\omega$, there exists an ordered set $B$ of cardinality $\kappa$ such that all subsets of cardinality $\kappa$ contain a well-ordered subset of cardinality $\kappa$ and $B$ is not a union of a family of cardinality less than $\kappa$ of well-ordered subsets.
+
+Problem N.3. Let $\leq$ be a reflexive, antisymmetric relation on a finite set $A$. Show that this relation can be extended to an appropriate finite superset $B$ of $A$ such that $\leq$ on $B$ remains reflexive, antisymmetric, and any two elements of $B$ have a least upper bound as well as a greatest lower bound. (The relation $\leq$ is extended to $B$ if for $x, y \in A, x \leq y$ holds in $A$ if and only if it holds in $B$.)
+
+Solution. $B$ will consist of all the elements and subsets of $A$ without identifying the elements with the corresponding singletons. In what follows, lowercase letters denote elements, whire capitals mean subsets.
+
+Define $\leq$ as follows:
+
+$$
+\begin{array}{ll}
+a \leq b, & \text { as given, } \\
+a \leq P, & \text { if } a \in P, \\
+P \leq a, & \text { if } a \notin P, \\
+P \leq Q, & \text { if } P \subseteq Q .
+\end{array}
+$$
+
+This is obviously a reflexive and antisymmetric relation. To show the other property, it suffices to treat incomparable elements, that is, two incomparable elements in $A$, or two subsets of $A$, none containing the other, as a subset.
+
+If $a, b \in A$ are incomparable, $\{a, b\}, A \backslash\{a, b\}$ are the least upper (resp. greatest lower) bounds. If $P, Q \subseteq A$, then $P \cup Q$ and $P \cap Q$ will serve as the least upper and greatest lower bounds.
+
+Problem N.4. Let $\mathcal{F}$ be a family of subsets of a ground set $X$ such that $\cup_{F \in \mathcal{F}} F=X$, and
+
+(a) if $A, B \in \mathcal{F}$, then $A \cup B \subseteq C$ for some $C \in \mathcal{F}$;
+
+(b) if $A_{n} \in \mathcal{F}(n=0,1, \ldots), B \in \mathcal{F}$, and $A_{0} \subset A_{1} \subset \ldots$, then, for some $k \geq 0, A_{n} \cap B=A_{k} \cap B$ for all $n \geq k$. Show that there exist pairwise disjoint sets $X_{\gamma}(\gamma \in \Gamma)$, with $X=$ $\cup\left\{X_{\gamma}: \gamma \in \Gamma\right\}$, such that every $X_{\gamma}$ is contained in some member of $\mathcal{F}$, and every element of $\mathcal{F}$ is contained in the union of finitely many $X_{\gamma}$ 's.
+
+Solution. Let $<$ be a well-ordering of $F$. Let $\Gamma$ be the set of all finite subsets of $F$. Well order $\Gamma$ as follows:
+
+$$
+\begin{aligned}
+& \gamma_{1}, \gamma_{2} \in \Gamma, \gamma_{1} \neq \gamma_{2}, \gamma_{1}=\left\{A_{1}, \ldots, A_{n}\right\}, \gamma_{2}=\left\{B_{1}, \ldots, B_{m}\right\} \\
+& A_{n}<\cdots<A_{1}, B_{m}<\ldots B_{1}, m \leq n
+\end{aligned}
+$$
+
+Put $\gamma_{1}>\gamma_{2}$ if $A_{i}=B_{i}$ for $1 \leq i \leq m$. If, on the other hand, $i \leq m$ is the least number with $A_{i} \neq B_{i}$ then put $\gamma_{1}<\gamma_{2}$ or $\gamma_{1}>\gamma_{2}$ if $A_{i}<B_{i}$ or $A_{i}>B_{i}$. A straightforward checking shows that this well orders $\Gamma$. We notice that $\gamma_{1} \leq \gamma_{2}$ implies $\gamma_{1}<\gamma_{2}$.
+
+For $\gamma \in \Gamma$, we define $Y_{\gamma} \in F$ as follows. If $\gamma=\{A\}$, put $Y_{\gamma}=A$. Assume that $Y_{\delta}$ is defined for $\delta<\gamma$. Then let $Y_{\gamma}$ be a member of $F$, covering every $Y_{\beta}(\beta<\gamma)$. This is possible by (a).
+
+Now put $X_{\gamma}=Y_{\gamma} \backslash \cup_{\delta<\gamma} Y_{\delta}$. The only nontrivial thing to prove is that every $A \in F$ is covered by finitely many $X_{\beta}$. We prove by transfinite induction on $\gamma$ that $Y_{\gamma}$ is covered by finitely many $X_{\delta}$ 's. If this first fails for $\gamma$, there exists $\beta_{1}<\beta_{2}<\cdots<\gamma$ such that $Y_{\gamma} \cap X_{\beta_{n}} \neq \emptyset$. Let $Y_{\gamma}=\left\{A_{1}, \ldots, A_{k}\right\}, A_{1}>\cdots>A_{k}$. For every $n$ there is a $1 \leq j \leq k$ such that
+
+$$
+A_{1}, \ldots, A_{j-1} \in \beta_{n}, \quad A_{j} \notin \beta_{n} .
+$$
+
+We can assume, by shrinking, that $j$ is the same for every $n$. Put $\eta_{n}=$ $\max \left(\beta_{1}, \ldots, \beta_{n}\right)<\gamma$. As $\gamma$ is minimal, $Y_{\beta_{n}}$ meets finitely many $X_{\beta}$. As $Y_{\eta_{1}} \subset Y_{\eta_{2}} \subset \ldots$, by (b) there is an $m$ such that $Y_{\eta_{m}} \cap Y_{\gamma}=Y_{\eta_{m+1}} \cap Y_{\gamma}=\ldots$, so $Y_{\eta_{m}} \supseteq Y_{\eta_{m+i}} \cap Y_{\gamma} \supseteq X_{\eta_{m+i}} \cap Y_{\gamma} \neq \emptyset(i=0,1, \ldots)$ that is, $Y_{\eta_{m}}$ meets $X_{\eta_{m}}, X_{\eta_{m+1}}, \ldots$, a contradiction.
+
+Problem N.5. Show that there exists a tournament $(T, \rightarrow)$ of cardinality $\aleph_{1}$ containing no transitive subtournament of size $\aleph_{1}$. (A structure $(T, \rightarrow)$ is a tournament if $\rightarrow$ is a binary, irreflexive, asymmetric, and trichotomic relation. The tournament $(T, \rightarrow)$ is transitive if $\rightarrow$ is transitive, that is, if it orders $T$.)
+
+Solution. We use the existence of a Specker type, that is, an ordered set $(A,<)$ of size $\aleph_{1}$, not containing subsets similar to $\omega_{1}, \omega_{1}^{*}$, any uncountable subset of the reals. See (P. Erdős, A. Hajnal, A. Máté, R. Rado, Combinatorial set theory: Partition Relations for Cardinals, Akadémiai Kiadó, Budapest, 1984, p. 326.) Enumerate $A$ as $\left\{a(\alpha): \alpha<\omega_{1}\right\}$, and let $\left\{x(\alpha): \alpha<\omega_{1}\right\}$ be different real numbers in $[0,1]$. If $\alpha<\beta$, put $\alpha \leftarrow \beta$ iff either $x(\alpha)<x(\beta)$ and $a(\alpha)<a(\beta)$ or $x(\alpha)>x(\beta)$ and $a(\alpha)>a(\beta)$. Let $B \subseteq A$ be uncountable. Let $X=\left\{\alpha<\omega_{1}: a(\alpha) \in B\right\}$.
+
+Claim 1. There is an $\alpha \in X$ such that
+
+$$
+\{\beta \in X: a(\alpha)<a(\beta) \text { and } x(\alpha)<x(\beta)\}
+$$
+
+is uncountable.
+
+Proof. For $a \in B$, let $f(a)$ be the least $t \in[0,1]$ such that $x(\beta)<t$ for all but countably many $\beta \in X, a(\beta)>a$. Since $f$ is a non-increasing real-valued function on $(A,<)$, it can only have countably many different values; otherwise, there would be an uncountable subset of $A$, similar to a set of reals. Hence $f$ is constant on an uncountable $B_{0} \subseteq B$. Define $X_{0}$ analogously to $X$. We can choose $\alpha_{0} \in X_{0}$ such that $\left\{\beta \in X_{0}: x(\beta)>\right.$ $\left.x\left(\alpha_{0}\right)\right\}$ is uncountable; otherwise $(A,<)$ would contain a subset of type $\omega_{1}^{*}$. Now we can choose $\alpha \in X_{0}$ such that $a(\alpha)>a\left(\alpha_{0}\right)$ and $x(\alpha)<x\left(\alpha_{0}\right)$. Since $g(a(\alpha))=g\left(a\left(\alpha_{0}\right)\right)>x(\alpha)$, there are uncountably many $\beta \in X$ such that $a(\beta)>a(\alpha)$ and $x(\beta)>x(\alpha)$.
+
+Claim 2. There are uncountable $X_{0}, X_{1} \subseteq X$ such that if $\alpha \in X_{0}$, $\beta \in X_{1}$, then $a(\alpha)<a(\beta)$ and $x(\alpha)<x(\beta)$.
+
+Proof. Let $U$ be the set of those $\alpha \in X$ such that
+
+$$
+\{\beta \in X: a(\alpha)<a(\beta) \text { and } x(\alpha)<x(\beta)\}
+$$
+
+is countable, and let $L$ be the set of those $\alpha \in X$ such that
+
+$$
+\{\beta \in X: a(\beta)<a(\alpha) \text { and } x(\beta)<x(\alpha)\}
+$$
+
+is countable. If $U$ or $L$ is uncountable, we get a contradiction by Claim 1, so we can select $\alpha \in X \backslash U \backslash L$, and put
+
+$$
+\begin{aligned}
+& X_{0}=\{\beta \in X: a(\beta)<a(\alpha) \quad \text { and } \quad x(\beta)<x(\alpha)\} \\
+& X_{1}=\{\beta \in X: a(\alpha)<a(\beta) \quad \text { and } \quad x(\alpha)<x(\beta)\} .
+\end{aligned}
+$$
+
+By an application of Claim 2 to $X_{0}$ and the Specker type $(A,>)$, one can find $Y_{0}, Y_{1} \subseteq X_{0}$ such that $\alpha \in Y_{0}, \beta \in Y_{1}$ imply $a(\alpha)<a(\beta)$, and $x(\alpha)>x(\beta)$. Now select $\alpha \in Y_{0}, \beta \in X_{1}, \gamma \in Y_{1}$ with $\alpha<\beta<\gamma$. Then $\alpha \leftarrow \beta \leftarrow \gamma$ and $\gamma \leftarrow \alpha$, so our tournament is not transitive on $B$.
+
+Remark. The result in the problem was first proved by R. Laver.
+
+Problem N.6. Assume that $R$, a recursive, binary relation on $\mathbb{N}$ (the set of natural numbers), orders $\mathbb{N}$ into type $\omega$. Show that if $f(n)$ is the $n$th element of this order, then $f$ is not necessarily recursive.
+
+Solution. We use the following well-known facts. There is a set $A \subseteq \mathbb{N}$ that is recursively enumerable, that is, the range of a recursive function, but is not recursive, namely, its characteristic function is not recursive. For every infinite r.e. set $A$ there is a recursive function enumerating $A$ 's elements in a one-to-one manner. An infinite set possesses an increasing such enumeration if and only if it is recursive.
+
+Take a (necessarily infinite) r.e. but not recursive set $A$, and a function $g$ enumerating $A$ without repetition. Put $a R b$ iff $g(a)<g(b)$. Clearly, $R$ is recursive and orders $\mathbb{N}$ into type $\omega$. If $f(n)=$ the $n$th element by this order, and $f$ is recursive, then the recursive $h(n)=g(f(n))$ would enumerate $A$ 's elements in increasing order, which is impossible.
+
+Problem N.7. Let $\mathcal{H}$ be the class of all graphs with at most $2^{\aleph_{0}}$ vertices not containing a complete subgraph of size $\aleph_{1}$. Show that there is no graph $H \in \mathcal{H}$ such that every graph in $\mathcal{H}$ is a subgraph of $H$.
+
+Solution. We have to show that if $(V, G)$, a graph with $|V|=2^{\aleph_{0}}$, does not contain a complete graph on $\aleph_{1}$ vertices, then there is a graph $(W, H)$ with these properties such that $(W, H)$ cannot be embedded into $(V, G)$.
+
+Let $W$ be the set of those functions injecting a countable ordinal (possibly $O \neq \emptyset$ ) into a complete subgraph of $G$. To define $H$, join two such functions if one extends the other. Clearly,
+
+$$
+|W|=\sum_{\alpha<\omega_{1}}|\alpha \rightarrow V| \leq \aleph_{1} \cdot\left(2^{\aleph_{0}}\right)^{\aleph_{0}}=2^{\aleph_{0}}
+$$
+
+First, we show that $(W, H)$ does not contain a complete $\aleph_{1}$-gon. Assume that $\left\{f_{\alpha}: \alpha<\omega_{1}\right\}$ are pairwise joined, and that the ordinals $\operatorname{Dom}\left(f_{\alpha}\right)$ are in increasing order. By the construction of $H$, for $\beta<\alpha, f_{\alpha}$ extends $f_{\beta}$, so the union of the $f_{\alpha}$ 's gives a function $f: \omega_{1} \rightarrow V$ onto a complete $\aleph_{1}$-gon in $(V, G)$, a contradiction.
+
+Next we prove that $(W, H)$ may not be embedded into $(V, G)$. Assume that $h: W \rightarrow V$ is such an embedding. By transfinite recursion on $\alpha<\omega_{1}$, we define $f_{\alpha}: \alpha \rightarrow V, f_{\alpha} \in W$, and $x_{\alpha}=h\left(f_{\alpha}\right) \in V$ in such a way that $f_{\alpha}$ extends $f_{\beta}$ for $\beta<\alpha$. Put $f_{0}=\emptyset, f_{0} \in W$. If $f_{\beta}(\beta<\alpha)$ are defined, then
+
+$$
+\left\{x_{\beta}: \beta<\alpha\right\}=h\left\{f_{\beta}: \beta<\alpha\right\}
+$$
+
+is a complete subgraph, so we can define $f_{\alpha}(\beta)=x_{\beta}$. This clearly satisfies the requirements. But then $\left\{x_{\alpha}: \alpha<\omega_{1}\right\}$ is a complete subgraph in $G$, a contradiction.
+
+Remark. This is an unpublished result of R. Laver.
+
+Problem א.8. For which cardinalities $\kappa$ do antimetric spaces of cardinality $\kappa$ exist?
+
+$(X, \varrho)$ is called an antimetric space if $X$ is a nonempty set, $\varrho: X^{2} \rightarrow[0, \infty)$ is a symmetric map, $\varrho(x, y)=0$ holds iff $x=y$, and for any three-element subset $\left\{a_{1}, a_{2}, a_{3}\right\}$ of $X$
+
+$$
+\varrho\left(a_{1 f}, a_{2 f}\right)+\varrho\left(a_{2 f}, a_{3 f}\right)<\varrho\left(a_{1 f}, a_{3 f}\right)
+$$
+
+holds for some permutation $f$ of $\{1,2,3\}$.

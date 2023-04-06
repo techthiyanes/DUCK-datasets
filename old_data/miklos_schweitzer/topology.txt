@@ -1,0 +1,267 @@
+
+
+\subsection{TOPOLOGY}
+
+Problem T.1. Prove that any uncountable subset of the Euclidean $n$ space contains an uncountable subset with the property that the distances between different pairs of points are different (that is, for any points $P_{1} \neq$ $P_{2}$ and $Q_{1} \neq Q_{2}$ of this subset, $\overline{P_{1} P_{2}}=\overline{Q_{1} Q_{2}}$ implies either $P_{1}=Q_{1}$ and $P_{2}=Q_{2}$, or $P_{1}=Q_{2}$ and $\left.P_{2}=Q_{1}\right)$. Show that a similar statement is not valid if the Euclidean $n$-space is replaced with a (separable) Hilbert space.
+
+Solution. For the proof of the first statement of the problem, we say that a subset of the Euclidean $n$-space $E_{n}$ has property $T$ if the distances between all pairs of points of this subset are different. By induction on $n$, we prove that if all subsets of a set $H\left(\subseteq E_{n}\right)$ that have property $T$ are countable, then $H$ is countable. The case $n=0$ is trivial. Suppose that the statement is true for $n-1(\geq 0)$. Let $H\left(\subseteq E_{n}\right)$ be a set such that all subsets with property $T$ are countable. By Tukey's lemma, there exists a maximal subset $M$ of $H$ with property $T$. By maximality of $M$, any point of $H \backslash M$ either has equal distance from two distinct points of $M$ or has a distance from a point of $M$ that equals the distance between some pair of points in $M$. Therefore, $H$ is covered by the perpendicular bisector hyperplanes of pairs of points of $M$, together with the spheres centered at and passing through points of $M$. The set of these hyperplanes $F_{i}$ and spheres $S_{i}$ is countable $(i=1,2, \ldots)$, since $M$ is countable. Each $H \cap S_{j}$ is a countable set. Indeed, the preceding argument can be applied to $H \cap S_{j}$ instead of $H$ (since $H \cap S_{j}$ satisfies all assumptions made on $H$ ); therefore, the set of $S_{i}^{\prime \prime}$ 's and $F_{i}^{\prime}$ 's that replace the preceding $S_{i}$ 's and $F_{i}$ 's and cover $H \cap S_{j}$ is countable; by the induction hypothesis $H \cap F_{i}^{\prime}$ and (since $S_{j} \cap S_{i}^{\prime}$ is contained in a hyperplane of $E_{n}$ ) $H \cap S_{j} \cap S_{i}^{\prime}$ are countable sets. Thus, $H \cap S_{j}$ is countable since it can be covered by a countable family of countable sets. Further, by the induction hypothesis, each $H \cap F_{j}$ is a countable set. Therefore, $H$ is a countable set since it is covered by a countable family of countable sets.
+
+In order to prove the second statement of the problem, it suffices to construct an uncountable subset of the Hilbert space spanned by the orthonormal basis $e_{i}(i=1,2, \ldots)$, such that the set of distances between all pairs of points in this subset is countable. To this end, consider an uncountable set $\mathfrak{A}$ of infinite sets of natural numbers with pairwise finite intersection. It is well known that such a set $\mathfrak{A}$ exists. (For instance, the set of bounded, monotone sequences of rational numbers has this property.) Each set $A(\in \mathfrak{A})$ determines a vector $\sum_{i=1}^{\infty}\left(1 / 2^{i}\right) \cdot e_{\alpha_{i}}$ in the Hilbert space, where $\alpha_{i}$ runs through $A$ in increasing order. The set $K$ of these vectors is uncountable. On the other hand, the distance between any pair of elements of $K$ is the square root of a rational number, for if the vectors $a=\sum_{i=1}^{\infty}\left(1 / 2^{i}\right) \cdot e_{\alpha_{i}}$ and $a^{\prime}=\sum_{i=1}^{\infty}\left(1 / 2^{i}\right) \cdot e_{\alpha_{i}}^{\prime}$ are determined by the sets $A$ and $A^{\prime}(\in \mathfrak{A})$, then 
+
+$$
+\left\|a-a^{\prime}\right\|^{2}=\|a\|^{2}=\left\|a^{\prime}\right\|^{2}-2\left(a, a^{\prime}\right)=\frac{2}{3}-2 \sum_{a_{i}=a_{j}^{\prime}} \frac{1}{2^{i+j}}
+$$
+
+where in the last term we have a finite sum since $A \cap A^{\prime}$ is finite.
+
+Remark. István Juhász and Béla Bollobás pointed out that a similar argument proves the following generalization of the first statement of the problem: If $\mathfrak{m}$ is a regular cardinal number, then any subset of cardinality $\mathfrak{m}$ of the Euclidean $n$-space has a subset of cardinality $\mathfrak{m}$ in which all distances between pairs of points are different; further, they considered generalizations of the statement to other metric spaces.
+
+Problem T.2. A sentence of the following type is often heard in Hungarian weather reports: "Last night's minimum temperatures took all values between -3 degrees and +5 degrees." Show that it would suffice to say, "Both -3 degrees and +5 degrees occurred among last night's minimum temperatures." (Assume that temperature as a two-variable function of place and time is continuous.)
+
+Remark. The formulation of the problem allows for various models. The proof is simplest when the country is assumed to be compact; not assuming compactness requires a different proof and yields a more general theorem. The argument needs some modification if the time interval is replaced with a (not necessarily metrizable) compact space. In the following solutions, the space is connected and the time is compact. The proof is carried out for metric spaces in the first one and for arbitrary topological spaces in the second one.
+
+Solution 1. Since any continuous image of a connected space is connected, and in the real line only the intervals are connected sets, it is sufficient to prove that the function that assigns to each point the minimum temperature attained there during the night is continuous.
+
+Let $E$ be a connected metric space, $I$ be a compact metric space, $\mathbb{R}$ be the real line, and $f: I \rightarrow \mathbb{R}$ be a continuous function. For any fixed $x \in E$, the function $f(x, t)$ is continuous on the compact space $I$; therefore, $g(x)=\min _{t \in I} f(x, t)$ exists. We show that $g(x)$ is continuous. If this were not the case, then there would exist an $\varepsilon>0$ and a sequence $\left\{x_{k}\right\}$ $\left(x_{k} \in E, k=1,2, \ldots\right)$ such that $x_{k} \rightarrow x$, but
+
+$$
+\left|g\left(x_{k}\right)-g(x)\right| \geq \varepsilon
+$$
+
+We consider two cases:
+
+(a) There is a subsequence of $\left\{x_{n}\right\}$ such that
+
+$$
+g\left(x_{n_{k}}\right) \leq g(x)-\varepsilon
+$$
+
+If $f\left(x_{n_{k}}, t_{k}\right)=g\left(x_{n_{k}}\right)$, then the sequence $\left\{t_{k}\right\}$ has an accumulation point $t \in I$, and we can assume that $t_{k} \rightarrow t$. Then
+
+$$
+f\left(x_{n_{k}}, t_{k}\right)=g\left(x_{n_{k}}\right) \leq g(x)-\varepsilon \leq f(x, t)-\varepsilon
+$$
+
+and $f$ cannot be continuous. (b) There is a subsequence of $\left\{x_{n}\right\}$ such that
+
+$$
+g\left(x_{n_{k}}\right) \geq g(x)+\varepsilon
+$$
+
+If $f(x, t)=g(x)$, then
+
+$$
+f\left(x_{n_{k}}, t\right) \geq g\left(x_{n_{k}}\right) \geq g(x)+\varepsilon \geq f(x, t)+\varepsilon
+$$
+
+and $f$ cannot be continuous.
+
+Since at least one of the cases must hold, we have a contradiction, which proves the statement.
+
+Solution 2. Now let $E$ be a connected topological space and $I$ be a compact topological space. We keep other notations of Solution 1.
+
+We prove again that $g(x)$ is continuous on $E$. For $\varepsilon>0, u \in E$, and $v \in I$, let $U(u, v)$ and $V(u, v)$ be respective neighborhoods of $u$ and $v$ such that for all $(x, t) \in U(u, v) \times V(u, v)$, we have
+
+$$
+|f(u, v)-f(x, t)|<\varepsilon .
+$$
+
+For $u$ fixed, the neighborhoods $V(u, v)(v \in I)$ cover $I$. Then, by its compactness, $I$ is covered by a finite number of them:
+
+$$
+V\left(u, v_{1}\right), V\left(u, v_{2}\right), \ldots, V\left(u, v_{k}\right) .
+$$
+
+Then $U=\cap_{i=1}^{k} U\left(u, v_{i}\right)$ is a neighborhood of $u$, and if $x \in U$, then $\mid g(x)-$ $g(u) \mid<\varepsilon$, for if $t \in I$, then $t \in V\left(u, v_{j}\right)$ for some $j$, and then, since
+
+$$
+(x, t),(u, t) \in U\left(u, v_{j}\right) \times V\left(u, v_{j}\right)
+$$
+
+we have
+
+$$
+|f(x, t)-f(u, t)|<\varepsilon
+$$
+
+Remarks.
+
+1. Assuming space and time to be compact topological spaces, Attila Máté considered temperature to take values in a metric space and proved, under these conditions, that the function $g(x)$ is continuous. Compactness of space is not essential in this model.
+
+2. György Vesztergombi proved that the statement of the problem remains true if the definition of night depends on place (astronomical night), provided that the beginning and the end of the night are continuous functions of place.
+
+3. Miklós Simonovits gave an example to show that it is essential to assume compactness of night. (If the night is not compact, then, of course, we have to speak of local infimum instead of local minimum.) Let $E=[-1 .+1], I=(-\infty,+\infty), f(x, t)=e^{-t^{2} x^{2}}$. Then
+
+$$
+g(x)=\inf _{t \in I} f(x, t)= \begin{cases}1 & \text { for } x=0, \\ 0 & \text { for } x \neq 0,\end{cases}
+$$
+
+and $g(x)$ is not continuous. 4. Juhász and Pósa gave examples that show that it is not sufficient to assume partial continuity of $f(x, t)$. Juhász's example is the following: put $E=I=[-1,+1]$, and
+
+$$
+f(x, t)= \begin{cases}1 & \text { if } x \leq 0, \text { or } x>0 \text { and } t \geq 0 \\ 1+\frac{t}{x} & \text { if } x>0 \text { and }-x \leq t<0 \\ 1+\frac{x}{t} & \text { if } x>0 \text { and }-1 \leq t<-x\end{cases}
+$$
+
+In this case,
+
+$$
+g(x)= \begin{cases}1 & \text { for } x \leq 0 \\ 0 & \text { for } x>0\end{cases}
+$$
+
+is not continuous, and the statement of the problem is not true.
+
+Problem T.3. Let $A$ be a family of proper closed subspaces of the Hilbert space $H=l^{2}$ totally ordered with respect to inclusion (that is, if $L_{1}, L_{2} \in A$, then either $L_{1} \subset L_{2}$ or $L_{2} \subset L_{1}$ ). Prove that there exists a vector $x \in H$ not contained in any of the subspaces $L$ belonging to $A$.
+
+Solution 1. More generally, we prove the statement for separable Banach spaces. Let $B$ be a separable Banach space, and let $R$ be a system of subspaces $L$ of $B$ that satisfies the requirements of the problem. Suppose that $\cup_{L \in R} L=B$. Consider a countable, everywhere-dense subset $\left\{x_{1}, x_{2}, \ldots\right\}$ of $B$. By recursion, define a countable increasing sequence of elements of $R$ as follows. Let $L_{1}$ be an element of $B$ that contains $x_{1}$. Suppose that the subspaces $L_{1}, \ldots, L_{n}(\in R)$ have already been defined. Let $L^{(n+1)}$ be an element of $R$ that contains $x_{n+1}$. (Such an element exists by the assumptions.) One of the subspaces $L_{1}, \ldots, L_{n}, L^{(n+1)}$ contains all others; let this one be denoted by $L_{n+1}$. Then $L_{n} \subseteq L_{n+1}$ and $x_{n} \in L_{n}(n=1,2, \ldots)$. Now, let $L$ be an arbitrary element of $R$. Since $L$ is a proper closed subspace of $B$, it cannot contain all elements of the dense set $\left\{x_{1}, x_{2}, \ldots\right\}$. Suppose, say, that $x_{k} \notin L$. By definition, $x_{k} \in L_{k}$, so $L \subseteq L_{k}$ since the system $B$ is ordered with respect to inclusion. This means that $\cup_{i=1}^{\infty} L_{i}=B$.
+
+Now, for all natural numbers $n$, let $f_{n}$ be a continuous linear functional on $B$ for which $\left\|f_{n}\right\|=n$ and $f_{n}(x)=0$ if $x \in L_{n}$. (Such functionals exist. For example, take an arbitrary element $y_{n}$ in the complement of $L_{n}$. Since $L_{n}$ is closed, the distance $d$ of $y_{n}$ from the subspace $L_{n}$ is positive. Consider now the linear subspace $\left[y_{n}\right]+L_{n}$, where $\left[y_{n}\right]$ denotes the one-dimensional subspace generated by $y_{n}$, and let
+
+$$
+f_{n}^{(0)}\left(\lambda y_{n}-x\right)=n \lambda d
+$$
+
+where $x \in L_{n}$ and $\lambda$ is a complex number. $f_{n}^{(0)}$ is obviously linear on $\left[y_{n}\right]+L_{n}$ and $f_{n}^{(0)}(x)=0$ for $x \in L_{n}$, and
+
+$$
+\left\|f_{n}^{(0)}\right\|=\sup \frac{|n \lambda d|}{\left\|\lambda y_{n}-x\right\|}=\sup _{x \in L_{n}} \frac{n d}{\left\|y_{n}-x\right\|}=\frac{n d}{\inf _{x \in L_{n}}\left\|y_{n}-x\right\|}=n .
+$$
+
+By the Hahn-Banach theorem, $f_{n}^{(0)}$ is extendable to a functional $f_{n}$ defined on the whole $B$ that has the required properties.) Now, if $x \in B$, then $\lim _{n \rightarrow \infty} f_{n}(x)=0$, since, by $\cup_{i=1}^{\infty} L_{i}=B, x$ is contained in some $L_{i}$, and the sequence $\left\{L_{n}\right\}$ of subspaces is increasing with respect to inclusion. So, the sequence $\left\{f_{n}\right\}$ of functionals is pointwise convergent; therefore, by the Banach-Steinhaus theorem, $\sup _{n}\left\|f_{n}\right\|<\infty$. But this contradicts the choice of $f_{n}$.
+
+Solution 2. We prove the following generalization of the problem.
+
+Generalization. Let $M$ be a separable topological space of second Baire category, and let $\mathfrak{A}$ be a system of nowhere-dense closed subsets of $M$ ordered by inclusion. Then $\cap_{L \in \mathfrak{A}} L \neq M$.
+
+(It is obvious that the space $l^{2}$ and the family of subspaces in the problem and, more generally, separable Hilbert and Banach spaces with a similar family of subspaces all satisfy the hypotheses of this statement; indeed, these spaces equipped with the norm topology are separable topological spaces of second Baire category and, in any of these spaces, a proper closed subspace is nowhere dense.)
+
+Proof. Suppose that, to the contrary, $\cup_{L \in \mathfrak{A}} L=M$, and consider a countable, everywhere-dense set $R=\left\{x_{1}, x_{2}, \ldots\right\}$ in $M$. Put
+
+$$
+M_{k}=\bigcup\left\{L \in \mathfrak{A}: x_{k} \in L\right\} \quad(k=1,2, \ldots) .
+$$
+
+Then $M_{k}$ is a nonempty, nowhere-dense subset of $M$ for all $k$. Therefore, $\cup_{k=1}^{\infty} M_{k}$ is of first category, and
+
+$$
+\bigcup_{k=1}^{\infty} M_{k} \neq M
+$$
+
+On the other hand, if $L \in \mathfrak{A}$, then $L \neq M$. $L$ cannot contain $R$, that is, there is a natural number $k$ such that $x_{k} \notin L$. Since $\mathfrak{A}$ is ordered with respect to inclusion, $L \subseteq M_{k}$ follows from the definition of $M_{k}$. Thus, $\cup_{L \in \mathfrak{A}} L \subseteq \cup_{k=1}^{\infty} M_{k}$, a contradiction.
+
+Remark. Several contestants remarked that the statement of the problem is not true for nonseparable Hilbert spaces. Attila Máté gave the following example. Let $H$ be a nonseparable Hilbert space. Then $H$ is isomorphic to a Hilbert space $K \oplus L^{2}\left(\omega_{1}\right)$, where $K$ is a suitably chosen Hilbert space, and $\omega_{1}$ is the set of countable ordinals considered as the discrete measure space in which the measure of all singletons is 1 . Then
+
+$$
+\bigcup_{\xi \in \omega_{1}}\left(K \oplus L^{2}(\xi)\right)=K \oplus L^{2}\left(\omega_{1}\right)
+$$
+
+Problem T.4. Let $K$ be a compact topological group, and let $F$ be a set of continuous functions defined on $K$ that has cardinality greater than continuum. Prove that there exist $x_{0} \in K$ and $f \neq g \in F$ such that
+
+$$
+f\left(x_{0}\right)=g\left(x_{0}\right)=\max _{x \in K} f(x)=\max _{x \in K} g(x) .
+$$
+
+Solution. In the proof, we use the following theorem by Paul Erdős.
+
+Theorem. If the edges of a complete graph of cardinality greater than continuum are labeled with natural numbers, then there exists an uncountable complete subgraph with all edges labeled with the same number. See, for example, P. Erdős, A. Hajnal, and R. Radó, Partition Relations for Cardinal Numbers, Acta Math. Acad. Sci. Hung. 16 (1965), Theorem 1.
+
+If $F_{x}$ denotes the system of functions in $F$ whose maximum is $x$, then it is clear that the cardinality of $F_{x}$ is greater than continuum for some real number $x$. Suppose that $f_{=x} \cap g_{=x}=\emptyset$ for all pairs of functions $f \neq g \in$ $F_{x}$. Consider the complete graph with the functions in $F_{x}$ as vertices. If $f \neq g \in F_{x}$, then there exists a natural number $n$ such that $f_{\geq x-(1 / n)} \cap$ $g_{\geq x-(1 / n)}=\emptyset ;$ otherwise, the closed sets $\left\{f_{\geq x-(1 / n)}, g_{\geq x-(1 / n)}\right\}_{n=1,2, \ldots}$ would form a family with the finite intersection property whose intersection, by compactness, would be nonempty, but this intersection is contained in the set $f_{=x} \cap g_{=x}$. By the theorem quoted above, there is an $n$ and an uncountable $F^{\prime} \subseteq F_{x}$ such that all edges of $F^{\prime}$ are labeled with $n$. Thus, the sets $f_{x>1 / n}, f \in F^{\prime}$ are nonempty, open, and pairwise disjoint. This contradicts the well-known fact that $K$ admits a finite Haar measure, and therefore any family of pairwise disjoint, nonempty, open sets in $K$ is countable. So, the statement of the problem is true for some pair of functions $f \neq g \in F$.
+
+In fact, we proved the following theorem.
+
+Theorem. The statement of the problem holds for a compact space $K$ if $K$ satisfies the following condition: any family of pairwise disjoint, nonempty, open sets in $K$ is countable.
+
+Problem T.5. Prove that two points in a compact metric space can be joined with a rectifiable arc if and only if there exists a positive number $K$ such that, for any $\varepsilon>0$, these points can be connected with an $\varepsilon$-chain not longer than $K$.
+
+Solution. If $A$ and $B$ are two points of the metric space, then let $t(A, B)$ denote their distance. By a rectifiable arc joining $A$ and $B$ we mean a homeomorphic image of the real interval $[a, b]$, where $a$ and $b$ are mapped to $A$ and $B$, and for any subdivision $a=t_{0}<t_{1}<t_{2}<\cdots<t_{n=1}<t_{n}=b$, denoting the image of $t_{i}$ by $T_{i}$, we have
+
+$$
+\sum_{i=0}^{n-1} t\left(T_{i}, T_{i+1}\right) \leq K
+$$
+
+for some fixed $K$. The infimum of such numbers $K$ is called the length of the arc. Therefore, the half of the problem stating that if two points can be joined with a rectifiable arc, then for any $\varepsilon>0$ they can be joined with an $\varepsilon$-chain of length at most $K$, is obvious.
+
+Now suppose that, for any $\varepsilon>0, A$ and $B$ are joinable with an $\varepsilon$-chain not longer than $K$. Let $L=\left\{H_{0}, \ldots, H_{n}\right\}$ be a sequence of points in the metric space. We use the following notation:
+
+$$
+q(L)=\max _{1 \leq i \leq n} t\left(H_{i-1}, H_{i}\right)
+$$
+
+and
+
+$$
+K(L)=\sum_{i=1}^{n} t\left(H_{i-1}, H_{i}\right)
+$$
+
+For $0 \leq h<1$, let $L(h)$ denote the $H_{k}$ for which
+
+$$
+\sum_{i=1}^{k} t\left(H_{i-1}, H_{i}\right) \leq h \cdot K(L)<\sum_{i=1}^{k+1} t\left(H_{i-1}, H_{i}\right)
+$$
+
+and let $L(1)=H_{n}$. Then, obviously,
+
+$$
+t\left(L\left(H_{1}\right) L\left(H_{2}\right)\right) \leq\left|h_{1}-h_{2}\right| \cdot K(L)+q(L) .
+$$
+
+Now choose an indefinitely refining sequence $S_{0}$ of chains connecting $A$ and $B$, where the lengths of these chains do not exceed a fixed constant $K$. The hypotheses in the problem guarantee the existence of such a sequence of chains. Arrange the rational points of the interval $[0,1]$ into a sequence. Then let $S_{k}$ be an indefinitely refining sequence $S_{0}$ of chains connecting $A$ and $B$ such that for $k=1,2, \ldots$,
+
+(a) $S_{k}$ is a subsequence of $S_{k-1}$, and
+
+(b) $\mathcal{L}(h)$ is convergent in the first $k$ rational points when the chains are taken from $S_{k}$ and $k$ is kept fixed.
+
+(More precisely, instead of $L(h)$, we should write $L_{n, k}(h)$, where this denotes $L(h)$ for the $n$th chain of $S_{k}$. In (b), $k$ and $h$ are fixed while $n \rightarrow \infty$.) The sequence of chains $S_{k}$ can be defined for all $k$ by compactness of the space. Now define the function $f(h)$ on the set of rational numbers in $[0,1]$ by the formula
+
+$$
+f(h)=\lim _{n \rightarrow \infty} L_{k, n}(h)
+$$
+
+if $h$ is one of the first $k$ rational numbers. This definition is correct by (a). Let $h_{1}$ and $h_{2}$ be rational numbers in $[0,1]$. Choose a sufficiently large $k$ so that $h_{1}$ and $h_{2}$ occur among the first $k$ rational numbers. Then
+
+$$
+t\left(f\left(h_{1}\right), f\left(h_{2}\right)\right) \leq K \cdot\left|h_{1}-h_{2}\right| .
+$$
+
+Since a uniformly continuous function defined on a dense subset of the interval $[0,1]$ can always be continuously extended over the whole interval $[0,1]$, provided the target space is compact, the function $f(h)$ is extendable, and the last estimate remains valid. The image of the interval $[0,1]$ is a continuous curve connecting the points $A$ and $B$, and from the estimate it immediately follows that all approximating chains have length at most $K$. Therefore, the curve is rectifiable of length $\leq K$.
+
+In general, it is not true that we obtain an arc. But if we choose the above $K$ to be the smallest constant such that, for any $\varepsilon>0, A$ and $B$ are joinable with an $\varepsilon$-chain not longer than $K$, then we get an arc. Indeed, otherwise there would exist $u$ and $v$ in $[0,1](u \neq v)$, with $f(u)=f(v)$. Then we could delete the image of the open interval $(u, v)$ from the curve constructed above, and we would get a rectifiable curve from $A$ to $B$ whose length $K^{+}$is less than $K$. Then, by our initial observations, for any $\varepsilon>0$, $A$ and $B$ would be joinable by an $\varepsilon$-chain shorter than $K^{+}$. This contradicts the minimality of $K$, proving the statement of the problem.
+
+Remarks.
+
+1. László Lovász proved that, instead of compactness, assuming only local compactness and completeness of the space, the statement remains valid. By deleting a chord from a disk in the plane, we obtain a locally compact space in which two points on different sides of the chord cannot be joined with an arc although they are joinable with an arbitrarily fine $\varepsilon$-chain. Therefore, it does not suffice to assume only local compactness of the space. Completeness alone is not sufficient either. To show this, Lovász gave the following example.
+
+Example. Let $e_{0}, e_{1}, \ldots, e_{n}, \ldots$ be an orthonormal basis in the Hilbert space $l^{2}$. Consider the segments connecting 0 with the endpoints of the vectors $e_{1}, e_{2}, \ldots$, and similarly the segments connecting $e_{0}$ with the points $e_{1}+e_{0}, e_{2}+e_{0}, \ldots$. Divide the segment between $e_{n}$ and $e_{n}+e_{0}$ into $n$ equal parts, that is, consider the points $e_{n}+(i / n) \cdot e_{0}$ when $i=1,2, \ldots, n-1$. The segments and points just defined form a closed set in the Hilbert space; therefore, they define a complete metric space. In this space the points 0 and $e_{0}$ for any $\varepsilon>0$ are joinable with an $\varepsilon$-chain not longer than 3 , but they cannot be joined with an arc. This space can be made into a connected counterexample by connecting the points $e_{n}+((i-1) / n) \cdot e_{0}$ and $e_{n}+(i / n) \cdot e_{0}$ with suitably chosen, nonrectifiable arcs.
+
+2. A sketch of the proof of Lovász's generalization is the following.
+
+Proof. We call a point accessible if, for some $t, B$ and the point are joinable with an arc of length $t$ and, for any $\varepsilon>0$, the point and $A$ are joinable with an $\varepsilon$-chain not longer than $K-t$, where $K$ is the minimal constant used above. Of the accessible points $x$ and $y$ we say that $x$ is finer than $y$ if, in the definition of accessibility of $x$, the arc from $B$ can be chosen through $y$. Then, using Zorn's lemma, we define a "finest" point $x_{0}$, which we show to be necessarily $A$. Assuming the contrary, take a compact neighborhood $U$ of $x_{0}$ that does not contain $A$. Then define a point $z$ on the boundary of $U$ that is a limit point of certain points of chains from $x_{0}$ to $A$ in the definition of accessibility of $x_{0}$. We show that $z$ is accessible and finer than $x_{0}$. To this end, it suffices to see that $x_{0}$ and $z$ are joinable with a sufficiently short arc. But we can apply the result already obtained for compact spaces to the points $x_{0}$ and $z$, and this proves the statement.
+
+Problem T.6. Let a neighborhood basis of a point $x$ of the real line consist of all Lebesgue-measurable sets containing $x$ whose density at $x$ equals 1. Show that this requirement defines a topology that is regular but not normal.
+
+\section{Solution.}
+
+(1) Let $m(A)$ denote the measure of the Lebesgue-measurable set $A$. Let $A$ and $B$ be basis neighborhoods of the point $x$, we show that $A \cap B$ is as well. Since $A \cap B$ is measurable and $x \in A \cap B$, we only have to show that its density at the point $x$ is 1 , that is,
+
+$$
+\frac{m((A \cap B) \cap I)}{m(I)} \rightarrow 1
+$$
+
+when the interval $I$ shrinks to $x$ :
+
+$$
+\begin{aligned}
+\left|\frac{m(A \cap B \cap I)}{m(I)}-1\right| & =\left|\frac{m(I)-m(I-(A \cap B))}{m(I)}-1\right| \\
+& =\left|\frac{m((I-A) \cup(I-B))}{m(I)}\right| \\
+& \leq \frac{m(I-A)}{m(I)}+\frac{m(I-B)}{m(I)} .
+\end{aligned}
+$$
+
+The last expression converges to 0 when $I$ shrinks to $x$. So $A \cap B$ is indeed a neighborhood of $x$. In order to obtain a topology, we show that any neighborhood $A$ of $x$ contains a neighborhood $B$ of $x$ that is a neighborhood of all of its points. Let $B$ be the set of points in $A$ where the density of $A$ is 1 . Obviously, $x \in B$, and by the Lebesgue density theorem, $A-B$ has measure 0 . Therefore, $B$ is also measurable, and at points of $B, B$ has the same density as $A$, that is, 1 . So, we have a topology indeed. Let $E$ denote this new topology, and call its open sets $E$-open while keeping the adjective "open" for open sets in the usual topology. Similarly, we distinguish closed and $E$-closed sets. It is not obvious but it is true that the $E$-open sets are measurable. We can prove this as follows.
+
+Let $H$ be an $E$-open set. We can assume that $H$ is bounded; then the outer measure $\bar{m}(H)$ of $H$ is finite. Now put
+
+$$
+\alpha=\sup \{m(C): C \subseteq H, C \text { is measurable }\},
+$$
+
+and for all $n$ choose $C_{n}$ so that $C_{n} \subseteq H$ and $m\left(C_{n}\right)>\alpha-(1 / n)$. Then $S=\cup_{n} C_{n}$ is a subset of $H$ with the property that every measurable

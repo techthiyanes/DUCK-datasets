@@ -1,0 +1,525 @@
+\title{
+3.3 THEORY OF FUNCTIONS
+}
+
+Problem F.1. Prove that the function
+
+$$
+f(\vartheta)=\int_{1}^{\frac{1}{\vartheta}} \frac{d x}{\sqrt{\left(x^{2}-1\right)\left(1-\vartheta^{2} x^{2}\right)}}
+$$
+
+(where the positive value of the square root is taken) is monotonically decreasing in the interval $0<\vartheta<1$.
+
+Solution 1. Substitute
+
+$$
+t=\sqrt{\frac{x^{2}-1}{1-\vartheta^{2} x^{2}}}
+$$
+
+While $x$ increases in the interval $\left(1, \frac{1}{\vartheta}\right)$, the value $t$ increases in $(0,+\infty)$. Differentiating the relation
+
+$$
+\vartheta^{2} t^{2} x^{2}-t^{2}+x^{2}-1=0
+$$
+
+we obtain
+
+$$
+\frac{d x}{d t}=\frac{t\left(1-\vartheta^{2} x^{2}\right)}{x\left(1+\vartheta^{2} t^{2}\right)}
+$$
+
+and, consequently,
+
+$$
+\begin{aligned}
+f(\vartheta) & =\int_{1}^{\frac{1}{\vartheta}} \frac{d x}{\sqrt{\left(x^{2}-1\right)\left(1-\vartheta^{2} x^{2}\right)}} \\
+& =\int_{1}^{\frac{1}{\vartheta}} \frac{d x}{t\left(1-\vartheta^{2} x^{2}\right)}=\int_{0}^{+\infty} \frac{d x}{d t} \cdot \frac{d t}{t\left(1-\vartheta^{2} x^{2}\right)} \\
+& =\int_{0}^{+\infty} \frac{d t}{x\left(1+\vartheta^{2} t^{2}\right)}=\int_{0}^{+\infty} \frac{d t}{\sqrt{\left(1+t^{2}\right)\left(1+\vartheta^{2} t^{2}\right)}} .
+\end{aligned}
+$$
+
+Now, for increasing $\vartheta$ the integrand decreases. Since the limits of integration are independent of $\vartheta$, the integral is also monotonically decreasing.
+
+Solution 2. Map the first quadrant of the $z$-plane (excluding the points $z=1$ and $z=1 / \vartheta$ by semicircles open from below) to the $w$-plane with the help of the function
+
+$$
+w=\int_{0}^{z} \frac{d \zeta}{\sqrt{\left(1-\zeta^{2}\right)\left(1-\vartheta^{2} \zeta^{2}\right)}}
+$$
+
+(taking the value of the square root that is positive on the positive halfaxis). If, starting from $0, z=x+i y$ runs through the segment $0 \leq z \leq 1$, then starting from $0, w=u+i v$ obviously runs through the segment
+
+$$
+0 \leq w \leq \int_{0}^{1} \frac{d x}{\sqrt{\left(1-x^{2}\right)\left(1-\vartheta^{2} x^{2}\right)}}=A
+$$
+
+If $1 \leq z \leq \frac{1}{\vartheta}$, then it is clear that $w$ runs through the segment
+
+$$
+u=A, \quad 0 \leq v \leq \int_{0}^{\frac{1}{9}} \frac{d x}{\sqrt{\left(x^{2}-1\right)\left(1-\vartheta^{2} x^{2}\right)}}=B .
+$$
+
+If $z$ runs through the segment $1 / \vartheta \leq z<\infty$, then $w$ runs from the point $A+B i$ along the horizontal line $v=B$ to the point $(A-C)+B i$, where
+
+$$
+C=\int_{\frac{1}{\vartheta}}^{+\infty} \frac{d x}{\sqrt{\left(x^{2}-1\right)\left(\vartheta^{2} x^{2}-1\right)}}
+$$
+
+On the other hand, if, starting from $0, z$ runs through the positive part of the imaginary axis, then, starting from $0, w$ runs through the segment
+
+$$
+u=0, \quad 0 \leq v \leq D
+$$
+
+where
+
+$$
+D=\int_{0}^{+\infty} \frac{d y}{\sqrt{\left(1+y^{2}\right)\left(1+\vartheta^{2} y^{2}\right)}}
+$$
+
+Since the mapping is domain preserving, we have the relations
+
+$$
+A=C, \quad B=D
+$$
+
+the latter of which implies the statement.
+
+Problem F.2. Denote by $M(r, f)$ the maximum modulus on the circle $|z|=r$ of the transcendent entire function $f(z)$, and by $M_{n}(r, f)$ that of the nth partial sum of the power series of $f(z)$. Prove the existence of an entire function $f_{0}(z)$ and a corresponding sequence of positive numbers $r_{1}<r_{2}<\cdots \rightarrow+\infty$ such that
+
+$$
+\limsup _{n \rightarrow \infty} \frac{M_{n}\left(r_{n}, f_{0}\right)}{M\left(r_{n}, f_{0}\right)}=+\infty
+$$
+
+Solution. By a theorem of Fejér, there exists a power series
+
+$$
+f(z)=\sum_{n=0}^{\infty} a_{n} z^{n}
+$$
+
+which defines a regular function in the disc $|z|<1$ such that $|f(z)| \leq 1$ and such that the sequence of the partial sums
+
+$$
+s_{r}(z)=\sum_{n=0}^{r} a_{n} z^{n}
+$$
+
+is unbounded at the point $z=1$. We shall use this function $f(z)$ for constructing the function $f_{0}(z)$ that meets the requirements of the problem.
+
+We define sequences of numbers $n_{k}, m_{k}$, and $c_{k}$ as follows. Let $n_{0}=$ $m_{0}=c_{0}=0$. Then suppose that $n_{k-1}, m_{k-1}$, and $c_{k-1}$ have already been defined.
+
+We begin by defining $m_{k}$. Since $\limsup _{n \rightarrow+\infty} s_{n}(1)=\infty$, there is an $m_{k}$ with
+
+$$
+\left|s_{m_{k}}(1)\right|>k \sum_{l=0}^{k-1} \max _{|z|=k}\left|s_{n_{l}}(z)\right|
+$$
+
+in addition, we may assume that $m_{k}>n_{k-1}$.
+
+We now define $c_{k}$. Since $s_{m_{k}}(z)$ is continuous, for $c_{k}$ sufficiently close to 1 we also have
+
+$$
+\left|s_{m_{k}}\left(c_{k}\right)\right|>k \sum_{l=0}^{k-1} \max _{|z|=k}\left|s_{n_{l}}(z)\right| \text {. }
+$$
+
+We additionally assume that $c_{k}$ is real, further
+
+$$
+c_{k}>c_{k-1} \quad \text { and } \quad c_{k} \geq 1-\frac{1}{2^{k}}
+$$
+
+Finally, we define $n_{k}$ in the following way. Since $s_{n}(z)$ tends to $f(z)$ in the disc $|z|<1$, for sufficiently large $n_{k}$ we have
+
+$$
+\max _{|z|=c_{k}}\left|s_{n_{k}}(z)\right|<1
+$$
+
+On the other hand, the absolute convergence of the power series of $f(z)$ implies the convergence of $\sum_{n=0}^{\infty}\left|a_{n}\right| c_{k}^{n}$; thus, for sufficiently large $n_{k}$,
+
+$$
+\sum_{n>n_{k}}\left|a_{n}\right| c_{k}^{n}<1
+$$
+
+In addition to these two inequalities, we require that $n_{k}$ satisfy $n_{k}>m_{k}$.
+
+Now consider the power series
+
+$$
+\begin{aligned}
+& \sum_{n=1}^{n_{1}} a_{n} z^{n}+\sum_{n=n_{1}+1}^{n_{2}} a_{n}\left(\frac{z}{2}\right)^{n}+\ldots \\
+& =\sum_{k=1}^{\infty} \sum_{n=n_{k-1}+1}^{n_{k}} a_{n}\left(\frac{z}{k}\right)^{n}=\sum_{k=1}^{\infty}\left\{s_{n_{k}}\left(\frac{z}{k}\right)-s_{n_{k-1}}\left(\frac{z}{k}\right)\right\} .
+\end{aligned}
+$$
+
+We show that the function $f_{0}(z)$ defined by this power series has the desired property.
+
+Prescribing an arbitrarily large positive $R$, for $k>2 R$ and $|z| \leq R$ we have $\left|a_{n}(z / k)^{n}\right| \leq\left|a_{n}\right|\left(1 / 2^{n}\right)$. Since $\sum_{n=0}^{\infty}\left|a_{n}\right|\left(1 / 2^{n}\right)$ is convergent, the power series of $f_{0}(z)$ is absolutely convergent in the disc $|z|<R$. Thus $f_{0}(z)$ is a transcendental entire function.
+
+We give an upper estimate for $f_{0}(z)$ on the circle $|z|=k c_{k}$. In view of our previous remarks,
+
+$$
+\begin{aligned}
+\left|f_{0}(z)\right| & \leq\left|\sum_{l=1}^{k-1}\left\{s_{n_{l}}\left(\frac{z}{k}\right)-s_{n_{l-1}}\left(\frac{z}{k}\right)\right\}-s_{n_{k-1}}\left(\frac{z}{k}\right)\right| \\
+& +\left|s_{n_{k}}\left(\frac{z}{k}\right)\right|+\left|\sum_{l=k+1}^{\infty} \sum_{n=n_{l-1}+1}^{n_{k}} a_{n}\left(\frac{z}{k}\right)^{n}\right| \\
+& \leq 2 \sum_{l=0}^{k-1} \max _{|z|=k c_{k}}\left|s_{n_{l}}(z)\right|+\max _{|z|=c_{k}}\left|s_{n_{k}}(z)\right|+\sum_{l=k+1}^{\infty} \sum_{n=n_{l-1}+1}^{n_{k}}\left|a_{n}\right|\left(\frac{k c_{k}}{l}\right)^{n} \\
+& \leq 2 \sum_{l=0}^{k-1} \max _{|z|=k}\left|s_{n_{l}}(z)\right|+\max _{|z|=c_{k}}\left|s_{n_{k}}(z)\right|+\sum_{n>n_{k}}\left|a_{n}\right| c_{k}^{n} \\
+& \leq 2 \sum_{l=0}^{k-1} \max _{|z|=k}\left|s_{n_{l}}(z)\right|+1+1 .
+\end{aligned}
+$$
+
+Setting $\sum_{l=0}^{k-1} \max _{|z|=k}\left|s_{n_{l}}(z)\right|=T_{k}$, we obtain
+
+$$
+M\left(k c_{k}, f_{0}\right) \leq 2 T_{k}+2 .
+$$
+
+Next we give a lower estimate for the corresponding partial sum on the circle $|z|=k c_{k}$; since we are concerned with the maximum, it is sufficient to do this at the point $z=k c_{k}$.
+
+The modulus of the $m_{k}$ th partial sum $=$
+
+$$
+\begin{aligned}
+& =\left|s_{m_{k}}\left(\frac{z}{k}\right)-s_{n_{k-1}}\left(\frac{z}{k}\right)+\sum_{l=1}^{k-1}\left\{s_{n_{l}}\left(\frac{z}{k}\right)-s_{n_{l-1}}\left(\frac{z}{k}\right)\right\}\right| \\
+& \geq\left|s_{m_{k}}\left(c_{k}\right)\right|-2 \sum_{l=0}^{k-1} \max _{|z|=k}\left|s_{n_{l}}(z)\right| \geq(k-2) T_{k} ;
+\end{aligned}
+$$
+
+that is,
+
+$$
+M_{m_{k}}\left(k c_{k}, f_{0}\right) \geq(k-2) T_{k} .
+$$
+
+Now, since $\limsup _{l \rightarrow+\infty}\left|s_{n_{l}}(1)\right|=+\infty$, the numbers
+
+$$
+T_{k}=\sum_{l=0}^{k-1} \max _{|z|=k}\left|s_{n_{l}}(z)\right|
+$$
+
+tend to $+\infty$. Thus, for sufficiently large $k$ we have $T_{k}>1$ and, consequently,
+
+$$
+\frac{M_{m_{k}}\left(k c_{k}, f_{0}\right)}{M\left(k c_{k}, f_{0}\right)} \geq \frac{(k-2) T_{k}}{2\left(T_{k}+1\right)}>\frac{k-2}{4} .
+$$
+
+Therefore, taking $r_{m_{k}}=k c_{k}$, and for $n$ different from the $m_{k}$ choosing $r_{n}$ with the consideration of monotonicity but otherwise arbitrarily, we obtain
+
+$$
+\limsup _{n \rightarrow+\infty} \frac{M_{n}\left(r_{n}, f_{0}\right)}{M\left(r_{n}, f_{0}\right)} \geq \limsup _{k \rightarrow+\infty} \frac{M_{m_{k}}\left(r_{m_{k}}, f_{0}\right)}{M\left(r_{m_{k}}, f_{0}\right)} \geq \limsup _{k \rightarrow+\infty} \frac{k-2}{4}=+\infty
+$$
+
+Problem F.3. Let $H$ be a set of real numbers that does not consist of 0 alone and is closed under addition. Further, let $f(x)$ be a real-valued function defined on $H$ and satisfying the following conditions:
+
+$$
+f(x) \leq f(y) \text { if } x \leq y \quad \text { and } f(x+y)=f(x)+f(y) \quad(x, y \in H)
+$$
+
+Prove that $f(x)=c x$ on $H$, where $c$ is a nonnegative number.
+
+Solution. Let $x_{0}$ be an element of $H$ other than 0 , and let $c=f\left(x_{0}\right) / x_{0}$. It can be seen by induction that $f(n x)=n f(x)(n=1,2, \ldots)$ for every $x$ in $H$. Therefore
+
+$$
+f\left(n x_{0}\right)=c n x_{0}
+$$
+
+Let $y$ be an arbitrary element of $H$. Then there is a positive integer $n_{0}$ such that $\left(y+n_{0} x_{0}\right) x_{0}>0$. If $n$ is a sufficiently large positive integer, then there exist two positive integers $m_{n}$ and $\mu_{n}$ such that
+
+$$
+m_{n} x_{0} \leq n\left(y+n_{0} x_{0}\right) \leq \mu_{n} x_{0} \quad \text { and } \quad\left|m_{n}-\mu_{n}\right|=1
+$$
+
+In view of the monotonicity of the function $f(x)$, we have
+
+$$
+f\left(m_{n} x_{0}\right) \leq f\left(n\left(y+n_{0} x_{0}\right)\right) \leq f\left(\mu_{n} x_{0}\right)
+$$
+
+so by $(1)$
+
+$$
+c m_{n} x_{0} \leq n f\left(y+n_{0} x_{0}\right) \leq c \mu_{n} x_{0}
+$$
+
+It follows that
+
+$$
+c \frac{m_{n}}{n} x_{0} \leq f\left(y+n_{0} x_{0}\right) \leq c \frac{\mu_{n}}{n} x_{0}
+$$
+
+According to (2)
+
+$$
+\frac{m_{n}}{n} x_{0} \rightarrow y+n_{0} x_{0}, \quad \frac{\mu_{n}}{n} x_{0} \rightarrow y+n_{0} x_{0}
+$$
+
+Thus, from (3) we obtain that $f\left(y+n_{0} x_{0}\right)=c\left(y+n_{0} x_{0}\right)$. Consequently, $f(y)=f\left(y+n_{0} x_{0}\right)-f\left(n_{0} x_{0}\right)=c\left(y+n_{0} x_{0}\right)-c n_{0} x_{0}=c y$. The monotonicity of the function $f(x)$ yields $c \geq 0$. Problem F.4. Show that if $f(x)$ is a real-valued, continuous function on the half-line $0 \leq x<\infty$, and
+
+$$
+\int_{0}^{\infty} f^{2}(x) d x<\infty
+$$
+
+then the function
+
+$$
+g(x)=f(x)-2 e^{-x} \int_{0}^{x} e^{t} f(t) d t
+$$
+
+satisfies
+
+$$
+\int_{0}^{\infty} g^{2}(x) d x=\int_{0}^{\infty} f^{2}(x) d x
+$$
+
+Solution. We assume that the function $f(x)$ is square integrable in the Lebesgue sense on the half-line $(0, \infty)$. The relation
+
+$$
+f(x)-g(x)=2 e^{-x} \int_{0}^{x} e^{t} f(t) d t
+$$
+
+implies that
+
+$$
+(f(x)-g(x))^{\prime}=f(x)+g(x) \text { almost everywhere. }
+$$
+
+Using the Schwarz inequality, we obtain
+
+$$
+\begin{aligned}
+e^{-\omega}\left|\int_{0}^{\omega} e^{t} f(t) d t\right| & \leq e^{-\omega}\left|\int_{0}^{\omega / 2} e^{t} f(t) d t\right|+e^{-\omega}\left|\int_{\omega / 2}^{\omega} e^{t} f(t) d t\right| \\
+\leq & e^{-\omega}\left(\int_{0}^{\omega / 2} e^{2 t} d t\right)^{\frac{1}{2}}\left(\int_{0}^{\omega / 2} f^{2}(t) d t\right)^{\frac{1}{2}} \\
+& +e^{-\omega}\left(\int_{\omega / 2}^{\omega} e^{2 t} d t\right)^{\frac{1}{2}}\left(\int_{\omega / 2}^{\omega} f^{2}(t) d t\right)^{\frac{1}{2}} \\
+\leq & e^{-\omega / 2} \int_{0}^{\infty} f^{2}(x) d x+\int_{\omega / 2}^{\infty} f^{2}(t) d t
+\end{aligned}
+$$
+
+whence it follows that
+
+$$
+\lim _{\omega \rightarrow \infty} e^{-\omega} \int_{0}^{\omega} e^{t} f(t) d t=0 .
+$$
+
+Relation (1) assures that $f(x)-g(x)$, and therefore $(1 / 2)(f(x)-g(x))^{2}$, is absolutely continuous on each bounded subinterval of $(0, \infty)$. By (1) and $(2)$
+
+$$
+\begin{aligned}
+\int_{0}^{\omega}\left(f^{2}(x)-g^{2}(x)\right) d x & =\int_{0}^{\omega}\left(\frac{(f(x)-g(x))^{2}}{2}\right)^{\prime} d x \\
+& =\left[\frac{(f(x)-g(x))^{2}}{2}\right]_{0}^{\omega}=2 e^{-2 \omega}\left(\int_{0}^{\omega} e^{t} f(t) d t\right)^{2} .
+\end{aligned}
+$$
+
+Making use of (3), the statement follows. Problem F.5. Prove that for every convex function $f(x)$ defined on the interval $-1 \leq x \leq 1$ and having absolute value at most 1 , there is a linear function $h(x)$ such that
+
+$$
+\int_{-1}^{1}|f(x)-h(x)| d x \leq 4-\sqrt{8}
+$$
+
+Solution. We prove more than stated. We establish the existence of a constant $k$ such that
+
+$$
+\int_{-1}^{1}|f(x)-k| d x \leq 4-\sqrt{8}
+$$
+
+Without loss of generality, we may assume that $f(x)$ is continuous even at the endpoints of the interval $[-1,1]$ and that $f(-1) \geq f(1)$. Since $f(x)$ is continuous and convex on $[-1,1]$, there is a largest interval $\left[c_{1}, c_{2}\right]$ $\left(-1 \leq c_{1} \leq c_{2} \leq 1\right)$ on which $f(x)$ is minimal. Introduce the notation
+
+$$
+\min _{x \in[-1,1]} f(x)=p, \quad \max _{x \in[-1,1]} f(x)=q .
+$$
+
+Let $\phi_{1}(y)$ be the inverse of the restriction to $\left[-1, c_{1}\right]$ of the function $f(x)$, and let
+
+$$
+\phi_{2}(y)=\left\{\begin{array}{lll}
+f^{-1}(y) & \text { if } & p \leq y \leq f(1) \\
+1 & \text { if } & f(1) \leq y \leq q
+\end{array}\right.
+$$
+
+where $f^{-1}(y)$ denotes the inverse of the restriction to $\left[c_{2}, 1\right]$ of the function $f(x)$. Obviously, the function $\phi(y)=\phi_{2}(y)-\phi_{1}(y)$ is continuous and strictly increasing on the interval $[p, q]$; further $\phi(p)=\phi_{2}(p)-\phi_{1}(p)=$ $c_{2}-c_{1}$ and $\phi(q)=\phi_{2}(q)-\phi_{1}(q)=2$. We distinguish between two cases.
+
+a. If $c_{2}-c_{1} \leq 1$, then by the above properties of the function $\phi(y)$ there is one and only one number $k(\in[p, q])$ with $\phi(k)=1$. It can be shown that $k$ satisfies (1). Put $\phi_{1}(k)=d, \phi_{2}(k)=e, D=(d, k), E=(e, k)$, $G=(-1, k), H=(1, k), A=(-1,1)$, and $B=(1,1)$. The lines $A D$ and $B E$ intersect at a point $F$. By the convexity of $f(x)$ and the relation $|f(x)| \leq 1$, it is obvious that the graphs of the restrictions of $f(x)$ to the segments $[-1, d],[d, e]$, and $[e, 1]$ lie in the triangles $A G D, D F E$, and $E H B$, respectively. Therefore,
+
+$$
+\begin{aligned}
+\int_{-1}^{1}|f(x)-k| d x & =\int_{-1}^{d}|f(x)-k| d x+\int_{d}^{e}|f(x)-k| d x+\int_{e}^{1}|f(x)-k| d x \\
+& \leq t\left(A G D_{\triangle}\right)+t\left(D F E_{\triangle}\right)+t\left(E H B_{\triangle}\right),
+\end{aligned}
+$$
+
+where $t$ stands for area. If $F$ lies above the line $y=-1$, then - $D E$ being the mid-parallel of the triangle $A B F$ - the altitudes perpendicular to $G H$ of the triangles in question are equal, so the sum of the areas of the triangles is
+
+$$
+\frac{1}{2} m \cdot G D+\frac{1}{2} m \cdot D E+\frac{1}{2} m \cdot E H=\frac{1}{2} m(G D+D E+E H)=m \leq 1,(2)
+$$
+
+where $m=B H$. If $F$ lies below the line $y=-1$, then (denoting by $J$ the point of intersection of the line $y=-1$ and the segment $A F$, and further denoting by $K$ the point of intersection of the line $y=-1$ and the segment $B F$ ) it is obvious that the graph of the restriction to $[d, e]$ of $f(x)$ remains in the trapezoid $T$ determined by the vertices $D, J, K, E$ and, consequently,
+
+$$
+\int_{-1}^{1}|f(x)-k| d x \leq t\left(A G D_{\triangle}\right)+t(T)+t\left(E H B_{\triangle}\right)
+$$
+
+while $m=B H \geq 1$. Then
+
+$$
+t\left(A G D_{\triangle}\right)+t\left(E H B_{\triangle}\right)=\frac{1}{2} m \cdot G D+\frac{1}{2} m \cdot E H=\frac{1}{2} m .
+$$
+
+Since $J K=(2 m-2) m^{-1}$, we have
+
+$$
+t(T)=\frac{1}{2}\left(\frac{2 m-2}{m}+1\right)(2-m) .
+$$
+
+It follows that
+
+$$
+\begin{aligned}
+\int_{-1}^{1}|f(x)-k| d x & \leq \frac{4 m-2-m^{2}}{m}=4-\left(\frac{2}{m}+m\right) \\
+& \leq 4-2\left(\frac{2}{m} m\right)^{1 / 2}=4-\sqrt{8} .
+\end{aligned}
+$$
+
+Relations (2) and (3) imply (1).
+
+b. If $c_{2}-c_{1}>1$, then let $k=p$. Setting $A=(-1,1), B=(1,1), D=$ $\left(c_{1}, p\right), E=\left(c_{2}, p\right), G=(-1, p)$, and $H=(1, p)$, it follows as before that
+
+$$
+\begin{aligned}
+\int_{-1}^{1}|f(x)-p| d x & \leq t\left(A G D_{\triangle}\right)+t\left(E H B_{\triangle}\right) \\
+& \leq \frac{1}{2} m \cdot G D+\frac{1}{2} m \cdot E H=\frac{1}{2} m\left(1-\left(c_{2}-c_{1}\right)\right)<1,
+\end{aligned}
+$$
+
+which completes the proof.
+
+Remarks.
+
+1. Several participants have noted that the estimate cannot be improved in general. For instance, in the case of the function
+
+$$
+f(x)= \begin{cases}-1 & \text { if } \quad 0 \leq x \leq 1-\sqrt{2} / 2 \\ 1+\sqrt{8}(x-1) & \text { if } \quad 1-\sqrt{2} / 2<x \leq 1\end{cases}
+$$
+
+the estimate is the best possible. 2. Paul Turán called the attention of the organizing committee to the fact that S. Bernstein (Doklady Akad. Nauk SSSR, 1927, 405-407) had proved the following theorem:
+
+Theorem. Let $f(x)$ be an $n+1$ times differentiable function on the interval $[-1,1]$ satisfying the condition $f^{(n+1)}(x)>0$ on $[-1,1]$. The expression
+
+$$
+\int_{-1}^{1}\left|f(x)-R_{n}(x)\right| d x
+$$
+
+where $R_{n}(x)$ denotes a polynomial of degree $n$, is minimal when $R_{n}(x)$ is the Lagrange interpolation polynomial of degree $n$ that coincides with $f(x)$ at the points $\cos (h \pi /(n+2)) \quad(h=1,2, \ldots n+1)$.
+
+Problem F.6. Find all linear homogeneous differential equations with continuous coefficients (on the whole real line) such that for any solution $f(t)$ and any real number $c, f(t+c)$ is also a solution.
+
+Solution. As usual in the literature, we restrict attention to differential equations with the coefficient of the term of highest order identical to 1 .
+
+Let the differential equation
+
+$$
+y^{(n)}(x)+f_{1}(x) y^{(n-1)}(x)+\cdots+f_{n}(x) y(x)=0
+$$
+
+have the desired properties, and let $\phi(x)$ be a solution. Let $c$ be an arbitrary real number. Obviously,
+
+$$
+\frac{d^{i} \phi(x+c)}{d x^{i}}=\left(\frac{d^{i} \phi(t)}{d t^{i}}\right)_{t=x+c} \quad(i=1,2, \ldots, n)
+$$
+
+since together with $\phi(x) \phi(x+c)$ also satisfies (1), it follows that
+
+$$
+\left(\frac{d^{n} \phi(t)}{d t^{n}}\right)_{t=x+c}+f_{1}(x)\left(\frac{d^{n-1} \phi(t)}{d t^{n-1}}\right)_{t=x+c}+\cdots+f_{n}(x)(\phi(t))_{t=x+c}=0,
+$$
+
+that is,
+
+$$
+\phi^{(n)}(t)+f_{1}(t-c) \phi^{(n-1)}(t)+\cdots+f_{n}(t-c) \phi(t)=0,
+$$
+
+and this is true for any real constant $c$ and all real values of $t$. This means that all solutions of (1), so for example, $n$ linearly independent solutions of (1), satisfy the differential equation
+
+$$
+y^{(n)}(x)+f_{1}(x-c) y^{(n-1)}(x)+\cdots+f_{n}(x-c) y(x)=0
+$$
+
+hence - as is well known - it follows that the coefficient functions of the differential equations (1) and (3) coincide:
+
+$$
+f_{i}(x)=f_{i}(x-c) \quad(i=1,2, \ldots, n) .
+$$
+
+Choosing $x=0$, we obtain $f_{i}(0)=f_{i}(-c)$ for every $c(i=1,2, \ldots, n)$. Thus $f_{i}(x) \equiv f_{i}(0)$, and so the differential equation (1) has constant coefficients.
+
+Conversely, if (1) has constant coefficients, then from (2) it follows easily that together with any solution $\phi(x) \phi(x+c)$ is also a solution.
+
+Remarks.
+
+1. Assuming the conditions for a single $c$ only, from (4) we obtain that the coefficient functions are periodic with period $c$.
+
+2. If, for any solution $\phi(x), \phi\left(x+c_{1}\right)$ and $\phi\left(x+c_{2}\right)$ are also solutions, then together with $\phi(x)$ obviously $\phi\left(\left(x+c_{1}\right)+c_{2}\right)=\phi\left(x+c_{1}+c_{2}\right)$ is also a solution. Consequently, assuming the conditions for a (finite or infinite) set $\left\{c_{\alpha}\right\}$, the condition will also be fulfilled by the elements of the smallest additive semigroup that contains the numbers $c_{\alpha}$. In view of the previous remark, this implies that it is sufficient to assume the conditions only for values of $c$ that generate an additive semigroup containing a sequence that tends to zero.
+
+Problem F.7. Let $F$ be a closed set in the n-dimensional Euclidean space. Construct a function that is 0 on $F$, positive outside $F$, and whose partial derivatives all exist.
+
+Solution. Define a function $\phi_{r}(y)$ in the following way:
+
+$$
+\phi_{r}(y)=\left\{\begin{array}{lll}
+e^{\frac{1}{y-r^{2}}} & \text { if } & |y|<r^{2} \\
+0 & \text { if } & |y| \geq r^{2}
+\end{array}\right.
+$$
+
+Obviously, $\phi_{r}(y)$ is positive if $|y|<r^{2}$, and infinitely differentiable in the intervals $\left(-\infty, r^{2}\right)$ and $\left(r^{2},+\infty\right)$. Further, it is clear that $\left(d^{k} \phi_{r}(y) / d y^{k}\right)$ has the form $R_{k}(y) \phi_{r}(y)$, where $R_{k}(y)$ is a rational fractional function; so
+
+$$
+\lim _{x \rightarrow r^{2}+0} \frac{d^{k} \phi_{r}(y)}{d y^{k}}=\lim _{x \rightarrow r^{2}-0} \frac{d^{k} \phi_{r}(y)}{d y^{k}}=0 .
+$$
+
+Therefore $\left(d^{k} \phi_{r}(y) / d y^{k}\right)$ is continuous in $\left(-\infty, r^{2}\right)$ and $\left(r^{2},+\infty\right)$ and has right-hand and left-hand limits at the point $y=r^{2}$, whence it follows by induction that $\phi_{r}(y)$ has continuous derivatives of any order at $y=r^{2}$ and, consequently, at all points $y$.
+
+Denote by $\mathbb{E}_{n}$ the $n$-dimensional Euclidean space. For $a \in \mathbb{E}_{n}, x \in \mathbb{E}_{n}$, $a=\left(a_{1}, a_{2}, \ldots, a_{n}\right), x=\left(x_{1}, x_{2}, \ldots, x_{n}\right)$ put
+
+$$
+y_{a}(x)=\left(x_{1}-a_{1}\right)^{2}+\left(x_{2}-a_{2}\right)^{2}+\cdots+\left(x_{n}-a_{n}\right)^{2} .
+$$
+
+Obviously, for every $x$, all partial derivatives of $y_{a}(x)$ exist.
+
+Finally, let $G \subset \mathbb{E}_{n}$ be an open ball of center $a$ and radius $r$ chosen arbitrarily, and let
+
+$$
+f_{G}(x)=\phi_{r}\left(y_{a}(x)\right)
+$$
+
+Since $\phi_{r}(y)$ is infinitely differentiable for any $y$ and all partial derivatives of $y_{a}(x)$ exist for any $x$, all partial derivatives of $f_{G}(x)$ exist for any $x$. Moreover, it is evident that if $x \in G$ then $0 \leq y_{a}(x)<r^{2}$, so $f_{G}(x)>0$, while if $x \notin G$ then $f_{G}(x)=0$. Finally, each partial derivative of $f_{G}(x)$ is bounded since it is continuous everywhere and zero outside $G$.
+
+The complement $\bar{F}$ of $F$ relative to $\mathbb{E}_{n}$ is an open set, so it can be represented in the form $\bar{F}=\cup_{k=1}^{\infty} G_{k}$, where $G_{1}, G_{2}, \ldots$ are open balls.
+
+Since each partial derivative of the functions $f_{G_{1}}(x), f_{G_{2}}(x), \ldots$ is bounded, there exist positive constants $c_{k}(k=1,2, \ldots)$ such that all partial derivatives of order not higher than $k$ of the function $f_{G_{k}}(x)$ (including $f_{G_{k}}(x)$ itself) have absolute value less than $\left(1 / c_{k}\right)\left(1 / 2^{k}\right)$ for every $x$. Then, obviously, the function series
+
+$$
+\sum_{k=1}^{\infty} c_{k} f_{G_{k}}(x)
+$$
+
+is absolutely convergent; we set
+
+$$
+F(x)=\sum_{k=1}^{\infty} c_{k} f_{G_{k}}(x)
+$$
+
+Forming a partial derivative of order $i$ of the terms of the series, the definition of $c_{k}$ ensures that, beginning with the $i$ th term, the absolute value of each term can be majorized by $1 / 2^{k}$, so the sum of the partial derivatives is absolutely convergent. It follows that all partial derivatives of $F(x)$ exist. Finally, it is clear that $F(x)=0$ for $x \in F$ and $F(x)>0$ for $x \notin F$, thus the function $F(x)$ has the required properties.
+
+Remark. Let $F_{1}$ and $F_{2}$ be disjoint closed sets in the $n$-dimensional Euclidean space. By a similar method, one can construct an infinitely differentiable function that is equal to 0 on $F_{1}$, equal to 1 on $F_{2}$, and positive and less than 1 outside $F_{1}$ and $F_{2}$.
+
+Problem F.8. Let $f$ be a continuous, nonconstant, real function, and assume the existence of an $F$ such that $f(x+y)=F[f(x), f(y)]$ for all real $x$ and $y$. Prove that $f$ is strictly monotone.
+
+Solution. Suppose that $f$ is not strictly monotone. Then by the continuity of $f$ there exist real numbers $s_{1}<s_{2}$ with $f\left(s_{1}\right)=f\left(s_{2}\right)$. If $\varepsilon>0$ is arbitrary, then by the continuity of $f$ there are values $t_{1}<t_{2}$ in the closed interval $\left[s_{1}, s_{2}\right]$ such that $t_{2}-t_{1}<\varepsilon$ and $f\left(t_{1}\right)=f\left(t_{2}\right)$. Then, however,
+
+$$
+\begin{aligned}
+f\left[t+\left(t_{2}-t_{1}\right)\right] & =f\left[\left(t-t_{1}\right)+t_{2}\right]=F\left[f\left(t-t_{1}\right), f\left(t_{2}\right)\right] \\
+& =F\left[f\left(t-t_{1}\right), f\left(t_{1}\right)\right]=f\left[\left(t-t_{1}\right)+t_{1}\right]=f(t)
+\end{aligned}
+$$
+
+for all real values $t$. Thus $\tau=t_{2}-t_{1}$ is a period of $f$. Since $\tau<\varepsilon$ where $\varepsilon>0$ is arbitrary, it follows that the continuous function $f$ has arbitrarily small periods. Hence $f$ is constant, contrary to the assumption.

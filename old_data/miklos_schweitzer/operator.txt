@@ -1,0 +1,442 @@
+
+
+\subsection{OPERATORS}
+
+Problem 0.1. Let $a, b_{0}, b_{1}, \ldots, b_{n-1}$ be complex numbers, $A$ a complex square matrix of order $p$, and $E$ the unit matrix of order $p$. Assuming that the eigenvalues of $A$ are given, determine the eigenvalues of the matrix
+
+$$
+B=\left(\begin{array}{lllll}
+b_{0} E & b_{1} A & b_{2} A^{2} & \cdots & b_{n-1} A^{n-1} \\
+a b_{n-1} A^{n-1} & b_{0} E & b_{1} A & \cdots & b_{n-2} A^{n-2} \\
+a b_{n-2} A^{n-2} & a b_{n-1} A^{n-1} & b_{0} E & \cdots & b_{n-3} A^{n-3} \\
+& & \ddots & & \\
+a b_{1} A & a b_{2} A^{2} & a b_{3} A^{3} & \cdots & b_{0} E
+\end{array}\right) .
+$$
+
+Solution. We show that if the eigenvalues of $A$ are $\lambda_{1}, \ldots, \lambda_{p}$ then the eigenvalues of $B$ will be the numbers
+
+$$
+\phi\left(\alpha_{k} \lambda_{j}\right) \quad(k=1, \ldots, n ; j=1, \ldots, p),
+$$
+
+where $\alpha_{1}, \ldots, \alpha_{n}$ denote the roots of the equation $z^{n}-a=0$, and
+
+$$
+\phi(x)=b_{0}+b_{1} x+\cdots+b_{n-1} x^{n-1} .
+$$
+
+In fact, if $A_{0}, A_{1}, \ldots, A_{n-1}$ are quadratic matrices of order $p$ having complex entries, $a$ is an arbitrary complex number and
+
+$$
+C=\left(\begin{array}{lllll}
+A_{0} & A_{1} & A_{2} & \cdots & A_{n-1} \\
+a A_{n-1} & A_{0} & A_{1} & \cdots & A_{n-2} \\
+\vdots & \vdots & \vdots & \ddots & \vdots \\
+a A_{1} & a A_{2} & a A_{3} & \cdots & A_{0}
+\end{array}\right),
+$$
+
+then
+
+$$
+\operatorname{det} C=\operatorname{det} M\left(\alpha_{1}\right) \ldots \operatorname{det} M\left(\alpha_{n}\right)
+$$
+
+where
+
+$$
+M(x)=A_{0}+A_{1} x+\cdots+A_{n-1} x^{n-1} .
+$$
+
+For $a=0$ the assertion of this theorem is trivial. For $a \neq 0$, the validity of the theorem follows from the simple fact that
+
+$$
+C=W\left(\begin{array}{lll}
+M\left(\alpha_{1}\right) & \cdots & (0) \\
+\vdots & \ddots & \vdots \\
+(0) & \cdots & M\left(\alpha_{n}\right)
+\end{array}\right) W^{-1},
+$$
+
+where $W$ is the Kronecker product with $E$ of the Vandermonde matrix built from the roots of the equation $z^{n}=a$, that is,
+
+$$
+W=V \otimes E=\left(\begin{array}{lll}
+E & \cdots & E \\
+\alpha_{1} E & \cdots & \alpha_{n} E \\
+\vdots & \ddots & \vdots \\
+\alpha_{1}^{n-1} E & \cdots & \alpha_{n}^{n-1} E
+\end{array}\right)
+$$
+
+Apply (1) to the matrix $B-\lambda \mathcal{E}$ (where $\mathcal{E}$ is the unit matrix of order $n p):$
+
+$$
+\operatorname{det}(B-\lambda \mathcal{E})=\prod_{k=1}^{n} \operatorname{det}\left(\phi\left(\alpha_{k} A\right)-\lambda E\right)
+$$
+
+On the other hand it is well known that the eigenvalues of the matrix
+
+$$
+\phi\left(\alpha_{k} A\right)=b_{0} E+b_{1} \alpha_{k} A+\cdots+b_{n-1} \alpha_{k}^{n-1} A^{n-1}
+$$
+
+are
+
+$$
+\phi\left(\alpha_{k} \lambda_{1}\right), \ldots, \phi\left(\alpha_{k} \lambda_{p}\right)
+$$
+
+This proves the assertion.
+
+Remark. Another group of solutions is based on the theorem stated, but not proved, by one participant in the following general form:
+
+Theorem. If the eigenvalues of the quadratic matrix $A$ of order $p$ are $\lambda_{1}, \ldots, \lambda_{p}$, further $\max _{j}\left|\lambda_{j}\right|=\lambda$, and $f_{i j}(z)(i, j=1, \ldots, n)$ are regular functions on the $\operatorname{disc}|z| \leq \lambda$, then the eigenvalues of the matrix
+
+$$
+\left(\begin{array}{lll}
+f_{11}(A) & \cdots & f_{1 n}(A) \\
+\vdots & \ddots & \vdots \\
+f_{n 1}(A) & \cdots & f_{n n}(A)
+\end{array}\right)
+$$
+
+are given by the eigenvalues of the matrices
+
+$$
+\left(\begin{array}{lll}
+f_{11}\left(\lambda_{i}\right) & \cdots & f_{1 n}\left(\lambda_{i}\right) \\
+\vdots & \ddots & \vdots \\
+f_{n 1}\left(\lambda_{i}\right) & \cdots & f_{n n}\left(\lambda_{i}\right)
+\end{array}\right) \quad(i=1, \ldots, p)
+$$
+
+One participant proved this theorem in the less general case where the functions $f_{i j}(z)$ are polynomials; this proof can be applied in the more general case as well. Problem 0.2. Let $U$ be an $n \times n$ orthogonal matrix. Prove that for any $n \times n$ matrix $A$, the matrices
+
+$$
+A_{m}=\frac{1}{m+1} \sum_{j=0}^{m} U^{-j} A U^{j}
+$$
+
+converge entrywise as $m \rightarrow \infty$.
+
+Solution 1. For an arbitrary $n \times n$ matrix $A$, let $\|A\|$ denote the norm of $A$, that is,
+
+$$
+\|A\|=\sup _{\|x\|=1}\|A x\|
+$$
+
+where $x$ varies in the $n$-dimensional Euclidean space. If $U$ is orthogonal, then $U^{-1}$ is also orthogonal, and $\|U A\|=\|A U\|=\|A\|$.
+
+Entrywise convergence and convergence in norm of a sequence of matrices are equivalent. Thus, by the Bolzano-Weierstrass theorem, from a norm-convergent sequence of matrices it is possible to select a normconvergent subsequence.
+
+For a given orthogonal matrix $U$, natural number $m$, and arbitrary ma$\operatorname{trix} B$, put
+
+$$
+B_{m}=\frac{1}{m+1} \sum_{i=0}^{m} U^{-i} B U^{i}
+$$
+
+We shall need the following lemma:
+
+Lemma. For any natural number $m$,
+
+$$
+\lim _{p \rightarrow \infty}\left\|\left(A_{m}\right)_{p}-A_{p}\right\|=0 .
+$$
+
+Proof. Let $p>m$. Then
+
+$$
+\begin{aligned}
+\left(A_{m}\right)_{p} & =\frac{1}{p+1} \frac{1}{m+1} \sum_{i=0}^{p} \sum_{j=0}^{m} U^{-i-j} A U^{i+j} \\
+& =\frac{1}{p+1} \frac{1}{m+1} \sum_{k=0}^{p+m} s(k) U^{-k} A U^{k},
+\end{aligned}
+$$
+
+where
+
+$$
+s(k)=\sum_{0 \leq i \leq p, 0 \leq j \leq m} 1 \leq m+1 \quad(k=0, \ldots, p+m) ;
+$$
+
+if $m \leq k \leq p$, then $s(k)=m+1$. Hence
+
+$$
+\begin{aligned}
+& \left\|\left(A_{m}\right)_{p}-A_{p}\right\|=\left\|\frac{1}{p+1} \frac{1}{m+1} \sum_{k=0}^{p+m} s(k) U^{-k} A U^{k}-\frac{1}{p+1} \sum_{k=0}^{p} U^{-k} A U^{k}\right\| \\
+& =\frac{1}{p+1} \frac{1}{m+1}\left\|\sum_{k=0}^{m-1}(s(k)-m-1) U^{-k} A U^{k}+\sum_{k=p+1}^{p+m} s(k) U^{-k} A U^{k}\right\| \\
+& \leq \frac{2 m}{p+1}\|A\| \rightarrow 0
+\end{aligned}
+$$
+
+as $p \rightarrow \infty$. This proves the lemma. Now the assertion of the problem can be proved as follows. Since $\left\|A_{m}\right\| \leq$ $\|A\|$ for all natural number $m$, the sequence $\left\{A_{m}\right\}$ contains a subsequence $\left\{A_{m_{k}}\right\}$ that is convergent in norm to a matrix $H$. Then for $k \rightarrow \infty$ we have
+
+$$
+\begin{aligned}
+\left\|H-U^{-1} H U\right\| \leq & \left\|H-A_{m_{k}}\right\|+\left\|A_{m_{k}}-U^{-1} A_{m_{k}} U\right\| \\
+& +\left\|U^{-1}\left(A_{m_{k}}-H\right) U\right\| \\
+\leq & 2\left\|H-A_{m_{k}}\right\|+\frac{2}{m_{k}+1}\|A\| \rightarrow 0
+\end{aligned}
+$$
+
+whence $H=U^{-1} H U$. Thus, $H_{p}=H$ for every natural number $p$.
+
+We prove that $\lim _{p \rightarrow \infty}\left\|A_{p}-H\right\|=0$. Actually, for every natural number $k$ we have
+
+$$
+\begin{aligned}
+\left\|A_{p}-H\right\| & =\left\|A_{p}-H_{p}\right\| \leq\left\|A_{p}-\left(A_{m_{k}}\right)_{p}\right\|+\left\|\left(A_{m_{k}}\right)_{p}-H_{p}\right\| \\
+& \leq\left\|A_{p}-\left(A_{m_{k}}\right)_{p}\right\|+\left\|A_{m_{k}}-H\right\|
+\end{aligned}
+$$
+
+whence by the lemma we obtain
+
+$$
+\limsup _{p \rightarrow \infty}\left\|A_{p}-H\right\| \leq\left\|A_{m_{k}}-A\right\| .
+$$
+
+For $k \rightarrow \infty$, the assertion follows.
+
+Solution 2. Consider the natural embedding of the $n$-dimensional real space in the $n$-dimensional complex space. In the latter, the $n$ by $n$ real orthogonal matrices are unitary matrices. Thus, we prove more than required if in the statement of the problem we replace the orthogonal matrix by a unitary matrix, and real matrices $A$ by matrices with complex entries.
+
+So let $U=\left(U_{i j}\right)$ be a unitary matrix in the $n$-dimensional complex space. Then, as we know, in a suitable basis the matrix $U$ has the form $\left(U_{i j}\right)=\left(\varepsilon_{i} \delta_{i j}\right)$, where $\delta_{i j}$ is the Kronecker symbol and $\left|\varepsilon_{1}\right|=\cdots=\left|\varepsilon_{n}\right|=1$. Obviously,
+
+$$
+\left(U^{j}\right)_{i k}=\varepsilon_{i}^{j} \delta_{i k}, \quad\left(U^{-j}\right)_{i k}=\varepsilon_{i}^{-j} \delta_{i k} .
+$$
+
+Now, if $A=\left(a_{i k}\right)$ is an arbitrary matrix, then
+
+$$
+\left(U^{-j} A U^{j}\right)_{i k}=\sum_{r, s} \varepsilon_{i}^{-j} \delta_{i r} a_{r s} \varepsilon_{s}^{j} \delta_{s k}=\varepsilon_{i}^{-j} a_{i k} \varepsilon_{k}^{j}=\varepsilon_{i}^{-j} \varepsilon_{k}^{j} a_{i k} .
+$$
+
+Therefore,
+
+$$
+\left(A_{m}\right)_{i k}=\frac{1}{m+1} \sum_{j=0}^{m} \varepsilon_{i}^{-j} \varepsilon_{k}^{j} a_{i k}=\frac{a_{i k}}{m+1} \sum_{j=0}^{m} \varepsilon_{i}^{-j} \varepsilon_{k}^{j} .
+$$
+
+If $\varepsilon_{i}=\varepsilon_{k}$, then $\varepsilon_{i}^{-j} \varepsilon_{k}^{j}=1$, so $\lim _{m \rightarrow \infty}\left(A_{m}\right)_{i k}=a_{i k}$. On the other hand, if $\varepsilon_{i} \neq \varepsilon_{k}$, then
+
+$$
+\left(A_{m}\right)_{i k}=\frac{a_{i k}}{m+1} \sum_{j=0}^{m}\left(\overline{\varepsilon_{i}} \varepsilon_{k}\right)^{j}=\frac{a_{i k}}{m+1} \frac{\left(\overline{\varepsilon_{i}} \varepsilon_{k}\right)^{m+1}-1}{\overline{\varepsilon_{i}} \varepsilon_{k}-1} \rightarrow 0
+$$
+
+as $m \rightarrow \infty$, since
+
+$$
+\left|\frac{\left(\overline{\varepsilon_{i}} \varepsilon_{k}\right)^{m+1}-1}{\overline{\varepsilon_{i}} \varepsilon_{k}-1}\right| \leq \frac{2}{\left|\overline{\varepsilon_{i}} \varepsilon_{k}-1\right|}
+$$
+
+We see that in this case $\lim _{m \rightarrow \infty}\left(A_{m}\right)_{i k}=0$.
+
+It remains to note that if for a sequence of matrices $\left(a_{i k}^{(m)}\right)_{m=1}^{\infty}$ we know that for each pair of indices $i, k$ the numbers $a_{i k}^{(m)}$ tend to some $a_{i k}$ as $m \rightarrow \infty$ then the sequence of matrices, evidently, is entrywise convergent to the matrix $\left(a_{i k}\right)$.
+
+Solution 3. As a generalization of the problem, we prove the following theorem.
+
+Theorem. Let $H$ be a complex Hilbert space, and $U$ a unitary operator in $H$. Then, for any compact operator $A$ of $H$, the sequence of operators
+
+$$
+\Phi_{m}(A)=\frac{1}{m+1} \sum_{j=0}^{m} U^{-j} A U^{j} \quad(m=0,1, \ldots)
+$$
+
+is weakly convergent, that is, for every pair of elements $f, g$ in $H$
+
+$$
+\lim _{m, n \rightarrow \infty}\left(\left(\Phi_{m}(A)-\Phi_{n}(A)\right) f, g\right)=0
+$$
+
+where $(f, g)$ denotes the inner product of the elements $f, g \in H$.
+
+(This statement obviously contains the statement of the problem. Indeed, the $n$ by $n$ real orthogonal matrix appearing in the problem induces a unitary operator of the $n$-dimensional complex Hilbert space; in this $n$ dimensional space all linear operators, in particular those induced by $n$ by $n$ real matrices, are compact, and in finite-dimensional spaces weak and entrywise - so-called strong - convergences of operators coincide.)
+
+Proof. For proving the theorem, we first observe that the mappings $A \rightarrow$ $\Phi_{m}(A)(m=1,2, \ldots)$, defined for all bounded operators $A$ of $H$, have the following properties:
+
+a. For any pair of bounded linear operators $A, B$ of $H$ and any pair of complex numbers $\alpha$ and $\beta$
+
+$$
+\Phi_{m}(\alpha A+\beta B)=\alpha \Phi_{m}(A)+\beta \Phi_{m}(B) \quad(m=0,1, \ldots)
+$$
+
+b. For any bounded linear operator $A$ of $H$,
+
+$$
+\left\|\Phi_{m}(A)\right\| \leq\|A\| \quad(m=0,1, \ldots)
+$$
+
+where $\|A\|$ stands for the norm of $A$. c. If the sequence $\left\{A_{k}\right\}_{k=1}^{\infty}$ of bounded linear operators is uniformly convergent to a bounded linear operator $A$, that is, $\left\|A_{k}-A\right\| \rightarrow 0$ as $k \rightarrow \infty$, and the sequence $\left\{\Phi_{m}\left(A_{k}\right)\right\}_{m=0}^{\infty}$ is weakly convergent for each $k$, then the sequence $\left\{\Phi_{m}(A)\right\}_{m=0}^{\infty}$ is also weakly convergent.
+
+From these three properties only c. needs to be verified. So let $\left\{A_{k}\right\}_{k=1}^{\infty}$ be a sequence of operators with the properties above, and let $f$ and $g$ be two elements of the Hilbert space $H$. Without loss of generality, we may assume that $\|f\|=\|g\|=1$. Then
+
+$$
+\begin{aligned}
+& \left|\left(\left(\Phi_{m}(A)-\Phi_{n}(A)\right) f, g\right)\right| \\
+& =\left|\left(\left[\Phi_{m}(A)-\Phi_{m}\left(A_{k}\right)+\Phi_{m}\left(A_{k}\right)-\Phi_{n}\left(A_{k}\right)+\Phi_{n}\left(A_{k}\right)-\Phi_{n}(A)\right] f, g\right)\right| \\
+& \leq\left|\left(\Phi_{m}\left(A-A_{k}\right) f, g\right)\right|+\left|\left(\left(\Phi_{m}\left(A_{k}\right)-\Phi_{n}\left(A_{k}\right)\right) f, g\right)\right|+\left|\left(\Phi_{n}\left(A_{k}-A\right) f, g\right)\right| \\
+& \leq 2\left\|A-A_{k}\right\|+\left|\left(\left(\Phi_{m}\left(A_{k}\right)-\Phi_{n}\left(A_{k}\right)\right) f, g\right)\right|
+\end{aligned}
+$$
+
+(we have made use of properties a and $b$ and applied the Schwarz inequality).
+
+Now let $\varepsilon>0$ be arbitrary. Then, by one of the assumptions on the sequence $\left\{A_{k}\right\}_{k=1}^{\infty}$, there is an index $k=k(\varepsilon)$ such that
+
+$$
+\left\|A_{k(\varepsilon)}-A\right\|<\frac{\varepsilon}{4}
+$$
+
+Next, let $N=N(k(\varepsilon), \varepsilon)$ be a positive integer satisfying
+
+$$
+\left|\left(\left(\Phi_{m}\left(A_{k(\varepsilon)}\right)-\Phi_{n}\left(A_{k(\varepsilon)}\right)\right) f, g\right)\right|<\frac{\varepsilon}{2}
+$$
+
+for $m, n>N$. By the assumptions, such $N$ exists. Then, in view of the foregoing, we obtain
+
+$$
+\left|\left(\left(\Phi_{m}(A)-\Phi_{n}(A)\right) f, g\right)\right|<\varepsilon
+$$
+
+for $m, n>N$. This proves property c.
+
+It is well known that every compact operator is the uniform limit of finite rank operators, further every finite rank operator is a finite linear combination of rank 1 operators. Consequently, by properties a. and c., it is sufficient to prove our assertion for operators of rank 1 . So let $A$ be an operator of rank 1 . Then there are two elements $\phi$ and $\psi$ in the space $H$ such that
+
+$$
+A f=(f, \phi) \psi
+$$
+
+for all $f$ in $H$. Now, if $h$ and $g$ are any two elements of $H$, then
+
+$$
+\left(\Phi_{m}(A) h, g\right)=\frac{1}{m+1} \sum_{j=0}^{m}\left(A U^{j} h, U^{j} g\right)=\frac{1}{m+1} \sum_{j=0}^{m}\left(U^{j} h, \phi\right)\left(U^{-j} \psi, g\right) .
+$$
+
+Denote by $H \otimes H$ the tensor product of $H$ with itself. (The definition of the Hilbert space $H \otimes H$ is the following. Denote by $H_{0}$ the algebraic tensor product of $H$ with itself. As is well known, this is the free module generated by the symbols $x \otimes y(x, y \in H)$ and having the complex field for operator domain. By the inner product of two elements
+
+$$
+\hat{\psi}=\sum_{i=1}^{n} x_{i} \otimes y_{i}, \quad \hat{\psi}^{\prime}=\sum_{j=1}^{m} x_{j}^{\prime} \otimes y_{j}^{\prime}
+$$
+
+of $H_{0}$, we mean the number
+
+$$
+\left\langle\hat{\psi}, \hat{\psi}^{\prime}\right\rangle=\sum_{i=1}^{n} \sum_{j=1}^{m}\left(x_{i}, x_{j}^{\prime}\right)\left(y_{i}, y_{j}^{\prime}\right)
+$$
+
+Two elements $\hat{\psi}, \hat{\psi}^{\prime} \in H_{0}$ are considered to be identical if $\left\langle\hat{\psi}-\hat{\psi}^{\prime}, \hat{\psi}-\hat{\psi}^{\prime}\right\rangle=$ 0 . On the factor space $\tilde{H}_{0}$ that arises after this identification, (1) defines a norm. Completing $H_{0}$ in the metric induced by this norm, we obtain the Hilbert space $\tilde{H}=H \otimes H$.)
+
+Let $U_{0}$ be the operator of $\tilde{H}$ satisfying the relation
+
+$$
+U_{0}(x \otimes y)=\left(U x \otimes U^{-1} y\right) \quad(x, y \in H)
+$$
+
+$U_{0}$ is uniquely determined in this way and is unitary in $H$. On the other hand it is clear that
+
+$$
+\left(\Phi_{m}(A) h, g\right)=\frac{1}{m+1} \sum_{j=0}^{m}\left(U_{0}^{j}(h \otimes \psi), \phi \otimes g\right)
+$$
+
+By a classic theorem of ergodic theory (see for example $F$. Riesz and $B$. Sz. Nagy, Functional Analysis, Blackie, London, 1956, §144), the righthand side is convergent for every pair of elements $\hat{\psi}, \hat{\psi}^{\prime} \in \tilde{H}$ and so, in particular, for the pair $\hat{\psi}=h \otimes \psi, \hat{\psi}^{\prime}=\phi \otimes g$. The proof is complete.
+
+Problem 0.3. Prove that if a sequence of Mikusinski operators of the form $\mu e^{-\lambda s}$ ( $\lambda$ and $\mu$ nonnegative real numbers, $s$ the differentiation operator) is convergent in the sense of Mikusinski, then its limit is also of this form.
+
+Solution. Let $\mu_{n} e^{-\lambda_{n} s}$ be the convergent sequence of operators considered. We may assume that $\mu_{n} \rightarrow \mu$ and $\lambda_{n} \rightarrow \lambda(0 \leq \mu, \lambda \leq+\infty)$ as $n \rightarrow \infty$; in fact, passing to a suitable subsequence, this can always be achieved without any influence on convergence and limiting operator.
+
+By the definition of convergence, there exists an operator $\{p\} /\{q\} \quad(\{p\}$, $\{q\} \in C[0, \infty),\{p\},\{q\} \neq\{0\})$ such that
+
+$$
+\mu_{n} e^{-\lambda_{n} s} \frac{\{p\}}{\{q\}}
+$$
+
+is an almost uniformly (that is, uniformly on each finite interval) convergent sequence of functions in $C[0, \infty)$. We may assume that $p(0)=0$, since otherwise $\{p\} /\{q\}$ in (1) can be replaced by the equal expression $(\{p\}\{1\}) /(\{q\}\{1\})$. Define $p$ to be zero on the negative half-line; then $p$ will be a continuous function on the whole real line and not identically zero on the positive half-line. From (1) it follows that the sequence of functions
+
+$$
+\mu_{n} e^{-\lambda_{n} s}\{p\}=\left\{\mu_{n} p\left(t-\lambda_{n}\right)\right\}
+$$
+
+is almost uniformly convergent.
+
+If $\lambda=+\infty$, then we see that (2) is almost uniformly convergent to the zero function; thus
+
+$$
+\mu_{n} e^{-\lambda_{n} s} \rightarrow 0=0 \cdot e^{-s} \quad(n \rightarrow \infty) .
+$$
+
+If $\lambda<+\infty$, then we show that $\mu$ is also finite. Let $t_{0}$ be a point with $p\left(t_{0}-\lambda\right) \neq 0$. Then $p\left(t_{0}-\lambda_{n}\right) \rightarrow p\left(t_{0}-\lambda\right)(n \rightarrow \infty)$, so $\mu_{n} p\left(t_{0}-\lambda_{n}\right)$ can only be convergent if $\mu<+\infty$. Then, however, $\mu_{n} p\left(t-\lambda_{n}\right)$ tends almost uniformly to the function $\{\mu p(t-\lambda)\}=\mu e^{-\lambda s}\{p\}$. Consequently,
+
+$$
+\mu_{n} e^{-\lambda_{n} s} \rightarrow \mu e^{-\lambda s} \quad(n \rightarrow \infty) .
+$$
+
+Problem O.4. Prove that an idempotent linear operator of a Hilbert space is self-adjoint if and only if it has norm 0 or 1 .
+
+Solution 1. If $T$ is self-adjoint, then it is an orthogonal projection operator; it is well known that such operators have norm 1 or 0 . Conversely, let $\|T\| \leq 1$. For any element $x$ of the space and any number $\mu$, we have
+
+$$
+T(\mu T x-(x-T x))=\mu T x
+$$
+
+and therefore
+
+$$
+\begin{aligned}
+|\mu|^{2}\|T x\|^{2} & \leq\|\mu T x-(x-T x)\|^{2} \\
+& =-2 \operatorname{Re}[\mu(T x, x-T x)]+|\mu|^{2}\|T x\|^{2}+\|x-T x\|^{2} .
+\end{aligned}
+$$
+
+Consequently,
+
+$$
+\operatorname{Re}[\mu(T x, x-T x)] \leq \frac{1}{2}\|x-T x\|^{2} .
+$$
+
+But this is possible for every $\mu$ only if
+
+$$
+(T x, x-T x)=0 .
+$$
+
+Hence, it follows in a simple and well-known manner that $T^{*}=T$.
+
+The proof applies to real as well as complex spaces. Solution 2. The kernel (null space) of $T$, in view of the property $T^{2}=T$, coincides with the range of $I-T$, that is, with the set of all elements of the form $(I-T) x$ where $x$ runs through all elements of the space. It is a wellknown fact, and easy to verify, that the orthogonal complement of the range of $I-T$ is equal to the kernel of $I-T^{*}$. By a well-known result of Nagy (see, for example, B. Sz. Nagy and C. Foias, Harmonic Analysis of Operators on Hilbert Space, Akadémiai Kiadó and North-Holland Publ. Co., 1970), from the inequality $\|T\| \leq 1$ it follows that the invariant elements of $T$ and $T^{*}$ are the same. So, the kernel of $I-T^{*}$ coincides with the kernel of $I-T$, which, in turn, coincides with the range of $T$ (the latter fact follows from the property $\left.(I-T)^{2}=I-T\right)$. Thus
+
+$$
+(T x, x-T x)=0
+$$
+
+for every $x$, which implies the statement.
+
+Problem 0.5. Let $T$ be a bounded linear operator on a Hilbert space $H$, and assume that $\left\|T^{n}\right\| \leq 1$ for some natural number $n$. Prove the existence of an invertible linear operator $A$ on $H$ such that $\left\|A T A^{-1}\right\| \leq 1$.
+
+Solution. Let (., .) denote scalar multiplication in $H$. It is easy to verify that the formula
+
+$$
+[x, y]=\sum_{i=0}^{n-1}\left(T^{i} x, T^{i} y\right)
+$$
+
+defines a new scalar product on $H$. Let $\hat{H}$ denote the space equipped with the scalar product $[.$, , ]. Obviously,
+
+$$
+(x, x) \leq[x, x] \leq\left(\sum_{i=0}^{n-1}\left\|T^{i}\right\|^{2}\right)(x, x)
+$$
+
+for all $x \in H$, that is, the norm in $H$ is equivalent to that in $\hat{H}$. Consequently, $\hat{H}$ is also a Hilbert space.
+
+Since the dimension of a Hilbert space is the minimal power of complete sets, that is, sets whose closed linear span is the whole space, the dimensions of $H$ and $\hat{H}$ are equal. But Hilbert spaces of equal dimension are isomorphic. So, consider a Hilbert space isomorphism $A: \hat{H} \rightarrow H$. Since the underlying vector space for $H$ and $\hat{H}$ is the same, $A$ is an invertible linear operator on $H$. Let $x \in H$ be arbitrary, and put $y=A^{-1} x$. Then
+
+$$
+\begin{aligned}
+(x, x) & -\left(A T A^{-1} x, A T A^{-1} x\right)=(A y, A y)-(A T y, A T y)=[y, y]-[T y, T y] \\
+& =\sum_{i=0}^{n-1}\left(T^{i} y, T^{i} y\right)-\sum_{i=0}^{n-1}\left(T^{i+1} y, T^{i+1} y\right)=(y, y)-\left(T^{n} y, T^{n} y\right),
+\end{aligned}
+$$
+
+which is nonnegative since $\left\|T^{n}\right\| \leq 1$. Thus, we have obtained
+
+$$
+(x, x) \geq\left(A T A^{-1} x, A T A^{-1} x\right)
+$$

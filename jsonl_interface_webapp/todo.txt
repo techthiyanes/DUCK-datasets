@@ -1,0 +1,7 @@
+Remaining: 
+- Get ID navigation to work
+    - Currently: file resets to numerical.jsonl every time I set id value
+    - next and previous buttons don't work. This is because I moved the definition of `problem` variable
+
+To fix: 
+- When jsonl fails to load, jsonl says "404: Not Found". Make separate function to deal with this case.

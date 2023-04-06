@@ -1,0 +1,442 @@
+
+
+\subsection{PROBABILITY THEORY}
+
+Problem P.1. From a given triangle of unit area, we choose two points independently with uniform distribution. The straight line connecting these points divides the triangle, with probability one, into a triangle and a quadrilateral. Calculate the expected values of the areas of these two regions.
+
+Solution. First, observe that an affine transformation does not change the ratio of the areas, therefore the expectation of the ratio does not change. We will use this fact by choosing the type of the triangle in the most convenient way for our purposes.
+
+Denote the vertices of the triangle by $A_{1}, A_{2}, A_{3}$, and the chosen points by $X$ and $Y$. The probability that the line $e$ connecting the points $X$ and $Y$ crosses one of the points $A_{i}(i=1,2,3)$ is equal to zero because of the independence of $X$ and $Y$. So the probability that we will get a triangle and a quadrilateral by dividing the triangle by the line $e$ is equal to one. Denote by $\mathcal{A}_{i}$ the event that the point $A_{i}$ is a vertex of the small triangle. The events $\mathcal{A}_{i}(i=1,2,3)$ form a complete system of events, so by the theorem of "complete expectations,"
+
+$$
+E\left(\frac{t}{T}\right)=\sum_{i=1}^{3} E\left(\frac{t}{T} \mid \mathcal{A}_{i}\right) P\left(\mathcal{A}_{i}\right)
+$$
+
+where $t$ denotes the area of the small triangle, and $T$ denotes the area of the original triangle.
+
+If the original triangle is equilateral, then $E\left(t / T \mid \mathcal{A}_{i}\right)$ is independent of $i$ (so does $P\left(\mathcal{A}_{i}\right)$ for $\left.i=1,2,3\right)$, hence
+
+$$
+E\left(\frac{t}{T}\right)=E\left(\frac{t}{T} \mid \mathcal{A}_{1}\right) \sum_{i=1}^{3} P\left(\mathcal{A}_{i}\right)=E\left(\frac{t}{T} \mid \mathcal{A}_{1}\right) .
+$$
+
+Suppose now that we have a right-angled isosceles triangle, $A_{i}$ is the right-angled vertex, and the equal sides have unit length. Denote by $F(a, b)$ the (conditional) probability, that for the line segments $\xi$ and $\eta$ of the sides cut by $e$, we have $\xi<a$ and $\eta<b$, assuming that $\xi<1$ and $\eta<1$. That is,
+
+$$
+F(a, b)=P(\xi<a, \eta<b \mid \xi<1, \eta<1) .
+$$
+
+Since $a<1$ and $b<1$,
+
+$$
+F(a, b)=\frac{P(\xi<a, \eta<b)}{P(\xi<1, \eta<1)} .
+$$
+
+If $X=\left(x_{1}, x_{2}\right)$ and $Y=\left(y_{1}, y_{2}\right)$, then
+
+$$
+P(\xi<a, \eta<b)=c \int_{\triangle(a, b)} d x_{1} d x_{2} d y_{1} d y_{2},
+$$
+
+where $c$ is a constant, independent of $a$ and $b$, and $\triangle(a, b)$ is the domain of the four-dimensional space such that, for the corresponding line, $\xi<a$ and $\eta<b$. By substitutions $x_{i}=a x_{i}^{\prime}$ and $y_{i}=b y_{i}^{\prime}$, the domain $\triangle(a, b)$ is transformed to $\triangle(1,1)$, and therefore
+
+$$
+\begin{aligned}
+P(\xi<a, \eta<b) & =c a^{2} b^{2} \int_{\Delta(1,1)} d x_{1}^{\prime} d x_{2}^{\prime} d y_{1}^{\prime} d y_{2}^{\prime} \\
+& =a^{2} b^{2} P(\xi<1, \eta<1),
+\end{aligned}
+$$
+
+that is, $F(a, b)=a^{2} b^{2}$. So the density function is
+
+$$
+f(a, b)=\frac{\partial^{2} F(a, b)}{\partial a \partial b}=4 a b
+$$
+
+and thus the ratio of the areas of the triangles is given by
+
+$$
+g(a, b)=\frac{\frac{1}{2} a b}{\frac{1}{2} \cdot 1 \cdot 1}=a b
+$$
+
+The expectation of the ratio is
+
+$$
+\begin{aligned}
+E\left(\frac{t}{T}\right) & =E g(a, b)=\int_{0}^{1} \int_{0}^{1} g(a, b) f(a, b) d a d b \\
+& =\int_{0}^{1} \int_{0}^{1} 4 a^{2} b^{2} d a d b=\frac{4}{9} .
+\end{aligned}
+$$
+
+So the expectations of the areas of the triangle and the quadrilateral are $4 / 9$ and $5 / 9$, respectively.
+
+Problem P.2. Select $n$ points on a circle independently with uniform distribution. Let $P_{n}$ be the probability that the center of the circle is in the interior of the convex hull of these $n$ points. Calculate the probabilities $P_{3}$ and $P_{4}$.
+
+Solution 1. Assume that the circumference of the circle is one. Fix a point on the circle, and introduce the arclength parameter. Let $\tau_{1}, \ldots, \tau_{n}$ be the parameter values associated with the chosen points. Denote by $A_{n}$ the event that the center of the circle is not inside the convex hull of the points. Furthermore, denote by $B_{i}$ the event that there is no point on the $\operatorname{arc}\left(\tau_{i}, \tau_{i}+1 / 2\right)$. By the independence and uniform distribution of the points, it is obvious, that, except for an event of probability zero, the events $B_{i}$ are mutually disjoint and $A_{n}=B_{1}+\cdots+B_{n}, P\left(B_{i}\right)=1 / 2^{n-1}$, and therefore $P_{n}=1-P\left(A_{n}\right)=1-n / 2^{n-1}$. Hence $P_{3}=1 / 4, P_{4}=1 / 2$.
+
+Solution 2. Denote by $\overbrace{i} \tau_{j}$ the length of the shorter arc with endpoints $\tau_{i}$ and $\tau_{j}$ and by $B_{i j} \quad(1 \leq i<j \leq n)$ the event that all of the points are on the shorter arc with endpoints $\tau_{i}$ and $\tau_{j}$. (If $\tau_{i}$ and $\tau_{j}$ are the endpoints of a half-circle, then $B_{i j}$ denotes the event that all of the points are on one of the half-circles defined by them.) It is obvious that $A_{n}=\sum_{i, j} B_{i j}$. If the points are distinct, the events $B_{i j}$ are mutually disjoint. Since the points are independent and uniformly distributed, they do not coincide with probability one, and so $P\left(A_{n}\right)=\sum_{i, j} P\left(B_{i j}\right)$. Furthermore, $P\left(\overparen{\tau_{i} \tau_{j}}<x\right)=$ $2 x$, so $\left(P\left(\overparen{\tau}_{i} \tau_{j}<x\right)\right)^{\prime}=2 \quad(0<x<1 / 2)$ and $P\left(B_{i j} \mid \overparen{\tau}_{i} \tau_{j}<x\right)=x^{n-2}$. Because of the theorem of total probability,
+
+$$
+P\left(B_{i j}\right)=2 \int_{0}^{1 / 2} x^{n-2} d x=\frac{1}{(n-1) 2^{n-2}} .
+$$
+
+Hence,
+
+$$
+P_{n}=1-P\left(A_{n}\right)=1-\left(\begin{array}{l}
+n \\
+2
+\end{array}\right) \frac{1}{(n-1) 2^{n-2}}=1-\frac{n}{2^{n-1}}
+$$
+
+Problem P.3. Let $\varepsilon_{1}, \varepsilon_{2}, \ldots, \varepsilon_{2 n}$ be independent random variables such that $P\left(\varepsilon_{i}=1\right)=P\left(\varepsilon_{i}=-1\right)=1 / 2$ for all $i$, and define $S_{k}=\sum_{i=1}^{k} \varepsilon_{i}, 1 \leq$ $k \leq 2 n$. Let $N_{2 n}$ denote the number of integers $k \in[2,2 n]$ such that either $S_{k}>0$, or $S_{k}=0$ and $S_{k-1}>0$. Compute the variance of $N_{2 n}$.
+
+Solution. It is known (see, for example, W., Feller, An Introduction to Probability Theory and Its Applications, Wiley, New York, 1957, Vol. I, p. 77) that the distribution of $N_{2 n}$ is given as
+
+$$
+\begin{aligned}
+P\left(N_{2 n}=2 k\right) & =\frac{\left(\begin{array}{c}
+2 k \\
+k
+\end{array}\right)\left(\begin{array}{c}
+2(n-k) \\
+n-k
+\end{array}\right)}{2^{2 n}} \quad(k=0,1, \ldots, n), \\
+P\left(\mathbb{N}_{2 n}=2 k+1\right) & =0 \quad(k=0,1, \ldots, n-1) .
+\end{aligned}
+$$
+
+The symmetry of the distribution implies that $E\left(N_{2 n}\right)=n$, and from (1) and (2) we conclude that
+
+$$
+E\left(N_{2 n}^{2}\right)=\sum_{k=0}^{n}(2 k)^{2} \frac{\left(\begin{array}{c}
+2 k \\
+k
+\end{array}\right)\left(\begin{array}{c}
+2(n-k) \\
+n-k
+\end{array}\right)}{2^{2 n}}
+$$
+
+Assume that $|x|<1$, and consider the functions
+
+$$
+F(x)=\sum_{k=1}^{\infty}(2 k)^{2} \frac{\left(\begin{array}{c}
+2 k \\
+k
+\end{array}\right)}{2^{2 k}} x^{2 k} \text { and } G(x)=\left(1-x^{2}\right)^{-1 / 2}
+$$
+
+It is easy to see that
+
+$$
+G(x)=\sum_{k=0}^{\infty} \frac{\left(\begin{array}{c}
+2 k \\
+k
+\end{array}\right)}{2^{2 k}} x^{2 k}
+$$
+
+The generating function of $E\left(N_{2 n}^{2}\right)$ is $F(x) G(x)$, that is,
+
+$$
+F(x) G(x)=\sum_{k=0}^{\infty} E\left(N_{2 n}^{2}\right) x^{2 k}
+$$
+
+Using (3), it is easy to verify that
+
+$$
+F(x)=x\left(x G^{\prime}(x)\right)^{\prime}
+$$
+
+which implies that
+
+$$
+F(x)=x\left(x^{2}\left(1-x^{2}\right)^{-3 / 2}\right)^{\prime}=2 x^{2}\left(1-x^{2}\right)^{-3 / 2}+3 x^{4}\left(1-x^{2}\right)^{-5 / 2}
+$$
+
+Therefore,
+
+$$
+F(x) G(x)=2 x^{2}\left(1-x^{2}\right)^{-2}+3 x^{4}\left(1-x^{2}\right)^{-3} .
+$$
+
+Simple calculations show that
+
+$$
+\left(1-x^{2}\right)^{-2}=\sum_{k=1}^{\infty} k x^{2 k-2}
+$$
+
+and
+
+$$
+\left(1-x^{2}\right)^{-3}=\sum_{k+1}^{\infty} \frac{k(k-1)}{2} x^{2 k-4}
+$$
+
+So from (4), we get
+
+$$
+F(x) G(x)=\sum_{k=1}^{\infty} 2 k x^{2 k}+\sum_{k=1}^{\infty} \frac{3}{2} k(k-1) x^{2 k}=\sum_{k=1}^{\infty}\left(\frac{3}{2} k^{2}+\frac{1}{2} k\right) x^{2 k}
+$$
+
+Therefore,
+
+$$
+E\left(N_{2 n}^{2}\right)=\frac{3}{2} n^{2}+\frac{1}{2} n
+$$
+
+Hence,
+
+$$
+\operatorname{Var}\left(N_{2 n}\right)=E\left(N_{2 n}^{2}\right)-E^{2}\left(N_{2 n}\right)=\left(\frac{3}{2} n^{2}+\frac{1}{2} n\right)-n^{2}=\frac{n(n+1)}{2} .
+$$
+
+Problem P.4. A gambler plays the following coin-tossing game. He can bet an arbitrary positive amount of money. Then a fair coin is tossed, and the gambler wins or loses the amount he bet depending on the outcome. Our gambler, who starts playing with $x$ forints, where $0<x<2 C$, uses the following strategy: if at a given time his capital is $y<C$, he risks all of it; and if he has $y>C$, he only bets $2 C-y$. If he has exactly $2 C$ forints, he stops playing. Let $f(x)$ be the probability that he reaches $2 C$ (before going bankrupt). Determine the value of $f(x)$.
+
+Solution 1. We are going to prove that $f(x)=x / 2 C \quad(0<x<2 C)$. First, we show that $f(x)$ is nondecreasing. Let $0<x_{1}<x_{2}<2 C$, and suppose there is a sequence of tossings such that he can reach $2 C$ from $x_{1}$. We show that by the same sequence of tossings he can reach $2 C$ from $x_{2}$ (maybe earlier), so $f\left(x_{2}\right) \geq f\left(x_{1}\right)$.
+
+Let us see how the amount of the player's money changes after one toss:
+
+(a) if $x_{1}<x_{2}<C$, then $2 x_{1}<2 x_{2}$ for a win, and $0 \leq 0$ for a loss;
+
+(b) if $x_{1}<C<x_{2}$, then $2 x_{1}<2 C$ for a win, and $0<2\left(x_{2}-C\right)$ for a loss;
+
+(c) if $C<x_{1}<x_{2}$, then $2 C \leq 2 C$ for a win, and $2\left(x_{1}-C\right)<2\left(x_{2}-C\right)$ for a loss.
+
+Thus if $x_{1}<x_{2}$, then, for the new amounts $x_{1}^{\prime}$ and $x_{2}^{\prime}$, we have $x_{1}^{\prime} \leq x_{2}^{\prime}$.
+
+Define $x=\left(a / 2^{n}\right) \cdot 2 C \quad\left(1 \leq a \leq 2^{n}-1, a\right.$ is odd, $\left.n=1,2, \ldots\right)$. We will prove by induction that for such an $x, f(x)=a / 2^{n}=x / 2 C$. For $n=1$, $f((1 / 2) \cdot 2 C)=f(C)=1 / 2$, since starting from $C$ the player will have $2 C$ with probability $1 / 2$. Suppose the formula holds for $n=k \quad(k \geq 1)$, that is, $f(x)=f\left(\left(a / 2^{k}\right) \cdot 2 C\right)=a / 2^{k}$. If $x=\left(a / 2^{k+1}\right) \cdot 2 C$ and $a<2^{k}$ (that is, $x<C$ ), then the player will win $2 x$ forints or lose everything with probabilities $1 / 2,1 / 2$, respectively. So
+
+$$
+f(x)=\frac{1}{2} f\left(\frac{a}{2^{k}} 2 C\right)+\frac{1}{2} f(0)=\frac{a}{2^{k+1}}=\frac{x}{2 C} .
+$$
+
+If $x=\left(a / 2^{k+1}\right) \cdot 2 C$ and $2^{k}<a<2^{k+1}\left(a \neq 2^{k}\right.$ since it is odd), then the inequality $x>C$ implies
+
+$$
+f(x)=\frac{1}{2} f(2 C)+\frac{1}{2} f\left(\frac{a-2^{k}}{2^{k}}-2 C\right)=\frac{1}{2}+\frac{1}{2} \frac{a-2^{k}}{2^{k}}=\frac{a}{2^{k+1}}=\frac{x}{2 C}
+$$
+
+Suppose now $x_{0} \neq\left(a / 2^{n}\right) \cdot 2 C\left(1 \leq a \leq 2^{n}-1, a\right.$ is odd), and suppose $f\left(x_{0}\right) \neq x_{0} / 2 C$, but, for example, $f\left(x_{0}\right)>x_{0} / 2 C$. Then there should exist a number having the form $a / 2^{n}$ such that
+
+$$
+\frac{x_{0}}{2 C}<\frac{a}{2^{n}}<f\left(x_{0}\right)
+$$
+
+and it contradicts the fact that $f(x)$ is nondecreasing. Namely, because of (1), $x_{0}<\left(a / 2^{n}\right) \cdot 2 C$, and, on the other hand,
+
+$$
+\frac{a}{2^{n}}=f\left(\frac{a}{2^{n}} 2 C\right)<f\left(x_{0}\right)
+$$
+
+We can obtain a similar contradiction for $f\left(x_{0}\right)<x_{0} / 2 C$, therefore $f(x)=x / 2 C(0<x<2 C)$. Solution 2. Introduce the notation $g(x)=f(2 C x) \quad(0 \leq x \leq 1)$. Since $f(0)=0$ and $f(2 C)=1$, we get $g(0)=0$ and $g(1)=1$. It is easy to verify that
+
+$$
+g(x)= \begin{cases}\frac{1}{2} g(2 x) & \text { if } x \in\left[0, \frac{1}{2}\right] \\ \frac{1}{2}+\frac{1}{2} g(2 x-1) & \text { if } x \in\left(\frac{1}{2}, 1\right]\end{cases}
+$$
+
+To see this, observe that if $x \in(0,1 / 2]$, the gambler wins or loses $2 C x$ forints with probability $1 / 2$, so
+
+$$
+g(x)=\frac{1}{2} g(2 x)+\frac{1}{2} g(0)=\frac{1}{2} g(2 x) .
+$$
+
+If $x \in(1 / 2,1]$, the gambler will have $2 \mathrm{C}$ or $(2 x-1) 2 C$ forints with equal probabilities $1 / 2$, so
+
+$$
+g(x)=\frac{1}{2} g(1)+\frac{1}{2} g(2 x-1)=\frac{1}{2}+\frac{1}{2} g(2 x-1) .
+$$
+
+We will next show that the only bounded solution of the functional equation (2) is the identity function $g(x)=x$ (from which we get the same solution as before).
+
+Put $h(x)=g(x)-x$. Then $h(x)$ is bounded and
+
+$$
+h(x)= \begin{cases}\frac{1}{2} h(2 x) & \text { if } x \in\left[0, \frac{1}{2}\right] \\ \frac{1}{2} h(2 x-1) & \text { if } x \in\left(\frac{1}{2}, 1\right]\end{cases}
+$$
+
+We are going to show that $h(x) \equiv 0$. Since $h(x)$ is bounded, both $M=$ $\sup _{x \in[0,1]} h(x)$ and $m=\inf _{x \in[0,1]} h(x)$ are finite, and
+
+$$
+h(x)= \begin{cases}\frac{1}{2} h(2 x) \leq \frac{M}{2} & \text { if } x \in\left[0, \frac{1}{2}\right], \\ \frac{1}{2} h(2 x-1) \leq \frac{M}{2} & \text { if } x \in\left(\frac{1}{2}, 1\right] .\end{cases}
+$$
+
+The definition of $M$ implies that $M \leq M / 2$, that is, $M \leq 0$. A similar argument shows that $m \geq 0$, that is, $h(x) \equiv 0$.
+
+Problem P.5. For a real number $x$ in the interval $(0,1)$ with decimal representation
+
+$$
+0 . a_{1}(x) a_{2}(x) \ldots a_{n}(x) \ldots
+$$
+
+denote by $n(x)$ the smallest nonnegative integer such that
+
+$$
+\overline{a_{n(x)+1} a_{n(x)+2} a_{n(x)+3} a_{n(x)+4}}=1966 .
+$$
+
+Determine $\int_{0}^{1} n(x) d x$. ( $\overline{a b c d}$ denotes the decimal number with digits $a, b$, $c, d$.
+
+Solution 1. The integral is understood as a Lebesgue integral. Introduce the following notation:
+
+$$
+\begin{aligned}
+& L_{n}=\{x: x \in(0,1), \quad n(x)=n\}, \\
+& A_{n}=\left\{x: x \in(0,1), \overline{a_{n+1}(x) a_{n+2}(x) a_{n+3}(x) a_{n+4}(x)}=1966\right\} .
+\end{aligned}
+$$
+
+$\lambda$ is the Lebesgue measure, $\lambda_{n}=\lambda\left(L_{n}\right), \alpha_{n}=\lambda\left(A_{n}\right)$, where $(n=0$, $1,2, \ldots)$. Observe that $L_{n}$ and $A_{n}$ are the unions of finitely many intervals, so they are measurable sets.
+
+First, we show that $\sum_{n=0}^{\infty} \lambda_{n}=1$, that is, the integrand is defined almost everywhere. If
+
+$$
+\begin{aligned}
+& H=\{x: x \in(0,1) \\
+& \left.\overline{a_{k+1}(x) a_{k+2}(x) a_{k+3}(x) a_{k+4}(x)} \neq 1966, k=1,2, \ldots\right\}
+\end{aligned}
+$$
+
+and
+
+$$
+C_{n}=\left\{x: \frac{x \in(0,1)}{a_{4 k+1}(x) a_{4 k+2}(x) a_{4 k+3}(x) a_{4 k+4}(x)} \neq 1966, k=1,2, \ldots\right\}
+$$
+
+then $H \subset C_{n} \quad(n=0,1,2, \ldots)$ and
+
+$$
+\lambda\left(C_{n}\right)=\left(\frac{10^{4}-1}{10^{4}}\right)^{n+1}
+$$
+
+Therefore, $\lim _{n \rightarrow \infty} \lambda\left(C_{n}\right)=0, \lambda(H)=0$. The lengths of the intervals in $A_{n}$ are equal to $10^{-(n+4)}$, the number of these intervals is $10^{n}$ (we can choose the first $n$ decimal digits in $10^{n}$ different ways), and therefore $\alpha_{n}=10^{-4}$. Obviously, $A_{n} \cap L_{n}=L_{n}(n=0,1, \ldots)$, and if $n-3 \leq k \leq n-1$, then $A_{n} \cap L_{k}=0$ since two sequences 1966 cannot overlap. If $0 \leq k \leq n-4$ then
+
+$$
+\lambda\left(A_{n} \cap L_{k}\right)=\lambda\left(A_{n-k-4}\right) \lambda\left(L_{k}\right)=10^{-4} \lambda_{k}
+$$
+
+since the assumption that $x$ is in $L_{k}$ restricts only the first $(k+4)$ decimal digits of $x$. So
+
+$$
+10^{-4}=\lambda\left(A_{n}\right)=\sum_{k=0}^{n} \lambda\left(A_{n} \cap L_{k}\right)=\sum_{k=0}^{n-4} 10^{-4} \lambda_{k}+\lambda_{n}
+$$
+
+that is,
+
+$$
+10^{4} \lambda_{n}=1-\sum_{k=0}^{n-4} \lambda_{k}
+$$
+
+By the equality $\sum_{k=0}^{\infty} \lambda_{k}=1$, we get
+
+$$
+\sum_{k=n+1}^{\infty} \lambda_{k}=10^{4} \lambda_{n+4}
+$$
+
+For the integral of $n(x)$
+
+$$
+\int_{0}^{1} n(x) d x=\sum_{n=0}^{\infty} n \lambda_{n}=\sum_{n=0}^{\infty} \sum_{k=n+1}^{\infty} \lambda_{k}
+$$
+
+Hence, by (1),
+
+$$
+\begin{aligned}
+\int_{0}^{1} n(x) d x & =\sum_{n=0}^{\infty} 10^{4} \lambda_{n+4}=10^{4} \sum_{n=4}^{\infty} \lambda_{n} \\
+& =10^{4}\left(1-\lambda_{0}-\lambda_{1}-\lambda_{2}-\lambda_{3}\right),
+\end{aligned}
+$$
+
+and since $\lambda_{0}=\lambda_{1}=\lambda_{2}=\lambda_{3}=10^{-4}$, we clearly get
+
+$$
+\int_{0}^{1} n(x) d x=10^{4}-4=9996
+$$
+
+Solution 2. We solve the problem in a more general form. Let $\sigma=$ $\overline{s_{1}, s_{2}, \ldots, s_{k}}$ be an integer given in the decimal system, and for $x \in(0,1)$ define the function $n(x)$ as follows: let $n(x)$ be the smallest nonnegative integer such that
+
+$$
+\overline{a_{n(x)+1} a_{n(x)+2} \ldots \overline{a_{n(x)+k}}}=\overline{s_{1} s_{2} \ldots s_{k}} \text {. }
+$$
+
+We are going to calculate the value of $\int_{0}^{1} n(x) d x$. Let $(\Omega, \mathcal{A}, P)$ be the probability space of the Lebesgue-measurable subsets of the interval $(0,1)$ endowed with the Lebesgue measure. Then on the set $\Omega=(0,1)$, the digits $a_{1}, a_{2}, \ldots, a_{k}, \ldots$ are independent and
+
+$$
+P\left(a_{k}=i\right)=\frac{1}{10} \quad(k=1,2, \ldots ; i=0,1, \ldots, 9) .
+$$
+
+On this space, $n(x)$ is a random variable, and its expectation is
+
+$$
+\int_{0}^{1} n(x) d x
+$$
+
+Put $P_{n}=P(n(x)=n)$ and $Q_{n}=P\left(\overline{a_{n+1} a_{n+2} \ldots a_{n+k}}=\sigma\right)=1 / 10^{k}$ $(n=0,1, \ldots)$.
+
+Let $l$ be the smallest natural number such that shifting $\sigma$ by $l$ positions, the digits on the same positions coincide. (That is $s_{i}=s_{i+l}$ for all $i=$ $1,2, \ldots, k-l)$. Obviously, $1 \leq l \leq k$. Rewrite $k$ in the form $k=p l+r$, where $0 \leq p, \quad 1 \leq r \leq l$. The $\sigma$ consists of $p$ blocks $\tau=\overline{s_{1} s_{2} \ldots s_{l}}$ of length $l$, and the first $r$ digits of this block $\tau$. Notice that
+
+$$
+\begin{aligned}
+Q_{n}= & \left(P_{0} Q_{n-k}+P_{1} Q_{n-k-1}+\cdots+P_{n-k} Q_{0}\right) \\
+& +\left(P_{n-k+r} 10^{-(k-r)}+P_{n-k+r+l} 10^{-(k-r-l)}+\cdots+P_{n-l} 10^{-l}+P_{n}\right) \\
+& (n=k, k+1, \ldots)
+\end{aligned}
+$$
+
+since the event
+
+$$
+\overline{a_{n+1} a_{n+2} \ldots a_{n+k}}=\sigma
+$$
+
+can occur in two different cases, as follows: (a) Block $\sigma$ appears only from the $(i+1)$ th index $(0 \leq i \leq n-k)$, and after $n-k-i$ digits it occurs again. (The probability of this case is $P_{i} Q_{n-k-i}$.)
+
+(b) Block $\sigma$ appears from the $(n-k+r+i l)$ th index $(i=0,1, \ldots, p)$, thus
+
+$$
+\overline{a_{n-k+r+i l+1} a_{n-k+r+i l+2} \ldots a_{n+r+i l}}=\sigma
+$$
+
+and it appears again starting from the $(n+1)$ th index. Note that besides the previous assumption, it is also necessary that the values of the undefined $(k-r-i l)$ digits are given. The probability of this case is $P_{n-k+r+i l} 10^{k-l-i l}$.
+
+Assume that $P_{n}=Q_{n}=0$ if $n=-1,-2, \ldots$. Then (2) holds also for $0 \leq n<k$. Multiply (2) by $z^{n}$, add up the resulting equations for all values of $n$, and introduce the notation
+
+$$
+P(z)=\sum_{n=0}^{\infty} P_{n} z^{n}, \quad Q(z)=\sum_{n=0}^{\infty} Q_{n} z^{n}
+$$
+
+to get
+
+$$
+Q(z)=z^{k} P(z) Q(z)+\sum_{i=0}^{p} z^{k-r-i l} P(z) 10^{-(k-r-i l)}
+$$
+
+Using the obvious formula
+
+$$
+Q(z)=\sum_{n=0}^{\infty} \frac{1}{10^{k}} z^{n}=\frac{1}{10^{k}(1-z)}
+$$
+
+we have
+
+$$
+P(z)=\frac{1}{z^{k}+10^{k}(1-z) \sum_{i=0}^{p} z^{k-r-i l} 10^{-(k-r-i l)}}
+$$
+
+From $P(1)=1$ we can see that $n(x)$ is defined almost everywhere, and
+
+$$
+\int_{0}^{1} n(x) d x=P^{\prime}(1)=-k+\sum_{i=0}^{p} 10^{r+i l}
+$$
+
+This last equality shows that the integral is always an integer. If $\sigma=1966$, then $k=l=r=4, p=0$, and thus
+
+$$
+\int_{0}^{1} n(x) d x=10^{4}-4=9996
+$$
+
+If $\sigma=1961$, then $k=4, l=3, p=r=1$, and thus
+
+$$
+\int_{0}^{1} n(x) d x=10+10^{4}-4=10,006
+$$

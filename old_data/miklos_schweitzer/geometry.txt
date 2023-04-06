@@ -1,0 +1,213 @@
+\title{
+3.4 GEOMETRY
+}
+
+Problem G.1. Find the minimum possible sum of lengths of edges of a prism all of whose edges are tangent to a unit sphere.
+
+Solution. If the edges of a prism are tangent to a sphere, then each face of the prism intersects the sphere in a circle, tangent to the sides of the face. Hence, each face is a circumscribed polygon.
+
+The translation along the generators of the prism that takes one base polygon to the other moves the inscribed circle of the first polygon to the inscribed circle of the second. These circles are congruent and have parallel planes since the bases of the prism are congruent and parallel. Since the translation that moves one of two congruent and parallel circles on the sphere to the other is perpendicular to the plane of the circles, the generators of the prism are perpendicular to the base, thus, the prism in question is a right prism.
+
+Sides of a right prism are rectangles. Since they are also circumscribed, and only squares are circumscribed among rectangles, each side of the prism is a square. Consequently, the edges of the bases and the generators have the same length, the bases are regular, and the sum of the lengths of the edges of the prism is three times the perimeter of the base.
+
+Let us cut the prism and the sphere by a plane through the center of the sphere, parallel to the base. The prism is cut in a polygon congruent to the base polygons; the sphere is cut in a great circle. The great circle contains the point of contact of every tangents of the sphere orthogonal to the plane of the great circle. Therefore, it contains a point from each generator. We get that the base polygon is inscribed in a unit circle. Since the base polygon has equal sides, it must be a regular polygon. We conclude that the prisms that satisfy the prescribed condition are regular prisms, with the length of the generators equal to the length of the sides of the base polygon scaled in such a way that the circumcircle of the base polygon has radius 1.
+
+Conversely, every prism of this type satisfies the condition of the problem, since the center of such a prism is located at distance 1 from each edge. Indeed, the distance to the center from a generator is clearly equal to 1 . On the other hand, the orthogonal projection of the center onto a lateral face, which is a square, is the center of the face. Thus the distances to the center from the sides of this square are equal.
+
+To get the sum of the lengths of the edges of such a prism, we have to multiply by 3 the perimeter of a regular polygon inscribed in a unit circle. It remains to decide which of these regular polygons has the shortest perimeter.
+
+The perimeter of a regular $n$-gon inscribed in a unit circle is equal to
+
+$$
+2 n \sin \frac{\pi}{n}=2 \pi \frac{\sin \alpha}{\alpha},
+$$
+
+where $\alpha=\pi / n$. Since $\sin x$ is concave on the interval $(0, \pi)$, the slope of the chord connecting the origin to the point $(x, \sin x)$ is decreasing as $x$ is increasing. Therefore, $\sin \alpha / \alpha$ is minimal when $\alpha=\pi / n$ is maximal, that is, $n$ is minimal. Thus, the minimum is attained by a regular triangle.
+
+As for the prisms, the minimum of the sum of the edge lengths is obtained for a regular prism over a triangular base, with lateral faces being squares, and the value of the minimum is $3 \cdot 6 \cdot \sin 60^{\circ}=9 \sqrt{3}$.
+
+Problem G.2. Show that the perimeter of an arbitrary planar section of a tetrahedron is less than the perimeter of one of the faces of the tetrahedron.
+
+Solution. Obviously, planar sections of a tetrahedron are triangles or quadrangles, since each face of the tetrahedron contains at most one edge of the intersection provided that the intersection does not coincide with the face.
+
+The case of quadrangles can be reduced to the case of triangles. Namely, we show that if we translate the plane of a quadrangle intersection in both directions until it passes through the nearest vertex, then one of the translated planes intersects the tetrahedron in a triangle (possibly degenerated to an edge), the perimeter of which is not shorter than the perimeter of the quadrangle.
+
+If both translated planes intersect the tetrahedron in a triangle, then introduce the notation shown in Figure G.1 and express the sides of the quadrangle with the help of the sides of the two triangles. Since the planes of the three sections are parallel, the ratio of the segments of a straight line cut off by these planes is the same for all straight lines. Set
+
+$$
+\lambda=\overline{B P}: \overline{A B}=\overline{B Q}: \overline{B T}=\overline{F R}: \overline{U F}=\overline{G S}: \overline{A G} .
+$$
+
+Then for the corresponding sides we have
+
+$$
+\begin{aligned}
+& p=\lambda a_{1}, \quad q=b_{1}+(1-\lambda)\left(b_{2}-b_{1}\right)=\lambda b_{1}+(1-\lambda) b_{2}, \\
+& r=c_{2}+\lambda\left(c_{1}-c_{2}\right)=\lambda c_{1}+(1-\lambda) c_{2}, \quad s=(1-\lambda) a_{2} .
+\end{aligned}
+$$
+
+From these, $p+q+r+s=\lambda\left(a_{1}+b_{1}+c_{1}\right)+(1-\lambda)\left(a_{2}+b_{2}+c_{2}\right)$, that is, $K=\lambda K_{1}+(1-\lambda) K_{2}$, where $K=p+q+r+s, K_{1}=a_{1}+b_{1}+c_{1}$, and $K_{2}=a_{2}+b_{2}+c_{2}$. This implies
+
+$$
+K \leq \max \left\{K_{1}, K_{2}\right\}
+$$
+
+If one of the triangles $\triangle A U T$, or $\triangle B G F$, or both degeneratse to the edges $\overline{A D}$ or $\overline{B C}$, respectively, then this inequality remains valid, putting $K_{1}=$ $2 \overline{A D}$ or $K_{2}=2 \overline{B C}$, respectively. Then we get that the perimeter of one of 
+
+![](https://cdn.mathpix.com/cropped/2023_03_31_a772810374395e83138ag-03.jpg?height=702&width=762&top_left_y=337&top_left_x=736)
+
+Figure G.1.
+
+the faces of the tetrahedron is greater than the perimeter of the intersection quadrangle.
+
+Hence, it is enough to consider the case of triangle intersections. We may suppose that the intersection triangle has a vertex in common with the tetrahedron. Otherwise we may translate the plane of the triangle to reach this situation (see Figure G.2). The translated plane meets the tetrahedron in a triangle similar to the original one, with ratio of similarity greater than 1 and it passes through that vertex of the nonintersected face of the tetrahedron that is nearest to the intersecting plane.
+
+![](https://cdn.mathpix.com/cropped/2023_03_31_a772810374395e83138ag-03.jpg?height=699&width=764&top_left_y=1727&top_left_x=732)
+
+Figure G.2.
+
+If the intersecting plane is parallel to the face not met by it, the assertion is trivial. Otherwise, we show that the perimeter of $\triangle K B M$ is smaller than the greater of the perimeters of $\triangle K B C$ and $\triangle K B D$. For this purpose, consider the smallest ellipsoid of revolution with foci $K$ and $B$ that contains both $C$ and $D$. Since $M$ is an internal point of it, we get
+
+$$
+\overline{K M}+\overline{M B}<\max \{\overline{K C}+\overline{C B}, \overline{K D}+\overline{D B}\} \text {. }
+$$
+
+But then, either $k_{K B M}<k_{K B D}<k_{A B D}$ or $k_{K B M}<k_{K B C}$, where $k_{P Q R}$ denotes the perimeter of $\triangle P Q R$. In the first case, the assertion is proved, the second case can be finished by a repeated application of the previous arguments.
+
+Problem G.3. Show that the center of gravity of a convex region in the plane halves at least three chords of the region.
+
+Solution. Let us denote the disc by $T$ and its barycenter by $S$. If $X$ is a point of the boundary curve $G$ of $T$, then denote by $Y(X)$ the second intersection point of the straight line $X S$ and the curve $G$. Let $f(X)=$ $\overline{X S}-\overline{Y(X) S}$. We have $f(X)=-f(Y(X))$ for any $X \in G$. Since $f(X)$ changes continuously as $X$ runs over the $\operatorname{arc} \overparen{X Y}(X)$, it attains any value between $f(X)$ and $-f(X)$. This implies the existence of a point $X_{1} \in$ $G$ such that $\overline{X_{1} S}=\overline{Y\left(X_{1}\right) S}$. If $X_{1} S$ were the only straight line whose intersection with $T$ is halved by $S$, then $f$ would be positive along one of the $\operatorname{arcs} \widehat{X_{1} Y}\left(X_{1}\right)$. Reflecting this arc through $S$, the reflected arc together with the other $\operatorname{arc} \widehat{X_{1} Y}\left(X_{1}\right)$ of $G$ would bound a domain $T_{1}$, the barycenter of which is different from $S$, since $T_{1}$ lies in a half-plane bounded by a straight line passing through $S$. Therefore, the barycenter of the union $T_{2}=T_{1} \cup T$ should be different from $S$. On the other hand, $T_{2}$ is centrally symmetric with respect to $S$, so its barycenter should be invariant under the reflection in $S$, which means that its barycenter should be $S$, which is a contradiction.
+
+The same arguments show that if $f$ has finite zeros, then it can not be nonnegative on a half-arc of $G$. Suppose that there are only two straight lines $X_{1} S$ and $X_{2} S$ for which the segment of the straight line cut off by the figure is halved by $S\left(X_{1}, X_{2} \in G\right)$. By the previous remark, $f$ must be negative (or positive) on the $\operatorname{arcs} X_{2} Y\left(X_{1}\right)$ and $\overparen{X_{1} Y}\left(X_{2}\right)$, which is a contradiction, since the sign of $f$ is opposite on arcs opposite to one another. We conclude that at least three chords of the figure are halved by $S$. The existence of four such chords cannot be proved in general, as it is shown by the case of an arbitrary triangle.
+
+Problem G.4. Let $A_{1}, A_{2}, \ldots, A_{n}$ be the vertices of a closed convex $n$-gon $K$ numbered consecutively. Show that at least $n-3$ vertices $A_{i}$ have the property that the reflection of $A_{i}$ with respect to the midpoint of $\overline{A_{i-1} A_{i+1}}$ is contained in $K$. (Indices are meant $\bmod n$.)
+
+Solution. We shall call a vertex $P$ of $K$ reflectible with respect to $K$ if its reflection in the midpoint of the segment connecting the two neighbors of $P$ belongs to $K$. 1. Let us begin with the first nontrivial case, with the case of quadrangles. For both pairs of opposite sides, the sum of angles lying on one of the two sides is at least $\pi$; let us denote by $A$ a common vertex of two such sides and denote the other vertices in a cyclic order by $B, C, D$ (see Figure G.3). We show that $A$ is reflectible with respect to the quadrangle. We can construct the reflection $A^{\prime}$ of $A$ by taking a parallel to $A B$ through $D$, which intersects side $B C$ in a point $E$ because $\varangle A D C+\varangle B A D \geq \pi$, and then taking the parallel to $A D$ through $B$, which intersects the segment $D E$ at $A^{\prime}$ because $\varangle D A B+\varangle A B C \geq \pi$. Therefore, $A^{\prime}$ belongs to the quadrangle $A B C D$.
+
+![](https://cdn.mathpix.com/cropped/2023_03_31_a772810374395e83138ag-05.jpg?height=493&width=569&top_left_y=954&top_left_x=450)
+
+Figure G.3.
+
+![](https://cdn.mathpix.com/cropped/2023_03_31_a772810374395e83138ag-05.jpg?height=491&width=547&top_left_y=958&top_left_x=1190)
+
+Figure G.4.
+
+2. If we show that among any four vertices of the convex polygon $K$, at least one is reflectible with respect to $K$, then the assertion of the problem is proved.
+
+We shall say that a vertex $P$ of the polygon precedes the neighboring vertex $R$ if going around $K$ starting from $P$ in the direction of $R$ is a movement of positive orientation. Consider four arbitrary vertices of $K$ and apply for them the previous notation, that is, let $\varangle A D C+\varangle B A D \geq \pi$, $\varangle D A B+\varangle A B C \geq \pi$ (see Figure G.4). If the vertex $E$ of $K$ that follows $A$ is not $B$, then $E$ is an internal point of the intersection $S$ of three halfplanes $S_{1}, S_{2}, S_{3}$, where $S_{1}$ is bounded by the straight line $A D$ and contains $A B C D, S_{2}$ is bounded by $B C$ and contains $A B C D$, and $S_{3}$ is bounded by $A B$ and does not contain $A B C D$. Similarly, if the vertex $F$ that precedes $A$ is not $D$, then $F$ is an internal point of the domain $T=T_{1} \cap T_{2} \cap T_{3}$, where the half-plane $T_{1}$ is bounded by the straight line $A B$ and contains $A B C D, T_{2}$ is bounded by $D C$ and contains $A B C D$, and $T_{3}$ is bounded by $A D$ and does not contain $A B C D$. It is enough to prove that $A$ is reflectible with respect to the quadrangle $A E C F$, since then it is obviously reflectible with respect to $K$ as well. For this purpose, it suffices to show that $\varangle E A F+\varangle A F C \geq \pi$ and $\varangle F A E+\varangle E A C \geq \pi$. It is enough to see the first inequality; the second can be shown in a similar way. But we have
+
+$$
+\begin{aligned}
+\varangle E A F+\varangle A F C & =\varangle E A C+(\varangle C A F+\varangle A F C) \\
+& =\varangle E A C+\pi-\varangle A C F \geq \varangle B A C+\pi-\varangle A C D \\
+& =\varangle B A C+(\varangle C A D+\varangle A D C)=\varangle B A D+\varangle A D C \geq \pi,
+\end{aligned}
+$$
+
+which proves the assertion of the problem.
+
+Remarks.
+
+1. The assertion cannot be improved; that is, there exists for all $n$ a convex $n$-gon having exactly $n-3$ reflectible vertices. Indeed, consider a convex quadrangle $A B C D$ with no parallel sides. It is easy to see that such a quadrangle has only one reflectible vertex; denote it by $A$. Now consider a convex $n$-gon $K$ such that $B, C$, and $D$ are vertices of $K$ while the other vertices of $K$ lie in a neighborhood of radius $\varepsilon$ of $A$ (obviously, such a convex $n$-gon exists for any $n$ ). It can be easily seen that if $\varepsilon$ is sufficiently small, then $B, C$, and $D$ are not reflectible with respect to $K$.
+
+2. The assertion does not hold for concave polygons.
+
+Problem G.5. Is it true that on any surface homeomorphic to an open disc there exist two congruent curves homeomorphic to a circle?
+
+Solution. The answer is no: There exists a surface homeomorphic to a disc which does not contain two congruent curves homeomorphic to a circle. We show this by giving an example.
+
+We start from a minimal surface, that is, from a surface for which $H=1 / 2\left(g_{1}+g_{2}\right)=0$. (Here $H$ denotes the Minkowski curvature, and $g_{1}$ and $g_{2}$ are the principal curvatures of the surface.) Although unnecessary, we explain why we are looking for counterexamples among minimal surfaces. If two congruent copies of a surface intersect one another in a closed curve, then by covering one copy with the other, the two positions of the intersection curve give two congruent curves on the surface, which are different in general. If two copies are tangent to one another at an isolated common point, then by a slight movement of one of them, they can be made to intersect one another along a curve. The choice of minimal surfaces is justified by the fact that if $H>0$ at a point of a surface, then we can always find a congruent surface so that this point is an isolated common point of them. We can get such a surface by reflecting the original surface in the tangent plane at the point in question and then rotating it $90^{\circ}$ about the normal of the surface. This follows from Euler's theorem, since by the inequality
+
+$$
+g_{1} \cos ^{2} \varphi+g_{2} \sin ^{2} \varphi>-g_{2} \cos ^{2} \varphi-g_{1} \sin ^{2} \varphi,
+$$
+
+the curvatures of the normal sections of the original surface are always greater than the curvatures of the corresponding normal sections of the transformed surface, and therefore the first surface is above the second one in a small neighborhood (looking at them from the direction of the normal vector).
+
+Now we show that in a sufficiently small domain of a minimal surface, any two congruent closed curves bound congruent domains of the surface. For this purpose, take two copies of the surface and move one of them so that the congruent curves cover one another. Suppose that the piece of the minimal surface is small enough to ensure that both surfaces can be obtained as the graph of the single-valued functions $z=f_{1}(x, y)$ and $z=f_{2}(x, y)$. The areas of the domains bounded by the closed curve are obtained as integrals of the lengths of the vectors $m_{1}\left(-1, p_{1}, q_{1}\right)$ and $m_{2}\left(-1, p_{2}, q_{2}\right)$, respectively, over the same domain. (Here $p_{i}$ and $q_{i}$ denote the partial derivatives of $f_{i}$.)
+
+We use the fact that the variation of the surface area of a minimal surface is 0 , that is, if a minimal surface is embedded into a one-parameter family of surfaces all having the same boundary, then the derivative of the area of these surfaces with respect to the parameter is zero at the minimal surface. Consider the one-parameter family of surfaces defined by $z=\lambda f_{1}+(1-\lambda) f_{2}$. The area of a member of this family is obtained as the integral of the magnitude of the vector $\lambda m_{1}+(1-\lambda) m_{2}$. This magnitude is a strictly convex function of the parameter $\lambda$ if $m_{1} \neq m_{2}$ and does not depend on $\lambda$ if $m_{1}=m_{2}$. Consequently, the area, obtained by integrating convex functions of $\lambda$, is itself a convex function of $\lambda$. Its derivatives at $\lambda=0$ and 1 can vanish only if it is a constant function, and this happens only if $m_{1}=m_{2}$ at any point of the domain, that is, if the two pieces of surfaces coincide.
+
+According to this observation, it is enough to find a minimal surface that does not contain different congruent pieces. Since two irreducible algebraic surfaces that have a domain in common coincide, it is enough to present an algebraic minimal surface that has no or only a finite number of automorphisms different from the identity. (An automorphism of a surface is a bijective mapping of the surface onto itself that can be extended to a congruence of the space.) If the surface has finite automorphisms, then a small neighborhood of a point different from its automorphic images has no automorphisms different from the identity.
+
+Actually, any algebraic minimal surface would do, provided it is not a surface of revolution. However, we need to find only one of them. A simple computation shows that for the surface
+
+$$
+\begin{aligned}
+& x=u^{3}-3 u v^{2}+3 u, \\
+& y=v^{3}-3 u^{2} v+3 v, \\
+& z=6 u v,
+\end{aligned}
+$$
+
+$H=0$ and $K=-\frac{9}{4}\left(u^{2}+v^{2}+1\right)^{2}(K$ is the Gauss curvature). The latter attains its minimum only at $u=v=0$; thus this point and the Dupin indicatrix at this point must be fixed by any automorphism of the surface. There may be only a finite number of such automorphisms, however, since the Dupin indicatrix is a hyperbola by $K<0$.
+
+Problem G.6. The plane is divided into domains by $n$ straight lines in general position, where $n \geq 3$. Determine the maximum and minimum possible number of angular domains among them. (We say that $n$ lines are in general position if no two are parallel and no three are concurrent.)
+
+Solution. The minimal number of angular domains is three. Indeed, the convex hull of the intersection points of the straight lines is a convex polygon having at least three vertices. Each vertex is an intersection point of two straight lines and those half-lines of these lines, which go outside the convex hull, bound an angular domain of the considered subdivision, since there are no intersection points on them.
+
+On the other hand, one can always position $n \geq 3$ straight lines in the plane so that the number of angular domains is exactly 3 . Such a construction is given by $n$ tangents to a quadrant (see Figure G.5).
+
+![](https://cdn.mathpix.com/cropped/2023_03_31_a772810374395e83138ag-08.jpg?height=504&width=575&top_left_y=1293&top_left_x=729)
+
+Figure G.5.
+
+The maximal number of angular domains is
+
+$$
+n+\frac{(-1)^{n+1}-1}{2}
+$$
+
+that is, $n$ if $n$ is odd and $n-1$ if $n$ is even. Indeed, each straight line is divided by the others into two half-lines and some segments. Angular domains can be bounded only by these half-lines, and each half-line bounds at most one angular domain (otherwise there would be a point that lies on three of the straight lines). It follows that $2 n$ half-lines can bound no more than $n$ angular domains.
+
+For odd $n$, we can present an (essentially unique) construction with $n$ straight lines and $n$ angular domains: Consider the longest diagonals of a regular $n$-gon. These $n$ straight lines are in general position. There is an 
+
+![](https://cdn.mathpix.com/cropped/2023_03_31_a772810374395e83138ag-09.jpg?height=735&width=704&top_left_y=332&top_left_x=754)
+
+Figure G.6.
+
+angular domain at each vertex of the polygon. Thus the number of angular domains is $n$ (see Figure G.6).
+
+We prove that if $n$ straight lines in general position bound $n$ angular domains, then $n$ is odd. Removing the two half-lines considered above from each straight line gives $n$ segments. Any endpoint of such a segment is shared by exactly two segments. If two of the segments have different endpoints, then they cross one another since the intersection point of their straight lines can lie neither outside nor at the end of the segments. Thus, the union of the segments yields a (number of) self-intersecting closed broken line(s). Fix an orientation on each of these broken lines, and consider three consecutive segments $a, b$, and $c$ on one of them. Since $a$ and $c$ intersect, they lie on the same side of $b$. Omitting the endpoints of $a$ and $b$ (that is, three points), we can couple the remaining vertices, saying that the points $P, Q$ form a pair if $P$ is on the same side of $b$ as the segments $a$ and $c$, and $Q$ is the neighboring vertex that comes after $P$ according to the fixed orientation on the broken line containing $P$. Hence, the number, $n$, of vertices is odd.
+
+In the case of even $n$, we can attain the maximal $(n-1)$ angular domains. This follows directly from Figure G.6; if we remove one straight line, the number of angular domains decreases by 2 .
+
+Problem G.7. Let $A=A_{1} A_{2} A_{3} A_{4}$ be a tetrahedron, and suppose that for each $j \neq k,\left[A_{j}, A_{j k}\right]$ is a segment of length $\rho$ extending from $A_{j}$ in the direction of $A_{k}$. Let $p_{j}$ be the intersection line of the planes $\left[A_{j k} A_{j l} A_{j m}\right]$ and $\left[A_{k} A_{l} A_{m}\right]$. Show that there are infinitely many straight lines that intersect the straight lines $p_{1}, p_{2}, p_{3}, p_{4}$ simultaneously.
+
+Solution. It is natural to assume that we are in the projective space obtained from the Euclidean space by joining ideal elements. Exclude first the singular cases, and assume the tetrahedron has no edges of length $\rho$. Let $\{j, k, l, m\}=\{1,2,3,4\}$. Denote the intersection point of the straight lines $A_{k} A_{l}$ and $A_{j k} A_{j l}$ by $B_{j m}$. Obviously, $B_{j m}$ is the intersection point of the plane $S_{m}=\left[A_{j} A_{k} A_{l}\right]$ opposite to $A_{m}$ and the straight line $p_{j}$. Consider now the plane $S_{j}$ (see Figure G.7). The points $B_{k j}, B_{l j}, B_{m j}$ are adjacent to a straight line $e_{j}$, as is easy to see by a multiple application of Menelaos' theorem. This implies that $e_{j}$ intersects $p_{1}, p_{2}, p_{3}, p_{4}$ simultaneously. (Indeed, the points $B_{k j}, B_{l j}, B_{m j}$ belong to $p_{k}, p_{l}, p_{m}$, respectively, while $p_{j}$ and $e_{j}$ are coplanar.) The line $e_{j}$ is not an edge of the tetrahedron, since it would result, the excluded case. The lines $e_{1}, e_{2}, e_{3}, e_{4}$ are all different since they lie in different planes of the tetrahedron, but none of them coincides with an edge.
+
+![](https://cdn.mathpix.com/cropped/2023_03_31_a772810374395e83138ag-10.jpg?height=542&width=976&top_left_y=1076&top_left_x=539)
+
+Figure G.7.
+
+Therefore, the lines $p_{1}, p_{2}, p_{3}, p_{4}$ are intersected by four different straight lines simultaneously. If two of the lines $p_{i}(i=1,2,3,4)$ are intersecting, then their point in common must be contained in the plane spanned by the two other straight lines; hence we can easily find infinitely many straight lines intersecting all four of them.
+
+If $p_{1}, p_{2}, p_{3}, p_{4}$ are mutually skew, then take $p_{1}, p_{2}, p_{3}$. It is known that the straight lines that intersect all of these three lines sweep out a doubly ruled second-order surface. One family of straight lines on this surface is given by the straight lines intersecting $p_{1}, p_{2}, p_{3}$, while $p_{1}, p_{2}, p_{3}$ belong to the other family. The line $p_{4}$ has more than two points in common with the surface, hence it is also a generator of it and intersects every straight line in the first family.
+
+Now let us discuss the singular cases.
+
+(a) If the three edges starting from one of the vertices $A_{k}$ have length $\rho$, then $p_{k}$ is not properly defined, while the three other lines are adjacent to $A_{k}$. As $p_{k}$ is not determined, the statement cannot be applied to this case. If, however, we define $p_{k}$ as an arbitrary straight line in the two coinciding planes that should define it, the statement is clearly true.
+
+(b) If there are two edges of length $\rho$ starting from a vertex $A_{k}$, then denote by $A_{l}$ the fourth vertex, not lying on these edges. It is easy to see that in this case $p_{k}$ is the intersection of the planes $S_{k}$ and $S_{l}$, $p_{l} \subset S_{l}$, while the two other lines, $p_{j}, p_{m}$, go through $A_{k}$. This means that any straight line $e$ such that $A_{k} \in e \subset S_{l}$ intersects all the lines $p_{i}$.
+
+(c) Assume now that the tetrahedron has exactly one edge of length $\rho$. In this case, one of the straight lines $e_{i}$ coincides with this edge, and therefore we can only say that there are three different straight lines among $e_{1}, e_{2}, e_{3}, e_{4}$. However, to apply the arguments used in the generic case, it suffices to have three straight lines that intersect all of $p_{1}, p_{2}, p_{3}, p_{4}$. Thus, $p_{1}, p_{2}, p_{3}, p_{4}$ are intersected by infinitely many straight lines simultaneously.
+
+![](https://cdn.mathpix.com/cropped/2023_03_31_a772810374395e83138ag-11.jpg?height=656&width=914&top_left_y=1174&top_left_x=646)
+
+Figure G.8.
+
+(d) Assume, finally, that the tetrahedron has two edges of length $\rho$, opposite to one another, say $A_{1} A_{3}=A_{2} A_{4}=\rho=a$. Introduce the notation $A_{1} A_{2}=b, A_{2} A_{3}=c, A_{3} A_{4}=d, A_{1} A_{4}=f$ (see Figure G.8). Applying Menelaos' theorem, we obtain the following divided ratios:
+
+$$
+\begin{array}{ll}
+\left(A_{1} A_{3} B_{24}\right)=\frac{b-a}{a-c}, & \left(A_{1} A_{3} B_{42}\right)=\frac{f-a}{a-d}, \\
+\left(A_{2} A_{4} B_{31}\right)=\frac{c-a}{a-d}, & \left(A_{2} A_{4} B_{13}\right)=\frac{b-a}{a-f} .
+\end{array}
+$$
+
+Turning to cross ratios,
+
+$$
+\left(A_{1} A_{3} B_{24} B_{42}\right)=\frac{(b-a)(a-d)}{(a-c)(f-a)}=\left(A_{2} A_{4} B_{13} B_{31}\right),
+$$

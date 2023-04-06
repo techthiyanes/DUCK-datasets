@@ -1,1 +1,1 @@
-cache/symbolic.jsonl
+cache/mcat_science_images_val.jsonl

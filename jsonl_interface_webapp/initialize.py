@@ -29,10 +29,10 @@ req_to_link = {
     # 
     "mcat_reading_test": github_root + "test/mcat/mcat_reading_test.jsonl",
     "mcat_reading_val": github_root + "valid/mcat/mcat_reading_val.jsonl",
-    "mcat_science":  github_root + "test/mcat/mcat_science_test.jsonl",
-    "mcat_science":  github_root + "valid/mcat/mcat_science_val.jsonl",
-    "mcat_science_images": github_root + "test/mcat/mcat_science_images_test.jsonl",
-    "mcat_science_images": github_root + "valid/mcat/mcat_science_images_val.jsonl",
+    "mcat_science_test":  github_root + "test/mcat/mcat_science_test.jsonl",
+    "mcat_science_val":  github_root + "valid/mcat/mcat_science_val.jsonl",
+    "mcat_science_images_test": github_root + "test/mcat/mcat_science_images_test.jsonl",
+    "mcat_science_images_val": github_root + "valid/mcat/mcat_science_images_val.jsonl",
     #
     "law": github_root + "valid/law/mcq.jsonl"
 }
